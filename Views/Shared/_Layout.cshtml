@@ -8,7 +8,8 @@
     <title>@ViewData["Title"] - 1st USSS Co.F</title>
 
     <link rel="shortcut icon" href="favicon.ico">
-    <link href="~/css/site.css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+    @*<link href="~/css/wor.css?family=Roboto+Slab" rel="stylesheet" type="text/css">*@
+    <link href="~/css/wor.css" rel="stylesheet">
     <link href="~/css/site.css" rel="stylesheet">
 
     <script src="~/lib/jquery/jquery.min.js"></script>
@@ -22,33 +23,12 @@
         <div id="body">
             <div id="outerWrapper">
 
-                @*
-                    <div id="lightBoxOuterContainer">
-                        <div id="lightBoxShadow" onclick="closeLightBox(this)"></div>
-                        <div id="lightBoxContainer">
-                            <div id="lightBox">
-                                <img id="lightBoxImage">
-                            </div>
-
-                            <div id="lightBoxButtonsShadow">
-                                <div id="lightBoxButtons">
-                                    <h2 class="lightBoxButtons" onclick="previousImage()">
-                                        Backward
-                                    </h2>
-                                    <h2 class="lightBoxButtons" onclick="nextImage()">
-                                        Forward
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                *@
-
                 <div id="wrapper">
                     <div id="nailContainer">
                         <img src="~/img/Nail.png" id="nailLeft" alt="nail">
                         <img src="~/img/Nail.png" id="nailRight" alt="nail">
                     </div>
+
                     <header>
                         <a href="/">
                             <p class="worBorder">
@@ -65,7 +45,7 @@
                                 <a id="navHome" href="/">Home</a>
                             </li>
                             <li>
-                                <a id="navNews" href="/">News</a>
+                                <a id="navNews" href="/">Maps</a>
                             </li>
                             <li>
                                 <a id="navMedia" href="/">Media</a>
@@ -83,45 +63,11 @@
 
                     </nav>
 
-                    <nav id="companyToolHeaderContainer" class="worBorder" style="padding: 0px;">
-                        <div style="margin: 0px; padding: 0px;">
-                            <ul style="margin: 0px; padding: 0px; height: 60px;">
-                                <li style="margin: 0px;">
-                                    <div id="companyToolHeaderTextContainer">
-                                        <ul class="companyToolNavUl">
-                                            <li>
-                                                <h1 class="text-center">
-                                                    <a id="companyToolHeaderLogin" class="handWrittenFine companyToolHeaderLoginLogout" href="#">Login</a>
-
-                                                </h1>
-                                            </li>
-                                        </ul>
-                                        <ul class="companyToolNavUl" style="width: 230px;">
-                                            <li>
-                                                <h1 class="text-center">
-                                                    <a id="companyToolHeader" href="#">- Company Tool -</a>
-                                                </h1>
-                                            </li>
-                                        </ul>
-
-                                        <ul id="companyToolHeaderLoggedOut" class="companyToolNavUl">
-                                            <li>
-                                                <a class="handWritten companyToolHeaderLinks hoverOverlay">
-                                                    Companies: 479
-                                                </a>
-                                                <br>
-                                                <a class="handWritten companyToolHeaderLinks hoverOverlay">
-                                                    Soldiers: 38851
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="fancyClearBoth">
-                            </div>
-                        </div>
-                    </nav>
+                    <div id="companyToolHeaderContainer" class="worBorder">
+                        <h1 class="text-center">
+                            Karlsen' Sharps
+                        </h1>
+                    </div>
 
                     <div class="worBorder CT_Background">
                         @RenderBody()
