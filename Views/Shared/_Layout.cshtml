@@ -9,6 +9,7 @@
 
     <link rel="shortcut icon" href="favicon.ico">
     <link href="~/css/site.css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+    <link href="~/css/wor.css" rel="stylesheet">
     <link href="~/css/site.css" rel="stylesheet">
 
     <script src="~/lib/jquery/jquery.min.js"></script>
@@ -62,22 +63,19 @@
 
                         <ul>
                             <li>
-                                <a id="navHome" href="/">Home</a>
+                                <a id="navHome" href="@Url.Action("Index", "Home")">Home</a>
                             </li>
                             <li>
-                                <a id="navNews" href="/">News</a>
+                                <a id="navNews" href="@Url.Action("Index", "Maps")">Maps</a>
+                            </li>
+                            <li>
+                                <a id="navEvents" href="/">Events</a>
                             </li>
                             <li>
                                 <a id="navMedia" href="/">Media</a>
                             </li>
                             <li>
-                                <a href="/">Forum</a>
-                            </li>
-                            <li>
-                                <a id="navFAQ" href="/">FAQ</a>
-                            </li>
-                            <li>
-                                <a id="navContact" href="/">Contact</a>
+                                <a id="navContact" href="/">Company</a>
                             </li>
                         </ul>
 
@@ -97,5 +95,9 @@
             </div>
         </div>
     </div>
+    
+    <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("scripts", required: false)
+
 </body>
 </html>
