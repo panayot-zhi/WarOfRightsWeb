@@ -4,6 +4,7 @@
         var mapName = Model;
         var mapId = Maps.Normalize(mapName);
         var mapArea = Maps.AreaFromMapName(mapName);
+        var mapThumbImage = Url.Content($"~/img/maps/thumbs/{mapId}.png");
         var mapImage = Url.Content($"~/img/maps/{mapId}.png");
         var mapLink = Url.Action(mapArea, "Maps", new { id = mapId });
         var mapDescription = Maps.Descriptions[mapId];
@@ -11,7 +12,7 @@
 
 <div class="briefFieldReportContainer">
     <a href="@mapImage" target="_blank">
-        <img src="@mapImage" class="worTightBorder">
+        <img src="@mapThumbImage" class="worTightBorder">
     </a>
     <div class="briefDescription">
         <a href="@mapLink">
