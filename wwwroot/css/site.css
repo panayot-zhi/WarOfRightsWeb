@@ -8,3 +8,13 @@ nav ul li a.active {
 #briefMapsContainer .briefFieldReportContainer img {
     width: 200px;
 }
+
+.regiment {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    font-family: worHandwritten;
+    font-style: italic;
+    font-size: 21px;
+    font-weight: bold;
+}
