@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Drill Camp Maps";
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<div id="briefMapsContainer">
+
+    @await Html.PartialAsync("_MapBrief", Maps.DrillCampUSA)
+    @await Html.PartialAsync("_MapBrief", Maps.DrillCampCSA)
+
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function() {
+            $("#navMaps").addClass('active');
+            $("#navMapDrillCamps").addClass('active');
+        })
+    </script>
+}
