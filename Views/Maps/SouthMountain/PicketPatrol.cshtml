@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Picket Patrol";
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<h2 class="contentTitle" id="tabTitle">Picket Patrol</h2>
+
+<a href="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.PicketPatrol)}.png")" target="_blank">
+    <img src="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.PicketPatrol)}.png")" class="imageMaxWidth">
+</a>
+
+<p>
+    TODO
+</p>
+
+@section scripts {
+    <script>
+        $(document).ready(function() {
+            $("#navMaps").addClass('active');
+            $("#navMapPicketPatrol").addClass('active');
+        })
+    </script>
+}

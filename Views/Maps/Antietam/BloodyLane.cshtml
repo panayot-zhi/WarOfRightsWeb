@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = Maps.BloodyLane;
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<h2 class="contentTitle" id="tabTitle">Sunken (Bloody) lane</h2>
+
+<div id="mapHistory" class="fancyClearBoth">
+
+    <h2 class="text-right">History</h2>
+
+    <p>
+        The Sunken Road, as it was known to area residents prior to the Battle of Antietam, was a dirt farm lane which was used primarily by farmers to bypass Sharpsburg and been worn down over the years by rain and wagon traffic. On September 17, 1862, Confederate Maj. Gen. Daniel Harvey Hill placed his division of approximately 2,600 men along the road, piled fence rails on the embankment to further strengthen the position and waited for the advance of the Union army. As Federal troops moved to reinforce the fighting in the West Woods, Union Maj. Gen. William H. French and his 5,500 men veered south, towards Hill's position along the Sunken Road. As French's men approached the Sunken Road, the Confederate troops staggered them with a powerful volley delivered at a range of less than one hundred yards.
+    </p>
+    <p>
+        Union and Confederate troops dug in. For nearly four hours, from 9:30 a.m. to 1 p.m., bitter fighting raged along this road as French, supported by Gen. Israel B. Richardson`s division, sought to drive the Southerners back. Outnumbered but with a well-defended position, the Confederates in the road stood their ground for most of the morning. Finally, the Federals were able to overwhelm Hill's men, successfully driving them from this strong position and piercing the center of the Confederacy's line. However, the Federals did not follow up this success with additional attacks, and confusion and sheer exhaustion ended the fighting in this part of the battlefield. In three hours of combat, 5,500 soldiers were killed or wounded and neither side gained a decisive advantage. The Sunken Road was now Bloody Lane.
+    </p>
+
+</div>
+
+<a href="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.BloodyLane)}.png")" target="_blank">
+    <img src="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.BloodyLane)}.png")" class="imageMaxWidth">
+</a>
+
+<h2 class="text-right">Belligerents</h2>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#navMaps").addClass('active');
+            $("#navMapAntietam").addClass('active');
+        })
+    </script>
+}
