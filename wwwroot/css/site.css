@@ -4,3 +4,7 @@ nav ul li a.active {
     text-decoration: underline;
     text-decoration-color: grey;
 }
+
+#briefMapsContainer .briefFieldReportContainer img {
+    width: 200px;
+}
