@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = Maps.RouletteLane;
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<h2 class="contentTitle" id="tabTitle">Roulette Lane</h2>
+
+<div id="mapHistory" class="fancyClearBoth">
+
+    <h2 class="text-right">History</h2>
+
+</div>
+
+<a href="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.RouletteLane)}.png")" target="_blank">
+    <img src="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.RouletteLane)}.png")" class="imageMaxWidth">
+</a>
+
+<h2 class="text-right">Belligerents</h2>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#navMaps").addClass('active');
+            $("#navMapAntietam").addClass('active');
+        })
+    </script>
+}

@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Harpers Ferry Maps";
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<div id="briefMapsContainer">
+
+    @await Html.PartialAsync("_MapBrief", Maps.MarylandHeights)
+    @await Html.PartialAsync("_MapBrief", Maps.RiverCrossing)
+    @await Html.PartialAsync("_MapBrief", Maps.Downtown)
+    @await Html.PartialAsync("_MapBrief", Maps.SchoolHouseRidge)
+    @await Html.PartialAsync("_MapBrief", Maps.HighStreet)
+    @await Html.PartialAsync("_MapBrief", Maps.BolivarHeightsCamp)
+    @await Html.PartialAsync("_MapBrief", Maps.ShenandoahStreet)
+    @await Html.PartialAsync("_MapBrief", Maps.HarpersGraveyard)
+    @await Html.PartialAsync("_MapBrief", Maps.BolivarHeightsRedoubt)
+    @await Html.PartialAsync("_MapBrief", Maps.WashingtonStreet)
+
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function() {
+            $("#navMaps").addClass('active');
+            $("#navMapHarpersFerry").addClass('active');
+        })
+    </script>
+}

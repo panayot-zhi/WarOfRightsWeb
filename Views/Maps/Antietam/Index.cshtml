@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Antietam Maps";
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<div id="briefMapsContainer">
+
+    @await Html.PartialAsync("_MapBrief", Maps.EastWoodsSkirmish)
+    @await Html.PartialAsync("_MapBrief", Maps.HookersPush)
+    @await Html.PartialAsync("_MapBrief", Maps.HagerstownTurnpike)
+    @await Html.PartialAsync("_MapBrief", Maps.MillersCornfield)
+    @await Html.PartialAsync("_MapBrief", Maps.EastWoods)
+    @await Html.PartialAsync("_MapBrief", Maps.NicodemusHill)
+    @await Html.PartialAsync("_MapBrief", Maps.BloodyLane)
+    @await Html.PartialAsync("_MapBrief", Maps.PryFord)
+    @await Html.PartialAsync("_MapBrief", Maps.PryGristMill)
+    @await Html.PartialAsync("_MapBrief", Maps.PryHouse)
+    @await Html.PartialAsync("_MapBrief", Maps.WestWoods)
+    @await Html.PartialAsync("_MapBrief", Maps.DunkerChurch)
+    @await Html.PartialAsync("_MapBrief", Maps.BurnsideBridge)
+    @await Html.PartialAsync("_MapBrief", Maps.CookesCountercharge)
+    @await Html.PartialAsync("_MapBrief", Maps.OttoSherrickFarm)
+    @await Html.PartialAsync("_MapBrief", Maps.RouletteLane)
+    @await Html.PartialAsync("_MapBrief", Maps.PiperFarm)
+    @await Html.PartialAsync("_MapBrief", Maps.HillsCounterattack)
+
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function() {
+            $("#navMaps").addClass('active');
+            $("#navMapAntietam").addClass('active');
+        })
+    </script>
+}

@@ -1,0 +1,104 @@
+﻿@{
+    ViewBag.Title = Maps.BurnsideBridge;
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<h2 class="contentTitle" id="tabTitle">Burnside Bridge</h2>
+
+<div id="mapHistory" class="fancyClearBoth">
+
+    <h2 class="text-right">History</h2>
+
+    <p>About 500 Confederate soldiers held the area overlooking the Lower Bridge for three hours. Burnside's command finally cap tured the bridge and crossed Antietam Creek, which forced the Confederates back toward Sharpsburg.</p>
+    <p>A Crucial Crossing, a General's Namesake, a Battlefield Icon</p>
+    <p>Known at the time of the battle as the Rohrbach or Lower Bridge, this picturesque crossing over Antietam Creek was built in 1836 to connect Sharpsburg with Rohrersville, the next town to the south. It was actively used for traffic until 1966 when a bypass enabled the bridge to be restored to its 1862 appearance.</p>
+    <p>For more than three hours on September 17, 1862, Confederate Gen. Robert Toombs and fewer than 500 Georgia soldiers manned this imposing position against three Federal assaults made by Gen. Ambrose Burnside's much larger Ninth Corps. Confederate General James Longstreet wrote of the action: "Gen. Toombs held the bridge and defended it most gallantly, driving back repeated attacks, and only yielded it after the force brought against him became overwhelming and threatened his flank and rear."</p>
+    <p>About 1:00 p.m., with Union soldiers crossing downstream and another attack made on the bridge, Toombs and his men had to retreat. However, the strong delaying action provided much needed time to allow Gen. A.P. Hill's Confederate soldiers, marching from Harpers Ferry, to arrive on the field.</p>
+    <p>
+        <strong><em>"Repulsed Again and Again"</em></strong><br>
+        Gen. David R. Jones, Longstreet's Command
+    </p>
+</div>
+
+<a href="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.BurnsideBridge)}.png")" target="_blank">
+    <img src="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.BurnsideBridge)}.png")" class="imageMaxWidth">
+</a>
+
+<h2 class="text-right">Belligerents</h2>
+
+<div id="mapBelligerents" class="fancyClearBoth">
+    
+    <ul>
+        <li>
+            <h3>
+                USA
+            </h3>
+            <ul>
+                <li>
+                    <h2 class="regiment">51st New York Volunteer Infantry</h2>
+                    <ul>
+                        <li>
+                            <p>Springfield 1861</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="regiment">2nd Maryland Infantry Regiment</h2>
+                    <ul>
+                        <li>
+                            <p>Springfield 1861</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="regiment">Clark's Battery - 3in Ordnance and '57</h2>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>
+                CSA
+            </h3>
+            <ul>
+                <li>
+                    <h2 class="regiment">2nd Georgia Infantry</h2>
+                    <ul>
+                        <li>
+                            <p>Springfield 1842</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="regiment">20th Georgia</h2>
+                    <ul>
+                        <li>
+                            <p>Mississippi 1841</p>
+                        </li>
+                        <li>
+                            <p>Pattern Enfield 1853</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="regiment">Richarson's Battery - 3in Ordnance, '57, and ;61</h2>
+                </li>
+                <li>
+                    <h2 class="regiment">Brown's Battery - 10lb Parrott, '57, and '61</h2>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function() {
+            $("#navMaps").addClass('active');
+            $("#navMapAntietam").addClass('active');
+        })
+    </script>
+}

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "South Mountain Maps";
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<div id="briefMapsContainer">
+
+    @await Html.PartialAsync("_MapBrief", Maps.GarlandsStand)
+    @await Html.PartialAsync("_MapBrief", Maps.CoxsPush)
+    @await Html.PartialAsync("_MapBrief", Maps.HatchsAttack)
+    @await Html.PartialAsync("_MapBrief", Maps.AndersonsCounterattack)
+    @await Html.PartialAsync("_MapBrief", Maps.RenosFall)
+    @await Html.PartialAsync("_MapBrief", Maps.ColquittsDefence)
+
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function() {
+            $("#navMaps").addClass('active');
+            $("#navMapSouthMountain").addClass('active');
+        })
+    </script>
+}

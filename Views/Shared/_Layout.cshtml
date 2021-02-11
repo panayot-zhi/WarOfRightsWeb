@@ -8,7 +8,6 @@
     <title>@ViewData["Title"] - 1st USSS Co.F</title>
 
     <link rel="shortcut icon" href="favicon.ico">
-    @*<link href="~/css/wor.css?family=Roboto+Slab" rel="stylesheet" type="text/css">*@
     <link href="~/css/wor.css" rel="stylesheet">
     <link href="~/css/site.css" rel="stylesheet">
 
@@ -23,12 +22,33 @@
         <div id="body">
             <div id="outerWrapper">
 
+                @*
+                    <div id="lightBoxOuterContainer">
+                        <div id="lightBoxShadow" onclick="closeLightBox(this)"></div>
+                        <div id="lightBoxContainer">
+                            <div id="lightBox">
+                                <img id="lightBoxImage">
+                            </div>
+
+                            <div id="lightBoxButtonsShadow">
+                                <div id="lightBoxButtons">
+                                    <h2 class="lightBoxButtons" onclick="previousImage()">
+                                        Backward
+                                    </h2>
+                                    <h2 class="lightBoxButtons" onclick="nextImage()">
+                                        Forward
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                *@
+
                 <div id="wrapper">
                     <div id="nailContainer">
                         <img src="~/img/Nail.png" id="nailLeft" alt="nail">
                         <img src="~/img/Nail.png" id="nailRight" alt="nail">
                     </div>
-
                     <header>
                         <a href="/">
                             <p class="worBorder">
@@ -42,32 +62,26 @@
 
                         <ul>
                             <li>
-                                <a id="navHome" href="/">Home</a>
+                                <a id="navHome" href="@Url.Action("Index", "Home")">Home</a>
                             </li>
                             <li>
-                                <a id="navNews" href="/">Maps</a>
+                                <a id="navMaps" href="@Url.Action("Index", "Maps")">Maps</a>
+                            </li>
+                            <li>
+                                <a id="navEvents" href="/">Events</a>
                             </li>
                             <li>
                                 <a id="navMedia" href="/">Media</a>
                             </li>
                             <li>
-                                <a href="/">Forum</a>
-                            </li>
-                            <li>
-                                <a id="navFAQ" href="/">FAQ</a>
-                            </li>
-                            <li>
-                                <a id="navContact" href="/">Contact</a>
+                                <a id="navContact" href="/">Company</a>
                             </li>
                         </ul>
 
                     </nav>
 
-                    <div id="companyToolHeaderContainer" class="worBorder">
-                        <h1 class="text-center">
-                            Karlsen' Sharps
-                        </h1>
-                    </div>
+                    @await RenderSectionAsync("navigation", required: false)
+
 
                     <div class="worBorder CT_Background">
                         @RenderBody()
@@ -80,5 +94,9 @@
             </div>
         </div>
     </div>
+    
+    <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("scripts", required: false)
+
 </body>
 </html>

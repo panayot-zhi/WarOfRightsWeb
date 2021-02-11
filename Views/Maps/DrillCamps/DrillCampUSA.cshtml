@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = Maps.DrillCampUSA;
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<h2 class="contentTitle" id="tabTitle">Union Drill Camp</h2>
+
+<div id="mapHistory" class="fancyClearBoth">
+
+    <h2 class="text-right">History</h2>
+
+</div>
+
+<a href="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.DrillCampUSA)}.png")" target="_blank">
+    <img src="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.DrillCampUSA)}.png")" class="imageMaxWidth">
+</a>
+
+<h2 class="text-right">Belligerents</h2>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#navMaps").addClass('active');
+            $("#navMapHarpersFerry").addClass('active');
+        })
+    </script>
+}
