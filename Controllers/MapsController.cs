@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WarOfRightsWeb.Utility;
 
 namespace WarOfRightsWeb.Controllers
 {
