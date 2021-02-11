@@ -7,6 +7,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\html\" />
   </ItemGroup>
 
   <ItemGroup>

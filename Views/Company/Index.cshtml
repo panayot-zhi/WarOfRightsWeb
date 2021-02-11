@@ -1,20 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home";
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Company";
 }
 
 @section navigation {
     <nav id="companyToolHeaderContainer" class="worBorder" style="padding: 0px;">
 
         <div style="margin: 0px; padding: 0px;">
-            <ul style="margin: 0px; padding: 0px; height: 56px;">
+            <ul style="margin: 0px; padding: 0px; height: 70px;">
                 <li style="margin: 0px;">
                     <div id="companyToolHeaderTextContainer">
 
                         <ul class="companyToolNavUl" style="width: 100%;">
                             <li>
-                                <h1 class="text-center">
-                                    <a href="#">Karlsen' Sharps</a>
-                                </h1>
+                                <h2 class="handWritten" >
+                                    1st US Sharpshooters Company F
+                                </h2>
                             </li>
                         </ul>
 
@@ -26,3 +28,9 @@
         </div>
     </nav>
 }
+
+@Html.Raw(Model.Content)
+
+<hr>
+
+<h2 class="text-center">Retrieved: @Model.Retrieved</h2>
