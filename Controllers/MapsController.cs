@@ -41,16 +41,6 @@ namespace WarOfRightsWeb.Controllers
             return View("SouthMountain/Index");
         }
 
-        public IActionResult BolivarHeightsCamp(string id)
-        {
-            if (!string.IsNullOrEmpty(id))
-            {
-                return View($"BolivarHeightsCamp/{id}");
-            }
-
-            return View("BolivarHeightsCamp/Index");
-        }
-
         public IActionResult DrillCamps(string id)
         {
             if (!string.IsNullOrEmpty(id))
@@ -59,6 +49,11 @@ namespace WarOfRightsWeb.Controllers
             }
 
             return View("DrillCamps/Index");
+        }
+
+        public IActionResult BolivarHeightsCampUSA()
+        {
+            return View("DrillCamps/BolivarHeightsCampUSA");
         }
 
         public IActionResult PicketPatrol()
