@@ -3,17 +3,23 @@
 }
 
 @section navigation {
+    
+    @{
+        var tip = Misc.RandomTip();
+        var height = tip.Length > 80 ? "100px" : "60px";
+    }
+
     <nav id="companyToolHeaderContainer" class="worBorder" style="padding: 0px;">
 
         <div style="margin: 0px; padding: 0px;">
-            <ul style="margin: 0px; padding: 0px; height: 60px;">
+            <ul style="margin: 0px; padding: 0px; height: @height;">
                 <li style="margin: 0px;">
                     <div id="companyToolHeaderTextContainer">
 
-                        <ul class="companyToolNavUl" style="width: 100%;">
+                        <ul class="companyToolNavUl" style="width: 100%; padding-top: 4px;">
                             <li>
                                 <h1 class="text-center">
-                                    <a href="#">Karlsen' Sharps</a>
+                                    @tip
                                 </h1>
                             </li>
                         </ul>

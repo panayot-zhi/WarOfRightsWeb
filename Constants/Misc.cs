@@ -23,7 +23,7 @@ namespace WarOfRightsWeb.Constants
             "You can mute the 3D voice and text chat of annoying players by pressing on the small speaker in the TAB menu.",
             "There are 4 morale states: Battle Ready, Engaged, Taking Losses and Breaking.",
             "The defending team wins the battle if they are still in possession of the point of contention when the timer runs out.",
-            "Adjust your range sights by pressing Z while aiming.",
+            //"Adjust your range sights by pressing Z while aiming.",   // No, don't do that
             "Stray too far away from the battlefield and you will be considered a deserter.",
             "Officers, Flag Bearers and NCO's are all limited classes.",
             "Dismounted cavalry units are often equipped with swords, carbines and pistols but highly limited.",
@@ -35,7 +35,7 @@ namespace WarOfRightsWeb.Constants
             "Officers can use their field glasses to get a clearer strategical view of the current situation.",
             "Right click to enter At The Ready. It is only possible to move in Quicktime while being At The Ready.",
             "A bayonet is deadlier than a rifle butt.",
-            "You will automatically speed up to catch the player straight in front of you when marching.",
+            //"You will automatically speed up to catch the player straight in front of you when marching.", // What?! No, that ain't true!
             "Press Left Alt to enter freelook mode to get better situational awareness.",
             "Use the Mouse Wheel to adjust your focus when looking through the field glasses.",
             "Press X to toggle between Right Shoulder Shift and Shoulder Arms.",
