@@ -18,3 +18,16 @@ nav ul li a.active {
     font-size: 21px;
     font-weight: bold;
 }
+
+li h3 a,
+li h2 a {
+    font-size: inherit;
+}
+
+#helpContentWrapper {
+    padding-top: 5px;
+}
+
+#helpContentWrapper .fancyClearBoth {
+    padding: 20px 0;
+}

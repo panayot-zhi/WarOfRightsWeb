@@ -6,7 +6,7 @@
     
     @{
         var tip = Misc.RandomTip();
-        var height = tip.Length > 80 ? "100px" : "60px";
+        var height = tip.Length >= 80 ? "100px" : "60px";
     }
 
     <nav id="companyToolHeaderContainer" class="worBorder" style="padding: 0px;">
@@ -33,69 +33,88 @@
     </nav>
 }
 
-<div id="contentWrapper">
+<div id="helpContentWrapper">
     
     <div id="tableOfContents" class="fancyLeft">
-        <h2 class="text-center">
+        <h1 class="text-center" style="padding-bottom: 15px;">
             Table of Contents
-        </h2>
+        </h1>
         <ul>
             <li>
-                <h3>
-                    Main 1
-                </h3>
+                <h2>
+                    <a href="#helpIntroduction">Introduction</a>
+                </h2>
+            </li>
+            <li>
+                <h2>
+                    <a href="#helpGameConcepts">Game concepts</a>
+                </h2>
                 <ul>
                     <li>
-                        <p>
-                            <a href="#companyRanking"></a>
-                        </p>
+                        <h3>
+                            <a href="#helpGameModes">Game modes</a>
+                        </h3>
                     </li>
                     <li>
-                        <p>
-                            Sub 2
-                        </p>
+                        <h3>
+                            <a href="#helpBattleStages">Battle stages</a>
+                        </h3>
                     </li>
                     <li>
-                        <p>
-                            Sub 3
-                        </p>
+                        <h3>
+                            <a href="#helpMoraleSystem">The Morale System</a>
+                        </h3>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>
+                    <a href="#helpCompanyRanking">Company Ranking</a>
+                    
+                </h2>
+            </li>
+            <li>
+                <h2>
+                    <a href="#helpDrillCommands">Drill commands</a>
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            <a href="#helpMarching">Marching</a>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <a href="#helpShooting">Shooting</a>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <a href="#helpFormations">Formations</a>
+                        </h3>
                     </li>
 
                 </ul>
             </li>
             <li>
                 <h2>
-                    Main 2
+                    <a href="#helpWeapons">Weapons</a>
+                    
                 </h2>
-            </li>
-            <li>
-                <p>
-                    Main 3
-                </p>
             </li>
         </ul>
     </div>
 
     <div class="fancyRight">
-
-        <h2 class="text-center">
-            Game General Information
-        </h2>
-
-        <p class="frontPageTextFirstLetter">
-            War of Rights is a multiplayer game set during the perilous days of the American Civil War,
-            in the Maryland Campaign of September, 1862. Campfire Games is devoted to presenting the gruesome
-            and glorious elements of the period, while maintaining the highest level of historical
-            accuracy and realism as is possible with the wonders of CRYENGINE.
-            <br>
-        </p>
-
+        <img src="@Url.Content("~/img/escanear0406.png")" alt="Killer's in green coats" class="imageMaxWidth"/>
     </div>
 
+    <div class="fancyClearBoth" ></div>
 
-
-    <div class="fancyClearBoth"></div>
-
+    @await Html.PartialAsync("_Introduction")
+    @await Html.PartialAsync("_GameConcepts")
     @await Html.PartialAsync("_CompanyRanking")
+    @await Html.PartialAsync("_DrillCommands")
+    @await Html.PartialAsync("_Weapons")
 
 </div>
