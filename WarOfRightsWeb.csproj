@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>73d43068-f21b-4f5a-84a8-5fc3efae0dde</UserSecretsId>
+	<RuntimeIdentifiers>linux-x64;ubuntu.18.04-x64</RuntimeIdentifiers>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
   </PropertyGroup>
 
   <ItemGroup>
