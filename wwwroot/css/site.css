@@ -31,3 +31,11 @@ li h2 a {
 #helpContentWrapper .fancyClearBoth {
     padding: 20px 0;
 }
+
+#helpContentWrapper img.imageRightAlign {
+    float: right;
+    width: 250px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-style: none;
+}
