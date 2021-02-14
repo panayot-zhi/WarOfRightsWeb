@@ -2,14 +2,14 @@
     <h1 class="text-center">
         Game Concepts
     </h1>
-    
+
     <br>
 
     <h2 id="helpGameModes">
         Game Modes
     </h2>
     <p>
-        As of yet War of Rights offers three game modes: Skirmish, Picket Patrol and Drill Camp. These can be seen in-game in the server browser in the mode column for the server. 
+        As of yet War of Rights offers three game modes: Skirmish, Picket Patrol and Drill Camp. These can be seen in-game in the server browser in the mode column for the server.
         Each mode has their own rules and peculiarities, this section tells you what's special about each of these modes.
     </p>
 
@@ -17,20 +17,21 @@
         Skirmish
     </h3>
     <p>
-        The Skirmish game mode you'll encounter most often. It allows up to 150 players, depending on the server slots size. Games last 45 minutes OR until one team losses morale. 
-        Most of the matches are with auto-balanced teams (somewhere around 75 vs 75 players), although this feature can be temporarily disabled on private servers, 
-        but not on official ones (WAR OF RIGHTS OFFICIAL). Currently there are <a href="@Url.Action("Index", "Maps")">34 maps</a> for skirmish across 
+        The Skirmish game mode you'll encounter most often. It allows up to 150 players, depending on the server slots size. Games last 45 minutes OR until one team losses morale.
+        Most of the matches are with auto-balanced teams (somewhere around 75 vs 75 players), although this feature can be temporarily disabled on private servers,
+        but not on official ones (WAR OF RIGHTS OFFICIAL). Currently there are <a href="@Url.Action("Index", "Maps")">34 maps</a> for skirmish across
         Harpers Ferry, Antietam, and South Mountain. Almost all of which have artillery on either one or both sides.
     </p>
 
     <h3>
         Picket Patrol
+        <img src="@Url.Content("~/img/Winslow_Homer_-_The_Army_of_the_Potomac--A_Sharp-Shooter_on_Picket_Duty_-_Google_Art_Project.jpg")" alt="Sharpshooter on Picket Patrol" class="imageMaxWidth" />
     </h3>
     <p>
-        The main objective of Picket Patrol is simply to kill the enemy force you encounter. The round ends when all enemies are killed or the timer runs out. 
+        The main objective of Picket Patrol is simply to kill the enemy force you encounter. The round ends when all enemies are killed or the timer runs out.
         Whoever has the most kills when the timer ends, wins. The teams kill count is hidden until the end of the round where a winner is declared. @* TODO: Revisit this *@
-        Players only have 1 life per round. Formation requirements are stricter than in the Skirmishes game mode: players should stick in groups of at least 3 
-        and cannot be “out of line” for more than 30 seconds. Formation restrictions are automatically disabled when less than 12 players are present on the server. 
+        <u>Players only have 1 life per round</u>. Formation requirements are stricter than in the Skirmishes game mode: players should stick in groups of at least 3
+        and cannot be “out of line” for more than 30 seconds. Formation restrictions are automatically disabled when less than 12 players are present on the server.
         Each patrol area has roughly 7 team spawn points placed in various positions in the area. Team spawn points are selected at random at the beginning og the round.
     </p>
 
@@ -38,20 +39,106 @@
         Drill Camp
     </h3>
     <p>
-        The training ground of any army, here only one side is present and you can choose to spawn from all the regiments on your side (CSA or USA). 
-        The timer displays the current time of day. You cannot die in Drill Camp, although you can be hurt and all the bad implications that follow from being shot or stabbed do still occur. 
+        The training ground of the army, here only one side is present and you can choose from all the regiments on your side (CSA or USA) with the help of the pages in the spawn screen.
+        The timer displays the current time of day. You cannot die in Drill Camp, although you can be hurt and all the bad implications that follow from being shot or stabbed do still occur.
         At the marksman range you can get instant feedback on where your shot hit the target.
     </p>
 
 
     <h2 id="helpBattleStages">
         Battle Stages
+        <img src="@Url.Content("~/img/Burnside_Bridge.jpg")" alt="Burnside Bridge" class="imageMaxWidth" />
     </h2>
 
     <p>
-        The training ground of any army, here only one side is present and you can choose to spawn from all the regiments on your side (CSA or USA). 
-        The timer displays the current time of day. You cannot die in Drill Camp, although you can be hurt and all the bad implications that follow from being shot or stabbed do still occur. 
-        At the marksman range you can get instant feedback on where your shot hit the target.
+        All battles in the Skirmish mode go through these stages.
+        Changes in the battle stage are indicated with a distinctive rallying cry from the enemy (the Huzaah's and YeYe's).
+        If you lost a lot of tickets, you're in for a morale drop, <a href="#helpMoraleSystem">read more about the Morale System here</a>.
+        Depending on if you are an attacker or a defender there are two different endings: The Final Push and The Last Stand.
+    </p>
+
+    <ul>
+        <li>
+            <h3>
+                Battle Ready
+            </h3>
+            <p>
+                All teams begin their battles at this morale stage. <br>
+                Your team suffered minimal losses, men feel fearless!
+            </p>
+        </li>
+        <li>
+            <h3>
+                Engaged
+            </h3>
+            <p>
+                Your team suffered few losses, morale is still high!
+            </p>
+        </li>
+        <li>
+            <h3>
+                Taking Losses
+            </h3>
+            <p>
+                Casualties are rising, men are concerned!
+            </p>
+        </li>
+        <li>
+            <h3>
+                Breaking
+            </h3>
+            <p>
+                Your team suffers heavy casualties, the men are in disarray!
+            </p>
+        </li>
+    </ul>
+
+    <br>
+
+    <h3>
+        Final Push
+
+    </h3>
+    <p>
+        <img src="@Url.Content("~/img/popups/FinalPush.png")" alt="Final Push" class="imageRightAlign" />
+        During this final stage the attackers have 3 minutes to capture the point of contention.
+        Unlike the Last Stand by the defenders, attackers can still spawn reinforcements and their death does not cost morale loss (0 tickets).
+    </p>
+
+    <br>
+
+    <h3>
+        Last Stand
+
+    </h3>
+    <p>
+        <img src="@Url.Content("~/img/popups/LastStand.png")" alt="Last Stand" class="imageRightAlign" />
+        All defenders that are currently alive or had their deployment accepted are spawned in, but no further reinforcements are allowed.
+        Other players and players who die in this stage are allowed only to spectate their remaining teammates for the rest of the round.
+    </p>
+
+    <br>
+
+    <h3>
+        Overtime
+    </h3>
+    <p>
+        Overtime is triggered by the attackers when the battle timer reaches 0 and they (the attackers) have the majority men on point.
+        Once the defenders have the majority men on the point of contention - they win the game.
+    </p>
+
+    <br>
+
+    <h3>
+        Counterattacks
+
+    </h3>
+    <p>
+        <img src="@Url.Content("~/img/popups/CounterAttack.png")" alt="Counter Attack" class="imageRightAlign" />
+        Counterattacks raise the defenders morale if they are able to retake point of contention.
+        If the defending team retakes the point, their morale is equalized to that of the attacking team.
+        The counterattack time is dependent on the defenders battle stage: at Battle Ready they have 21min, at Engaged 14min and at Taking Losses 7min to respond, before they loose the game.
+        If the attacking team captures the point when the defenders are at Breaking they automatically win the game.
     </p>
 
     <br>
@@ -59,5 +146,122 @@
     <h2 id="helpMoraleSystem">
         The Morale System
     </h2>
-</div>
 
+    <p>
+        Every killed soldier has impact on the teams morale. Once the army morale is at breaking,
+        there are just a few reinforcements left and your team is about to loose.
+        To reduce morale losses, it's important to fight in <u>formations</u>.
+    </p>
+
+    <h3>
+        Formations
+    </h3>
+    <p>
+
+        Each formation type has its own implication on your teams morale.
+        How the games applies these types is based of how many players are within a set distance from each other.
+    </p>
+
+    <div class="fancyRight">
+        <ul>
+            <li>
+                <h3>
+                    Out of Line
+                </h3>
+                <p>
+                    You are on your own! Rejoin your comrades immediately! Your death will have severe consequences on the teams morale.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Skirmishing
+                </h3>
+                <p>
+                    When 3 players are within an immediate distance to each other, the game will put them in the Skirmishing formation.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    In Formation
+                </h3>
+                <p>
+                    When another 3 players join the circle of their comrades they are considered In Formation.
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="fancyLeft">
+        <img src="@Url.Content("~/img/sharps-in-the-woods-gigapixel-scale-4_00x.jpg")" alt="Counter Attack" class="imageMaxWidth" />
+    </div>
+
+    <div class="fancyClearBoth"></div>
+
+    <h3>
+        Tickets
+    </h3>
+    <p>
+        When a player dies during the match, the game calculates how many tickets the team looses <u>based on the players formation</u> when killed:
+    </p>
+    <ul>
+        <li>
+            <p>
+                Out of Line: 5 tickets
+            </p>
+        </li>
+        <li>
+            <p>
+                Skirmishing: 3 tickets
+            </p>
+        </li>
+        <li>
+            <p>
+                In Formation: 1 ticket
+            </p>
+        </li>
+    </ul>
+    <p>
+
+        Tickets scale depending also on the server size and the players currently in it:
+    </p>
+
+    <ul>
+        <li>
+            <p>
+                up to 25 players: x4
+            </p>
+        </li>
+
+        <li>
+            <p>
+                up to 50 players: x2
+            </p>
+        </li>
+
+        <li>
+            <p>
+                up to 100 players: x1
+            </p>
+        </li>
+
+        <li>
+            <p>
+                up to 150 players: x0.75
+            </p>
+        </li>
+
+    </ul>
+
+    <br>
+
+    <h3>
+        Flag Bearers and Officers
+    </h3>
+    <p>
+        Color bearers and commanders have a special interaction with the formation types. Their special role requires them to stay with the immediate distance of their teammates (indicated by their current formation).
+        If an officer goes Out of Line <u>for more than 20 seconds</u>, he will be considered a deserter and will die. If a Flag Bearer fails to return to his comrades <u>within 60 seconds</u> he will die immediately.
+        When in Skirmishing the Flag Bearer spawns troops only half (20 seconds spawn) as fast as a In Formation flag (10 second spawn). When the Flag Bearer is Out of Line or killed the spawn on flag option will be unavailable.
+    </p>
+
+    <br>
+</div>
