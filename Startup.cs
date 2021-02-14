@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Globalization;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace WarOfRightsWeb
 {
@@ -21,8 +22,7 @@ namespace WarOfRightsWeb
         {
             services.AddSingleton<IConfiguration>(Configuration);
 
-            services.AddControllersWithViews()
-                .AddRazorRuntimeCompilation();
+            services.AddControllersWithViews();
 
             Console.WriteLine("<<<< SERVICES CONFIGURED");
         }
@@ -34,6 +34,11 @@ namespace WarOfRightsWeb
 
             CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
             CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
 
             app.UseDeveloperExceptionPage();
             app.UseStaticFiles();

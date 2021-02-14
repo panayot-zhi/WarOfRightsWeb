@@ -13,8 +13,11 @@
     <Folder Include="wwwroot\html\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.0" />
+  <ItemGroup>    
+    <Compile Remove="release\**" />    
+    <Content Remove="release\**" />    
+    <EmbeddedResource Remove="release\**" />    
+    <None Remove="release\**" />
   </ItemGroup>
 
 </Project>
