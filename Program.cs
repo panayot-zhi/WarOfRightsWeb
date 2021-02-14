@@ -1,11 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WarOfRightsWeb
 {
@@ -13,7 +8,19 @@ namespace WarOfRightsWeb
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            Console.WriteLine("IN MAIN >>>>");
+
+            try
+            {
+                Console.WriteLine("STARTING APPLICATION >>>>");
+                CreateHostBuilder(args).Build().Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("APPLICATION FAILED TO START >>>>");
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex);
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
