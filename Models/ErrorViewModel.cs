@@ -1,5 +1,3 @@
-using System;
-
 namespace WarOfRightsWeb.Models
 {
     public class ErrorViewModel
