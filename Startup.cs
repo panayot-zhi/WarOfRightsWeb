@@ -5,24 +5,36 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Globalization;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.Extensions.Hosting;
 
 namespace WarOfRightsWeb
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IConfiguration Configuration { get; }
+
+        public IWebHostEnvironment WebHostEnvironment { get; }
+
+        public Startup(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
         {
             Configuration = configuration;
+            WebHostEnvironment = webHostEnvironment;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IConfiguration>(Configuration);
 
-            services.AddControllersWithViews();
+            if (WebHostEnvironment.IsDevelopment())
+            {
+                services.AddControllersWithViews()
+                    .AddRazorRuntimeCompilation();
+            }
+            else
+            {
+                services.AddControllersWithViews();
+            }
 
             Console.WriteLine("<<<< SERVICES CONFIGURED");
         }

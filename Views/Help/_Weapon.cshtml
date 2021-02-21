@@ -8,7 +8,19 @@
     var description = Weapons.Descriptions[id];
     var imagePath = System.IO.Path.Combine(WebHost.WebRootPath, "img", "weapons", $"{id}.jpg");
     var imageExists = System.IO.File.Exists(imagePath);
-    var image = Url.Content($"~/img/weapons/{id}.jpg");
+
+    string image;
+    if (!imageExists)
+    {
+        imagePath = System.IO.Path.Combine(WebHost.WebRootPath, "img", "weapons", $"{id}.png");
+        imageExists = System.IO.File.Exists(imagePath);
+        image = Url.Content($"~/img/weapons/{id}.png");
+    }
+    else
+    {
+        image = Url.Content($"~/img/weapons/{id}.jpg");
+    }
+
 }
 
 <li>
