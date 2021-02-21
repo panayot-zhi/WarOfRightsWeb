@@ -1,0 +1,1154 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Title>Audio script template</Title>
+  <Author>Maëlenn Lumineau</Author>
+  <LastAuthor>FancySweetroll</LastAuthor>
+  <LastPrinted>2003-10-30T09:38:41Z</LastPrinted>
+  <Created>2002-06-17T19:14:00Z</Created>
+  <LastSaved>2020-03-23T10:49:09Z</LastSaved>
+  <Company>Electronic Arts</Company>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <SupBook>
+   <Path>\DOCUME~1\jack\LOCALS~1\Temp\p4v\PC025 perforce 1666\data\Game02\Game\Languages\Copy of Dialog_Asset_List_Final_edit.xls</Path>
+   <SheetName>DropDown</SheetName>
+   <SheetName>Conversations</SheetName>
+   <Xct>
+    <Count>2</Count>
+    <SheetIndex>0</SheetIndex>
+    <Crn>
+     <Row>6</Row>
+     <ColFirst>0</ColFirst>
+     <ColLast>4</ColLast>
+     <Text>clean</Text>
+     <Text>TV</Text>
+     <Text>radio (disturbed) </Text>
+     <Text>radio (low)</Text>
+     <Text>radio (heavy)</Text>
+    </Crn>
+    <Crn>
+     <Row>9</Row>
+     <ColFirst>0</ColFirst>
+     <ColLast>41</ColLast>
+     <Text>Player</Text>
+     <Text>Barnes</Text>
+     <Text>Hawker</Text>
+     <Text>Sykes</Text>
+     <Text>Johnson</Text>
+     <Text>Cortez</Text>
+     <Text>Beck</Text>
+     <Text>Miller</Text>
+     <Text>Baxter</Text>
+     <Text>American scientist</Text>
+     <Text>Shark</Text>
+     <Text>Chia</Text>
+     <Text>Kirovski</Text>
+     <Text>Michaels</Text>
+     <Text>Chang</Text>
+     <Text>Marine Soldier a</Text>
+     <Text>Marine Soldier b</Text>
+     <Text>Chinese Soldier a</Text>
+     <Text>Chinese Soldier b</Text>
+     <Text>Chinese Soldier c</Text>
+     <Text>Chinese Soldier d</Text>
+     <Text>Chinese Soldier e</Text>
+     <Text>Chinese Soldier f</Text>
+     <Text>Chinese Officer a</Text>
+     <Text>Chinese Officer b</Text>
+     <Text>Chinese Scientist a</Text>
+     <Text>Chinese Scientist b</Text>
+     <Text>Chinese Scientist Female a</Text>
+     <Text>Chinese Scientist Female b</Text>
+     <Text>Filmcrew Member</Text>
+     <Text>Morrison</Text>
+     <Text>C17 Pilot a</Text>
+     <Text>C17 Pilot b</Text>
+     <Text>Submarine Commander Davis</Text>
+     <Text>Pilot (camera)</Text>
+     <Text>Bridge officer 1</Text>
+     <Text>Bridge officer 2</Text>
+     <Text>Carrier deck guide</Text>
+     <Text>Jet Pilot</Text>
+     <Text>VTOL Pilot</Text>
+     <Text>Commander (camera)</Text>
+     <Text>Team Two (camera)</Text>
+    </Crn>
+   </Xct>
+  </SupBook>
+  <WindowHeight>6750</WindowHeight>
+  <WindowWidth>15210</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <TabRatio>274</TabRatio>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:Family="Modern" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:Family="Modern" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#FF0000" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#666699" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:Family="Modern" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#666699" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s68">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s69">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s70">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s71">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s72">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s73">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s74">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="characters"
+   ss:RefersTo="='\DOCUME~1\jack\LOCALS~1\Temp\p4v\PC025 perforce 1666\data\Game02\Game\Languages\[Copy of Dialog_Asset_List_Final_edit.xls]DropDown'!R10C1:R10C42"/>
+  <NamedRange ss:Name="type"
+   ss:RefersTo="='\DOCUME~1\jack\LOCALS~1\Temp\p4v\PC025 perforce 1666\data\Game02\Game\Languages\[Copy of Dialog_Asset_List_Final_edit.xls]DropDown'!R7C1:R7C5"/>
+ </Names>
+ <Worksheet ss:Name="Sheet1">
+  <Names>
+   <NamedRange ss:Name="Print_Area" ss:RefersTo="=Sheet1!R1C3:R2C4"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="196" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="13.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="271.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="587.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="477"/>
+   <Column ss:AutoFitWidth="0" ss:Width="160.5"/>
+   <Row ss:AutoFitHeight="0" ss:Height="51" ss:StyleID="s62">
+    <Cell ss:StyleID="s63"/>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">KEY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ORIGINAL TEXT</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">TRANSLATED TEXT</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell><Data ss:Type="String">CONTEXT</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+    <Cell ss:StyleID="s63"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">This contains original text meant for subtitles. Use descriptive expressions like &lt;frantic laughter&gt; and ## for a new line.</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">This contains text for subtitles. Use descriptive expressions like &lt;frantic laughter&gt; and ## for a new line.</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s69"/>
+    <Cell ss:StyleID="s70"/>
+    <Cell ss:StyleID="s70"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Morale Screen</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row ss:StyleID="s73"/>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleInfo_LosingMorale</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Being an &lt;/font&gt;&lt;font color='#A33324'&gt;Out of Line &lt;/font&gt;&lt;font color='#FFFFFF'&gt;casualty has caused a severe blow to the army's morale!&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;Low suppression resistance and recovery rate while &lt;/font&gt;&lt;font color='#A33324'&gt;Out of Line&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Being an &lt;/font&gt;&lt;font color='#A33324'&gt;Out of Line &lt;/font&gt;&lt;font color='#FFFFFF'&gt;casualty has caused a severe blow to the army's morale!&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;Low suppression resistance and recovery rate while &lt;/font&gt;&lt;font color='#A33324'&gt;Out of Line&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleInfo_MoraleLowered</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;You've fallen with great dignity and honor while being &lt;/font&gt;&lt;font color='#FFB324'&gt;In Formation &lt;/font&gt;&lt;font color='#FFFFFF'&gt;and have thus caused a reduced morale cost.&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;High suppression resistance and recovery rate while &lt;/font&gt;&lt;font color='#FFB324'&gt;In Formation&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;You've fallen with great dignity and honor while being &lt;/font&gt;&lt;font color='#FFB324'&gt;In Formation &lt;/font&gt;&lt;font color='#FFFFFF'&gt;and have thus caused a reduced morale cost.&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;High suppression resistance and recovery rate while &lt;/font&gt;&lt;font color='#FFB324'&gt;In Formation&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleInfo_MoraleHit</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Being killed while &lt;font color='#FFB324'&gt;Skirmishing &lt;/font&gt;&lt;font color='#FFFFFF'&gt; has caused a drop in the morale of the men.&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;Normal suppression resistance and recovery rate while &lt;/font&gt;&lt;font color='#FFB324'&gt;Skirmishing&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Being killed while &lt;font color='#FFB324'&gt;Skirmishing &lt;/font&gt;&lt;font color='#FFFFFF'&gt; has caused a drop in the morale of the men.&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;Normal suppression resistance and recovery rate while &lt;/font&gt;&lt;font color='#FFB324'&gt;Skirmishing&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleInfo_FinalPush</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Your death no longer has a morale cost.&lt;br/&gt;Only a &lt;/font&gt;&lt;font color='#FFB324'&gt;furious charge&lt;/font&gt;&lt;font color='#FFFFFF'&gt; can now turn the day into victory!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Your death no longer has a morale cost.&lt;br/&gt;Only a &lt;/font&gt;&lt;font color='#FFB324'&gt;furious charge&lt;/font&gt;&lt;font color='#FFFFFF'&gt; can now turn the day into victory!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleSubtitle_LosingMorale</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#A33324'&gt;Morale loss reduced by 0%&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#A33324'&gt;Morale loss reduced by 0%&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleSubtitle_MoraleLowered</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Morale loss reduced by 80%&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Morale loss reduced by 80%&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleSubtitle_MoraleHit</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFB324'&gt;Morale loss reduced by 40%&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFB324'&gt;Morale loss reduced by 40%&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleSubtitle_LastStand</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;You fought valiantly, but there are &lt;/font&gt;&lt;font color='#FFB324'&gt;no more available reinforcements.&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;You fought valiantly, but there are &lt;/font&gt;&lt;font color='#FFB324'&gt;no more available reinforcements.&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleSubtitle_LastStand_JustJoined</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Your team have run out of reinforcements!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Your team have run out of reinforcements!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MoraleSubtitle_FinalPush</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Your team has rallied for one &lt;/font&gt;&lt;font color='#FFB324'&gt;final push!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Your team has rallied for one &lt;/font&gt;&lt;font color='#FFB324'&gt;final push!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:Index="25" ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Skirmish Area Info</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHooker'sPushDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In the early fog of dawn, Union General Joseph Hooker pushes southwards with his I Corps, starting from the edge of North Woods, past the R. Miller Farm and through the Miller Cornfield only to be engaged south of it by defending Confederate General Ewell's Division at about 7 AM.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">In the early fog of dawn, Union General Joseph Hooker pushes southwards with his I Corps, starting from the edge of North Woods, past the R. Miller Farm and through the Miller Cornfield only to be engaged south of it by defending Confederate General Ewell's Division at about 7 AM.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHooker'sPushDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 06:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 06:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHagerstownTurnpikeDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Upon leaving Miller’s Cornfield, the Union attacks the Confederates who are defending the Hagerstown Turnpike, a road running next to the cornfield. Its fenced in sides and the road itself functions as a clear line between Jackson’s forces in the West Woods and Hooker’s south of the cornfield.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Upon leaving Miller’s Cornfield, the Union attacks the Confederates who are defending the Hagerstown Turnpike, a road running next to the cornfield. Its fenced in sides and the road itself functions as a clear line between Jackson’s forces in the West Woods and Hooker’s south of the cornfield.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHagerstownTurnpikeDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 06:30</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 06:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoMiller'sCornfieldDescription</Data></Cell>
+    <Cell><Data ss:Type="String">An hour after the early morning actions of General Hooker and his Corps near the Miller farmstead, the damaged cornfield is subjected to a new infusion of blood, this time from the men of Hood's division. A withering fire from several sides mean that terrible casualties are wrought.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">An hour after the early morning actions of General Hooker and his Corps near the Miller farmstead, the damaged cornfield is subjected to a new infusion of blood, this time from the men of Hood's division. A withering fire from several sides mean that terrible casualties are wrought.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoMiller'sCornfieldDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 07:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 07:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoEastWoodsDescription</Data></Cell>
+    <Cell><Data ss:Type="String">As Confederate General Hood attempts to push the advancing Union General Hooker’s I Corps back into the Cornfield, some of his forces also push against the Union holding in the East Woods directly adjacent to Miller’s Cornfield.  </Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">As Confederate General Hood attempts to push the advancing Union General Hooker’s I Corps back into the Cornfield, some of his forces also push against the Union holding in the East Woods directly adjacent to Miller’s Cornfield.  </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoEastWoodsDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 07:20</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 07:20</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoEastWoodsSkirmishDescription</Data></Cell>
+    <Cell><Data ss:Type="String">During the late afternoon of September 16th, General Hooker takes his Corps across Antietam creek at the upper bridge in order to locate the rebel flank. In the waning light, the 42nd PA and 3rd PA reserves are sent out in a skirmish formation to probe the East Woods for rebels.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">During the late afternoon of September 16th, General Hooker takes his Corps across Antietam creek at the upper bridge in order to locate the rebel flank. In the waning light, the 42nd PA and 3rd PA reserves are sent out in a skirmish formation to probe the East Woods for rebels.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoEastWoodsSkirmishDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 16th - 20:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 16th - 20:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoBloodyLaneDescription</Data></Cell>
+    <Cell><Data ss:Type="String">A sunken road often used by farmers becomes a natural fort against a Union onslaught of Rebel lines as Union General French pushes forward with his 3rd Division and becomes engaged with elements of Confederate General D.H. Hill’s Division entrenched in the road.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">A sunken road often used by farmers becomes a natural fort against a Union onslaught of Rebel lines as Union General French pushes forward with his 3rd Division and becomes engaged with elements of Confederate General D.H. Hill’s Division entrenched in the road.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoBloodyLaneDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 09:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 09:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoPryFordDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In this alternate scenario, grey-clad soldiers hold an important point near a ford on the Antietam Creek, and are attacked by dismounted Union cavalry under Pleasanton used by Union Commander General McClellan as skirmishers probing for the enemy throughout the day of fighting.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">In this alternate scenario, grey-clad soldiers hold an important point near a ford on the Antietam Creek, and are attacked by dismounted Union cavalry under Pleasanton used by Union Commander General McClellan as skirmishers probing for the enemy throughout the day of fighting.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoPryFordDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 09:30</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 09:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoPryGristMillDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In this alternate scenario, Hooker's forces must contend with Confederate skirmishers holding an important crossing point of the Little Antietam creek. Pry’s Grist Mill is situated near the confluence of Little Antietam and Antietam Creek and is a major supplier of flour in the region. </Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">In this alternate scenario, Hooker's forces must contend with Confederate skirmishers holding an important crossing point of the Little Antietam creek. Pry’s Grist Mill is situated near the confluence of Little Antietam and Antietam Creek and is a major supplier of flour in the region. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoPryGristMillDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 10:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 10:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoPryHouseDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In this alternative scenario pockets of Confederate forces have managed to sneak by the Union line and are attacking Pry House, headquarter of commanding Union General George B. McClellan. </Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">In this alternative scenario pockets of Confederate forces have managed to sneak by the Union line and are attacking Pry House, headquarter of commanding Union General George B. McClellan. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoPryHouseDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 10:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 10:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoWestWoodsDescription</Data></Cell>
+    <Cell><Data ss:Type="String">General Edwin Sumner's Union Second Corps advances into the West Woods where they are met by Confederate Wing Commander Jackson’s men. Union General John Sedgwick's division is performing a series of reckless charges into the Confederates at very high costs to break the Confederate line.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">General Edwin Sumner's Union Second Corps advances into the West Woods where they are met by Confederate Wing Commander Jackson’s men. Union General John Sedgwick's division is performing a series of reckless charges into the Confederates at very high costs to break the Confederate line.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoWestWoodsDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 10:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 10:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoDunkerChurchDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Union General Greene pushes his Division towards the rebel-held whitewashed church on the outskirts of the West Woods from the direction of the burning Mumma Farm. The church is a focal point of several Union attacks as it sits elevated on a small plateau. </Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Union General Greene pushes his Division towards the rebel-held whitewashed church on the outskirts of the West Woods from the direction of the burning Mumma Farm. The church is a focal point of several Union attacks as it sits elevated on a small plateau. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoDunkerChurchDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 10:30</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 10:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoBurnsideBridgeDescription</Data></Cell>
+    <Cell><Data ss:Type="String">After several hours of preparation, Union General Burnside is ready to advance the IX Corps against Confederate General Toombs’ Brigade of skirmishers whom, while being vastly outnumbered, holds the heights overlooking the Lower Bridge crossing Antietam Creek.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">After several hours of preparation, Union General Burnside is ready to advance the IX Corps against Confederate General Toombs’ Brigade of skirmishers whom, while being vastly outnumbered, holds the heights overlooking the Lower Bridge crossing Antietam Creek.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoBurnsideBridgeDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 11:30</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 11:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoOtto&amp;SherrickFarmDescription</Data></Cell>
+    <Cell><Data ss:Type="String">The idyllic farms of the Otto and Sherrick families becomes a heavily contested area as the two forces clash. The farms are situated in close proximity to the Lower Bridge and moving towards the town of Sharpsburg dictates passing their grounds.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">The idyllic farms of the Otto and Sherrick families becomes a heavily contested area as the two forces clash. The farms are situated in close proximity to the Lower Bridge and moving towards the town of Sharpsburg dictates passing their grounds.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoOtto&amp;SherrickFarmDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 12:30</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 12:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoPiperFarmDescription</Data></Cell>
+    <Cell><Data ss:Type="String">The 7th Maine is ordered by Colonel Irwin to push past the bodies at the Bloody Lane, the Piper Cornfield, the apple orchard and attack the Piper farm buildings themselves, which act as headquarters for Confederate Wing Commander General Longstreet. 4 Confederate brigades await them.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">The 7th Maine is ordered by Colonel Irwin to push past the bodies at the Bloody Lane, the Piper Cornfield, the apple orchard and attack the Piper farm buildings themselves, which act as headquarters for Confederate Wing Commander General Longstreet. 4 Confederate brigades await them.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoPiperFarmDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 16:30</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 16:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoNicodemusHillDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Confederates are defending Jackson's artillery positioned on Nicodemus Hill from the Union attacking from the direction of Miller farm. The commanding viewpoint offered by Nicodemus Hill offers Washington’s, Chew’s, and Pelham’s batteries devastating fire down the Union lines.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Confederates are defending Jackson's artillery positioned on Nicodemus Hill from the Union attacking from the direction of Miller farm. The commanding viewpoint offered by Nicodemus Hill offers Washington’s, Chew’s, and Pelham’s batteries devastating fire down the Union lines.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoNicodemusHillDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 08:45</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 08:45</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoCooke'sCounterchargeDescription</Data></Cell>
+    <Cell><Data ss:Type="String">After several hours with no reinforcements, Union General Greene is forced to withdraw from his salient in the West Woods. Confederate Colonel Cooke orders a countercharge towards Mumma Farm in response to the fleeing Federals.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">After several hours with no reinforcements, Union General Greene is forced to withdraw from his salient in the West Woods. Confederate Colonel Cooke orders a countercharge towards Mumma Farm in response to the fleeing Federals.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoCooke'sCounterchargeDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 12:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 12:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoRouletteLaneDescription</Data></Cell>
+    <Cell><Data ss:Type="String">The 3rd Arkansas and 27th North Carolina under Colonel Cooke find themselves on the flank of the Federals now in possession of the Sunken Road. The 1st Delaware and 14th Indiana are tasked with holding the rebels back at Roulette Lane.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">The 3rd Arkansas and 27th North Carolina under Colonel Cooke find themselves on the flank of the Federals now in possession of the Sunken Road. The 1st Delaware and 14th Indiana are tasked with holding the rebels back at Roulette Lane.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoRouletteLaneDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 12:45</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 12:45</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHill'sCounterattackDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Confederate General Hill arrives from Harper's Ferry late in the day with his Light Division partially wearing captured Federal uniforms. The Division smashes into the flank of the advancing Burnside's Corps which has been delayed heavily earlier in the day at the Lower Bridge.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Confederate General Hill arrives from Harper's Ferry late in the day with his Light Division partially wearing captured Federal uniforms. The Division smashes into the flank of the advancing Burnside's Corps which has been delayed heavily earlier in the day at the Lower Bridge.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHill'sCounterattackDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 17th - 17:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 17th - 17:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoMarylandHeightsDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Early on the morning of the 13th, Kershaw’s and Barksdale’s Brigades of Confederates attack the Maryland Heights while the 32nd Ohio and 126th New York try to guard the approach to Harper’s Ferry.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Early on the morning of the 13th, Kershaw’s and Barksdale’s Brigades of Confederates attack the Maryland Heights while the 32nd Ohio and 126th New York try to guard the approach to Harper’s Ferry.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoMarylandHeightsDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 13th - 09:30</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 13th - 09:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoRiverCrossingDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In this fictitious scenario, Confederates under General McLaws desperately attempt to cross the Potomac River to assault the town of Harper’s Ferry from both sides.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">In this fictitious scenario, Confederates under General McLaws desperately attempt to cross the Potomac River to assault the town of Harper’s Ferry from both sides.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoRiverCrossingDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 09:30</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 15th - 09:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoDowntownDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In this fictitious scenario, the Confederates have breached Camp Hill, and are now assaulting the downtown area of Harper’s Ferry where the last defenders doggedly try to hold out against them.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">In this fictitious scenario, the Confederates have breached Camp Hill, and are now assaulting the downtown area of Harper’s Ferry where the last defenders doggedly try to hold out against them.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoDowntownDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 10:00</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">September 15th - 10:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHighStreetDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In this fictitious scenario, the Union garrison under General Miles attempt to defend the north side of Camp Hill against Confederate assaults after their taking of the Bolivar Heights. </Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">In this fictitious scenario, the Union garrison under General Miles attempt to defend the north side of Camp Hill against Confederate assaults after their taking of the Bolivar Heights. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHighStreetDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 11:00</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 11:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoShenandoahStreetDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In this semi-fictitious scenario, AP Hill has broken past the southern defenses of Bolivar Heights, and is now threatening to take the downtown region of Harper’s Ferry as blue-clad defenders scramble to stop the Confederates.</Data></Cell>
+    <Cell><Data ss:Type="String">In this semi-fictitious scenario, AP Hill has broken past the southern defenses of Bolivar Heights, and is now threatening to take the downtown region of Harper’s Ferry as blue-clad defenders scramble to stop the Confederates.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoShenandoahStreetDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 13:30</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 12:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHarpersGraveyardDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In this fictitious scenario, following the taking of Bolivar Heights, the Confederates are launching an assault on the last holdouts of the garrison via the historic Harper’s Graveyard.</Data></Cell>
+    <Cell><Data ss:Type="String">In this fictitious scenario, following the taking of Bolivar Heights, the Confederates are launching an assault on the last holdouts of the garrison via the historic Harper’s Graveyard.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHarpersGraveyardDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 14:30</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 14:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoWashingtonStreetDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In this fictitious scenario, the Union garrison attempt to defend against Confederates now streaming down Camp Hill by way of the main thoroughfare to Harper’s Ferry from Bolivar – Washington Street.</Data></Cell>
+    <Cell><Data ss:Type="String">In this fictitious scenario, the Union garrison attempt to defend against Confederates now streaming down Camp Hill by way of the main thoroughfare to Harper’s Ferry from Bolivar – Washington Street.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoWashingtonStreetDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 15:30</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 15:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoSchoolHouseRidgeDescription</Data></Cell>
+    <Cell><Data ss:Type="String">During the siege of Harper's Ferry, General Stonewall Jackson had lined a large portion of his force along Schoolhouse Ridge, which sat opposite a valley overlooked by the Bolivar Heights, which the Union had hastily fortified. In this fictitious scenario, the Confederates attempt to make a frontal charge against the strong defenses of the Union!</Data></Cell>
+    <Cell><Data ss:Type="String">During the siege of Harper's Ferry, General Stonewall Jackson had lined a large portion of his force along Schoolhouse Ridge, which sat opposite a valley overlooked by the Bolivar Heights, which the Union had hastily fortified. In this fictitious scenario, the Confederates attempt to make a frontal charge against the strong defenses of the Union!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoSchoolHouseRidgeDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 06:30</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 06:30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishinfoBolivarHeightsCampDescription</Data></Cell>
+    <Cell><Data ss:Type="String">The Bolivar Heights was an important and strategic position for Union forces during their garrison of the town, the ridge also serving as a partial campsite to the 15,000 stationed in the beautiful valley. In this fictitious scenario, Confederate forces have breached the hastily-made defences, while Union forces desperately try to muster a counterattack.</Data></Cell>
+    <Cell><Data ss:Type="String">The Bolivar Heights was an important and strategic position for Union forces during their garrison of the town, the ridge also serving as a partial campsite to the 15,000 stationed in the beautiful valley. In this fictitious scenario, Confederate forces have breached the hastily-made defences, while Union forces desperately try to muster a counterattack.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishinfoBolivarHeightsCampDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 09:00</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 09:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishinfoBolivarHeightsRedoubtDescription</Data></Cell>
+    <Cell><Data ss:Type="String">The Bolivar Heights was an important and strategic position for Union forces during their garrison of the town, the ridge also serving as a partial campsite to the 15,000 stationed in the beautiful valley. In this fictitious scenario, Confederate forces are attacking the artillery redoubt of the entrenched Union forces.</Data></Cell>
+    <Cell><Data ss:Type="String">The Bolivar Heights was an important and strategic position for Union forces during their garrison of the town, the ridge also serving as a partial campsite to the 15,000 stationed in the beautiful valley. In this fictitious scenario, Confederate forces are attacking the artillery redoubt of the entrenched Union forces.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishinfoBolivarHeightsRedoubtDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 10:00</Data></Cell>
+    <Cell><Data ss:Type="String">September 15th - 10:00</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoGarland'sStandDescription</Data></Cell>
+    <Cell><Data ss:Type="String">CSA Brig. General Samuel Garland having been ordered by Maj. Gen. D.H. Hill to defend Fox's Gap and its road - directly exposing the wagon trains of the Confederate army should it fall, is now deploying his brigade next to the Wise Farm. To his immediate front Union Colonel Scammon's brigade consisting of the 30th and 12th Ohio is advancing and engaging with the 13th and 20th North Carolina while the 23rd Ohio is putting pressure on his far too drawn-out line's right flank.</Data></Cell>
+    <Cell><Data ss:Type="String">CSA Brig. General Samuel Garland having been ordered by Maj. Gen. D.H. Hill to defend Fox's Gap and its road - directly exposing the wagon trains of the Confederate army should it fall, is now deploying his brigade next to the Wise Farm. To his immediate front Union Colonel Scammon's brigade consisting of the 30th and 12th Ohio is advancing and engaging with the 13th and 20th North Carolina while the 23rd Ohio is putting pressure on his far too drawn-out line's right flank.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoGarland'sStandDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 10:00 close to Fox's Gap</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 10:00 close to Fox's Gap</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHatch'sAttackDescription</Data></Cell>
+    <Cell><Data ss:Type="String">In an effort to secure the southern part of South Mountain itself and thus open up the flank of Confederate Major General D.H. Hill situated at the strong defensive positions at Mountain House and on the Dahlgren Road at Turner's Gap, Union Brig. Gen. John Hatch's 3500-man division pushes onwards and upwards through some of the most difficult and rocky terrain of the battlefield. On top of the crest CSA General Garnett's 400-man division is rushing forwards to safeguard the flank of the mountain gap.</Data></Cell>
+    <Cell><Data ss:Type="String">In an effort to secure the southern part of South Mountain itself and thus open up the flank of Confederate Major General D.H. Hill situated at the strong defensive positions at Mountain House and on the Dahlgren Road at Turner's Gap, Union Brig. Gen. John Hatch's 3500-man division pushes onwards and upwards through some of the most difficult and rocky terrain of the battlefield. On top of the crest CSA General Garnett's 400-man division is rushing forwards to safeguard the flank of the mountain gap.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHatch'sAttackDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 18:30 close to Turner's Gap</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 18:30 close to Turner's Gap</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoColquitt'sDefenceDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Positioned behind a stonewall at the base of Turner's Gap and on the fenced-in Dahlgren Road running above the gap, overlooking the National Road headed into Turner's Gap, CSA Colonel Colquitt's brigade readies itself for the attack it knows is coming after having witnessed Union Gen. Hatch's attack on Garnett to the left of Colquitt's brigade an hour earlier. On the National Road in front of them, Union Gen. Gibbon's brigade begins its slow but steady push with an iron-like determination.</Data></Cell>
+    <Cell><Data ss:Type="String">Positioned behind a stonewall at the base of Turner's Gap and on the fenced-in Dahlgren Road running above the gap, overlooking the National Road headed into Turner's Gap, CSA Colonel Colquitt's brigade readies itself for the attack it knows is coming after having witnessed Union Gen. Hatch's attack on Garnett to the left of Colquitt's brigade an hour earlier. On the National Road in front of them, Union Gen. Gibbon's brigade begins its slow but steady push with an iron-like determination.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoColquitt'sDefenceDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 19:00 Turner's Gap</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 19:00 Turner's Gap</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoReno'sFallDescription</Data></Cell>
+    <Cell><Data ss:Type="String">After the Confederate collapse at Fox's Gap earlier in the day due to the attacks by Union Maj. Gen. Reno's IX Corps, CSA Brig. Gen. Hood now orders his division south to relieve the battered Confederate lines in an effort to regain a foothold at the gap. To deny the Confederates the chance of doing so, the 51st New York and Pennsylvania are sent forward with the Corps commander in close proximity in order to inspire his troops and inspect the lines.</Data></Cell>
+    <Cell><Data ss:Type="String">After the Confederate collapse at Fox's Gap earlier in the day due to the attacks by Union Maj. Gen. Reno's IX Corps, CSA Brig. Gen. Hood now orders his division south to relieve the battered Confederate lines in an effort to regain a foothold at the gap. To deny the Confederates the chance of doing so, the 51st New York and Pennsylvania are sent forward with the Corps commander in close proximity in order to inspire his troops and inspect the lines.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoReno'sFallDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 18:00 close to Fox's Gap</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 18:00 close to Fox's Gap</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoCox'sPushDescription</Data></Cell>
+    <Cell><Data ss:Type="String">As the 30th and 12th Ohio attack the left flank of Garland's Brigade, Union Division Commander Jacob Cox pushes forward the 36th and 23rd Ohio to engage the Confederate 5th North Carolina as well as the 23rd North Carolina, having just reinforced the stretched out and besieged Confederate line. Between the two lines is Fox's Gap, a windswept, valley-like gap covered in stonewalls, fencing in the numerous fields covering the area.</Data></Cell>
+    <Cell><Data ss:Type="String">As the 30th and 12th Ohio attack the left flank of Garland's Brigade, Union Division Commander Jacob Cox pushes forward the 36th and 23rd Ohio to engage the Confederate 5th North Carolina as well as the 23rd North Carolina, having just reinforced the stretched out and besieged Confederate line. Between the two lines is Fox's Gap, a windswept, valley-like gap covered in stonewalls, fencing in the numerous fields covering the area.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoCox'sPushDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 11:00 Fox's Gap</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 11:00 Fox's Gap</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoAnderson'sCounterattackDescription</Data></Cell>
+    <Cell><Data ss:Type="String">With but a few hours of daylight left the 9th and 89th New York along with Clark's Battery take up a defensive position on the northern side of Fox's Gap, defended by Garland's, now broken, Brigade earlier in the day. CSA Gen. G.B. Anderson, arriving with badly needed reinforcements to the remnants of the Confederate force, targets Clark's Battery and the two New York regiments for his counterattack. </Data></Cell>
+    <Cell><Data ss:Type="String">With but a few hours of daylight left the 9th and 89th New York along with Clark's Battery take up a defensive position on the northern side of Fox's Gap, defended by Garland's, now broken, Brigade earlier in the day. CSA Gen. G.B. Anderson, arriving with badly needed reinforcements to the remnants of the Confederate force, targets Clark's Battery and the two New York regiments for his counterattack. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoAnderson'sCounterattackDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 18:00 Fox's Gap</Data></Cell>
+    <Cell><Data ss:Type="String">September 14th - 18:00 Fox's Gap</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="89.25">
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishinfoPicketPatrolDescription</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Eliminate enemy picket force.&#10;\n&#10;One life per round.&#10;\n&#10;Random team spawn points.&#10;\n&#10;Strict formation rules.</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Eliminate enemy picket force.&#10;\n&#10;One life per round.&#10;\n&#10;Random team spawn points.&#10;\n&#10;Strict formation rules.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishinfoPicketPatrolDateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September, 1862</Data></Cell>
+    <Cell><Data ss:Type="String">September, 1862</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">usaAttackingBanner</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;YOU'RE &lt;/font&gt;&lt;font color='#e4a688'&gt;ATTACKING&lt;/font&gt;&lt;font color='#FFFFFF'&gt; THE POINT OF CONTENTION!&lt;/font&gt;</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;YOU'RE &lt;/font&gt;&lt;font color='#e4a688'&gt;ATTACKING&lt;/font&gt;&lt;font color='#FFFFFF'&gt; THE POINT OF CONTENTION!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">usaDefendingBanner</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;YOU'RE &lt;/font&gt;&lt;font color='#88ade4'&gt;DEFENDING&lt;/font&gt;&lt;font color='#FFFFFF'&gt; THE POINT OF CONTENTION!&lt;/font&gt;</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;YOU'RE &lt;/font&gt;&lt;font color='#88ade4'&gt;DEFENDING&lt;/font&gt;&lt;font color='#FFFFFF'&gt; THE POINT OF CONTENTION!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">csaAttackingBanner</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;YOU'RE &lt;/font&gt;&lt;font color='#e4a688'&gt;ATTACKING&lt;/font&gt;&lt;font color='#FFFFFF'&gt; THE POINT OF CONTENTION!&lt;/font&gt;</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;YOU'RE &lt;/font&gt;&lt;font color='#e4a688'&gt;ATTACKING&lt;/font&gt;&lt;font color='#FFFFFF'&gt; THE POINT OF CONTENTION!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">csaDefendingBanner</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;YOU'RE &lt;/font&gt;&lt;font color='#88ade4'&gt;DEFENDING&lt;/font&gt;&lt;font color='#FFFFFF'&gt; THE POINT OF CONTENTION!&lt;/font&gt;</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;YOU'RE &lt;/font&gt;&lt;font color='#88ade4'&gt;DEFENDING&lt;/font&gt;&lt;font color='#FFFFFF'&gt; THE POINT OF CONTENTION!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:Index="101">
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHarpersFerryUSADescription</Data></Cell>
+    <Cell><Data ss:Type="String">Situated in the beautiful Shenandoah Valley, Bolivar Heights is one of three the commands an overlook of the town of Harper's Ferry below. Camp Hill and the Bolivar Heights were taken over by those garrisoning this strategically important confluence of rail and water.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Situated in the beautiful Shenandoah Valley, Bolivar Heights is one of three the commands an overlook of the town of Harper's Ferry below. Camp Hill and the Bolivar Heights were taken over by those garrisoning this strategically important confluence of rail and water.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoHarpersFerryUSADateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September, 1862</Data></Cell>
+    <Cell><Data ss:Type="String">September, 1862</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoDrillCampUSADescription</Data></Cell>
+    <Cell><Data ss:Type="String">Nestled in the lush and gently rolling hills of central Maryland, a regiment-sized camp has been set up among various farmsteads in 1862. </Data></Cell>
+    <Cell><Data ss:Type="String">Nestled in the lush and gently rolling hills of central Maryland, a regiment-sized camp has been set up among various farmsteads in 1862. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoDrillCampUSADateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September, 1862</Data></Cell>
+    <Cell><Data ss:Type="String">September, 1862</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoDrillCampCSADescription</Data></Cell>
+    <Cell><Data ss:Type="String">Having crossed the Potomac earlier in the week, Confederate forces have carved out space among the ample farmland of central Maryland for a regiment-sized encampment during the Maryland Campaign of 1862. </Data></Cell>
+    <Cell><Data ss:Type="String">Having crossed the Potomac earlier in the week, Confederate forces have carved out space among the ample farmland of central Maryland for a regiment-sized encampment during the Maryland Campaign of 1862. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">SkirmishInfoDrillCampCSADateTime</Data></Cell>
+    <Cell><Data ss:Type="String">September, 1862</Data></Cell>
+    <Cell><Data ss:Type="String">September, 1862</Data></Cell>
+   </Row>
+   <Row ss:Index="109" ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Tab Screen</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Attack</Data></Cell>
+    <Cell><Data ss:Type="String">Attack</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Attack</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Defend</Data></Cell>
+    <Cell><Data ss:Type="String">Defend</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Defend</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Drill</Data></Cell>
+    <Cell><Data ss:Type="String">Drill</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Drill</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Picket</Data></Cell>
+    <Cell><Data ss:Type="String">Picket</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Picket</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4" ss:Formula="=RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">End Game Screen</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="96">
+    <Cell ss:Index="2"><Data ss:Type="String">UsaVictoryDescription</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">A cause for great celebration has come from the recent clashes in Maryland! After a resounding victory at the passes of Fox's and Crampton's Gap, we now hear that our General McClellan, sometimes lovingly referred to as &quot;Little Napoleon&quot; in good measure, has routed that wily Lee and his ragtag forces after their poor attempt at threatening loyal Northern land! Even now he and his bunch of miscreants are slinking their way back across the Potomac, of which their illicit crossing was discovered.</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">A cause for great celebration has come from the recent clashes in Maryland! After a resounding victory at the passes of Fox's and Crampton's Gap, we now hear that our General McClellan, sometimes lovingly referred to as &quot;Little Napoleon&quot; in good measure, has routed that wily Lee and his ragtag forces after their poor attempt at threatening loyal Northern land! Even now he and his bunch of miscreants are slinking their way back across the Potomac, of which their illicit crossing was discovered.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="96">
+    <Cell ss:Index="2"><Data ss:Type="String">UsaDefeatDescription</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Let all those across the North bow their heads in mourning to those brave sons we have lost today. Our reporters from the field are sorry to forward news of our retreat from the bloodied fields near Antietam Creek. Even now, our brave men retreat through the streets of Frederick, which they marched through in such display of military might not but a few days before. The majority including wounded are expected to return to the depleted defenses of Washington within the week.</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">Let all those across the North bow their heads in mourning to those brave sons we have lost today. Our reporters from the field are sorry to forward news of our retreat from the bloodied fields near Antietam Creek. Even now, our brave men retreat through the streets of Frederick, which they marched through in such display of military might not but a few days before. The majority including wounded are expected to return to the depleted defenses of Washington within the week.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="96">
+    <Cell ss:Index="2"><Data ss:Type="String">CsaVictoryDescription</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">The telegraph wires have been bogged down since last week with the glorious news of our victory over the Northerners in Maryland, as General Lee has once again triumphed on the field against &quot;Little Napoleon&quot; and his ragtag band of Yankees near Sharpsburg! We at the Richmond Enquirer have heard from various officers directly from the field as they continue now towards the defenses of Washington as to the events, but all are now expecting a quick end to the present hostilities.</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">The telegraph wires have been bogged down since last week with the glorious news of our victory over the Northerners in Maryland, as General Lee has once again triumphed on the field against &quot;Little Napoleon&quot; and his ragtag band of Yankees near Sharpsburg! We at the Richmond Enquirer have heard from various officers directly from the field as they continue now towards the defenses of Washington as to the events, but all are now expecting a quick end to the present hostilities.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="96">
+    <Cell ss:Index="2"><Data ss:Type="String">CsaDefeatDescription</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">We at the Richmond Enquirer are mournful in our recounting that our glorious forces, in their incursion of the cursed north, have been thwarted in their brave efforts. Early the morning of the 17th, after a light bombardment and a continuation thereof in the dewy early hours, the divisions of General Jackson's left flank were attacked outside of Sharpsburg near the Hagerstown turnpike. Our troops, having met the flurry of lead hail with a hail of their own to severe losses of the enemy.</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">We at the Richmond Enquirer are mournful in our recounting that our glorious forces, in their incursion of the cursed north, have been thwarted in their brave efforts. Early the morning of the 17th, after a light bombardment and a continuation thereof in the dewy early hours, the divisions of General Jackson's left flank were attacked outside of Sharpsburg near the Hagerstown turnpike. Our troops, having met the flurry of lead hail with a hail of their own to severe losses of the enemy.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4" ss:StyleID="s74"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Leaving Area</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_OutOfLineDefault</Data></Cell>
+    <Cell><Data ss:Type="String">You're about to desert your fellow men!&lt;br/&gt;Turn back.</Data></Cell>
+    <Cell><Data ss:Type="String">You're about to desert your fellow men!&lt;br/&gt;Turn back.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_OutOfLineOfficer</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Return to lead your regiment!&lt;br/&gt;An officer &lt;font color='#A33324'&gt;Out of Line&lt;/font&gt;&lt;font color='#FFFFFF'&gt; has no place on the field of battle!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Return to lead your regiment!&lt;br/&gt;An officer &lt;font color='#A33324'&gt;Out of Line&lt;/font&gt;&lt;font color='#FFFFFF'&gt; has no place on the field of battle!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_OutOfLineFlagBearer</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Return to your comrades!&lt;br/&gt;Reinforcements unable to deploy when &lt;font color='#A33324'&gt;Out of Line.&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Return to your comrades!&lt;br/&gt;Reinforcements unable to deploy when &lt;font color='#A33324'&gt;Out of Line.&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="16.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_OutOfLineLastStand</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFB324'&gt;Last Stand&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;Return to the point of contention immediately!&lt;/font&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFB324'&gt;Last Stand&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;Return to the point of contention immediately!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="16.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_DesertingAreaPicketPatrol</Data></Cell>
+    <Cell><Data ss:Type="String">You are leaving your designated patrol area!&lt;br/&gt;Turn back immediately!</Data></Cell>
+    <Cell><Data ss:Type="String">You are leaving your designated patrol area!&lt;br/&gt;Turn back immediately!</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="16.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_OutOfLinePicketPatrol</Data></Cell>
+    <Cell><Data ss:Type="String">You're about to desert your fellow men!&lt;br/&gt;Turn back.</Data></Cell>
+    <Cell><Data ss:Type="String">You're about to desert your fellow men!&lt;br/&gt;Turn back.</Data></Cell>
+   </Row>
+   <Row ss:Index="129" ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Ticket texts</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_battleReady</Data></Cell>
+    <Cell><Data ss:Type="String">BATTLE READY</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">BATTLE READY</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_engaged</Data></Cell>
+    <Cell><Data ss:Type="String">ENGAGED</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">ENGAGED</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_takingLosses</Data></Cell>
+    <Cell><Data ss:Type="String">TAKING LOSSES</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">TAKING LOSSES</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_breaking</Data></Cell>
+    <Cell><Data ss:Type="String">BREAKING</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">BREAKING</Data></Cell>
+   </Row>
+   <Row ss:Index="135">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_lastStand</Data></Cell>
+    <Cell><Data ss:Type="String">LAST STAND</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">LAST STAND</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_finalPush</Data></Cell>
+    <Cell><Data ss:Type="String">FINAL PUSH</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">FINAL PUSH</Data></Cell>
+   </Row>
+   <Row ss:Index="138">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_FinalCounterAttackLabel</Data></Cell>
+    <Cell><Data ss:Type="String">Final Counter Attack</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Final Counter Attack</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_CounterAttackLabel</Data></Cell>
+    <Cell><Data ss:Type="String">Counter Attacking</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Counter Attacking</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_Overtime</Data></Cell>
+    <Cell><Data ss:Type="String">Overtime</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Overtime</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4" ss:StyleID="s74"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Screen messages</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_LastStandMessageDefender</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;We are about to be overrun!&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFB324'&gt;Reinforce the contested area immediately!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;We are about to be overrun!&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFB324'&gt;Reinforce the contested area immediately!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_LastStandMessageDefenderSpawned</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Reinforce the contested area immediately!&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFB324'&gt;If you refuse to comply, you will be treated as a deserter!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Reinforce the contested area immediately!&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFB324'&gt;If you refuse to comply, you will be treated as a deserter!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_LastStandMessageAttacker</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The enemy has run out of reserves!&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;Now is the time to push them off the field!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The enemy has run out of reserves!&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFFFFF'&gt;Now is the time to push them off the field!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_FinalPushMessageAttacker</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The fighting spirit of our team is breaking!&lt;br/&gt;Rally for one final push!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The fighting spirit of our team is breaking!&lt;br/&gt;Rally for one final push!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_FinalPushMessageDefender</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The enemy is breaking!&lt;br/&gt;Hold your ground!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The enemy is breaking!&lt;br/&gt;Hold your ground!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_TeamDamageWarning</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#A33324'&gt;WARNING!&lt;/font&gt;&lt;br/&gt;Additional team damage will result in a ban!</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#A33324'&gt;WARNING!&lt;/font&gt;&lt;br/&gt;Additional team damage will result in a ban!</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_PicketPatrolPreMatchEnded</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Enough players have joined.&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFB324'&gt;Formation restrictions are now active!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;Enough players have joined.&lt;/font&gt;&lt;br/&gt;&lt;font color='#FFB324'&gt;Formation restrictions are now active!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_CounterAttack_Started_Attack</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The enemy has taken the field&lt;/font&gt;&lt;br/&gt;Prepare to counter &lt;font color='#e4a688'&gt;attack!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The enemy has taken the field&lt;/font&gt;&lt;br/&gt;Prepare to counter &lt;font color='#e4a688'&gt;attack!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_CounterAttack_Started_Defend</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;We have captured the point&lt;/font&gt;&lt;br/&gt;&lt;font color='#88ade4'&gt;Defend &lt;font color='#FFFFFF'&gt;the field at all costs!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;We have captured the point&lt;/font&gt;&lt;br/&gt;&lt;font color='#88ade4'&gt;Defend &lt;font color='#FFFFFF'&gt;the field at all costs!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_CounterAttack_Stopped_Attack</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The enemy has recaptured the field&lt;/font&gt;&lt;br/&gt;Mount another &lt;font color='#e4a688'&gt;attack!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;The enemy has recaptured the field&lt;/font&gt;&lt;br/&gt;Mount another &lt;font color='#e4a688'&gt;attack!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_CounterAttack_Stopped_Defend</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;We have reclaimed the field&lt;/font&gt;&lt;br/&gt;It must be &lt;font color='#88ade4'&gt;defended!&lt;/font&gt;</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;We have reclaimed the field&lt;/font&gt;&lt;br/&gt;It must be &lt;font color='#88ade4'&gt;defended!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_ForwardSpawn_Artillery_Overrun</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;One of our artillery positions has been &lt;/font&gt;&lt;font color='#FFB324'&gt;overrun&lt;/font&gt;&lt;font color='#FFFFFF'&gt; by the enemy! Our battery crew is not able to deploy at it until retaken!&lt;/font&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;One of our artillery positions has been &lt;/font&gt;&lt;font color='#FFB324'&gt;overrun&lt;/font&gt;&lt;font color='#FFFFFF'&gt; by the enemy! Our battery crew is not able to deploy at it until retaken!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_ForwardSpawn_Artillery_Retaken</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;One of our artillery positions has been &lt;/font&gt;&lt;font color='#88ade4'&gt;retaken&lt;/font&gt;&lt;font color='#FFFFFF'&gt; by our forces! Our battery crew is now able to deploy at it once more!&lt;/font&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">&lt;font color='#FFFFFF'&gt;One of our artillery positions has been &lt;/font&gt;&lt;font color='#88ade4'&gt;retaken&lt;/font&gt;&lt;font color='#FFFFFF'&gt; by our forces! Our battery crew is now able to deploy at it once more!&lt;/font&gt;</Data></Cell>
+   </Row>
+   <Row ss:Index="157" ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Chat</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_systemMessage:</Data></Cell>
+    <Cell><Data ss:Type="String">[Server]:</Data></Cell>
+    <Cell><Data ss:Type="String">[Server]:</Data></Cell>
+   </Row>
+   <Row ss:Index="160" ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Player Information</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_Charge</Data></Cell>
+    <Cell><Data ss:Type="String">Charge</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Charge</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_QuickTime</Data></Cell>
+    <Cell><Data ss:Type="String">Quick Time</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Quick Time</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_DoubleQuick</Data></Cell>
+    <Cell><Data ss:Type="String">Double Quick</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Double Quick</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_Kneeling</Data></Cell>
+    <Cell><Data ss:Type="String">Kneeling</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Kneeling</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_ShoulderArms</Data></Cell>
+    <Cell><Data ss:Type="String">Shoulder Arms</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Shoulder Arms</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_RightShoulderShift</Data></Cell>
+    <Cell><Data ss:Type="String">Right Shoulder Shift</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Right Shoulder Shift</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_Salute</Data></Cell>
+    <Cell><Data ss:Type="String">Salute</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Salute</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_OrderArms</Data></Cell>
+    <Cell><Data ss:Type="String">Order Arms</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Order Arms</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_ParadeRest</Data></Cell>
+    <Cell><Data ss:Type="String">Parade Rest</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Parade Rest</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_InplaceRest</Data></Cell>
+    <Cell><Data ss:Type="String">Inplace Rest</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Inplace Rest</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_PresentArms</Data></Cell>
+    <Cell><Data ss:Type="String">Present Arms</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Present Arms</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_Pointing</Data></Cell>
+    <Cell><Data ss:Type="String">Pointing</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Pointing</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_MeleeMode</Data></Cell>
+    <Cell><Data ss:Type="String">Melee Mode</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Melee Mode</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_AtTheReady</Data></Cell>
+    <Cell><Data ss:Type="String">At The Ready</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">At The Ready</Data></Cell>
+   </Row>
+   <Row ss:Index="176" ss:AutoFitHeight="0" ss:Height="14.25">
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Interact Labels</Data></Cell>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_open_door</Data></Cell>
+    <Cell><Data ss:Type="String">Open Door</Data></Cell>
+    <Cell><Data ss:Type="String">Open Door</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_close_door</Data></Cell>
+    <Cell><Data ss:Type="String">Close Door</Data></Cell>
+    <Cell><Data ss:Type="String">Close Door</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_PushWheel</Data></Cell>
+    <Cell><Data ss:Type="String">Push Wheel</Data></Cell>
+    <Cell><Data ss:Type="String">Push Wheel</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_PickUpTrailSpike</Data></Cell>
+    <Cell><Data ss:Type="String">Pick Up Trail Spike</Data></Cell>
+    <Cell><Data ss:Type="String">Pick Up Trail Spike</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_TurnElevationScrew</Data></Cell>
+    <Cell><Data ss:Type="String">Turn Elevation Screw</Data></Cell>
+    <Cell><Data ss:Type="String">Turn Elevation Screw</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_SpongeBarrel</Data></Cell>
+    <Cell><Data ss:Type="String">Sponge Barrel</Data></Cell>
+    <Cell><Data ss:Type="String">Sponge Barrel</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_RamWorm</Data></Cell>
+    <Cell><Data ss:Type="String">Ram Worm</Data></Cell>
+    <Cell><Data ss:Type="String">Ram Worm</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_InsertRound</Data></Cell>
+    <Cell><Data ss:Type="String">Insert Round</Data></Cell>
+    <Cell><Data ss:Type="String">Insert Round</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_RamRound</Data></Cell>
+    <Cell><Data ss:Type="String">Ram Round</Data></Cell>
+    <Cell><Data ss:Type="String">Ram Round</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_PrimeCannon</Data></Cell>
+    <Cell><Data ss:Type="String">Prime Cannon</Data></Cell>
+    <Cell><Data ss:Type="String">Prime Cannon</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_Ignition</Data></Cell>
+    <Cell><Data ss:Type="String">Ignition</Data></Cell>
+    <Cell><Data ss:Type="String">Ignition</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_PickUpPole</Data></Cell>
+    <Cell><Data ss:Type="String">Pick Up Pole</Data></Cell>
+    <Cell><Data ss:Type="String">Pick Up Pole</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_OpenLimberChest</Data></Cell>
+    <Cell><Data ss:Type="String">Open Limber Chest</Data></Cell>
+    <Cell><Data ss:Type="String">Open Limber Chest</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_CloseLimberChest</Data></Cell>
+    <Cell><Data ss:Type="String">Close Limber Chest</Data></Cell>
+    <Cell><Data ss:Type="String">Close Limber Chest</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_TakeArtillery_3InchOrdnance_Shell</Data></Cell>
+    <Cell><Data ss:Type="String">Take Shell</Data></Cell>
+    <Cell><Data ss:Type="String">Take Shell</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_TakeArtillery_3InchOrdnance_Case</Data></Cell>
+    <Cell><Data ss:Type="String">Take Case</Data></Cell>
+    <Cell><Data ss:Type="String">Take Case</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_TakeArtillery_3InchOrdnance_Canister</Data></Cell>
+    <Cell><Data ss:Type="String">Take Canister</Data></Cell>
+    <Cell><Data ss:Type="String">Take Canister</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_TakeArtillery_12PdrNapoleon_Shell</Data></Cell>
+    <Cell><Data ss:Type="String">Take Shell</Data></Cell>
+    <Cell><Data ss:Type="String">Take Shell</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_TakeArtillery_12PdrNapoleon_Case</Data></Cell>
+    <Cell><Data ss:Type="String">Take Case</Data></Cell>
+    <Cell><Data ss:Type="String">Take Case</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_TakeArtillery_12PdrNapoleon_Canister</Data></Cell>
+    <Cell><Data ss:Type="String">Take Canister</Data></Cell>
+    <Cell><Data ss:Type="String">Take Canister</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Layout x:Orientation="Landscape"/>
+    <Header x:Margin="0.51181102362204722"
+     x:Data="&amp;LTime restriction sample script"/>
+    <Footer x:Margin="0.51181102362204722" x:Data="Page &amp;P"/>
+    <PageMargins x:Bottom="0.98425196850393704" x:Left="0" x:Right="0"
+     x:Top="0.98425196850393704"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <Scale>70</Scale>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>123</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>202</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
