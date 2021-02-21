@@ -28,10 +28,16 @@
     <img src="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.BurnsideBridge)}.png")" class="imageMaxWidth">
 </a>
 
+<p></p>
+
+<a href="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.BurnsideBridge)}_loading.png")" target="_blank">
+    <img src="@Url.Content($"~/img/maps/{Maps.Normalize(Maps.BurnsideBridge)}_loading.png")" class="imageMaxWidth">
+</a>
+
 <h2 class="text-right">Belligerents</h2>
 
 <div id="mapBelligerents" class="fancyClearBoth">
-    
+
     <ul>
         <li>
             <h3>
@@ -97,7 +103,7 @@
 
 @section scripts {
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("#navMaps").addClass('active');
             $("#navMapAntietam").addClass('active');
         })
