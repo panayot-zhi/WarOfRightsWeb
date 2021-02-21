@@ -38,10 +38,10 @@ namespace WarOfRightsWeb.Controllers
             dynamic vModel = new ExpandoObject();
 
             var filePath = Path.Combine(_webHostEnv.WebRootPath, "html", $"{_configuration["CompanyID"]}.html");
-            var content = System.IO.File.ReadAllText(filePath);
-            var roosterFile = new FileInfo(filePath);
-            vModel.Retrieved = roosterFile.LastWriteTime.ToString("f");
-            vModel.Content = content;
+            var roosterFile = System.IO.File.ReadAllText(filePath);
+            var roosterFileInfo = new FileInfo(filePath);
+            vModel.Retrieved = roosterFileInfo.LastWriteTime.ToString("f");
+            vModel.Rooster = roosterFile;
 
             return View(vModel);
         }
