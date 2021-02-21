@@ -1,0 +1,31 @@
+﻿@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment WebHost
+@model string
+
+@{
+    var id = Model;
+    var name = Weapons.DisplayNames[id];
+    var parameters = Weapons.Parameters[id];
+    var description = Weapons.Descriptions[id];
+    var imagePath = System.IO.Path.Combine(WebHost.WebRootPath, "img", "weapons", $"{id}.jpg");
+    var imageExists = System.IO.File.Exists(imagePath);
+    var image = Url.Content($"~/img/weapons/{id}.jpg");
+}
+
+<li>
+    <h3 id="@id">
+        @name
+    </h3>
+    <p>
+        @if (imageExists)
+        {
+            <a href="@image">
+                <img src="@image" alt="@name" class="imageRightAlign" />
+            </a>
+        }
+
+        @Html.Raw(parameters)
+        <br />
+        @Html.Raw(description)
+
+    </p>
+</li>

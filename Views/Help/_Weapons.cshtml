@@ -159,22 +159,8 @@
     </h2>
 
     <ul>
-        <li>
-            <h3 id="LorenzM1854">
-                Lorenz M1854
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/LorenzM1854.jpg")">
-                    <img src="@Url.Content("~/img/LorenzM1854.jpg")" alt="Lorenz M1854" class="imageRightAlign" />
-                </a>
-                Rifled Musket, Caliber: .54", ROF: 3 RPM<br>
-                Length: 37.52", Weight: 8.82 lbs, Range: 300 yds<br>
-                The Lorenz M1854 Rifle, an Austrian make. 392.000 were imported by the Union, 100.000 for the Confederacy. Union versions tended to get rebored to be .58 caliber 
-                so that the same ammo could be used, however the Confederates did not have the machinery to do such re-boring, so Confederate versions tended to stay at .54 caliber.
-                <br>
-                <small>P.S.: Please, do not use this rifle. It is shit.</small>
-            </p>
-        </li>
+        
+        @await Html.PartialAsync("_Weapon", Weapons.LorenzM1854)
 
         <li>
             <h3 id="Mississippi_1841">
