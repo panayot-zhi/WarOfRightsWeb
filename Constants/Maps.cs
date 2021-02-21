@@ -104,6 +104,9 @@ namespace WarOfRightsWeb.Constants
                 case DrillCampUSA:
                     return "DrillCamps";
 
+                case PicketPatrol:
+                    return "PicketPatrol";
+
                 case HarpersFerryBolivarHeightsCampUSA:
                     return "BolivarHeightsCampUSA";
 
