@@ -8,49 +8,10 @@
     </h2>
 
     <ul>
-        <li>
-            <h3 id="US_FtOfficerSword1850">
-                M1850 Foot Officer Sword
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/US_FtOfficerSword1850.jpg")">
-                    <img src="@Url.Content("~/img/US_FtOfficerSword1850.jpg")" alt="M1840 NCO Sword" class="imageRightAlign" />
-                </a>
-                Blade Length: 15.5", Weight: 4.5 lbs
-                <br>
-                Fashioned after many European military blades, the Foot Officer's Sword was intended to be worn by company level officers of Infantry and Artillery of the rank of Major and below.
-                It was accompanied in implementation by it's sister blade, the Staff Officer's Sword, which had a different design to it's brass guard.
-            </p>
-        </li>
 
-        <li>
-            <h3 id="US_LightCavalrySaber1860">
-                US Light Cavalry Saber M1860
-            </h3>
-            <p>
-                Length: 35", Weight: 2.25 lbs
-                <br>
-                Made as a lighter replacement of the cumbersome M1840 "Wristbreaker" Heavy Cavalry Saber, the Light Cavalry Saber was put into production
-                at the same time that the United States was reformulating its cavalry to better match military developments on the European continent.
-                Both the north and south made large use of this model of blade.
-            </p>
-        </li>
-
-        <li>
-            <h3 id="US_NCOSword1840">
-                M1840 NCO Sword
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/US_NCOSword1840.jpg")">
-                    <img src="@Url.Content("~/img/US_NCOSword1840.jpg")" alt="M1840 NCO Sword" class="imageRightAlign" />
-                </a>
-                Length: 15.5", Weight: 1 lbs 14 oz
-                <br>
-                Based largely off of French épées, or small swords, the 1840 NCO sword was a symbol of a non-commissioned officer's authority in a regiment.
-                In practice, many sergeants and corporals, though authorized to carry it, put more stock in a musket and bayonet.
-                However, such weapons added dash and daring to those on parade!
-            </p>
-        </li>
+        @await Html.PartialAsync("_Weapon", Weapons.US_FtOfficerSword1850)
+        @await Html.PartialAsync("_Weapon", Weapons.US_LightCavalrySaber1860)
+        @await Html.PartialAsync("_Weapon", Weapons.US_NCOSword1840)
     </ul>
 
     <h2>
@@ -58,100 +19,12 @@
     </h2>
 
     <ul>
-        <li>
-            <h3 id="RemingtonM1858">
-                Remington New Army Revolver M1858
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/RemingtonM1858.jpg")">
-                    <img src="@Url.Content("~/img/RemingtonM1858.jpg")" alt="Remington New Army Revolver M1858" class="imageRightAlign" />
-                </a>
-                Caliber: .44", ROF: 6 RPM<br>
-                Length: 13.25", Weight: 2.8 lbs, Range: 75 yds<br>
-                Remington quickly became the largest competitor of Colt in the weapons manufacturing market, and the enterprising upper-strap design on the M1858 is
-                one example of their fierce rivalry. While many soldiers were issued Colts, many preferred the ease of reloading and the durability offered by the design of the 1858.
-            </p>
-        </li>
-
-        <li>
-            <h3 id="LeMat">
-                LeMat M1855
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/LeMat.jpg")">
-                    <img src="@Url.Content("~/img/LeMat.jpg")" alt="LeMat M1855" class="imageRightAlign" />
-                </a>
-                Caliber: .42", ROF: 9 RPM<br>
-                Length: 13.25", Weight: 3.1 lbs, Range: 40 yds<br>
-                Originally developed just prior to the war by Jean Alexander LeMatt, a close cousin of future general Pierre Beauregard.
-                Beauregard was wearing one that was gifted to him by his cousin as he ordered his troops to begin bombardment of Fort Sumter.
-                Once the Union took control of New Orleans, LeMatt fled to Paris to continue production in France, while his nine-shot revolver with
-                its underslung sixteen-gauge shotgun barrel became highly popular among Confederate officers.
-            </p>
-        </li>
-
-        <li>
-            <h3 id="ColtWalkerM1847">
-                Colt Walker M1847
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/ColtWalkerM1847.jpg")">
-                    <img src="@Url.Content("~/img/ColtWalkerM1847.jpg")" alt="Colt Walker M1847" class="imageRightAlign" />
-                </a>
-                Caliber: .58", ROF: 6 RPM<br>
-                Length: 16", Weight: 3.5 lbs, Range: 75 yds<br>
-                Also known as the "horse killer", the Walker revolver was a fiercesome weapon first designed by Colt
-                to be used by the Texas Rangers after the success of his maiden design, the Patterson.
-                It was loaded with the same amount of powder used in muskets, and was often carried by heavy cavalry to take out enemy horses,
-                and was often placed in holsters on the pommel of a saddle. The design was later improved by Colt with the 1848 Dragoon model.
-            </p>
-        </li>
-
-        <li>
-            <h3 id="ColtPocketM1849">
-                Colt Pocket M1849
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/ColtPocketM1849.jpg")">
-                    <img src="@Url.Content("~/img/ColtPocketM1849.jpg")" alt="Colt Pocket M1849" class="imageRightAlign" />
-                </a>
-                Caliber: .44" ROF: 6 RPM<br>
-                Length: 14", Weight: 2.7 lbs, Range: 75 yds<br>
-                With the introduction of further designs by Colt and the many competitors that sprang up after him, some delineation had to be made between revolvers.
-                Most were known as "saddle guns", since they were too heavy to be worn normally. Colt introduced the 1849 "Pocket" Colt as one that could be comfortably
-                worn on one's person. Despite its smaller size it still was a mean weapon to face in combat, being a .44 caliber weapon.
-            </p>
-        </li>
-
-        <li>
-            <h3 id="ColtNavyM1851">
-                Colt Navy M1851
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/ColtNavyM1851.jpg")">
-                    <img src="@Url.Content("~/img/ColtNavyM1851.jpg")" alt="Colt Navy M1851" class="imageRightAlign" />
-                </a>
-                Caliber: .36", ROF: 6 RPM<br>
-                Length: 14", Weight: 2.7 lbs, Range: 75 yds<br>
-                Colt produced several designs for use by the US military, including a design specifically tailored for the Navy, sporting a lower .36 caliber
-                in comparison to its larger .44 caliber brothers. The 1851 was also very popular for civilian sale as well, which the enterprising Colt was quick to capitalize on.
-            </p>
-        </li>
-
-        <li>
-            <h3 id="ColtArmyM1860">
-                Colt Army M1860
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/ColtArmyM1860.jpg")">
-                    <img src="@Url.Content("~/img/ColtArmyM1860.jpg")" alt="Colt Army M1860" class="imageRightAlign" />
-                </a>
-                Caliber: .44", ROF: 6 RPM<br>
-                Length: 14", Weight: 2.7 lbs, Range: 75 yds<br>
-                One of the most iconic weapons produced by the Colt Manufacturing Co., the M1860 Colt was used by officers and cavalrymen of both sides during the Civil War.
-                When the war first broke, Samuel Colt was quick to have the government contract his revolvers exclusively, though many of his revolvers <i>managed</i> to reach Confederate hands as well.
-            </p>
-        </li>
+        @await Html.PartialAsync("_Weapon", Weapons.RemingtonM1858)
+        @await Html.PartialAsync("_Weapon", Weapons.LeMat)
+        @await Html.PartialAsync("_Weapon", Weapons.ColtWalkerM1847)
+        @await Html.PartialAsync("_Weapon", Weapons.ColtPocketM1849)
+        @await Html.PartialAsync("_Weapon", Weapons.ColtNavyM1851)
+        @await Html.PartialAsync("_Weapon", Weapons.ColtArmyM1860)
     </ul>
 
     <h2>
@@ -159,161 +32,25 @@
     </h2>
 
     <ul>
-        <li>
-            <h3 id="LorenzM1854">
-                Lorenz M1854
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/LorenzM1854.jpg")">
-                    <img src="@Url.Content("~/img/LorenzM1854.jpg")" alt="Lorenz M1854" class="imageRightAlign" />
-                </a>
-                Rifled Musket, Caliber: .54", ROF: 3 RPM<br>
-                Length: 37.52", Weight: 8.82 lbs, Range: 300 yds<br>
-                The Lorenz M1854 Rifle, an Austrian make. 392.000 were imported by the Union, 100.000 for the Confederacy. Union versions tended to get rebored to be .58 caliber 
-                so that the same ammo could be used, however the Confederates did not have the machinery to do such re-boring, so Confederate versions tended to stay at .54 caliber.
-                <br>
-                <small>P.S.: Please, do not use this rifle. It is shit.</small>
-            </p>
-        </li>
-
-        <li>
-            <h3 id="Mississippi_1841">
-                Mississippi M1841
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/Mississippi_1841.png")">
-                    <img src="@Url.Content("~/img/Mississippi_1841.png")" alt="Mississippi M1841" class="imageRightAlign" />
-                </a>
-                Rifled Musket, Caliber: .58", ROF: 3 RPM<br>
-                Length: 48.5", Weight: 9.25 lbs, Range: 1.100 yds<br>
-                The Mississippi M1841 was originally produced by the Harper's Ferry Armory, and first used by its namesake, the militiamen of Mississippi that fought 
-                under Andrew Jackson at New Orleans. Most used by Confederate Infantry, Sergeants and some Corporals, 
-                it was also a popular choice by Confederate Cavalry and Sharpshooters.
-            </p>
-        </li>
-        
-        <li>
-            <h3 id="PatternEnfield_1853">
-                Pattern Enfield M1853
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/PatternEnfield_1853.jpg")">
-                    <img src="@Url.Content("~/img/PatternEnfield_1853.jpg")" alt="Pattern Enfield M1853" class="imageRightAlign" />
-                </a>
-                Rifled Musket, Caliber: .577", ROF: 3 RPM<br>
-                Length: 55", Weight: 9.5 lbs, Range: 1000 yds<br>
-                The Pattern Enfield M1853 Rifled Muskets had been imported From Great Britain in numbers up to 900.000 and were being used extensively by both sides, 
-                mostly because it could fire the same bullet as the Springfield M1861 which helped keep costs low. Their barrels were often blued by the 
-                Royal Armory to help prevent the rust buildup often seen on the American "Rustfields."
-            </p>
-        </li>
-        
-        <li>
-            <h3 id="SharpsCarbine">
-                Sharps Carbine M1859
-            </h3>
-            <p>
-                @*<a href="@Url.Content("~/img/SharpsCarbine.jpg")">
-                    <img src="@Url.Content("~/img/SharpsCarbine.jpg")" alt="Sharps Carbine M1859" class="imageRightAlign" />
-                </a>*@
-                Rifled Musket, Caliber: .54", ROF: 7 RPM<br>
-                Length: 39.19", Weight: 8.37 lbs, Range: 500 yds<br>
-                The Sharps Carbine M1859 is a shorter version of the Sharps Infantry Rifle M1859, making it very useful for cavalry.
-                It has the same breach loading mechanism as the Sharps Infantry Rifle. 
-                The Sharps became one of the most iconic and popular weapons used by cavalry troops during and after the Civil War to great effect.
-            </p>
-        </li>
-        
-        <li>
-            <h3 id="SharpsRifle">
-                Sharps Infantry Rifle M1859
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/SharpsRifle.jpg")">
-                    <img src="@Url.Content("~/img/SharpsRifle.jpg")" alt="Sharps Infantry Rifle M1859" class="imageRightAlign" />
-                </a>
-                Rifled Musket, Caliber: .52", ROF: 7 RPM<br>
-                Length: 47", Weight: 9.5 lbs, Range: 500 yds<br>
-                The Sharps Infantry Rifle M1859 differs from contemporary muzzleloaders by being loaded directly from the breach.
-                This allows for much faster reloading as the soldier doesnt need to spend time ramming down the cartridge.
-                The Confederates copied this weapon to make something called the Robinson Carbine. Both looked the same, though with a tad different markings.
-            </p>
-        </li>
-        
-        <li>
-            <h3 id="Springfield_M1861">
-                Springfield M1861
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/Springfield_M1861.jpg")">
-                    <img src="@Url.Content("~/img/Springfield_M1861.jpg")" alt="Springfield M1861" class="imageRightAlign" />
-                </a>
-                Rifled Musket, Caliber: .58", ROF: 3 RPM<br>
-                Length: 56", Weight: 9 lbs, Range: 500 yds<br>
-                The Springfield M1861 was one of the most common rifles during the war. This weapon was extensively used by the infantry of both sides, and was the third weapon produced by the US with mass-produced rifling.
-            </p>
-        </li>
-        
-        <li>
-            <h3 id="SpringfieldM1842">
-                Springfield M1842
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/SpringfieldM1842.jpg")">
-                    <img src="@Url.Content("~/img/SpringfieldM1842.jpg")" alt="Springfield M1842" class="imageRightAlign" />
-                </a>
-                Smoothbore, Caliber: .69", ROF: 3 RPM<br>
-                Length: 58", Weight: 10 lbs, Range: 100 yds<br>
-                A hallmark of older styles of musketry, the M1842 Springfield was widely used during the Mexican-American War as much as in the Civil War twenty years later. 
-                With a large .69 caliber barrel, the 1842 could do some serious damage to an opponent, though it lacked for accuracy due to being a smoothbore weapon. 
-                However, the barrel was designed extra thick to accomodate for later rifling once the technology became available.
-            </p>
-        </li>
-        
-        <li>
-            <h3 id="SpringfieldM1855">
-                Springfield M1855
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/SpringfieldM1855.jpg")">
-                    <img src="@Url.Content("~/img/SpringfieldM1855.jpg")" alt="Springfield M1855" class="imageRightAlign" />
-                </a>
-                Rifled Musket, Caliber: .58", ROF: 3 RPM<br>
-                Length: 56", Weight: 9 lbs, Range: 500 yds<br>
-                The Model 1855 was an experiment of the US Army to use the Maynard tape priming system, though its poor testing in the field meant that they 
-                reverted to the conventional brass caps instead. However, the 1855 was also innovative for being the first rifled-musket to be issued to regular troops in the US.
-            </p>
-        </li>
-
-        <li>
-            <h3 id="Whitworth">
-                Whitworth Rifle M1854
-            </h3>
-            <p>
-                <a href="@Url.Content("~/img/Whitworth.jpg")">
-                    <img src="@Url.Content("~/img/Whitworth.jpg")" alt="Whitworth Rifle M1854" class="imageRightAlign" />
-                </a>
-                Rifled Musket, Caliber: .54", ROF: 3 RPM<br>
-                Length: 49", Weight: 9 lbs, Range: 1000 yds<br>
-                The Whitworth was originally designed by Sir Joseph Whitworth, and was one of the first examples of a "sniper rifle" once mounted with a scope. 
-                They were highly prized weapons by Sharpshooters on both sides during the time of the Civil War, 
-                and two Union generals are said to have lost their lives due to this very accurate weapon.
-            </p>
-        </li>
+        @await Html.PartialAsync("_Weapon", Weapons.LorenzM1854)
+        @await Html.PartialAsync("_Weapon", Weapons.Mississippi_1841)
+        @await Html.PartialAsync("_Weapon", Weapons.PatternEnfield_1853)
+        @await Html.PartialAsync("_Weapon", Weapons.SharpsCarbine)
+        @await Html.PartialAsync("_Weapon", Weapons.SharpsRifle)
+        @await Html.PartialAsync("_Weapon", Weapons.Springfield_M1861)
+        @await Html.PartialAsync("_Weapon", Weapons.SpringfieldM1842)
+        @await Html.PartialAsync("_Weapon", Weapons.SpringfieldM1855)
+        @await Html.PartialAsync("_Weapon", Weapons.Whitworth)
     </ul>
-
-    <h2>
-        Artillery
-    </h2>
-    <p>
-        TODO
-    </p>
 
     <h2>
         Misc
     </h2>
-    <p>
-        TODO
-    </p>
+
+    <ul>
+        @await Html.PartialAsync("_Weapon", Weapons.Bayonet)
+        @await Html.PartialAsync("_Weapon", Weapons.SwordBayonet)
+        @await Html.PartialAsync("_Weapon", Weapons.ArtilleryTool_SpongeRammer)
+    </ul>
 </div>
 

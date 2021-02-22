@@ -11,23 +11,22 @@ namespace WarOfRightsWeb
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
-        {
-            Configuration = configuration;
-            Environment = environment;
-        }
-
         public IConfiguration Configuration { get; }
 
-        public IWebHostEnvironment Environment { get; }
+        public IWebHostEnvironment WebHostEnvironment { get; }
 
+        public Startup(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
+        {
+            Configuration = configuration;
+            WebHostEnvironment = webHostEnvironment;
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IConfiguration>(Configuration);
 
-            if (Environment.IsDevelopment())
+            if (WebHostEnvironment.IsDevelopment())
             {
                 services.AddControllersWithViews()
                     .AddRazorRuntimeCompilation();
@@ -36,7 +35,6 @@ namespace WarOfRightsWeb
             {
                 services.AddControllersWithViews();
             }
-            
 
             Console.WriteLine("<<<< SERVICES CONFIGURED");
         }

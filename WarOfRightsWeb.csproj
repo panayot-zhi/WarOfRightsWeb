@@ -11,6 +11,7 @@
     <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\html\" />
+    <Folder Include="wwwroot\xml\" />
   </ItemGroup>
 
   <ItemGroup>    

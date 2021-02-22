@@ -1,0 +1,31 @@
+﻿@section navigation {
+    <nav id="companyToolHeaderContainer" class="worBorder" style="padding: 0px;">
+
+        <ul style="margin: 0px; padding: 0px; height: 60px;">
+            <li style="margin: 0px;">
+                <div id="companyToolHeaderTextContainer">
+
+                    <ul class="companyToolNavUl" style="width: 50%;">
+                        <li>
+                            <h1 class="text-center">
+                                <a id="navUSARegiments" href="@Url.Action("USA", "Regiments")">USA</a>
+                            </h1>
+                        </li>
+                    </ul>
+
+                    <ul class="companyToolNavUl" style="width: 50%;">
+                        <li>
+                            <h1 class="text-center">
+                                <a id="navCSARegiments" class="active" href="@Url.Action("CSA", "Regiments")">CSA</a>
+                            </h1>
+                        </li>
+                    </ul>
+
+                </div>
+            </li>
+        </ul>
+
+        <div class="fancyClearBoth">
+        </div>
+    </nav>
+}

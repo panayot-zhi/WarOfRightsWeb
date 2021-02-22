@@ -39,3 +39,7 @@ li h2 a {
     margin-bottom: 10px;
     border-style: none;
 }
+
+#helpContentWrapper p {
+    padding-right: 20px;
+}

@@ -1,0 +1,853 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Title>Audio script template</Title>
+  <Author>Maëlenn Lumineau</Author>
+  <LastAuthor>Clark Morningstar</LastAuthor>
+  <LastPrinted>2003-10-30T09:38:41Z</LastPrinted>
+  <Created>2002-06-17T19:14:00Z</Created>
+  <LastSaved>2018-11-22T10:25:04Z</LastSaved>
+  <Company>Electronic Arts</Company>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <SupBook>
+   <Path>\DOCUME~1\jack\LOCALS~1\Temp\p4v\PC025 perforce 1666\data\Game02\Game\Languages\Copy of Dialog_Asset_List_Final_edit.xls</Path>
+   <SheetName>DropDown</SheetName>
+   <SheetName>Conversations</SheetName>
+   <Xct>
+    <Count>2</Count>
+    <SheetIndex>0</SheetIndex>
+    <Crn>
+     <Row>6</Row>
+     <ColFirst>0</ColFirst>
+     <ColLast>4</ColLast>
+     <Text>clean</Text>
+     <Text>TV</Text>
+     <Text>radio (disturbed) </Text>
+     <Text>radio (low)</Text>
+     <Text>radio (heavy)</Text>
+    </Crn>
+    <Crn>
+     <Row>9</Row>
+     <ColFirst>0</ColFirst>
+     <ColLast>41</ColLast>
+     <Text>Player</Text>
+     <Text>Barnes</Text>
+     <Text>Hawker</Text>
+     <Text>Sykes</Text>
+     <Text>Johnson</Text>
+     <Text>Cortez</Text>
+     <Text>Beck</Text>
+     <Text>Miller</Text>
+     <Text>Baxter</Text>
+     <Text>American scientist</Text>
+     <Text>Shark</Text>
+     <Text>Chia</Text>
+     <Text>Kirovski</Text>
+     <Text>Michaels</Text>
+     <Text>Chang</Text>
+     <Text>Marine Soldier a</Text>
+     <Text>Marine Soldier b</Text>
+     <Text>Chinese Soldier a</Text>
+     <Text>Chinese Soldier b</Text>
+     <Text>Chinese Soldier c</Text>
+     <Text>Chinese Soldier d</Text>
+     <Text>Chinese Soldier e</Text>
+     <Text>Chinese Soldier f</Text>
+     <Text>Chinese Officer a</Text>
+     <Text>Chinese Officer b</Text>
+     <Text>Chinese Scientist a</Text>
+     <Text>Chinese Scientist b</Text>
+     <Text>Chinese Scientist Female a</Text>
+     <Text>Chinese Scientist Female b</Text>
+     <Text>Filmcrew Member</Text>
+     <Text>Morrison</Text>
+     <Text>C17 Pilot a</Text>
+     <Text>C17 Pilot b</Text>
+     <Text>Submarine Commander Davis</Text>
+     <Text>Pilot (camera)</Text>
+     <Text>Bridge officer 1</Text>
+     <Text>Bridge officer 2</Text>
+     <Text>Carrier deck guide</Text>
+     <Text>Jet Pilot</Text>
+     <Text>VTOL Pilot</Text>
+     <Text>Commander (camera)</Text>
+     <Text>Team Two (camera)</Text>
+    </Crn>
+   </Xct>
+  </SupBook>
+  <WindowHeight>5085</WindowHeight>
+  <WindowWidth>28095</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <TabRatio>274</TabRatio>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:Family="Modern" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:Family="Modern" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#FF0000" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#666699" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:Family="Modern" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#666699" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s68">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s69">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s70">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s71">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s72">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s73">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s74">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s75">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s76">
+   <Borders/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="characters"
+   ss:RefersTo="='\DOCUME~1\jack\LOCALS~1\Temp\p4v\PC025 perforce 1666\data\Game02\Game\Languages\[Copy of Dialog_Asset_List_Final_edit.xls]DropDown'!R10C1:R10C42"/>
+  <NamedRange ss:Name="type"
+   ss:RefersTo="='\DOCUME~1\jack\LOCALS~1\Temp\p4v\PC025 perforce 1666\data\Game02\Game\Languages\[Copy of Dialog_Asset_List_Final_edit.xls]DropDown'!R7C1:R7C5"/>
+ </Names>
+ <Worksheet ss:Name="Sheet1">
+  <Names>
+   <NamedRange ss:Name="Print_Area" ss:RefersTo="=Sheet1!R1C3:R2C4"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="130" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="13.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="271.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="343.5" ss:Span="1"/>
+   <Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="160.5"/>
+   <Row ss:AutoFitHeight="0" ss:Height="51" ss:StyleID="s62">
+    <Cell ss:StyleID="s63"/>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">KEY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ORIGINAL TEXT</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">TRANSLATED TEXT</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell><Data ss:Type="String">CONTEXT</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25" ss:StyleID="s62">
+    <Cell ss:StyleID="s63"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">This contains original text meant for subtitles. Use descriptive expressions like &lt;frantic laughter&gt; and ## for a new line.</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">This contains text for subtitles. Use descriptive expressions like &lt;frantic laughter&gt; and ## for a new line.</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.25" ss:StyleID="s68">
+    <Cell ss:StyleID="s69"/>
+    <Cell ss:StyleID="s70"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Weapons</Data></Cell>
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s73"/>
+   </Row>
+   <Row ss:StyleID="s72"/>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_primaryWeapon</Data></Cell>
+    <Cell><Data ss:Type="String">Primary Weapon</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Primary Weapon</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_secondaryWeapon</Data></Cell>
+    <Cell><Data ss:Type="String">Secondary Weapon</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Secondary Weapon</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_BuckAndBall_title</Data></Cell>
+    <Cell><Data ss:Type="String">Buck And Ball</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Buck And Ball</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_BuckShot_title</Data></Cell>
+    <Cell><Data ss:Type="String">Buck Shot</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Buck Shot</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_CompressionBall_title</Data></Cell>
+    <Cell><Data ss:Type="String">Compression Ball</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Compression Ball</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_HexagonalBullet_title</Data></Cell>
+    <Cell><Data ss:Type="String">Hexagonal Bullet</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Hexagonal Bullet</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_MinieBall_title</Data></Cell>
+    <Cell><Data ss:Type="String">Minie Ball</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Minie Ball</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_PistolBall_title</Data></Cell>
+    <Cell><Data ss:Type="String">Pistol Ball</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Pistol Ball</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_RoundBall_title</Data></Cell>
+    <Cell><Data ss:Type="String">Round Ball</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Round Ball</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Springfield_M1861_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Springfield M1861</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Springfield M1861</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Springfield_M1861_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .58 in\nROF: 3 RPM</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .58 in\nROF: 3 RPM</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Springfield_M1861_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 56 in\nWeight: 9 lbs\nRange: 500 yds</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 56 in\nWeight: 9 lbs\nRange: 500 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="42.75" ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Springfield_M1861_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The Springfield M1861 was one of the most common rifles during the war. This weapon was extensively used by the infantry of both sides, and was the third weapon produced by the US with mass-produced rifling.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">The Springfield M1861 was one of the most common rifles during the war. This weapon was extensively used by the infantry of both sides, and was the third weapon produced by the US with mass-produced rifling.</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SpringfieldM1855_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Springfield M1855</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Springfield M1855</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SpringfieldM1855_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .58 in\nROF: 3 RPM</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .58 in\nROF: 3 RPM</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SpringfieldM1855_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 56 in\nWeight: 9 lbs\nRange: 500 yds</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 56 in\nWeight: 9 lbs\nRange: 500 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75" ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SpringfieldM1855_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The Model 1855 was an experiment of the US Army to use the Maynard tape priming system, though its poor testing in the field meant that they reverted to the conventional brass caps instead. However, the 1855 was also inovative for being the first rifled-musket to be issued to regular troops in the US. </Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">The Model 1855 was an experiment of the US Army to use the Maynard tape priming system, though its poor testing in the field meant that they reverted to the conventional brass caps instead. However, the 1855 was also inovative for being the first rifled-musket to be issued to regular troops in the US. </Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SpringfieldM1842_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Springfield M1842</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Springfield M1842</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SpringfieldM1842_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Smoothbore\nCaliber: .69 in\nROF: 3 RPM</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Smoothbore\nCaliber: .69 in\nROF: 3 RPM</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SpringfieldM1842_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 58 in\nWeight: 10 lbs\nRange: 100 yds</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 58 in\nWeight: 10 lbs\nRange: 100 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="76.5" ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SpringfieldM1842_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">A hallmark of older styles of musketry, the M1842 Springfield was widely used during the Mexican-American War as much as in the Civil War twenty years later. With a large .69 caliber barrel, the 1842 could do some serious damage to an opponent, though it lacked for accuracy due to being a smoothbore weapon. However, the barrel was designed extra thick to accomodate for later rifling once the technology became available.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">A hallmark of older styles of musketry, the M1842 Springfield was widely used during the Mexican-American War as much as in the Civil War twenty years later. With a large .69 caliber barrel, the 1842 could do some serious damage to an opponent, though it lacked for accuracy due to being a smoothbore weapon. However, the barrel was designed extra thick to accomodate for later rifling once the technology became available.</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:StyleID="s76"/>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">ui_LorenzM1854_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Lorenz M1854</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Lorenz M1854</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_LorenzM1854_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .54 in\nROF: 3 RPM</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .54 in\nROF: 3 RPM</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_LorenzM1854_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 37.52 in\nWeight: 8.82 lbs\nRange: 300 yds</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 37.52 in\nWeight: 8.82 lbs\nRange: 300 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75" ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_LorenzM1854_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The Lorenz M1854 Rifle, an Austrian make. 392.000 were imported by the Union, 100.000 for the Confederacy. Union versions tended to get rebored to be .58 caliber so that the same ammo could be used, however the Confederates did not have the machinery to do such re-boring, so Confederate versions tended to stay at .54 caliber.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">The Lorenz M1854 Rifle, an Austrian make. 392.000 were imported by the Union, 100.000 for the Confederacy. Union versions tended to get rebored to be .58 caliber so that the same ammo could be used, however the Confederates did not have the machinery to do such re-boring, so Confederate versions tended to stay at .54 caliber.</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+   </Row>
+   <Row ss:StyleID="s72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Mississippi_1841_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Mississippi M1841</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Mississippi M1841</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Mississippi_1841_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .58 in\nROF: 3 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .58 in\nROF: 3 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Mississippi_1841_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 48.5 in\nWeight: 9.25 lbs\nRange: 1.100 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 48.5 in\nWeight: 9.25 lbs\nRange: 1.100 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="67.5">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Mississippi_1841_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The Mississippi M1841 was originally produced by the Harper's Ferry Armory, and first used by its namesake, the militiamen of Mississippi that fought under Andrew Jackson at New Orleans. Most used by Confederate Infantry, Sergeants and some Corporals, it was also a popular choice by Confederate Cavalry and Sharpshooters.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">The Mississippi M1841 was originally produced by the Harper's Ferry Armory, and first used by its namesake, the militiamen of Mississippi that fought under Andrew Jackson at New Orleans. Most used by Confederate Infantry, Sergeants and some Corporals, it was also a popular choice by Confederate Cavalry and Sharpshooters.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+    <Cell ss:StyleID="s72"/>
+    <Cell ss:StyleID="s72"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_PatternEnfield_1853_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Pattern Enfield M1853</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Pattern Enfield M1853</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_PatternEnfield_1853_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .577 in\nROF: 3 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .577 in\nROF: 3 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_PatternEnfield_1853_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 55 in\nWeight: 9.5 lbs\nRange: 1000 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 55 in\nWeight: 9.5 lbs\nRange: 1000 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="102">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_PatternEnfield_1853_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The Pattern Enfield M1853 Rifled Muskets had been imported From Great Britain in numbers up to 900.000 and were being used extensively by both sides, mostly because it could fire the same bullet as the Springfield M1861 which helped keep costs low. Their barrels were often blued by the Royal Armory to help prevent the rust buildup often seen on the American &quot;Rustfields.&quot;</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">The Pattern Enfield M1853 Rifled Muskets had been imported From Great Britain in numbers up to 900.000 and were being used extensively by both sides, mostly because it could fire the same bullet as the Springfield M1861 which helped keep costs low. Their barrels were often blued by the Royal Armory to help prevent the rust buildup often seen on the American &quot;Rustfields.&quot;</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+    <Cell ss:StyleID="s72"/>
+    <Cell ss:StyleID="s72"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SharpsRifle_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Sharps Infantry Rifle M1859</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Sharps Infantry Rifle M1859</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SharpsRifle_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .52 in\nROF: 7 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .52 in\nROF: 7 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SharpsRifle_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 47 in\nWeight: 9.5 lbs\nRange: 500 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 47 in\nWeight: 9.5 lbs\nRange: 500 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="76.5">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SharpsRifle_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The Sharps Infantry Rifle M1859 differs from contemporary muzzleloaders by being loaded directly from the breach. This allows for much faster reloading as the soldier doesnt need to spend time ramming down the cartridge. The Confederates copied this weapon to make something called the Robinson Carbine. Both looked the same, though with a tad different markings.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">The Sharps Infantry Rifle M1859 differs from contemporary muzzleloaders by being loaded directly from the breach. This allows for much faster reloading as the soldier doesnt need to spend time ramming down the cartridge. The Confederates copied this weapon to make something called the Robinson Carbine. Both looked the same, though with a tad different markings.</Data></Cell>
+   </Row>
+   <Row ss:Index="52">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SharpsCarbine_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Sharps Carbine M1859</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Sharps Carbine M1859</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SharpsCarbine_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .54 in\nROF: 7 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .54 in\nROF: 7 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SharpsCarbine_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 39.19 in\nWeight: 8.37 lbs\nRange: 500 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 39.19 in\nWeight: 8.37 lbs\nRange: 500 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="66.75">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SharpsCarbine_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The Sharps Carbine M1859 is a shorter version of the Sharps Infantry Rifle M1859, making it very useful for cavalry. It has the same breach loading mechanism as the Sharps Infantry Rifle. The Sharps became one of the most iconic and popular weapons used by cavalry troops during and after the Civil War to great effect.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">The Sharps Carbine M1859 is a shorter version of the Sharps Infantry Rifle M1859, making it very useful for cavalry. It has the same breach loading mechanism as the Sharps Infantry Rifle. The Sharps became one of the most iconic and popular weapons used by cavalry troops during and after the Civil War to great effect.</Data></Cell>
+   </Row>
+   <Row ss:Index="57">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Whitworth_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Whitworth Rifle M1854</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Whitworth Rifle M1854</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Whitworth_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .54 in\nROF: 3 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Rifled Musket\nCaliber: .54 in\nROF: 3 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Whitworth_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 49 in\nWeight: 9 lbs\nRange: 1000 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 49 in\nWeight: 9 lbs\nRange: 1000 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Whitworth_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The Whitworth was originally designed by Sir Joseph Whitworth, and was one of the first examples of a &quot;sniper rifle&quot; once mounted with a scope. They were highly prized weapons by Sharpshooters on both sides during the time of the Civil War, and two Union generals are said to have lost their lives due to this very accurate weapon.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">The Whitworth was originally designed by Sir Joseph Whitworth, and was one of the first examples of a &quot;sniper rifle&quot; once mounted with a scope. They were highly prized weapons by Sharpshooters on both sides during the time of the Civil War, and two Union generals are said to have lost their lives due to this very accurate weapon.</Data></Cell>
+   </Row>
+   <Row ss:Index="62">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtNavyM1851_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Colt Navy M1851</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Colt Navy M1851</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtNavyM1851_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Revolver\nCaliber: .36 in\nROF: 6 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Revolver\nCaliber: .36 in\nROF: 6 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtNavyM1851_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 14 in\nWeight: 2.7 lbs\nRange: 75 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 14 in\nWeight: 2.7 lbs\nRange: 75 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtNavyM1851_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Colt produced several designs for use by the US military, including a design specifically tailored for the Navy, sporting a lower .36 caliber in comparison to its larger .44 caliber brothers. The 1851 was also very popular for civilian sale as well, which the enterprising Colt was quick to capitalize on. </Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Colt produced several designs for use by the US military, including a design specifically tailored for the Navy, sporting a lower .36 caliber in comparison to its larger .44 caliber brothers. The 1851 was also very popular for civilian sale as well, which the enterprising Colt was quick to capitalize on. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s72"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtPocketM1849_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Colt Pocket M1849</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Colt Pocket M1849</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtPocketM1849_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Revolver\nCaliber: .44 in\nROF: 6 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Revolver\nCaliber: .44 in\nROF: 6 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtPocketM1849_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 14 in\nWeight: 2.7 lbs\nRange: 75 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 14 in\nWeight: 2.7 lbs\nRange: 75 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="76.5">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtPocketM1849_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">With the introduction of further designs by Colt and the many competitors that sprang up after him, some delineation had to be made between revolvers. Most were known as &quot;saddle guns,&quot; since they were too heavy to be worn normally. Colt introduced the 1849 &quot;Pocket&quot; Colt as one that could be comfortably worn on one's person. Despite its smaller size it still was a mean weapon to face in combat, being a .44 caliber weapon.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">With the introduction of further designs by Colt and the many competitors that sprang up after him, some delineation had to be made between revolvers. Most were known as &quot;saddle guns,&quot; since they were too heavy to be worn normally. Colt introduced the 1849 &quot;Pocket&quot; Colt as one that could be comfortably worn on one's person. Despite its smaller size it still was a mean weapon to face in combat, being a .44 caliber weapon.</Data></Cell>
+   </Row>
+   <Row ss:Index="72">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtWalkerM1847_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Colt Walker M1847</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Colt Walker M1847</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtWalkerM1847_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Revolver\nCaliber: .58 in\nROF: 6 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Revolver\nCaliber: .58 in\nROF: 6 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtWalkerM1847_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 16 in\nWeight: 3.5 lbs\nRange: 75 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 16 in\nWeight: 3.5 lbs\nRange: 75 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="89.25">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtWalkerM1847_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Also known as the &quot;horse killer,&quot; the Walker revolver was a fiercesome weapon first designed by Colt to be used by the Texas Rangers after the success of his maiden design, the Patterson. It was loaded with the same amount of powder used in muskets, and was often carried by heavy cavalry to take out enemy horses, and was often placed in holsters on the pommel of a saddle. The design was later improved by Colt with the 1848 Dragoon model.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Also known as the &quot;horse killer,&quot; the Walker revolver was a fiercesome weapon first designed by Colt to be used by the Texas Rangers after the success of his maiden design, the Patterson. It was loaded with the same amount of powder used in muskets, and was often carried by heavy cavalry to take out enemy horses, and was often placed in holsters on the pommel of a saddle. The design was later improved by Colt with the 1848 Dragoon model.</Data></Cell>
+   </Row>
+   <Row ss:Index="77">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtArmyM1860_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Colt Army M1860</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Colt Army M1860</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtArmyM1860_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Revolver\nCaliber: .44 in\nROF: 6 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Revolver\nCaliber: .44 in\nROF: 6 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtArmyM1860_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 14 in\nWeight: 2.7 lbs\nRange: 75 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 14 in\nWeight: 2.7 lbs\nRange: 75 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ColtArmyM1860_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">One of the most iconic weapons produced by the Colt Manufacturing Co., the M1860 Colt was used by officers and cavalrymen of both sides during the Civil War. When the war first broke, Samuel Colt was quick to have the government contract his revolvers exclusively, though many of his revolvers &quot;managed&quot; to reach Confederate hands as well.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">One of the most iconic weapons produced by the Colt Manufacturing Co., the M1860 Colt was used by officers and cavalrymen of both sides during the Civil War. When the war first broke, Samuel Colt was quick to have the government contract his revolvers exclusively, though many of his revolvers &quot;managed&quot; to reach Confederate hands as well.</Data></Cell>
+   </Row>
+   <Row ss:Index="82">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_LeMat_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">LeMat M1855</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">LeMat M1855</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_LeMat_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Revolver\nCaliber: .42 in\nROF: 9 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Revolver\nCaliber: .42 in\nROF: 9 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_LeMat_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 13.25 in\nWeight: 3.1 lbs\nRange: 40 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 13.25 in\nWeight: 3.1 lbs\nRange: 40 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="89.25">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_LeMat_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Originally developed just prior to the war by Jean Alexander LeMatt, a close cousin of future general Pierre Beauregard. Beauregard was wearing one that was gifted to him by his cousin as he ordered his troops to begin bombardment of Fort Sumter. Once the Union took control of New Orleans, LeMatt fled to Paris to continue production in France, while his nine-shot revolver with its underslung sixteen-gauge shotgun barrel became highly popular among Confederate officers.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Originally developed just prior to the war by Jean Alexander LeMatt, a close cousin of future general Pierre Beauregard. Beauregard was wearing one that was gifted to him by his cousin as he ordered his troops to begin bombardment of Fort Sumter. Once the Union took control of New Orleans, LeMatt fled to Paris to continue production in France, while his nine-shot revolver with its underslung sixteen-gauge shotgun barrel became highly popular among Confederate officers.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s72"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_RemingtonM1858_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Remington New Army Revolver M1858</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Remington New Army Revolver M1858</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_RemingtonM1858_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Revolver\nCaliber: .44 in\nROF: 6 RPM</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Revolver\nCaliber: .44 in\nROF: 6 RPM</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_RemingtonM1858_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 13.25 in\nWeight: 2.8 lbs\nRange: 75 yds</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 13.25 in\nWeight: 2.8 lbs\nRange: 75 yds</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_RemingtonM1858_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Remington quickly became the largest competitor of Colt in the weapons manufacturing market, and the enterprising upper-strap design on the M1858 is one example of their fierce rivalry. While many soldiers were issued Colts, many preferred the ease of reloading and the durability offered by the design of the 1858.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Remington quickly became the largest competitor of Colt in the weapons manufacturing market, and the enterprising upper-strap design on the M1858 is one example of their fierce rivalry. While many soldiers were issued Colts, many preferred the ease of reloading and the durability offered by the design of the 1858.</Data></Cell>
+   </Row>
+   <Row ss:Index="92">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_FtOfficerSword1850_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">US Foot Officer Sword M1850</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">US Foot Officer Sword M1850</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_FtOfficerSword1850_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Sword</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Sword</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_FtOfficerSword1850_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Blade Length: 15.5 in\nWeight: 4.5 lbs</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Blade Length: 15.5 in\nWeight: 4.5 lbs</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_FtOfficerSword1850_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Fashioned after many European military blades, the Foot Officer's Sword was intended to be worn by company level officers of Infantry and Artillery of the rank of Major and below. It was accompanied in implementation by it's sister blade, the Staff Officer's Sword, which had a different design to it's brass guard.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Fashioned after many European military blades, the Foot Officer's Sword was intended to be worn by company level officers of Infantry and Artillery of the rank of Major and below. It was accompanied in implementation by it's sister blade, the Staff Officer's Sword, which had a different design to it's brass guard.</Data></Cell>
+   </Row>
+   <Row ss:Index="97">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_LightCavalrySaber1860_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">US Light Cavalry Saber M1860</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">US Light Cavalry Saber M1860</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_LightCavalrySaber1860_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Saber</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Saber</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_LightCavalrySaber1860_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 35 in\nWeight: 2.25 lbs</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 35 in\nWeight: 2.25 lbs</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_LightCavalrySaber1860_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Made as a lighter replacement of the cumbersome M1840 &quot;Wristbreaker&quot; Heavy Cavalry Saber, the Light Cavalry Saber was put into production at the same time that the United States was reformulating its cavalry to better match military developments on the European continent. Both the north and south made large use of this model of blade.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Made as a lighter replacement of the cumbersome M1840 &quot;Wristbreaker&quot; Heavy Cavalry Saber, the Light Cavalry Saber was put into production at the same time that the United States was reformulating its cavalry to better match military developments on the European continent. Both the north and south made large use of this model of blade.</Data></Cell>
+   </Row>
+   <Row ss:Index="102">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_NCOSword1840_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">US NCO Sword M1840</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">US NCO Sword M1840</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_NCOSword1840_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Sword</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Sword</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_NCOSword1840_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 15.5 in\nWeight: 1 lbs 14 oz</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 15.5 in\nWeight: 1 lbs 14 oz</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_US_NCOSword1840_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Based largely off of French épées, or small swords, the 1840 NCO sword was a symbol of a non-commissioned officer's authority in a regiment. In practice, many sergeants and corporals, though authorized to carry it, put more stock in a musket and bayonet. However, such weapons added dash and daring to those on parade!  </Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Based largely off of French épées, or small swords, the 1840 NCO sword was a symbol of a non-commissioned officer's authority in a regiment. In practice, many sergeants and corporals, though authorized to carry it, put more stock in a musket and bayonet. However, such weapons added dash and daring to those on parade!  </Data></Cell>
+   </Row>
+   <Row ss:Index="107">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Bayonet_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Socket Bayonet</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Socket Bayonet</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Bayonet_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Bayonet</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Bayonet</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Bayonet_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 18 in\nWeight: 1.75 lbs</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 18 in\nWeight: 1.75 lbs</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="89.25">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Bayonet_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The socket bayonet was an important step forward in comparison to earlier &quot;plug&quot; style bayonets, which were inserted directly in the barrel of the musket being used and prevented it from being fired. By 1700, the socket bayonet was widely adopted, while fifteen years later the triangular-shaped blade was also introduced. Soldiers in the Civil War prefered not to get close with weapons they considered barbarous, instead retreating in the face of glinting steel. </Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">The socket bayonet was an important step forward in comparison to earlier &quot;plug&quot; style bayonets, which were inserted directly in the barrel of the musket being used and prevented it from being fired. By 1700, the socket bayonet was widely adopted, while fifteen years later the triangular-shaped blade was also introduced. Soldiers in the Civil War prefered not to get close with weapons they considered barbarous, instead retreating in the face of glinting steel. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"/>
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s72"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SwordBayonet_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Sword Bayonet</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Sword Bayonet</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SwordBayonet_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Bayonet</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Bayonet</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SwordBayonet_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 21.6 in\nWeight: 2.85 lbs</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 21.6 in\nWeight: 2.85 lbs</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="76.5">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_SwordBayonet_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">The 19th century saw the introduction of the sword bayonet, with the 1855 sword bayonet being the first used by the US for their purposes. While originally designed as a variant bayonet for use on the 1855 Springfield Musket, many more were made for the earlier 1841 Mississippi rifle. Its design also allowed it to be used as a small sword in its own right when not attached to a rifle.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">The 19th century saw the introduction of the sword bayonet, with the 1855 sword bayonet being the first used by the US for their purposes. While originally designed as a variant bayonet for use on the 1855 Springfield Musket, many more were made for the earlier 1841 Mississippi rifle. Its design also allowed it to be used as a small sword in its own right when not attached to a rifle.</Data></Cell>
+   </Row>
+   <Row ss:Index="117">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Foot_Artillery_Sword_US_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Foot Artillery Sword US</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Foot Artillery Sword US</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Foot_Artillery_Sword_US_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Sword</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Sword</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Foot_Artillery_Sword_US_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Blade Length: 15.5 in\nWeight: 4.5 lbs</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Blade Length: 15.5 in\nWeight: 4.5 lbs</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Foot_Artillery_Sword_US_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">A nice description for a foot artillery sword</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">A nice description for a foot artillery sword</Data></Cell>
+   </Row>
+   <Row ss:Index="122">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Foot_Artillery_Sword_CS_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Foot Artillery Sword CS</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Foot Artillery Sword CS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Foot_Artillery_Sword_CS_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Sword</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Sword</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Foot_Artillery_Sword_CS_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Blade Length: 15.5 in\nWeight: 4.5 lbs</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Blade Length: 15.5 in\nWeight: 4.5 lbs</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="93">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_Foot_Artillery_Sword_CS_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">A nice description for a foot artillery sword</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">A nice description for a foot artillery sword</Data></Cell>
+   </Row>
+   <Row ss:Index="127">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ArtilleryTool_SpongeRammer_title</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Loading Implement</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Loading Implement</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ArtilleryTool_SpongeRammer_info1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Type: Artillery Tool</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Type: Artillery Tool</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ArtilleryTool_SpongeRammer_info2</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Length: 50.6 in\nWeight: 3.85 lbs</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Length: 50.6 in\nWeight: 3.85 lbs</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2" ss:StyleID="s75"><Data ss:Type="String">ui_ArtilleryTool_SpongeRammer_description</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Used for cleaning out the embers of the previous shot on the artillery and for ramming the new shell down the barrel.</Data></Cell>
+    <Cell ss:StyleID="s72" ss:Formula="=RC[-1]"><Data ss:Type="String">Used for cleaning out the embers of the previous shot on the artillery and for ramming the new shell down the barrel.</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Layout x:Orientation="Landscape"/>
+    <Header x:Margin="0.51181102362204722"
+     x:Data="&amp;LTime restriction sample script"/>
+    <Footer x:Margin="0.51181102362204722" x:Data="Page &amp;P"/>
+    <PageMargins x:Bottom="0.98425196850393704" x:Left="0" x:Right="0"
+     x:Top="0.98425196850393704"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <Scale>70</Scale>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>57</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>80</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
