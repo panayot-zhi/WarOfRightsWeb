@@ -43,3 +43,77 @@ li h2 a {
 #helpContentWrapper p {
     padding-right: 20px;
 }
+
+#companyToolHeaderTextContainer {
+    z-index: 1;
+}
+
+#wrapper {
+    opacity: 1;
+}
+
+#calendar {
+    clear: both;
+    padding: 20px;
+    margin: 30px 0;
+    background-image: url('../img/popups/VerticalPaper.png');
+    background-size: cover;
+    box-shadow: 0px 1px 1px #999;
+    text-align: center;
+    overflow: hidden;
+}
+
+#calendar .fancyRight {
+    padding-right: 80px;
+}
+
+#calendar .calendar-month {
+    display: inline-block;
+}
+
+#calendar .calendar-month td,
+#calendar .calendar-month th {
+    padding: 10px;
+    text-align: center;
+    border: dashed 2px;
+    font-family: worHeaderFont;
+}
+
+#calendar .calendar-month th {
+    border: solid 2px;
+    background-color: grey;
+}
+
+#calendar .calendar-today a,
+#calendar .calendar-today span {
+    color: black;
+    font-size: 26px;
+    font-family: worHeaderFont;
+}
+
+#calendar .calendar-current-month-day a,
+#calendar .calendar-current-month-day span {
+    color: black;
+    font-size: 22px;
+    font-family: worHeaderFont;
+}
+
+#calendar .calendar-previous-month-day a,
+#calendar .calendar-previous-month-day span,
+#calendar .calendar-next-month-day a,
+#calendar .calendar-next-month-day span {
+    color: grey;
+    font-size: 18px;
+    font-family: worHeaderFont;
+}
+
+#calendar .calendar-marked-day-passed {
+    background-image: url('../img/red_cross.png');
+    background-size: cover;
+}
+
+#calendar .calendar-marked-day {
+    background-image: url('../img/red_circle.png');
+    background-size: cover;
+}
+
