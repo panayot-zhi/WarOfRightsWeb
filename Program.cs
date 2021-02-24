@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.IO;
 using Microsoft.Extensions.Configuration;
 
 namespace WarOfRightsWeb
@@ -28,7 +29,10 @@ namespace WarOfRightsWeb
             Host.CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
-                    config.AddJsonFile("events.json",
+                    var contentRootPath = hostingContext.HostingEnvironment.ContentRootPath;
+                    var path = Path.Combine(contentRootPath, "wwwroot", "json", "events.json");
+
+                    config.AddJsonFile(path,
                         optional: false,
                         reloadOnChange: true);
                 })
