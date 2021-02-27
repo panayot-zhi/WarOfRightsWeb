@@ -1,0 +1,44 @@
+﻿{
+  "Events": [
+    {
+      "Name": "Company Drill",
+      "ShortDescription": "Perfect our shooting skills and raise battle awareness.",
+      "Description": "",
+      "Starting": "2021-02-08T19:00:00+0200",
+      "Occurring": "Weekly",
+      "Duration": "01:30"
+    },
+    {
+      "Name": "Picket Patrol",
+      "ShortDescription": "",
+      "Description": "",
+      "Starting": "2021-02-03T20:00:00+0200",
+      "Occurring": "Weekly",
+      "Duration": "02:00"
+    },
+    {
+      "Name": "Friday Event",
+      "ShortDescription": "",
+      "Description": "",
+      "Starting": "2021-02-05T20:00:00+0200",
+      "Occurring": "Weekly",
+      "Duration": "02:00"
+    },
+    {
+      "Name": "Sunday Event",
+      "ShortDescription": "",
+      "Description": "",
+      "Starting": "2021-02-07T20:00:00+0200",
+      "Occurring": "Weekly",
+      "Duration": "02:00"
+    },
+    {
+      "Name": "Shooting Competition",
+      "ShortDescription": "",
+      "Description": "Every first drill of the month we test our skills amongst each other in a shooting competition with various disciplines.",
+      "Starting": "2021-02-01T19:00:00+0200",
+      "Occurring": "Monthly",
+      "Duration": "01:30"
+    }
+  ]
+}

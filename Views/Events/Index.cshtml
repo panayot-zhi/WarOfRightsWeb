@@ -1,8 +1,102 @@
-﻿@model dynamic
+﻿@model EventsViewModel
 
 @{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+    ViewBag.Title = "Events";
 }
 
-<h2>title</h2>
+<div class="fancyLeft text-left">
+    <h1 id="tabTitle">Next Event In:</h1>
+    <h2 style="margin-top: 10px" id="current-time">02:45:44</h2>
+</div>
+
+<div class="fancyRight text-right">
+    <h1>@Model.Current.Name</h1>
+    <p class="text-right">@Model.Current.Description</p>
+    <h2>@Model.Current.WeekDay, @Model.Current.Time</h2>
+</div>
+
+<img src="@Url.Content("~/img/during-the-american-civil-war.jpg")" class="imageMaxWidth">
+
+<p></p>
+
+@{
+    var now = DateTimeOffset.Now.Date;
+    // var now = new DateTime(2021, 1, 7).Date;
+}
+
+<div id="calendar">
+    <div class="fancyLeft">
+        @await Html.PartialAsync("_Month", model: new EventsViewModel()
+        {
+            EventTemplates = Model.EventTemplates,
+            Current = new Event()
+            {
+                ExactDate = now.AddMonths(-1)
+            }
+        })
+
+        @await Html.PartialAsync("_Month", model: new EventsViewModel()
+        {
+            EventTemplates = Model.EventTemplates,
+            Current = new Event()
+            {
+                ExactDate = now
+            }
+        })
+
+        @await Html.PartialAsync("_Month", model: new EventsViewModel()
+        {
+            EventTemplates = Model.EventTemplates,
+            Current = new Event()
+            {
+                ExactDate = now.AddMonths(1)
+            }
+        })
+    </div>
+
+    <div class="fancyRight">
+        @foreach(var e in Model.EventTemplates)
+        {
+            <h2>@e.Name</h2>
+            <h3>@e.WeekDay, @e.Time - @e.Occurring.ToString()<br><small>Next: @e.ExactDate</small></h3>
+            
+            <p>@e.Description</p>
+        }
+    </div>
+</div>
+
+@section scripts {
+    <script src="lib/moment.js/moment-with-locales.min.js"></script>
+
+    <script>
+        /*$(document).ready(function () {
+
+            var track = 0;
+            function timeNow() {
+
+                var now = new Date,
+                    hours = now.getHours(),
+                    /*ampm    = hours<12 ? ' AM' : ' PM',#1#
+                    minutes = now.getMinutes(),
+                    seconds = now.getSeconds(),
+                    t_str = [(hours < 10 ? "0" + hours : hours),
+                            (minutes < 10 ? "0" + minutes : minutes),
+                            (seconds < 10 ? "0" + seconds : seconds)]
+                        .join(':');
+
+                document.getElementById("current-time").innerHTML = t_str;
+                track += 1;
+            }
+
+            window.TimeTrack = function () {
+                return track;
+            };
+
+            window.TimeTick = setInterval(function () {
+                timeNow();
+            }, 1000);
+
+
+        });*/
+    </script>
+}

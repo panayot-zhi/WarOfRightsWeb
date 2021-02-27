@@ -1,0 +1,147 @@
+﻿<div id="lightBoxOuterContainer">
+    <div id="lightBoxShadow" onclick="closeLightBox()">
+    </div>
+    <div id="lightBoxContainer">
+        <div id="lightBox">
+            <img id="lightBoxImage">
+        </div>
+
+        <div id="lightBoxButtonsShadow">
+            <div id="lightBoxButtons">
+                <h2 class="lightBoxButtons" onclick="previousImage()">Backward
+                </h2>
+                <h2 class="lightBoxButtons" onclick="nextImage()">Forward
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function getCurrentImage() {
+        return $galleryImages.find("a.active");
+    }
+
+    function openLightBox() {
+
+        var $image = getCurrentImage();
+
+        document.getElementById("lightBoxImage").src = $image.data("src");
+        document.getElementById("lightBoxImage").style.visibility = "visible";
+        document.getElementById("lightBoxContainer").style.visibility = "visible";
+        document.getElementById("lightBoxShadow").style.visibility = "visible";
+
+        window.setTimeout(fitImageToScreen, 150);
+    }
+
+    function fitImageToScreen() {
+
+        if (document.getElementById("lightBoxContainer").style.visibility != "visible") {
+            return;
+        }
+
+        var image = new Image;
+        var $image = getCurrentImage();
+        image.src = $image.data("src");
+
+        var currentImageRawHeight = image.height;
+        var currentImageRawWidth = image.width;
+
+        var newHeight;
+        var newWidth;
+
+        var browserWidth = window.innerWidth;
+        var browserHeight = window.innerHeight;
+        var marginSides = 50;
+        var marginTop = 50;
+
+        var imageWidth = browserWidth - marginSides;
+        var imageHeight = browserHeight - marginTop;
+
+        // calculates image height while maintaining the aspect ratio
+        newHeight = (currentImageRawHeight / currentImageRawWidth) * imageWidth;
+        newWidth = (currentImageRawWidth / currentImageRawHeight) * imageHeight;
+
+        document.getElementById("lightBoxImage").style.width = imageWidth + "px";
+        document.getElementById("lightBoxImage").style.height = newHeight + "px";
+        document.getElementById("lightBox").style.left = ((browserWidth / 2) - (imageWidth / 2)) + "px";
+        document.getElementById("lightBox").style.top = ((browserHeight / 2) - (newHeight / 2)) + "px";
+        //if the image is taller than the browser window the image will be scaled on its height
+
+        if (newHeight + marginTop > browserHeight) {
+            // calculates image width while maintaining the aspect ratio
+            newWidth = (currentImageRawWidth / currentImageRawHeight) * imageHeight;
+
+            document.getElementById("lightBoxImage").style.height = imageHeight + "px";
+            document.getElementById("lightBoxImage").style.width = newWidth + "px";
+            document.getElementById("lightBox").style.left = ((browserWidth / 2) - (newWidth / 2)) + "px";
+            document.getElementById("lightBox").style.top = ((browserHeight / 2) - (imageHeight / 2)) + "px";
+        }
+
+        document.getElementById("lightBoxImage").style.visibility = "visible";
+    }
+
+    function nextImage() {
+
+        var $image = getCurrentImage();
+        var $nextImage = $image.next();
+        if (!$nextImage.length) {
+            return;
+        }
+
+        $galleryImages.children("a").removeClass("active");
+        $nextImage.addClass("active");
+
+        document.getElementById("lightBoxImage").src = $nextImage.data("src");
+        window.setTimeout(fitImageToScreen, 150);
+    }
+
+    function previousImage() {
+
+        var $image = getCurrentImage();
+        var $previousImage = $image.prev();
+        if (!$previousImage.length) {
+            return;
+        }
+
+        $galleryImages.children("a").removeClass("active");
+        $previousImage.addClass("active");
+
+        document.getElementById("lightBoxImage").src = $previousImage.data("src");
+        window.setTimeout(fitImageToScreen, 150);
+    }
+
+    function closeLightBox() {
+
+        $galleryImages.children("a").removeClass("active");
+
+        document.getElementById("lightBoxImage").src = "";
+        document.getElementById("lightBoxImage").style.visibility = "hidden";
+        document.getElementById("lightBoxContainer").style.visibility = "hidden";
+        document.getElementById("lightBoxShadow").style.visibility = "hidden";
+    }
+
+    var $galleryImagesContainer = $("#galleryImagesContainer");
+    var $galleryImages = $("#galleryImages");
+
+    $(document).ready(function() {
+
+        if (!$galleryImagesContainer.length || !$galleryImages.length) {
+            console.warn("No galleryImagesContainer or galleryImages elements: ", $galleryImagesContainer, $galleryImages);
+            return;
+        }
+
+        $galleryImages.on("click", "a", function(e) {
+            e.preventDefault();
+
+            var me = this;
+            var $me = $(me);
+
+            $galleryImages.children("a").removeClass("active");
+            $me.addClass("active");
+
+            openLightBox();
+        });
+    });
+</script>

@@ -5,7 +5,6 @@ using System.Dynamic;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using WarOfRightsWeb.Models;
 
 namespace WarOfRightsWeb.Controllers
 {
@@ -25,12 +24,6 @@ namespace WarOfRightsWeb.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
         public IActionResult About()

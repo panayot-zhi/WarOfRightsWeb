@@ -1,0 +1,87 @@
+﻿@model EventsViewModel
+
+@{
+    var now = DateTime.Now.Date;
+    var current = Model.Current.ExactDate;
+    var firstDateOfTheMonth = new DateTime(current.Year, current.Month, 1);
+    //subtract 1, because we normal people start week from Monday
+    var dayOfTheWeekNumber = (int) firstDateOfTheMonth.DayOfWeek - 1;
+    var startDate = firstDateOfTheMonth.AddDays(-dayOfTheWeekNumber);
+    var totalDaysInCurrentMonth = DateTime.DaysInMonth(current.Year, current.Month);
+    // this is a double, not a day :D
+    var numberOfWeeks = Math.Ceiling(totalDaysInCurrentMonth / 7d);
+    var lastDateOfTheMonth = new DateTime(current.Year, current.Month, totalDaysInCurrentMonth);
+}
+
+<h2>@current.ToString("MMMM")</h2>
+
+<table class="calendar-month">
+    <thead>
+    <tr>
+        <th>M</th>
+        <th>T</th>
+        <th>W</th>
+        <th>T</th>
+        <th>F</th>
+        <th>S</th>
+        <th>S</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        @for (int i = 0; i < numberOfWeeks * 7; i++)
+        {
+            var day = startDate.AddDays(i);
+
+            if (i % 7 == 0 && i != 0)
+            {
+                // start a new row (week) every 7 days
+                @:</tr><tr>
+            }
+
+            var cssClass = "calendar-current-month-day";
+            var eventThisDay = Model.EventTemplates.SingleOrDefault(x => x.ExactDate.Date == day)?.ExactDate;
+
+            if (day < firstDateOfTheMonth)
+            {
+                cssClass = "calendar-previous-month-day";
+            }
+            else if (day > lastDateOfTheMonth)
+            {
+                cssClass = "calendar-next-month-day";
+            }
+            else if (day == current.Date)
+            {
+                cssClass = "calendar-today";
+            }
+
+            if (eventThisDay != null)
+            {
+                if (eventThisDay < now)
+                {
+                    cssClass += " calendar-marked-day-passed";
+                }
+                else
+                {
+                    cssClass += " calendar-marked-day";                    
+                }
+            }
+
+            <td class="@cssClass">
+
+                @if (eventThisDay != null)
+                {
+                    <a href="#">@day.Day</a>
+                }
+                else
+                {
+                    <span>@day.Day</span>
+                }
+
+            </td>
+
+
+        }
+    </tr>
+    </tbody>
+</table>
