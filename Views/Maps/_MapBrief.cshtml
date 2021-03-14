@@ -1,13 +1,13 @@
 ﻿@model string
 
 @{
-        var mapName = Model;
-        var mapId = Maps.Normalize(mapName);
-        var mapArea = Maps.AreaFromMapName(mapName);
-        var mapThumbImage = Url.Content($"~/img/maps/thumbs/{mapId}.png");
-        var mapImage = Url.Content($"~/img/maps/{mapId}.png");
-        var mapLink = Url.Action(mapArea, "Maps", new { id = mapId });
-        var mapDescription = Maps.Descriptions[mapId];
+        var map = Model;
+        var mapName = Maps.DisplayNames[map];
+        var mapArea = Extensions.AreaFromMap(map);
+        var mapThumbImage = Url.Content($"~/img/maps/thumbs/{map}.png");
+        var mapImage = Url.Content($"~/img/maps/{map}.png");
+        var mapLink = Url.Action(mapArea, "Maps", new { id = map });
+        var mapDescription = Maps.Descriptions[map];
 }
 
 <div class="briefFieldReportContainer">

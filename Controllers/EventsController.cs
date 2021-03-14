@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using WarOfRightsWeb.Utility;
 using WarOfRightsWeb.Models;
 
 namespace WarOfRightsWeb.Controllers
