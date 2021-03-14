@@ -117,3 +117,13 @@ li h2 a {
     background-size: cover;
 }
 
+.imageContainer {
+    float: left;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.imageContainer .worTightBorder {
+    width: 200px;
+    height: 200px;
+}
