@@ -1,5 +1,10 @@
 ﻿@{
-    ViewBag.Title = "Picket Patrol";
+    ViewBag.Title = Maps.PicketPatrol;
+
+    var map = Maps.PicketPatrol;
+    var dateTime = Maps.DateTimes[map];
+    var image = Url.Content($"~/img/maps/{map}.png");
+    var imageLoading = Url.Content($"~/img/maps/{map}_loading.png");
 }
 
 @section navigation {

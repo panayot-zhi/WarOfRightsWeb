@@ -1,5 +1,12 @@
 ﻿@{
     ViewBag.Title = Maps.BurnsideBridge;
+
+    var map = Maps.BurnsideBridge;
+    var dateTime = Maps.DateTimes[map];
+    var image = Url.Content($"~/img/maps/{map}.png");
+    var imageLoading = Url.Content($"~/img/maps/{map}_loading.png");
+
+    var mapInfo = MapsInfo.Parameters[map];
 }
 
 @section navigation {

@@ -1,5 +1,10 @@
 ﻿@{
-    ViewBag.Title = Maps.BolivarHeightsCamp;
+    ViewBag.Title = Maps.HarpersFerryUSA;
+
+    var map = Maps.HarpersFerryUSA;
+    var dateTime = Maps.DateTimes[map];
+    var image = Url.Content($"~/img/maps/{map}.png");
+    var imageLoading = Url.Content($"~/img/maps/{map}_loading.png");
 }
 
 @section navigation {
