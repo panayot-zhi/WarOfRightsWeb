@@ -5,6 +5,8 @@
     var dateTime = Maps.DateTimes[map];
     var image = Url.Content($"~/img/maps/{map}.png");
     var imageLoading = Url.Content($"~/img/maps/{map}_loading.png");
+
+    var mapInfo = MapsInfo.Parameters[map];
 }
 
 @section navigation {
@@ -19,15 +21,15 @@
 
 </div>
 
-<h2 class="text-right">@Maps.DateTimes[Maps.HatchsAttack]</h2>
-<a href="@Url.Content($"~/img/maps/{Maps.HatchsAttack}.png")" target="_blank">
-    <img src="@Url.Content($"~/img/maps/{Maps.HatchsAttack}.png")" class="imageMaxWidth">
+<h2 class="text-right">@dateTime</h2>
+<a href="@image" target="_blank">
+    <img src="@image" class="imageMaxWidth">
 </a>
 
 <p></p>
 
-<a href="@Url.Content($"~/img/maps/{Maps.HatchsAttack}_loading.png")" target="_blank">
-    <img src="@Url.Content($"~/img/maps/{Maps.HatchsAttack}_loading.png")" class="imageMaxWidth">
+<a href="@imageLoading" target="_blank">
+    <img src="@imageLoading" class="imageMaxWidth">
 </a>
 
 <h2 class="text-right">Belligerents</h2>
