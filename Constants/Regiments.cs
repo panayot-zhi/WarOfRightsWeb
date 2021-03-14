@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WarOfRightsTools.Generated
+namespace WarOfRightsWeb.Constants
 {
     public static class Regiments
     {
