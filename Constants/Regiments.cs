@@ -155,6 +155,9 @@ namespace WarOfRightsWeb.Constants
         public const string BatteryWeaver = "BatteryWeaver";
         public const string BatteryBoyce = "BatteryBoyce";
 
+        // Missing regiments ...
+        public const string Alabama3rd = "3rdAlabama";
+        
         // ui_(?<id>\w+)Title
         // NOTE: Generated item display names
         public static Dictionary<string, string> DisplayNames = new()
@@ -305,6 +308,8 @@ namespace WarOfRightsWeb.Constants
             { BatteryVonSehlen, "Battery Von Sehlen" },
             { BatteryWeaver, "Battery Wever" },
             { BatteryBoyce, "Battery Boyce" },
+
+            { Alabama3rd, "3rd Alabama" },
         };
 
         // ui_{id}Description
@@ -457,6 +462,8 @@ namespace WarOfRightsWeb.Constants
             { BatteryVonSehlen, "The governor of Indiana, Oliver Morton, was a major supporter of President Lincoln and ensured that Indianapolis was a center for Union sentiment and troop-raising. Captain John Von Sehlen’s 15th Independent Battery of Light Artillery was one such regiment raised in March of 1862, and with their six Ordnance Rifles made their way to Harper’s Ferry. Despite their lack of any combat experience, the men valiantly joined those of Phillips’ Battery in the center of the line at Bolivar Heights to face off against the invading Confederate forces. After the surrender of the garrison, they were exchanged and sent to Annapolis, MD before being sent to the Western Theater where they served in many engagements until the end of the war." },
             { BatteryWeaver, "Germans comprised the second largest minority group after the Irish to immigrate in large numbers to the US, and were widely represented on the battlefields of the Civil War. The 1st Battalion NY Light Artillery was one example of a majority-German organization which was first organized out of New York City in 1861. Battery A was put under the command of Lt. Bernhard Wever - which was sometimes anglicized to Weaver - when the battery was mustered in August, 1861. At the time of the Battle of Antietam, most of the battalion provided effective long-ranging fire from their position close to the Phillip Pry House with the help of their huge 20lb Parrotts, which had range on most every part of the battlefield." },
             { BatteryBoyce, "Originally known as the Macbeth Light Artillery after the town in Berkeley County, the battery had been commanded by Captain Robert Boyce since its origin in late August of 1861. At the Battle of Antietam the battery helped shore the defenses behind the Sunken Road, firing more than seventy rounds of canister and solid shot at the Union lines which rapidly overtook his position. With two functional guns remaining following the defense of what would be called Bloody Lane, the battery was then moved south to help defend against Sykes’ Division coming in from the Middle Bridge, firing a few shots to forestall their advance before the battle ended for the day. Boyce would perish from disease in 1863, though his battery lived on to fight more battles through the rest of the war." },
+
+            { Alabama3rd, "The 3rd Alabama Infantry Regiment was mustered in at Montgomery, Alabama in April 1861. And fought in some of The Civil War's most bloody battles, including Seven Pines, Fredericksburg, Chancellorsville, Antietam, Gettysburg and The Wilderness. By war's end the regiment would surrender at Appomattox Court House." },
         };
     }
 }
