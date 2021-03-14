@@ -4,7 +4,7 @@ namespace WarOfRightsWeb.Constants
 {
     public static class Misc
     {
-        private static readonly Random Random = new Random();
+        private static readonly Random Random = new();
 
         public static string[] Tips = new[]
         {

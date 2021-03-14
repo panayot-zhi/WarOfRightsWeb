@@ -15,12 +15,12 @@ namespace WarOfRightsWeb.Constants
         public const string MinieBall = "MinieBall";
         public const string PistolBall = "PistolBall";
         public const string RoundBall = "RoundBall";
-        public const string SpringfieldM1861 = "Springfield_M1861";
+        public const string SpringfieldM1861 = "SpringfieldM1861";
         public const string SpringfieldM1855 = "SpringfieldM1855";
         public const string SpringfieldM1842 = "SpringfieldM1842";
         public const string LorenzM1854 = "LorenzM1854";
-        public const string Mississippi1841 = "Mississippi_1841";
-        public const string PatternEnfield1853 = "PatternEnfield_1853";
+        public const string Mississippi1841 = "Mississippi1841";
+        public const string PatternEnfield1853 = "PatternEnfield1853";
         public const string SharpsRifle = "SharpsRifle";
         public const string SharpsCarbine = "SharpsCarbine";
         public const string Whitworth = "Whitworth";
@@ -30,14 +30,14 @@ namespace WarOfRightsWeb.Constants
         public const string ColtArmyM1860 = "ColtArmyM1860";
         public const string LeMat = "LeMat";
         public const string RemingtonM1858 = "RemingtonM1858";
-        public const string USFtOfficerSword1850 = "US_FtOfficerSword1850";
-        public const string USLightCavalrySaber1860 = "US_LightCavalrySaber1860";
-        public const string USNCOSword1840 = "US_NCOSword1840";
+        public const string USFtOfficerSword1850 = "USFtOfficerSword1850";
+        public const string USLightCavalrySaber1860 = "USLightCavalrySaber1860";
+        public const string USNCOSword1840 = "USNCOSword1840";
         public const string Bayonet = "Bayonet";
         public const string SwordBayonet = "SwordBayonet";
-        public const string FootArtillerySwordUS = "Foot_Artillery_Sword_US";
-        public const string FootArtillerySwordCS = "Foot_Artillery_Sword_CS";
-        public const string ArtilleryToolSpongeRammer = "ArtilleryTool_SpongeRammer";
+        public const string FootArtillerySwordUS = "FootArtillerySwordUS";
+        public const string FootArtillerySwordCS = "FootArtillerySwordCS";
+        public const string ArtilleryToolSpongeRammer = "ArtilleryToolSpongeRammer";
 
         // ui_(?<id>\w+)_title
         // NOTE: Generated item display names        
