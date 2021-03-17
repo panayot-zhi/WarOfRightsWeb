@@ -5,7 +5,7 @@
 @section navigation {
     
     @{
-        var tip = Misc.RandomTip();
+        var tip = Extensions.RandomTip();
         var height = tip.Length >= 70 ? "100px" : "60px";
     }
 
@@ -99,6 +99,12 @@
             <li>
                 <h2>
                     <a href="#helpBattleAwareness">Battle Awareness</a>
+                    
+                </h2>
+            </li>
+            <li>
+                <h2>
+                    <a href="@Url.Action("Index", "Regiments")">Regiments</a>
                     
                 </h2>
             </li>

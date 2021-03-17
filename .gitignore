@@ -342,3 +342,4 @@ healthchecksdb
 # Mine
 appsettings.Production.json
 appsettings.Development.json
+*.7z

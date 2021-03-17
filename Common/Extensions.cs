@@ -1,9 +1,12 @@
-﻿using WarOfRightsWeb.Constants;
+﻿using System;
+using WarOfRightsWeb.Constants;
 
 namespace WarOfRightsWeb.Common
 {
     public static class Extensions
     {
+        private static readonly Random Random = new();
+
         public static string Normalize(string mapName)
         {
             return mapName?
@@ -71,5 +74,9 @@ namespace WarOfRightsWeb.Common
             }
         }
 
+        public static string RandomTip()
+        {
+            return Misc.Tips[Random.Next(Misc.Tips.Length)];
+        }
     }
 }
