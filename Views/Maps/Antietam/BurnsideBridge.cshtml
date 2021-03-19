@@ -43,76 +43,7 @@
 
 <h2 class="text-right">Belligerents</h2>
 
-<div id="mapBelligerents" class="fancyClearBoth">
-
-    <ul>
-        <li>
-            <h3>
-                USA
-            </h3>
-            <ul>
-                <li>
-                    <h2 class="regiment">51st New York Volunteer Infantry</h2>
-                    <ul>
-                        <li>
-                            <p>Privates: Springfield 1861</p>
-                        </li>
-                        <li>
-                            <p>NCO's: Springfield 1861</p>
-                        </li>
-                        <li>
-                            <p>Officers: US_FtOfficerSword1850, </p>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <h2 class="regiment">2nd Maryland Infantry Regiment</h2>
-                    <ul>
-                        <li>
-                            <p>Springfield 1861</p>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <h2 class="regiment">Clark's Battery - 3in Ordnance and '57</h2>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <h3>
-                CSA
-            </h3>
-            <ul>
-                <li>
-                    <h2 class="regiment">2nd Georgia Infantry</h2>
-                    <ul>
-                        <li>
-                            <p>Springfield 1842</p>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <h2 class="regiment">20th Georgia</h2>
-                    <ul>
-                        <li>
-                            <p>Mississippi 1841</p>
-                        </li>
-                        <li>
-                            <p>Pattern Enfield 1853</p>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <h2 class="regiment">Richarson's Battery - 3in Ordnance, '57, and ;61</h2>
-                </li>
-                <li>
-                    <h2 class="regiment">Brown's Battery - 10lb Parrott, '57, and '61</h2>
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-</div>
+@await Html.PartialAsync("_MapTeams", mapInfo)
 
 @section scripts {
     <script>

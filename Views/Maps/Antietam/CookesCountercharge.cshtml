@@ -13,7 +13,7 @@
     @await Html.PartialAsync("_MapsNav")
 }
 
-<h2 class="contentTitle" id="tabTitle">Sunken (Bloody) lane</h2>
+<h2 class="contentTitle" id="tabTitle">Cookes Countercharge</h2>
 
 <div id="mapHistory" class="fancyClearBoth">
 
@@ -34,6 +34,8 @@
 
 
 <h2 class="text-right">Belligerents</h2>
+
+@await Html.PartialAsync("_MapTeams", mapInfo)
 
 @section scripts {
     <script>
