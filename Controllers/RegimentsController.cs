@@ -22,6 +22,11 @@ namespace WarOfRightsWeb.Controllers
             return View();
         }
 
+        public IActionResult Regiment(string id)
+        {
+            return View("Regiment", model: id);
+        }
+
         public IActionResult USA()
         {
             return View();
