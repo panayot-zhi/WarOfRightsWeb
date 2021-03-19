@@ -72,7 +72,7 @@ namespace WarOfRightsWeb.Constants
             { SwordBayonet, "Sword Bayonet" },
             { FootArtillerySwordUS, "Foot Artillery Sword US" },
             { FootArtillerySwordCS, "Foot Artillery Sword CS" },
-            { ArtilleryToolSpongeRammer, "Loading Implement" },
+            { ArtilleryToolSpongeRammer, "Sponge Rammer" },
         };
 
         // ui_{id}_info\d

@@ -10,15 +10,23 @@
             <li style="margin: 0px;">
                 <div id="companyToolHeaderTextContainer">
 
-                    <ul class="companyToolNavUl" style="width: 50%;">
+                    <ul class="companyToolNavUl" style="width: 30%;">
                         <li>
                             <h1 class="text-center">
                                 <a id="navUSARegiments" href="@Url.Action("USA", "Regiments")">USA</a>
                             </h1>
                         </li>
                     </ul>
+                    
+                    <ul class="companyToolNavUl" style="width: 40%;">
+                        <li>
+                            <h1 class="text-center">
+                                <a id="navAllRegiments" class="active" href="@Url.Action("Index", "Regiments")">All</a>
+                            </h1>
+                        </li>
+                    </ul>
 
-                    <ul class="companyToolNavUl" style="width: 50%;">
+                    <ul class="companyToolNavUl" style="width: 30%;">
                         <li>
                             <h1 class="text-center">
                                 <a id="navCSARegiments" href="@Url.Action("CSA", "Regiments")">CSA</a>
@@ -32,6 +40,10 @@
 
         <div class="fancyClearBoth">
         </div>
+
     </nav>
 }
 
+<div id="briefRegimentsContainer">
+    @await Html.PartialAsync("_RegimentBrief", Regiments.USSharpshooters1st)
+</div>

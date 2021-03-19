@@ -54,7 +54,7 @@ li h2 a {
 
 #calendar {
     clear: both;
-    padding: 20px;
+    padding: 40px 20px;
     margin: 30px 0;
     background-image: url('../img/popups/VerticalPaper.png');
     background-size: cover;
