@@ -1,0 +1,66 @@
+﻿@model string
+
+@{
+
+    var regiment = Model;
+    var faction = "USA";
+    var regimentDisplayName = Regiments.DisplayNames[regiment];
+
+    ViewBag.Title = regimentDisplayName;
+
+}
+
+@section navigation {
+    <nav id="companyToolHeaderContainer" class="worBorder" style="padding: 0px;">
+
+        <ul style="margin: 0px; padding: 0px; height: 60px;">
+            <li style="margin: 0px;">
+                <div id="companyToolHeaderTextContainer">
+
+                    <ul class="companyToolNavUl" style="width: 30%;">
+                        <li>
+                            <h1 class="text-center">
+                                <a id="navUSARegiments" href="@Url.Action("USA", "Regiments")">USA</a>
+                            </h1>
+                        </li>
+                    </ul>
+
+                    <ul class="companyToolNavUl" style="width: 40%;">
+                        <li>
+                            <h1 class="text-center">
+                                <a id="navAllRegiments" href="@Url.Action("Index", "Regiments")">All</a>
+                            </h1>
+                        </li>
+                    </ul>
+
+                    <ul class="companyToolNavUl" style="width: 30%;">
+                        <li>
+                            <h1 class="text-center">
+                                <a id="navCSARegiments" href="@Url.Action("CSA", "Regiments")">CSA</a>
+                            </h1>
+                        </li>
+                    </ul>
+
+                </div>
+            </li>
+        </ul>
+
+        <div class="fancyClearBoth">
+        </div>
+
+    </nav>
+}
+
+<h2 class="contentTitle" id="tabTitle">@Model</h2>
+
+
+<p></p>
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#nav" + "@faction" + "Regiments").addClass('active');
+        })
+    </script>
+}

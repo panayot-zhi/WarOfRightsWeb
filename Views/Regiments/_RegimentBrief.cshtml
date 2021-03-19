@@ -1,0 +1,21 @@
+﻿@model string
+
+@{
+    var regiment = Model;
+    var regimentName = Regiments.DisplayNames[regiment];    
+    var regimentImage = Url.Content($"~/img/regiments/usa_infantry_{regiment}_FlagBearer.png");
+    var regimentDescription = Regiments.Descriptions[regiment];
+
+}
+
+<div class="briefFieldReportContainer">
+    <a href="@regimentImage" target="_blank" class="imageContainer">
+        <div style="background: url('@regimentImage'); background-size: contain; background-position-y: -2px" class="worTightBorder"></div>
+    </a>
+    <div class="briefDescription">
+        <a href="@Url.Action("Regiment", "Regiments", new { id = Model })">
+            <h2 class="briefFieldReportName">@regimentName</h2>
+        </a>
+        <p class="fancyClearBoth">@Html.Raw(regimentDescription)</p>
+    </div>
+</div>
