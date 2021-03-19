@@ -4,6 +4,7 @@
 
 	public static class Misc
 	{
+		// ui_gametip\d+
 		public static string[] Tips = new[]
 		{
 			"Left Shift makes you Charge. C toggles Double Quick, Quicktime.",
