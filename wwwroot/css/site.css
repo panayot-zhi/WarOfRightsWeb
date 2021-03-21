@@ -127,3 +127,18 @@ li h2 a {
     width: 200px;
     height: 200px;
 }
+
+#mapBelligerentsUSA .latestNewsItem a {
+    text-decoration: none;
+}
+
+#mapBelligerentsUSA .latestNewsItem:hover {
+    cursor: auto;
+}
+
+#mapBelligerentsCSA .latestNewsItem,
+#mapBelligerentsUSA .latestNewsItem {
+    display: inline-block;
+    min-height: 200px;
+    height: auto;
+}
