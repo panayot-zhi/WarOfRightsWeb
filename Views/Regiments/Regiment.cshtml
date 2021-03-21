@@ -1,13 +1,13 @@
 ﻿@model string
 
 @{
-
     var regiment = Model;
-    var faction = Labels.USA;
+    var faction = Extensions.RegimentFaction(regiment);
+    var type = Extensions.RegimentType(regiment);
     var regimentDisplayName = Regiments.DisplayNames[regiment];
+    var description = Regiments.Descriptions[regiment];
 
     ViewBag.Title = regimentDisplayName;
-
 }
 
 @section navigation {
@@ -51,11 +51,81 @@
     </nav>
 }
 
-<h2 class="contentTitle" id="tabTitle">@Model</h2>
+<h2 class="contentTitle" id="tabTitle">@regimentDisplayName</h2>
 
+<div id="regimentDescription" class="fancyClearBoth">
+    <p>@Html.Raw(description)</p>
+</div>
 
-<p></p>
+<div class="fancyCenter text-center">
+    
+    @{
+        string artilleryPrivate1 = null, artilleryPrivate2 = null, infantryPrivate = null, flagBearer = null;
+        var nco = Url.RegimentImageOrDefault(faction, type, regiment, Labels.NCO);
+        var officer = Url.RegimentImageOrDefault(faction, type, regiment, Labels.Officer);
 
+        var defaultCss = "background-size: 250px 250px; background-position-y: -60px; background-position-x: -30px;";
+        var flagCss = "background-size: contain; background-position-y: -2px;";
+    }
+
+    @if (type == Labels.Artillery)
+    {
+        artilleryPrivate1 = Url.RegimentImageOrDefault(faction, type, regiment, Labels.ArtilleryPrivate1);
+        artilleryPrivate2 = Url.RegimentImageOrDefault(faction, type, regiment, Labels.ArtilleryPrivate1);
+    }
+    else
+    {
+        infantryPrivate = Url.RegimentImageOrDefault(faction, type, regiment, Labels.Private);
+        flagBearer = Url.RegimentImageOrDefault(faction, type, regiment, Labels.FlagBearer);
+    }
+    
+
+    @if (artilleryPrivate1 != null)
+    {    
+        <a href="@artilleryPrivate1" target="_blank" class="imageContainer">
+             <div style="background: url('@artilleryPrivate1'); @defaultCss" class="worTightBorder"></div>
+             <span>Artillery Private</span>
+         </a>
+    }
+    
+    @if (artilleryPrivate2 != null)
+    {    
+        <a href="@artilleryPrivate2" target="_blank" class="imageContainer">
+            <div style="background: url('@artilleryPrivate2'); @defaultCss" class="worTightBorder"></div>
+            <span>Artillery Private</span>
+        </a>
+    }
+    
+    @if (infantryPrivate != null)
+    {    
+        <a href="@infantryPrivate" target="_blank" class="imageContainer">
+            <div style="background: url('@infantryPrivate'); @defaultCss" class="worTightBorder"></div>
+            <span>Artillery Private</span>
+        </a>
+    }
+    
+    @if (flagBearer != null)
+    {    
+        <a href="@flagBearer" target="_blank" class="imageContainer">
+            <div style="background: url('@flagBearer'); @flagCss" class="worTightBorder"></div>
+            <span>Flag Bearer</span>
+        </a>
+    }
+
+    <a href="@nco" target="_blank" class="imageContainer">
+        <div style="background: url('@nco'); @defaultCss" class="worTightBorder"></div>
+        <span>NCO</span>
+    </a>
+
+    <a href="@officer" target="_blank" class="imageContainer">
+        <div style="background: url('@officer'); @defaultCss" class="worTightBorder">
+        </div>
+        <span>Officer</span>
+    </a>
+
+</div>
+
+<div class="fancyClearBoth"></div>
 
 @section scripts {
     <script>

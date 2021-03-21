@@ -17,7 +17,9 @@ namespace WarOfRightsWeb.Constants
 
         public const string FlagBearer = "FlagBearer";
         public const string NCO = "NCO";
-        public const string Officer = "Officer";
+        public const string Officer = "Officer";    
         public const string Private = "Private";
+        public const string ArtilleryPrivate1 = "ArtilleryPrivate1";
+        public const string ArtilleryPrivate2 = "ArtilleryPrivate2";
     }
 }
