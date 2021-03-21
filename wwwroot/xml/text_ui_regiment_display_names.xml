@@ -85,8 +85,8 @@
     </Crn>
    </Xct>
   </SupBook>
-  <WindowHeight>13410</WindowHeight>
-  <WindowWidth>29715</WindowWidth>
+  <WindowHeight>16755</WindowHeight>
+  <WindowWidth>32767</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <TabRatio>274</TabRatio>
@@ -246,7 +246,7 @@
   <Names>
    <NamedRange ss:Name="Print_Area" ss:RefersTo="=Sheet1!R1C3:R2C4"/>
   </Names>
-  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="295" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="297" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s62">
    <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="13.5"/>
    <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="271.5"/>
@@ -382,6 +382,11 @@
     <Cell ss:Index="2"><Data ss:Type="String">ui_8thOhioTitle</Data></Cell>
     <Cell><Data ss:Type="String">8th Ohio</Data></Cell>
     <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">8th Ohio</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s74">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_5thNewYorkTitle</Data></Cell>
+    <Cell><Data ss:Type="String">5th New York</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">5th New York</Data></Cell>
    </Row>
    <Row ss:StyleID="s74">
     <Cell ss:Index="2"><Data ss:Type="String">ui_9thNewYorkTitle</Data></Cell>
@@ -1216,6 +1221,12 @@
     <Cell ss:StyleID="s74"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="63.75">
+    <Cell ss:Index="2" ss:StyleID="s74"><Data ss:Type="String">ui_5thNewYorkDescription</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Organized under the command of Col. Abram Duryee at Fort Schuyler at New York harbor in April of 1861, the regiment soon became renowned as the efficient and disciplined “Duryee’s Zouaves.” However, they would also quickly prove their mettle and coolness under fire over the course of their regiment’s brief career, including their first fight at Big Bethel in June, and in the Peninsula Campaign a year later. After several charges into Rebel lines, their ranks were already depleted by the time they met their foe again at Second Bull Run. Joined by the equally small 10th NY Zouaves, the 5th NY barely mustered 490 men when a Confederate division 30,000 strong under James Longstreet crashed against them. The Zouave lines were literally ripped to shreds by the Rebel volleys, leaving only 200 to stagger back. As such, the 5th NY was left in reserve for several months while the ranks were reestablished, while a final engagement at Chancellorsville heralded the end of their two-year enlistment, where several hundred reenlisted into the 146th NY Infantry.</Data></Cell>
+    <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">Organized under the command of Col. Abram Duryee at Fort Schuyler at New York harbor in April of 1861, the regiment soon became renowned as the efficient and disciplined “Duryee’s Zouaves.” However, they would also quickly prove their mettle and coolness under fire over the course of their regiment’s brief career, including their first fight at Big Bethel in June, and in the Peninsula Campaign a year later. After several charges into Rebel lines, their ranks were already depleted by the time they met their foe again at Second Bull Run. Joined by the equally small 10th NY Zouaves, the 5th NY barely mustered 490 men when a Confederate division 30,000 strong under James Longstreet crashed against them. The Zouave lines were literally ripped to shreds by the Rebel volleys, leaving only 200 to stagger back. As such, the 5th NY was left in reserve for several months while the ranks were reestablished, while a final engagement at Chancellorsville heralded the end of their two-year enlistment, where several hundred reenlisted into the 146th NY Infantry.</Data></Cell>
+    <Cell ss:StyleID="s74"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75">
     <Cell ss:Index="2" ss:StyleID="s74"><Data ss:Type="String">ui_9thNewYorkDescription</Data></Cell>
     <Cell ss:StyleID="s74"><Data ss:Type="String">The “Hawkins Zouaves” were swiftly mustered into service after lawyer Rush Hawkins implored his state senator and friend. By 1863, they helped to quell the infamous draft riots in New York City, however their dwindling numbers forced them to be consolidated into the 17th NY Veteran Volunteer Infantry with several others.</Data></Cell>
     <Cell ss:StyleID="s74" ss:Formula="=RC[-1]"><Data ss:Type="String">The “Hawkins Zouaves” were swiftly mustered into service after lawyer Rush Hawkins implored his state senator and friend. By 1863, they helped to quell the infamous draft riots in New York City, however their dwindling numbers forced them to be consolidated into the 17th NY Veteran Volunteer Infantry with several others.</Data></Cell>
@@ -1851,12 +1862,12 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <TopRowVisible>131</TopRowVisible>
+   <TopRowVisible>181</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>152</ActiveRow>
-     <ActiveCol>2</ActiveCol>
+     <ActiveRow>189</ActiveRow>
+     <ActiveCol>3</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

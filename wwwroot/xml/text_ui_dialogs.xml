@@ -1,0 +1,779 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Title>Audio script template</Title>
+  <Author>Maëlenn Lumineau</Author>
+  <LastAuthor>FancySweetroll</LastAuthor>
+  <LastPrinted>2003-10-30T09:38:41Z</LastPrinted>
+  <Created>2002-06-17T19:14:00Z</Created>
+  <LastSaved>2020-12-07T13:22:24Z</LastSaved>
+  <Company>Electronic Arts</Company>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <SupBook>
+   <Path>C:\DOCUME~1\jack\LOCALS~1\Temp\p4v\PC025 perforce 1666\data\Game02\Game\Languages\Copy of Dialog_Asset_List_Final_edit.xls</Path>
+   <SheetName>DropDown</SheetName>
+   <SheetName>Conversations</SheetName>
+   <Xct>
+    <Count>2</Count>
+    <SheetIndex>0</SheetIndex>
+    <Crn>
+     <Row>6</Row>
+     <ColFirst>0</ColFirst>
+     <ColLast>4</ColLast>
+     <Text>clean</Text>
+     <Text>TV</Text>
+     <Text>radio (disturbed) </Text>
+     <Text>radio (low)</Text>
+     <Text>radio (heavy)</Text>
+    </Crn>
+    <Crn>
+     <Row>9</Row>
+     <ColFirst>0</ColFirst>
+     <ColLast>41</ColLast>
+     <Text>Player</Text>
+     <Text>Barnes</Text>
+     <Text>Hawker</Text>
+     <Text>Sykes</Text>
+     <Text>Johnson</Text>
+     <Text>Cortez</Text>
+     <Text>Beck</Text>
+     <Text>Miller</Text>
+     <Text>Baxter</Text>
+     <Text>American scientist</Text>
+     <Text>Shark</Text>
+     <Text>Chia</Text>
+     <Text>Kirovski</Text>
+     <Text>Michaels</Text>
+     <Text>Chang</Text>
+     <Text>Marine Soldier a</Text>
+     <Text>Marine Soldier b</Text>
+     <Text>Chinese Soldier a</Text>
+     <Text>Chinese Soldier b</Text>
+     <Text>Chinese Soldier c</Text>
+     <Text>Chinese Soldier d</Text>
+     <Text>Chinese Soldier e</Text>
+     <Text>Chinese Soldier f</Text>
+     <Text>Chinese Officer a</Text>
+     <Text>Chinese Officer b</Text>
+     <Text>Chinese Scientist a</Text>
+     <Text>Chinese Scientist b</Text>
+     <Text>Chinese Scientist Female a</Text>
+     <Text>Chinese Scientist Female b</Text>
+     <Text>Filmcrew Member</Text>
+     <Text>Morrison</Text>
+     <Text>C17 Pilot a</Text>
+     <Text>C17 Pilot b</Text>
+     <Text>Submarine Commander Davis</Text>
+     <Text>Pilot (camera)</Text>
+     <Text>Bridge officer 1</Text>
+     <Text>Bridge officer 2</Text>
+     <Text>Carrier deck guide</Text>
+     <Text>Jet Pilot</Text>
+     <Text>VTOL Pilot</Text>
+     <Text>Commander (camera)</Text>
+     <Text>Team Two (camera)</Text>
+    </Crn>
+   </Xct>
+  </SupBook>
+  <WindowHeight>12885</WindowHeight>
+  <WindowWidth>23460</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <TabRatio>274</TabRatio>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s67">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s68">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:Family="Modern" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s69">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:Family="Modern" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#FF0000" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s70">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#666699" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s71">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:Family="Modern" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#666699" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s72">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s74">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s75">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFCC00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s76">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s78">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s79">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s80">
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s82">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s83">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="characters"
+   ss:RefersTo="='C:\DOCUME~1\jack\LOCALS~1\Temp\p4v\PC025 perforce 1666\data\Game02\Game\Languages\[Copy of Dialog_Asset_List_Final_edit.xls]DropDown'!R10C1:R10C42"/>
+  <NamedRange ss:Name="type"
+   ss:RefersTo="='C:\DOCUME~1\jack\LOCALS~1\Temp\p4v\PC025 perforce 1666\data\Game02\Game\Languages\[Copy of Dialog_Asset_List_Final_edit.xls]DropDown'!R7C1:R7C5"/>
+ </Names>
+ <Worksheet ss:Name="Sheet1">
+  <Names>
+   <NamedRange ss:Name="Print_Area" ss:RefersTo="=Sheet1!R1C3:R2C4"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="105" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s62">
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="13.5"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="271.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="343.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="329.25"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="160.5"/>
+   <Row ss:AutoFitHeight="0" ss:Height="51" ss:StyleID="s65">
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">KEY</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">ORIGINAL TEXT</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">TRANSLATED TEXT</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell><Data ss:Type="String">CONTEXT</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25" ss:StyleID="s65">
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s70"/>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">This contains original text meant for subtitles. Use descriptive expressions like &lt;frantic laughter&gt; and ## for a new line.</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">This contains text for subtitles. Use descriptive expressions like &lt;frantic laughter&gt; and ## for a new line.</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.25" ss:StyleID="s72">
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.25" ss:StyleID="s76">
+    <Cell ss:StyleID="s78"/>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">Object interaction</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_exitgame_title</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">CERTIFICATE OF DISCHARGE</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">CERTIFICATE OF DISCHARGE</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="76.5">
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_exitgame_description</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">This Certificate given to this soldier is here by relieved of duty and has earned their service on the battlefield. They may, if so they choose, proceed to the desktop.&#10;\n&#10;\n&#10;Do you wish to resign?</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">This Certificate given to this soldier is here by relieved of duty and has earned their service on the battlefield. They may, if so they choose, proceed to the desktop.&#10;\n&#10;\n&#10;Do you wish to resign?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_exitgame_question</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DO YOU WISH TO RESIGN?</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DO YOU WISH TO RESIGN?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_exitgame_signed</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DISCHARGED BY:</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DISCHARGED BY:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joinpasswordedgame_title</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">PASSWORDED SERVER</Data></Cell>
+    <Cell ss:StyleID="Default" ss:Formula="=RC[-1]"><Data ss:Type="String">PASSWORDED SERVER</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joinpasswordedgame_description</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">To join the passworded server, please type in the correct password!</Data></Cell>
+    <Cell ss:StyleID="Default" ss:Formula="=RC[-1]"><Data ss:Type="String">To join the passworded server, please type in the correct password!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joinpasswordedgame_question</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">Password</Data></Cell>
+    <Cell ss:StyleID="Default" ss:Formula="=RC[-1]"><Data ss:Type="String">Password</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joinpasswordedgame_signed</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DISCHARGED BY:</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DISCHARGED BY:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joiningsession_title</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">JOINING SESSION</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">JOINING SESSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joiningsessionfromsteam_title</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">JOINING SESSION VIA STEAM</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">JOINING SESSION VIA STEAM</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joiningsession_description</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">You are on your way to the battlefield. Should you choose to stay behind, do so now.</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">You are on your way to the battlefield. Should you choose to stay behind, do so now.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joininggame_title</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">JOINING GAME</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">JOINING GAME</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joininggame_description</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">You are on your way to the battlefield. Should you choose to stay behind, do so now.</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">You are on your way to the battlefield. Should you choose to stay behind, do so now.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_joingame_signed</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">RESIGNATION:</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">RESIGNATION:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_leaveserver_title</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">Leave Server</Data></Cell>
+    <Cell ss:StyleID="Default" ss:Formula="=RC[-1]"><Data ss:Type="String">Leave Server</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_leaveserver_description</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">Do you wish to the leave the server and return to the main menu?</Data></Cell>
+    <Cell ss:StyleID="Default" ss:Formula="=RC[-1]"><Data ss:Type="String">Do you wish to the leave the server and return to the main menu?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_leaveserver_question</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DO YOU WISH TO RESIGN?</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DO YOU WISH TO RESIGN?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_leaveserver_signed</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DISCHARGED BY:</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">DISCHARGED BY:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_message_general_question</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">CONTINUE?</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">CONTINUE?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_message_general_signed</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">SIGNED BY:</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">SIGNED BY:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_message_rentserver_title</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Rent G-Portal Server</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Rent G-Portal Server</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_message_rentserver_description</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Do you want to rent a G-Portal gameserver? This will minimize the game and open your default web browser.</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Do you want to rent a G-Portal gameserver? This will minimize the game and open your default web browser.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="12">
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_viewtutorials_title</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">View Tutorials</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">View Tutorials</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_viewtutorials_description</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Do you want to view tutorial videos for War of Rights? This will open a tutorial video webpage in your default web browser</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Do you want to view tutorial videos for War of Rights? This will open a tutorial video webpage in your default web browser</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_message_ban_title</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Banned from server</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Banned from server</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_message_ban_info</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">You have been banned due to teamdamage!</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">You have been banned due to teamdamage!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_message_ban_description</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Banned description</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Banned description</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_message_ban_button</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">OK</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">OK</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_BenchmarkTitle</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Benchmark</Data></Cell>
+    <Cell ss:StyleID="s82" ss:Formula="=RC[-1]"><Data ss:Type="String">Benchmark</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_BenchmarkDescription</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Do you want to start the benchmark? This will load the Antietam battlefield and start a looping cinematic sequence and show the average FPS in the bottom right corner.</Data></Cell>
+    <Cell ss:StyleID="s82" ss:Formula="=RC[-1]"><Data ss:Type="String">Do you want to start the benchmark? This will load the Antietam battlefield and start a looping cinematic sequence and show the average FPS in the bottom right corner.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_EnterSpectatorCameraTitle</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Enter Spectator Camera?</Data></Cell>
+    <Cell ss:StyleID="s82" ss:Formula="=RC[-1]"><Data ss:Type="String">Enter Spectator Camera?</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">ui_EnterSpectatorCameraDescription</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Entering the spectator camera allows you to fly around on the map. Activating it will kill your player, inducing a morale cost to your team and require you to respawn when exiting the spectator camera!</Data></Cell>
+    <Cell ss:StyleID="s82" ss:Formula="=RC[-1]"><Data ss:Type="String">Entering the spectator camera allows you to fly around on the map. Activating it will kill your player, inducing a morale cost to your team and require you to respawn when exiting the spectator camera!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_UnsavedChangesTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Unsaved Changes!</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Unsaved Changes!</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_UnsavedChangesDescription</Data></Cell>
+    <Cell><Data ss:Type="String">You have unsaved changes.&#10;\n&#10;\n&#10;Do you wish to save or discard the changes?</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">You have unsaved changes.&#10;\n&#10;\n&#10;Do you wish to save or discard the changes?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_UnsavedChangesSave</Data></Cell>
+    <Cell><Data ss:Type="String">Save</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Save</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_UnsavedChangesCancel</Data></Cell>
+    <Cell><Data ss:Type="String">Discard</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Discard</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_ResolutionConfirmationTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Screen Dimensions Changed!</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Screen Dimensions Changed!</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_ResolutionConfirmationDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Can you see this message?&#10;\n&#10;\n&#10;The game will revert to its previous settings in 15 seconds</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Can you see this message?&#10;\n&#10;\n&#10;The game will revert to its previous settings in 15 seconds</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_GameplayOptionsResetConfirmationTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Reset Gameplay Options</Data></Cell>
+    <Cell><Data ss:Type="String">Reset Gameplay Options</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_GameplayOptionsResetConfirmationDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to reset all gameplay options to their defaults?</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to reset all gameplay options to their defaults?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_GraphicsOptionsResetConfirmationTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Reset Graphics Options</Data></Cell>
+    <Cell><Data ss:Type="String">Reset Graphics Options</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_GraphicsOptionsResetConfirmationDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to reset all graphics options to their defaults?</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to reset all graphics options to their defaults?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_SoundOptionsResetConfirmationTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Reset Sound Options</Data></Cell>
+    <Cell><Data ss:Type="String">Reset Sound Options</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_SoundOptionsResetConfirmationDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to reset all sound options to their defaults?</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to reset all sound options to their defaults?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_KeybindingsOptionsResetConfirmationTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Reset Keybindings</Data></Cell>
+    <Cell><Data ss:Type="String">Reset Keybindings</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_dialog_KeybindingsOptionsResetConfirmationDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to reset all keybindings to their defaults?</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to reset all keybindings to their defaults?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_AnnounceDescription</Data></Cell>
+    <Cell><Data ss:Type="String">The message you type here will be sent to all players on the server</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">The message you type here will be sent to all players on the server</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_message</Data></Cell>
+    <Cell><Data ss:Type="String">Message</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Message</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_banPlayerDescription</Data></Cell>
+    <Cell><Data ss:Type="String">This will ban and kick the player from the server</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">This will ban and kick the player from the server</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_reason</Data></Cell>
+    <Cell><Data ss:Type="String">Reason</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Reason</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_hours</Data></Cell>
+    <Cell><Data ss:Type="String">Hours</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Hours</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s80"><Data ss:Type="String">ui_kickPlayerDescription</Data></Cell>
+    <Cell><Data ss:Type="String">This will kick the player from the server</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">This will kick the player from the server</Data></Cell>
+   </Row>
+   <Row ss:Index="77">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_switchAreaDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to end the current round and proceed to the next area?</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Do you wish to end the current round and proceed to the next area?</Data></Cell>
+   </Row>
+   <Row ss:Index="79" ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_SetPasswordDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Type the password you want the server to have.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Type the password you want the server to have.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_Password</Data></Cell>
+    <Cell><Data ss:Type="String">Password: </Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Password: </Data></Cell>
+   </Row>
+   <Row ss:Index="82">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_RemovePassword</Data></Cell>
+    <Cell><Data ss:Type="String">Remove Password</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Remove Password</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_RemovePasswordDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Do you want to remove the password on this server?</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Do you want to remove the password on this server?</Data></Cell>
+   </Row>
+   <Row ss:Index="85">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_SetServerNameDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Type the name you want the server to have.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Type the name you want the server to have.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_ServerName</Data></Cell>
+    <Cell><Data ss:Type="String">Server Name: </Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Server Name: </Data></Cell>
+   </Row>
+   <Row ss:Index="88">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_chooseWinner</Data></Cell>
+    <Cell><Data ss:Type="String">Choose Winner</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Choose Winner</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_chooseWinnerDescriptionUSA</Data></Cell>
+    <Cell><Data ss:Type="String">Do you want USA to be the winner of the current round?</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Do you want USA to be the winner of the current round?</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_chooseWinnerDescriptionCSA</Data></Cell>
+    <Cell><Data ss:Type="String">Do you want CSA to be the winner of the current round?</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Do you want CSA to be the winner of the current round?</Data></Cell>
+   </Row>
+   <Row ss:Index="92">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_restartRound</Data></Cell>
+    <Cell><Data ss:Type="String">Restart Round</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Restart Round</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_restartRoundDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Do you want to restart the current round?</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Do you want to restart the current round?</Data></Cell>
+   </Row>
+   <Row ss:Index="95">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_endRoundDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Do you wish to end the current round?</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Do you wish to end the current round?</Data></Cell>
+   </Row>
+   <Row ss:Index="97">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_banSteamId</Data></Cell>
+    <Cell><Data ss:Type="String">Ban Steam ID</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Ban Steam ID</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_unbanSteamId</Data></Cell>
+    <Cell><Data ss:Type="String">Unban Steam ID</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Unban Steam ID</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_verifySteamIdForBanDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Enter the Steam ID you wish to permanently ban. Clicking verify will open the Steam overlay with the user profile of the Steam ID you entered after which the Steam overlay can be closed and you can permanently ban the player.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Enter the Steam ID you wish to permanently ban. Clicking verify will open the Steam overlay with the user profile of the Steam ID you entered after which the Steam overlay can be closed and you can permanently ban the player.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell ss:Index="2"><Data ss:Type="String">ui_verifySteamIdForUnbanDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Enter the Steam ID you wish to unban. Clicking verify will open the Steam overlay with the user profile of the Steam ID you entered after which the Steam overlay can be closed and you can unban the player.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Enter the Steam ID you wish to unban. Clicking verify will open the Steam overlay with the user profile of the Steam ID you entered after which the Steam overlay can be closed and you can unban the player.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_banSteamIdDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Clicking Ban will permanently ban the entered Steam ID on this server.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Clicking Ban will permanently ban the entered Steam ID on this server.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_unbanSteamIdDescription</Data></Cell>
+    <Cell><Data ss:Type="String">Clicking Unban will unban the entered Steam ID on this server.</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Clicking Unban will unban the entered Steam ID on this server.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">ui_SteamId</Data></Cell>
+    <Cell><Data ss:Type="String">Steam ID</Data></Cell>
+    <Cell ss:Formula="=RC[-1]"><Data ss:Type="String">Steam ID</Data></Cell>
+   </Row>
+   <Row ss:Index="105" ss:AutoFitHeight="0" ss:Height="25.5"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Layout x:Orientation="Landscape"/>
+    <Header x:Margin="0.51181102362204722"
+     x:Data="&amp;LTime restriction sample script"/>
+    <Footer x:Margin="0.51181102362204722" x:Data="Page &amp;P"/>
+    <PageMargins x:Bottom="0.98425196850393704" x:Left="0" x:Right="0"
+     x:Top="0.98425196850393704"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <Scale>70</Scale>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>72</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>102</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
