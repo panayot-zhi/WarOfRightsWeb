@@ -1,65 +1,41 @@
 ﻿@model MapsInfo.SkirmishInfo
 
-<div id="mapBelligerents" class="fancyClearBoth">
+<h2 class="text-right">Belligerents</h2>
 
-    <ul>
-        <li>
-            <h3>
-                USA @(Model.DefendingTeam == Labels.USA ? "(Defending)" : "(Attacking)")
-            </h3>
-            <ul>
-                @foreach (var regiment in Model.RegimentsUSA)
-                {
-                    var displayName = Regiments.DisplayNames[regiment];
-                    var usaWeaponPool = RegimentsInfo.WeaponsPool[regiment];
-                    
-                    <li>
-                        <h2 class="regiment">@displayName</h2>
-                        <ul>
-                            @for (int i = 0; i < usaWeaponPool.Count; i++)
-                            {
-                                var weapon = usaWeaponPool.ElementAt(i);
+<div id="mapBelligerentsUSA" class="fancyLeft">
 
-                                <li>
-                                    <p>
-                                        @(weapon.Value == 100 ? "" : $"{weapon.Value}%") @Weapons.DisplayNames[weapon.Key]
-                                    </p>
-                                </li>
-                            }
-                        </ul>
-                    </li>
-                }
-            </ul>
-        </li>
-        <li>
-            <h3>
-                CSA @(Model.DefendingTeam == Labels.CSA ? "(Defending)" : "(Attacking)")
-            </h3>
-            <ul>
-                @foreach (var regiment in Model.RegimentsCSA)
-                {
-                    var displayName = Regiments.DisplayNames[regiment];
-                    var csaWeaponPool = RegimentsInfo.WeaponsPool[regiment];
-                    var isArtillery = Extensions.RegimentType(regiment) == Labels.Artillery;
-
-                    <li>
-                        <h2 class="regiment">@displayName</h2>
-                        <ul>
-                            @for (int i = 0; i < csaWeaponPool.Count; i++)
-                            {
-                                var weapon = csaWeaponPool.ElementAt(i);
-
-                                <li>
-                                    <p>
-                                        @(weapon.Value == 100 ? "" : $"{weapon.Value}%") @Weapons.DisplayNames[weapon.Key]
-                                    </p>
-                                </li>
-                            }
-                        </ul>
-                    </li>
-                }
-            </ul>
-        </li>
-    </ul>
+    <h1 class="text-center">@Labels.USA @(Model.DefendingTeam == Labels.USA ? "(Defending)" : "(Attacking)")</h1>
+    
+    @foreach (var regiment in Model.RegimentsUSA)
+    {
+        @await Html.PartialAsync("_RegimentBrief", regiment)
+    }
 
 </div>
+
+<div id="mapBelligerentsCSA" class="fancyRight">
+
+    <h1 class="text-center">@Labels.CSA @(Model.DefendingTeam == Labels.CSA ? "(Defending)" : "(Attacking)")</h1>
+
+    @foreach (var regiment in Model.RegimentsCSA)
+    {
+        @await Html.PartialAsync("_RegimentBrief", regiment)
+    }
+
+</div>
+
+<div class="fancyClearBoth"></div>
+
+<h2 class="text-right">Parameters</h2>
+
+<div id="mapParameters">
+    <p class="text-right">- Round Time: @(Extensions.SecondsToMinutes(Model.RoundTime)) min</p>
+    <p class="text-right">- Wave Time: @Model.WaveTime s</p>
+    <p class="text-right">- Capture Speed: @Model.CaptureSpeed</p>
+    <p class="text-right">- Neutralize Speed: @Model.NeutralizeSpeed</p>
+    <p class="text-right">- Tickets USA: @Model.TicketsUSA</p>
+    <p class="text-right">- Tickets CSA: @Model.TicketsCSA</p>
+    <p class="text-right">- Final Push Time: @(Extensions.SecondsToMinutes(Model.FinalPushTime)) min</p>
+</div>
+
+<div class="fancyClearBoth"></div>

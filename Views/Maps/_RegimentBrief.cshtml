@@ -6,7 +6,16 @@
     var weaponPool = RegimentsInfo.WeaponsPool[regiment];
     var faction = Extensions.RegimentFaction(regiment).ToLowerInvariant();
     var type = Extensions.RegimentType(regiment).ToLowerInvariant();
-    var image = Url.RegimentImageOrDefault(Labels.FlagBearer, regiment, type, faction);
+    var isArtillery = type == Labels.Artillery.ToLowerInvariant();
+    var imageName = $"{faction}_{type}_{regiment}_" + (isArtillery ? 
+        Labels.NCO : Labels.FlagBearer);
+    var image = Url.RegimentImageIfExists(imageName);
+    if (image == null)
+    {
+        imageName = $"{faction}_{type}_default_" + (isArtillery ? 
+            Labels.NCO : Labels.FlagBearer);
+        image = Url.RegimentImageIfExists(imageName);
+    }
 }
 
 <div class="latestNewsItem">

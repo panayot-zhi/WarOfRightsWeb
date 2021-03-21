@@ -128,17 +128,17 @@ li h2 a {
     height: 200px;
 }
 
-#mapBelligerentsUSA .latestNewsItem a {
-    text-decoration: none;
-}
-
 #mapBelligerentsUSA .latestNewsItem:hover {
     cursor: auto;
+}
+
+#mapBelligerentsUSA .latestNewsItem a,
+#mapBelligerentsCSA .latestNewsItem a {
+    text-decoration: none;
 }
 
 #mapBelligerentsCSA .latestNewsItem,
 #mapBelligerentsUSA .latestNewsItem {
     display: inline-block;
-    min-height: 200px;
     height: auto;
 }
