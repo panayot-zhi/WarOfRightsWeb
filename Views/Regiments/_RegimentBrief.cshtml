@@ -13,7 +13,7 @@
         <div style="background: url('@regimentImage'); background-size: contain; background-position-y: -2px" class="worTightBorder"></div>
     </a>
     <div class="briefDescription">
-        <a href="@Url.Action("Regiment", "Regiments", new { id = Model })">
+        <a href="@Url.Action("Index", "Regiments", new { id = Model })">
             <h2 class="briefFieldReportName">@regimentName</h2>
         </a>
         <p class="fancyClearBoth">@Html.Raw(regimentDescription)</p>

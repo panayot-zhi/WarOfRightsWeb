@@ -3,6 +3,7 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using WarOfRightsWeb.Constants;
 
 namespace WarOfRightsWeb.Controllers
 {
@@ -17,14 +18,14 @@ namespace WarOfRightsWeb.Controllers
             this._webHostEnv = webHostEnv;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
-            return View();
-        }
+            if (Regiments.DisplayNames.ContainsKey(id))
+            {
+                return View("Regiment", model: id);
+            }
 
-        public IActionResult Regiment(string id)
-        {
-            return View("Regiment", model: id);
+            return View();
         }
 
         public IActionResult USA()
