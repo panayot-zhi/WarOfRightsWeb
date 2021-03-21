@@ -1,26 +1,11 @@
-﻿@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment WebHost
-@model string
+﻿@model string
 
 @{
     var id = Model;
     var name = Weapons.DisplayNames[id];
     var parameters = Weapons.Parameters[id];
     var description = Weapons.Descriptions[id];
-    var imagePath = System.IO.Path.Combine(WebHost.WebRootPath, "img", "weapons", $"{id}.jpg");
-    var imageExists = System.IO.File.Exists(imagePath);
-
-    string image;
-    if (!imageExists)
-    {
-        imagePath = System.IO.Path.Combine(WebHost.WebRootPath, "img", "weapons", $"{id}.png");
-        imageExists = System.IO.File.Exists(imagePath);
-        image = Url.Content($"~/img/weapons/{id}.png");
-    }
-    else
-    {
-        image = Url.Content($"~/img/weapons/{id}.jpg");
-    }
-
+    var image = Url.WeaponImageIfExists(id);
 }
 
 <li>
@@ -28,7 +13,7 @@
         @name
     </h3>
     <p>
-        @if (imageExists)
+        @if (image != null)
         {
             <a href="@image">
                 <img src="@image" alt="@name" class="imageRightAlign" />
