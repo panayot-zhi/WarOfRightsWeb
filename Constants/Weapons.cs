@@ -39,6 +39,11 @@ namespace WarOfRightsWeb.Constants
         public const string FootArtillerySwordCS = "FootArtillerySwordCS";
         public const string ArtilleryToolSpongeRammer = "ArtilleryToolSpongeRammer";
 
+        // Artillery
+        public const string Artillery10PdrParrott = "Artillery10PdrParrott";
+        public const string Artillery12PdrNapoleon = "Artillery12PdrNapoleon";
+        public const string Artillery3InchOrdnance = "Artillery3InchOrdnance";
+
         // ui_(?<id>\w+)_title
         // NOTE: Generated item display names        
         public static Dictionary<string, string> DisplayNames = new()
@@ -73,6 +78,10 @@ namespace WarOfRightsWeb.Constants
             { FootArtillerySwordUS, "Foot Artillery Sword US" },
             { FootArtillerySwordCS, "Foot Artillery Sword CS" },
             { ArtilleryToolSpongeRammer, "Sponge Rammer" },
+
+            { Artillery10PdrParrott, "10-pounder Parrott" },
+            { Artillery12PdrNapoleon, "12-pounder Napoleon" },
+            { Artillery3InchOrdnance, "3-inch ordnance" },
         };
 
         // ui_{id}_info\d
@@ -109,6 +118,11 @@ namespace WarOfRightsWeb.Constants
             { FootArtillerySwordUS, "Type: Sword<br>Blade Length: 15.5\"<br>Weight: 4.5 lbs<br>" },
             { FootArtillerySwordCS, "Type: Sword<br>Blade Length: 15.5\"<br>Weight: 4.5 lbs<br>" },
             { ArtilleryToolSpongeRammer, "Type: Artillery Tool<br>Length: 50.6\"<br>Weight: 3.85 lbs<br>" },
+
+            { Artillery10PdrParrott, "Type: Artillery<br>Length: 50.6\"<br>Weight: 3.85 lbs<br>" },
+            { Artillery12PdrNapoleon, "12-pounder Napoleon" },
+            { Artillery3InchOrdnance, "3-inch ordnance" },
+
         };
 
         // ui_{id}_description
