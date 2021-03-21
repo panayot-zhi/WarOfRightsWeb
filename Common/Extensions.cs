@@ -279,10 +279,10 @@ namespace WarOfRightsWeb.Common
             return seconds;
         }
 
-        public static string RegimentImageOrDefault(this IUrlHelper urlHelper, string character, string regiment, string type, string faction)
+        public static string RegimentImageOrDefault(this IUrlHelper urlHelper, string faction, string type, string regiment, string character)
         {
-            var image = ImageIfExists(urlHelper, $"{faction}_{type}_{regiment}_{character}", "regiments");
-            return image ?? ImageIfExists(urlHelper, $"{faction}_{type}_default_{character}", "regiments");
+            return urlHelper.RegimentImageIfExists($"{faction}_{type}_{regiment}_{character}") ??
+                   urlHelper.RegimentImageIfExists($"{faction}_{type}_default_{character}");
         }
 
         public static string RegimentImageIfExists(this IUrlHelper urlHelper, string name)
