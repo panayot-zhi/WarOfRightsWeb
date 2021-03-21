@@ -1,6 +1,41 @@
 ﻿@model string
 
 @{
-    var regimentId = Model;
-    var regimentDisplayName = Regiments.DisplayNames[regimentId];
+    var regiment = Model;
+    var displayName = Regiments.DisplayNames[regiment];
+    var weaponPool = RegimentsInfo.WeaponsPool[regiment];
+    var faction = Extensions.RegimentFaction(regiment).ToLowerInvariant();
+    var type = Extensions.RegimentType(regiment).ToLowerInvariant();
+    var image = Url.RegimentImageOrDefault(Labels.FlagBearer, regiment, type, faction);
 }
+
+<div class="latestNewsItem">
+    @if (image != null)
+    {
+        <a href="@image" target="_blank" class="imageContainer">
+            <div style="background: url('@image'); background-size: contain; background-position-y: -2px; width: 150px; height: 150px" class="worTightBorder"></div>
+        </a>
+    }
+
+    <div class="newsTextCenterDiv">
+                
+        <a href="@Url.Action("Index", "Regiments", new {id = regiment})">
+            <h3>
+                @displayName
+            </h3>
+        </a>
+
+        <ul>
+            @for (int i = 0; i < weaponPool.Count; i++)
+            {
+                var weapon = weaponPool.ElementAt(i);
+
+                <li>
+                    <p>
+                        @(weapon.Value == 100 ? "" : $"{weapon.Value}%") @Weapons.DisplayNames[weapon.Key]
+                    </p>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
