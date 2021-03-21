@@ -50,11 +50,6 @@ namespace WarOfRightsWeb.Controllers
             return View("DrillCamps/Index");
         }
 
-        public IActionResult BolivarHeightsCampUSA()
-        {
-            return View("DrillCamps/BolivarHeightsCampUSA");
-        }
-
         public IActionResult PicketPatrol()
         {
             return View();

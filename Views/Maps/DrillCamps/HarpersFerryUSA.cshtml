@@ -5,21 +5,13 @@
     var dateTime = Maps.DateTimes[map];
     var image = Url.Content($"~/img/maps/{map}_spawn.png");
     var imageLoading = Url.Content($"~/img/maps/{map}_loading.png");
-
-    var mapInfo = MapsInfo.Parameters[map];
 }
 
 @section navigation {
     @await Html.PartialAsync("_MapsNav")
 }
 
-<h2 class="contentTitle" id="tabTitle">Harpers Ferry Bolivar Heights Camp USA</h2>
-
-<div id="mapHistory" class="fancyClearBoth">
-
-    <h2 class="text-right">History</h2>
-
-</div>
+<h2 class="contentTitle" id="tabTitle">Bolivar Heights Union Drill Camp</h2>
 
 <h2 class="text-right">@dateTime</h2>
 <a href="@image" target="_blank">
@@ -31,8 +23,6 @@
 <a href="@imageLoading" target="_blank">
     <img src="@imageLoading" class="imageMaxWidth">
 </a>
-
-@await Html.PartialAsync("_MapTeams", mapInfo)
 
 @section scripts {
     <script>

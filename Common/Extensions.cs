@@ -84,13 +84,11 @@ namespace WarOfRightsWeb.Common
 
                 case Maps.DrillCampCSA:
                 case Maps.DrillCampUSA:
+                case Maps.HarpersFerryUSA:
                     return "DrillCamps";
 
                 case Maps.PicketPatrol:
                     return "PicketPatrol";
-
-                case Maps.HarpersFerryUSA:
-                    return "BolivarHeightsCampUSA";
 
                 default:
                     return mapId;
