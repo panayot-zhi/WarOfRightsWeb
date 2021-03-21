@@ -119,10 +119,9 @@ namespace WarOfRightsWeb.Constants
             { FootArtillerySwordCS, "Type: Sword<br>Blade Length: 15.5\"<br>Weight: 4.5 lbs<br>" },
             { ArtilleryToolSpongeRammer, "Type: Artillery Tool<br>Length: 50.6\"<br>Weight: 3.85 lbs<br>" },
 
-            { Artillery10PdrParrott, "Type: Artillery<br>Length: 50.6\"<br>Weight: 3.85 lbs<br>" },
-            { Artillery12PdrNapoleon, "12-pounder Napoleon" },
-            { Artillery3InchOrdnance, "3-inch ordnance" },
-
+            { Artillery10PdrParrott, "" },
+            { Artillery12PdrNapoleon, "" },
+            { Artillery3InchOrdnance, "" },
         };
 
         // ui_{id}_description
@@ -159,6 +158,10 @@ namespace WarOfRightsWeb.Constants
             { FootArtillerySwordUS, "A nice description for a foot artillery sword" },
             { FootArtillerySwordCS, "A nice description for a foot artillery sword" },
             { ArtilleryToolSpongeRammer, "Used for cleaning out the embers of the previous shot on the artillery and for ramming the new shell down the barrel." },
+
+            { Artillery10PdrParrott, "" },
+            { Artillery12PdrNapoleon, "" },
+            { Artillery3InchOrdnance, "" },
         };
     }
 }
