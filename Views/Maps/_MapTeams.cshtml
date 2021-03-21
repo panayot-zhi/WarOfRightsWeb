@@ -26,9 +26,10 @@
 
 <div class="fancyClearBoth"></div>
 
-<h2 class="text-right">Map Parameters</h2>
+<div id="mapParameters" class="fancyClearBoth" style="display: none;">
+    
+    <h2 class="text-right">Map Parameters</h2>
 
-<div id="mapParameters">
     <p class="text-right">- Round Time: @(Extensions.SecondsToMinutes(Model.RoundTime)) min</p>
     <p class="text-right">- Wave Time: @Model.WaveTime s</p>
     <p class="text-right">- Capture Speed: @Model.CaptureSpeed</p>
@@ -36,6 +37,5 @@
     <p class="text-right">- Tickets USA: @Model.TicketsUSA</p>
     <p class="text-right">- Tickets CSA: @Model.TicketsCSA</p>
     <p class="text-right">- Final Push Time: @(Extensions.SecondsToMinutes(Model.FinalPushTime)) min</p>
-</div>
 
-<div class="fancyClearBoth"></div>
+</div>
