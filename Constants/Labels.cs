@@ -14,5 +14,10 @@ namespace WarOfRightsWeb.Constants
         public const string Artillery = "Artillery";
         public const string Battery = "Battery";
         public const string HeavyArtillery = "HeavyArtillery";
+
+        public const string FlagBearer = "FlagBearer";
+        public const string NCO = "NCO";
+        public const string Officer = "Officer";
+        public const string Private = "Private";
     }
 }
