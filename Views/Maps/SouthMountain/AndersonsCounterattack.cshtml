@@ -35,6 +35,25 @@
 
 @await Html.PartialAsync("_MapTeams", mapInfo)
 
+<div id="galleryImagesContainer">
+    <h1 class="text-center">
+        Ingame images of the map
+    </h1>
+
+    <div id="galleryImages">
+        <a href="#" class="active" data-src="https://warofrights.com/Pages_FieldReports/Update166/Images/Clark's_Battery_1.jpg">
+            <img class="galleryImageContainer worTightBorder" src="https://warofrights.com/Pages_FieldReports/Update166/Images/Clark's_Battery_1.jpg" alt="Clark’s Battery (USA), Anderson’s Counterattack, South Mountain">
+        </a>
+        <a href="#" data-src="https://warofrights.com/Pages_FieldReports/Update166/Images/Clark's_Battery_2.jpg">
+            <img class="galleryImageContainer worTightBorder" src="https://warofrights.com/Pages_FieldReports/Update166/Images/Clark's_Battery_2.jpg" alt="Clark’s Battery (USA), Anderson’s Counterattack, South Mountain">
+        </a>
+    </div>
+    <div class="fancyClearBoth">
+    </div>
+</div>
+
+@await Html.PartialAsync("_Gallery")
+
 @section scripts {
     <script>
         $(document).ready(function () {

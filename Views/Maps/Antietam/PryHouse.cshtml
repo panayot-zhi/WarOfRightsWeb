@@ -32,8 +32,26 @@
     <img src="@imageLoading" class="imageMaxWidth">
 </a>
 
-
 @await Html.PartialAsync("_MapTeams", mapInfo)
+
+<div id="galleryImagesContainer">
+    <h1 class="text-center">
+        Ingame images of the map
+    </h1>
+
+    <div id="galleryImages">
+        <a href="#" class="active" data-src="https://warofrights.com/Pages_FieldReports/Update166/Images/Carlton_battery_1-min.jpg">
+            <img class="galleryImageContainer worTightBorder" src="https://warofrights.com/Pages_FieldReports/Update166/Images/Carlton_battery_1-min.jpg" alt="Campbell’s Battery (USA), Hagerstown Turnpike, Antietam">
+        </a>
+        <a href="#" data-src="https://warofrights.com/Pages_FieldReports/Update166/Images/Carlton_battery_2-min.jpg">
+            <img class="galleryImageContainer worTightBorder" src="https://warofrights.com/Pages_FieldReports/Update166/Images/Carlton_battery_2-min.jpg" alt="Campbell’s Battery (USA), Hagerstown Turnpike, Antietam">
+        </a>
+    </div>
+    <div class="fancyClearBoth">
+    </div>
+</div>
+
+@await Html.PartialAsync("_Gallery")
 
 @section scripts {
     <script>
