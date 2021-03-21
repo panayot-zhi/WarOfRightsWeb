@@ -5,7 +5,7 @@
     <ul>
         <li>
             <h3>
-                USA @(Model.DefendingTeam == "USA" ? "(Defending)" : "(Attacking)")
+                USA @(Model.DefendingTeam == Labels.USA ? "(Defending)" : "(Attacking)")
             </h3>
             <ul>
                 @foreach (var regiment in Model.RegimentsUSA)
@@ -33,13 +33,14 @@
         </li>
         <li>
             <h3>
-                CSA @(Model.DefendingTeam == "CSA" ? "(Defending)" : "(Attacking)")
+                CSA @(Model.DefendingTeam == Labels.CSA ? "(Defending)" : "(Attacking)")
             </h3>
             <ul>
                 @foreach (var regiment in Model.RegimentsCSA)
                 {
                     var displayName = Regiments.DisplayNames[regiment];
                     var csaWeaponPool = RegimentsInfo.WeaponsPool[regiment];
+                    var isArtillery = Extensions.RegimentType(regiment) == Labels.Artillery;
 
                     <li>
                         <h2 class="regiment">@displayName</h2>

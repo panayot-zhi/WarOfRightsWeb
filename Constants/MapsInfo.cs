@@ -37,7 +37,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.EastWoodsSkirmish,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "17",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -54,7 +54,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.HookersPush,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "6.4",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -71,7 +71,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.HagerstownTurnpike,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "6.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -88,7 +88,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.MillersCornfield,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "6.8",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -105,7 +105,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.EastWoods,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "7.2",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -122,7 +122,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.NicodemusHill,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "8.75",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -139,7 +139,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.BloodyLane,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "9",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -156,7 +156,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.PryFord,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "9.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -173,7 +173,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.PryGristMill,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "10",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -190,7 +190,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.PryHouse,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "10",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -207,7 +207,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.WestWoods,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "9.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -224,7 +224,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.DunkerChurch,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "10.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -241,7 +241,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.BurnsideBridge,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "11.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -258,7 +258,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.CookesCountercharge,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "12",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -275,7 +275,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.OttoSherrickFarm,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "12.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -292,7 +292,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.RouletteLane,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "12.75",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -309,7 +309,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.PiperFarm,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "15.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -326,7 +326,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.HillsCounterattack,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "16",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -343,7 +343,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.MarylandHeights,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "9.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -360,7 +360,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.RiverCrossing,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "9.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -377,7 +377,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.Downtown,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "10",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -394,7 +394,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.SchoolHouseRidge,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "6.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -411,7 +411,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.HighStreet,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "11",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -428,7 +428,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.BolivarHeightsCamp,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "9",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -445,7 +445,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.ShenandoahStreet,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "13.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -462,7 +462,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.HarpersGraveyard,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "14.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -479,7 +479,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.BolivarHeightsRedoubt,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "10",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -496,7 +496,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.WashingtonStreet,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "15.5",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -513,7 +513,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.GarlandsStand,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "10",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -530,7 +530,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.CoxsPush,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "10",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -547,7 +547,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.HatchsAttack,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "16",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -564,7 +564,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.AndersonsCounterattack,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "16",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -581,7 +581,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.RenosFall,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "USA",
+                    DefendingTeam = Labels.USA,
                     TimeOfDay = "16",
                     RoundTime = "2700",
                     WaveTime = "30",
@@ -598,7 +598,7 @@ namespace WarOfRightsWeb.Constants
                 Maps.ColquittsDefence,
                 new SkirmishInfo()
                 {
-                    DefendingTeam = "CSA",
+                    DefendingTeam = Labels.CSA,
                     TimeOfDay = "16.5",
                     RoundTime = "2700",
                     WaveTime = "30",
