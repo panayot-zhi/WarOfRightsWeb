@@ -79,9 +79,9 @@ namespace WarOfRightsWeb.Constants
             { FootArtillerySwordCS, "Foot Artillery Sword CS" },
             { ArtilleryToolSpongeRammer, "Sponge Rammer" },
 
-            { Artillery10PdrParrott, "10-pounder Parrott" },
-            { Artillery12PdrNapoleon, "12-pounder Napoleon" },
-            { Artillery3InchOrdnance, "3-inch ordnance" },
+            { Artillery10PdrParrott, "10lbs Parrott" },
+            { Artillery12PdrNapoleon, "12lbs Napoleon" },
+            { Artillery3InchOrdnance, "3-inch Ordnance" },
         };
 
         // ui_{id}_info\d

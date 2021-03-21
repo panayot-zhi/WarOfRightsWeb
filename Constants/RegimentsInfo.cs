@@ -102,7 +102,8 @@ namespace WarOfRightsWeb.Constants
                 Regiments.BatteryBrockenbrough,
                 new()
                 {
-                    { Weapons.ArtilleryToolSpongeRammer, 100 }
+                    { Weapons.Artillery10PdrParrott, 3 },
+                    { Weapons.Artillery12PdrNapoleon, 3 },
                 }
             },
             {
@@ -158,7 +159,8 @@ namespace WarOfRightsWeb.Constants
                 Regiments.BatteryJordan,
                 new()
                 {
-                    { Weapons.ArtilleryToolSpongeRammer, 100 }
+                    { Weapons.Artillery12PdrNapoleon, 1 },
+                    { Weapons.Artillery3InchOrdnance, 1 }
                 }
             },
             {
@@ -200,7 +202,8 @@ namespace WarOfRightsWeb.Constants
                 Regiments.BatteryPoague,
                 new()
                 {
-                    { Weapons.ArtilleryToolSpongeRammer, 100 }
+                    { Weapons.Artillery3InchOrdnance, 1 },
+                    { Weapons.Artillery12PdrNapoleon, 2 },
                 }
             },
             {
@@ -598,7 +601,8 @@ namespace WarOfRightsWeb.Constants
                 Regiments.BatteryCampbell,
                 new()
                 {
-                    { Weapons.ArtilleryToolSpongeRammer, 100 }
+                    { Weapons.Artillery12PdrNapoleon, 3 },
+                    { Weapons.Artillery3InchOrdnance, 3 },
                 }
             },
             {
@@ -619,7 +623,8 @@ namespace WarOfRightsWeb.Constants
                 Regiments.BatteryCooper,
                 new()
                 {
-                    { Weapons.ArtilleryToolSpongeRammer, 100 }
+                    { Weapons.Artillery12PdrNapoleon, 2 },
+                    { Weapons.Artillery3InchOrdnance, 2 },
                 }
             },
             {
@@ -668,7 +673,8 @@ namespace WarOfRightsWeb.Constants
                 Regiments.BatteryMatthews,
                 new()
                 {
-                    { Weapons.ArtilleryToolSpongeRammer, 100 }
+                    { Weapons.Artillery12PdrNapoleon, 3 },
+                    { Weapons.Artillery10PdrParrott, 3 }
                 }
             },
             {
@@ -731,7 +737,8 @@ namespace WarOfRightsWeb.Constants
                 Regiments.BatteryThompson,
                 new()
                 {
-                    { Weapons.ArtilleryToolSpongeRammer, 100 }
+                    { Weapons.Artillery12PdrNapoleon, 2 },
+                    { Weapons.Artillery3InchOrdnance, 2 },
                 }
             },
             {

@@ -41,7 +41,15 @@
 
                 <li>
                     <p>
-                        @(weapon.Value == 100 ? "" : $"{weapon.Value}%") @Weapons.DisplayNames[weapon.Key]
+                        @if (isArtillery)
+                        {
+                            @($"{weapon.Value}x")
+                        }
+                        else
+                        {
+                            @(weapon.Value == 100 ? "" : $"{weapon.Value}%")
+                        }
+                        @Weapons.DisplayNames[weapon.Key]
                     </p>
                 </li>
             }
