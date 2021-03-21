@@ -14,6 +14,7 @@
       "library": "moment.js@2.29.1",
       "destination": "wwwroot/lib/moment.js/",
       "files": [
+        "moment-with-locales.js",
         "moment-with-locales.min.js"
       ]
     }
