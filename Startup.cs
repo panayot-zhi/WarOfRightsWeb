@@ -6,6 +6,7 @@ using System;
 using System.Globalization;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Hosting;
+using WarOfRightsWeb.Common;
 
 namespace WarOfRightsWeb
 {
@@ -46,6 +47,8 @@ namespace WarOfRightsWeb
 
             CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
             CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
+            Extensions.Initialize(env);
 
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {

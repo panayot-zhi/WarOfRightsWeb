@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Security.Policy;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using WarOfRightsWeb.Constants;
 
 namespace WarOfRightsWeb.Common
@@ -6,6 +10,25 @@ namespace WarOfRightsWeb.Common
     public static class Extensions
     {
         private static readonly Random Random = new();
+
+        private static IWebHostEnvironment _hostingEnvironment;
+
+        private static readonly object Initializator = new object();
+        private static bool _initialized;
+
+        public static void Initialize(IWebHostEnvironment hostEnvironment)
+        {
+            lock (Initializator)
+            {
+                if (_initialized)
+                {
+                    return;
+                }
+
+                _hostingEnvironment = hostEnvironment;
+                _initialized = true;
+            }
+        }
 
         public static string Normalize(string mapName)
         {
@@ -244,6 +267,51 @@ namespace WarOfRightsWeb.Common
             }
 
             throw new ArgumentException($"Unknown regiment '{regiment}'");
+        }
+
+        public static string SecondsToMinutes(string seconds)
+        {
+            if (int.TryParse(seconds, out var result))
+            {
+                return $"{Math.Floor(result / 60d)}:{result % 60}";
+            }
+
+            return seconds;
+        }
+
+        public static string RegimentImageOrDefault(this IUrlHelper urlHelper, string character, string regiment, string type, string faction)
+        {
+            var image = ImageIfExists(urlHelper, $"{faction}_{type}_{regiment}_{character}", "regiments");
+            return image ?? ImageIfExists(urlHelper, $"{faction}_{type}_default_{character}", "regiments");
+        }
+
+        public static string RegimentImageIfExists(this IUrlHelper urlHelper, string name)
+        {
+            return ImageIfExists(urlHelper, name, "regiments");
+        }
+
+        public static string WeaponImageIfExists(this IUrlHelper urlHelper, string name)
+        {
+            return ImageIfExists(urlHelper, name, "weapons");
+        }
+
+        public static string ImageIfExists(this IUrlHelper urlHelper, string name, string type)
+        {
+            var imagePath = System.IO.Path.Combine(_hostingEnvironment.WebRootPath, "img", type, $"{name}.jpg");
+            var imageExists = System.IO.File.Exists(imagePath);
+            if (imageExists)
+            {
+                return urlHelper.Content($"~/img/{type}/{name}.jpg");
+            }
+
+            imagePath = System.IO.Path.Combine(_hostingEnvironment.WebRootPath, "img", type, $"{name}.png");
+            imageExists = System.IO.File.Exists(imagePath);
+            if (imageExists)
+            {
+                return urlHelper.Content($"~/img/{type}/{name}.png");
+            }
+
+            return null;
         }
     }
 }
