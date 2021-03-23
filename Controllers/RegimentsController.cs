@@ -20,7 +20,7 @@ namespace WarOfRightsWeb.Controllers
 
         public IActionResult Index(string id)
         {
-            if (Regiments.DisplayNames.ContainsKey(id))
+            if (!string.IsNullOrEmpty(id) && Regiments.DisplayNames.ContainsKey(id))
             {
                 return View("Regiment", model: id);
             }
