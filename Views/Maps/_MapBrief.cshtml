@@ -1,12 +1,17 @@
 ﻿@model string
 
 @{
-        var map = Model;
-        var mapName = Maps.DisplayNames[map];
-        var mapArea = Extensions.AreaFromMap(map);        
-        var mapImage = Url.Content($"~/img/maps/{map}_skirmish.png");
-        var mapLink = Url.Action(mapArea, "Maps", new { id = map });
-        var mapDescription = Maps.Descriptions[map];
+    var map = Model;
+    var mapName = Maps.DisplayNames[map];
+    var mapArea = Extensions.AreaFromMap(map);
+    var mapImage = Url.Content($"~/img/maps/{map}_skirmish.png");
+    var mapLink = Url.Action(mapArea, "Maps", new { id = map });
+    var mapDescription = Maps.Descriptions[map];
+    var defenders = string.Empty;
+    if (MapsInfo.Parameters.ContainsKey(map))
+    {
+        defenders = MapsInfo.Parameters[map].DefendingTeam;
+    }
 }
 
 <div class="briefFieldReportContainer">
@@ -22,7 +27,14 @@
 
         <a href="@mapLink">
             <h2 class="briefFieldReportName">@mapName</h2>
+
         </a>
+
+        @if (!string.IsNullOrEmpty(defenders))
+        {
+            <h2 class="text-right">Defenders: @defenders</h2>
+        }
+
         <p class="fancyClearBoth">@Html.Raw(mapDescription)</p>
     </div>
 </div>
