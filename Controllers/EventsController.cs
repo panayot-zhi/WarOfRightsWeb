@@ -19,6 +19,7 @@ namespace WarOfRightsWeb.Controllers
         public IActionResult Index()
         {
             var eventTemplates = new List<Event>();
+
             _configuration.GetSection("Events").Bind(eventTemplates);
 
             var scheduledEvents = CalculateEventDates(eventTemplates, out var nextEventInLine);
@@ -26,7 +27,8 @@ namespace WarOfRightsWeb.Controllers
             var vModel = new EventsViewModel()
             {
                 Current = nextEventInLine,
-                EventTemplates = scheduledEvents
+                EventTemplates = eventTemplates,
+                ScheduledEvents = scheduledEvents
             };
 
             return View(vModel);
@@ -55,7 +57,6 @@ namespace WarOfRightsWeb.Controllers
                 var scheduledEvent = new Event()
                 {
                     Name = eventTemplate.Name,
-                    ShortDescription = eventTemplate.ShortDescription,
                     Description = eventTemplate.Description,
                     Starting = eventTemplate.Starting,
                     Occurring = eventTemplate.Occurring,
@@ -71,6 +72,20 @@ namespace WarOfRightsWeb.Controllers
 
                 result.Add(scheduledEvent);
             }
+
+            // Add one time events within the range of one month back and one month in the future
+            result.AddRange(eventTemplates.Where(x => x.Occurring == EventOccurrence.Once &&
+                x.Starting.Date >= now.AddMonths(-1) && x.Starting.Date <= now.AddMonths(1))
+                .Select(x => new Event()
+                {
+                    Name = x.Name,
+                    Description = x.Description,
+                    Starting = x.Starting,
+                    Occurring = x.Occurring,
+                    Duration = x.Duration,
+
+                    ExactDate = x.Starting
+                }));
 
             return result;
 
@@ -90,11 +105,6 @@ namespace WarOfRightsWeb.Controllers
             {
                 if (eventTemplate.Occurring == EventOccurrence.Once)
                 {
-                    if (eventTemplate.Starting.Date == current.Date)
-                    {
-                        return eventTemplate;
-                    }
-
                     continue;
                 }
 
