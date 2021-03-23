@@ -11,8 +11,7 @@
 
 <div class="fancyRight text-right">
     <h1>@Model.Current.Name</h1>
-    <p class="text-right">@Model.Current.Description</p>
-    <h2>@Model.Current.WeekDay, @Model.Current.Time</h2>
+    <h2>@Model.Current.WeekDay, @Model.Current.Time GMT</h2>
 </div>
 
 <img alt="War of Rights Event Schedule" src="@Url.Content("~/img/during-the-american-civil-war.jpg")" class="imageMaxWidth">
@@ -25,10 +24,10 @@
 }
 
 <div id="calendar">
-    <div class="fancyLeft">
+    <div id="monthsDisplay" class="fancyLeft">
         @await Html.PartialAsync("_Month", model: new EventsViewModel()
         {
-            EventTemplates = Model.EventTemplates,
+            EventTemplates = Model.ScheduledEvents,
             Current = new Event()
             {
                 ExactDate = now.AddMonths(-1)
@@ -37,7 +36,7 @@
 
         @await Html.PartialAsync("_Month", model: new EventsViewModel()
         {
-            EventTemplates = Model.EventTemplates,
+            EventTemplates = Model.ScheduledEvents,
             Current = new Event()
             {
                 ExactDate = now
@@ -46,7 +45,7 @@
 
         @await Html.PartialAsync("_Month", model: new EventsViewModel()
         {
-            EventTemplates = Model.EventTemplates,
+            EventTemplates = Model.ScheduledEvents,
             Current = new Event()
             {
                 ExactDate = now.AddMonths(1)
@@ -54,13 +53,19 @@
         })
     </div>
 
-    <div class="fancyRight">
+    <div id="eventTemplates" class="fancyRight">
         @foreach(var e in Model.EventTemplates)
         {
             <h2>@e.Name</h2>
-            <h3>@e.WeekDay, @e.Time - @e.Occurring.ToString()<br><small>Next: @e.ExactDate</small></h3>
+            <h3>
+                @e.WeekDay, @e.Time - @e.Occurring.ToString()<br>
+                @if (e.Occurring == EventOccurrence.Once)
+                {
+                    <small>At: @e.Starting</small>
+                }
+            </h3>
             
-            <p>@e.Description</p>
+            <p class="text-center">@e.Description</p>
         }
     </div>
 </div>
