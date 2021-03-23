@@ -142,3 +142,11 @@ li h2 a {
     display: inline-block;
     height: auto;
 }
+
+#briefMapsContainer {
+    padding-top: 60px;
+}
+
+#briefMapsContainer .briefDescription a > h2 {
+    margin-top: 10px;
+}
