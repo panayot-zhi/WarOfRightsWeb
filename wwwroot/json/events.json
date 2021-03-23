@@ -2,42 +2,44 @@
   "Events": [
     {
       "Name": "Company Drill",
-      "ShortDescription": "Perfect our shooting skills and raise battle awareness.",
-      "Description": "",
+      "Description": "Perfect your shooting skills and raise battle awareness. All company members are required to attend at least one drill per month.",
       "Starting": "2021-02-08T19:00:00+0200",
+      "Occurring": "Weekly",
+      "Duration": "01:00"
+    },
+    {
+      "Name": "Picket Patrol",
+      "Description": "Defeat the enemy team in this 5 round journey where you have only one life per round. A laid back experience for veteran players.",
+      "Starting": "2021-02-03T20:00:00+0200",
       "Occurring": "Weekly",
       "Duration": "01:30"
     },
     {
-      "Name": "Picket Patrol",
-      "ShortDescription": "",
-      "Description": "",
-      "Starting": "2021-02-03T20:00:00+0200",
-      "Occurring": "Weekly",
-      "Duration": "02:00"
-    },
-    {
       "Name": "Friday Event",
-      "ShortDescription": "",
-      "Description": "",
+      "Description": "To arms! Complete the week with an organized event with other friendly regiments in a deadly skirmish. Coordination begins typically 1h before the event starts. Muster up 15min before the event scheduled time.",
       "Starting": "2021-02-05T20:00:00+0200",
       "Occurring": "Weekly",
-      "Duration": "02:00"
+      "Duration": "01:30"
     },
     {
       "Name": "Sunday Event",
-      "ShortDescription": "",
-      "Description": "",
+      "Description": "Battle time! Join your comrades in an organized event with various other groups within warofrights. Coordination begins typically 1h before the event starts. Muster up 15min before the event scheduled time.",
       "Starting": "2021-02-07T20:00:00+0200",
       "Occurring": "Weekly",
-      "Duration": "02:00"
+      "Duration": "01:30"
     },
     {
       "Name": "Shooting Competition",
-      "ShortDescription": "",
       "Description": "Every first drill of the month we test our skills amongst each other in a shooting competition with various disciplines.",
       "Starting": "2021-02-01T19:00:00+0200",
       "Occurring": "Monthly",
+      "Duration": "01:00"
+    },
+    {
+      "Name": "One Time Test Event",
+      "Description": "This is a test event, it should appear if it is in the range of 2 months according to the current date, please delete manually afterwards, so it won't clog the list of event templates.",
+      "Starting": "2021-02-24T20:00:00+0200",
+      "Occurring": "Once",
       "Duration": "01:30"
     }
   ]
