@@ -5,8 +5,14 @@
 }
 
 <div class="fancyLeft text-left">
+    
+    @{
+        var now = DateTimeOffset.Now;
+        var initialCountDown = Model.Current.ExactDate - new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second, TimeSpan.FromHours(2));
+    }
+
     <h1 id="tabTitle">Next Event In:</h1>
-    <h2 style="margin-top: 10px" id="current-time">02:45:44</h2>
+    <h2 style="margin-top: 10px" id="next-event-countdown">@( $"{initialCountDown:c}" ) </h2>
 </div>
 
 <div class="fancyRight text-right">
@@ -17,11 +23,6 @@
 <img alt="War of Rights Event Schedule" src="@Url.Content("~/img/during-the-american-civil-war.jpg")" class="imageMaxWidth">
 
 <p></p>
-
-@{
-    var now = DateTimeOffset.Now.Date;
-    // var now = new DateTime(2021, 1, 7).Date;
-}
 
 <div id="calendar">
     <div id="monthsDisplay" class="fancyLeft">
@@ -58,10 +59,14 @@
         {
             <h2>@e.Name</h2>
             <h3>
-                @e.WeekDay, @e.Time - @e.Occurring.ToString()<br>
+
                 @if (e.Occurring == EventOccurrence.Once)
                 {
-                    <small>At: @e.Starting</small>
+                    @e.Starting
+                }
+                else
+                {
+                    @:@e.WeekDay, @e.Time - @e.Occurring.ToString()
                 }
             </h3>
             
