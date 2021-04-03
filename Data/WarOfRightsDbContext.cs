@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace WarOfRightsWeb.Data
 {
@@ -25,35 +21,58 @@ namespace WarOfRightsWeb.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<MapRegiment>()
-                .HasKey(x => new { x.ID });
+            SetUpMapTable(modelBuilder.Entity<Map>());
+            SetUpWeaponTable(modelBuilder.Entity<Weapon>());
+            SetUpRegimentTable(modelBuilder.Entity<Regiment>());
+            SetUpMapRegimentTable(modelBuilder.Entity<MapRegiment>());
+            SetUpMapRegimentWeaponTable(modelBuilder.Entity<MapRegimentWeapon>());
+        }
 
-            modelBuilder.Entity<MapRegiment>()
+        private static void SetUpRegimentTable(EntityTypeBuilder<Regiment> tableBuilder)
+        {
+            tableBuilder
+                .HasIndex(x => x.Name).IsUnique();
+        }
+
+        private static void SetUpWeaponTable(EntityTypeBuilder<Weapon> tableBuilder)
+        {
+            tableBuilder
+                .HasIndex(x => x.Name).IsUnique();
+        }
+
+        private static void SetUpMapTable(EntityTypeBuilder<Map> tableBuilder)
+        {
+            tableBuilder
+                .HasIndex(x => x.Name).IsUnique();
+        }
+
+        private static void SetUpMapRegimentTable(EntityTypeBuilder<MapRegiment> tableBuilder)
+        {
+            tableBuilder
                 .HasIndex(x => new { x.MapID, x.RegimentID }).IsUnique();
 
-            modelBuilder.Entity<MapRegiment>()
+            tableBuilder
                 .HasOne(x => x.Map)
                 .WithMany(x => x.MapRegiments)
                 .HasForeignKey(x => x.MapID);
 
-            modelBuilder.Entity<MapRegiment>()
+            tableBuilder
                 .HasOne(x => x.Regiment)
                 .WithMany(x => x.MapRegiments)
                 .HasForeignKey(x => x.RegimentID);
+        }
 
-
-            modelBuilder.Entity<MapRegimentWeapon>()
-                .HasKey(x => new { x.ID });
-
-            modelBuilder.Entity<MapRegimentWeapon>()
+        private static void SetUpMapRegimentWeaponTable(EntityTypeBuilder<MapRegimentWeapon> tableBuilder)
+        {
+            tableBuilder
                 .HasIndex(x => new { x.MapRegimentID, x.WeaponID }).IsUnique();
 
-            modelBuilder.Entity<MapRegimentWeapon>()
+            tableBuilder
                 .HasOne(x => x.MapRegiment)
                 .WithMany(x => x.MapRegimentWeapons)
                 .HasForeignKey(x => x.MapRegimentID);
 
-            modelBuilder.Entity<MapRegimentWeapon>()
+            tableBuilder
                 .HasOne(x => x.Weapon)
                 .WithMany(x => x.MapRegimentWeapons)
                 .HasForeignKey(x => x.WeaponID);

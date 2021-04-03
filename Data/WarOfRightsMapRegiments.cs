@@ -6,7 +6,9 @@ namespace WarOfRightsWeb.Data
 {
     public class MapRegiment
     {
+        [Key]
         public int ID { get; set; }
+
 
         public int MapID { get; set; }
 
@@ -15,6 +17,7 @@ namespace WarOfRightsWeb.Data
         public int RegimentID { get; set; }
 
         public Regiment Regiment { get; set; }
+
 
         public ICollection<MapRegimentWeapon> MapRegimentWeapons { get; set; }
 

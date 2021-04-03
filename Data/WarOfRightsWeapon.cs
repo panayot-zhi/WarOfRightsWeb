@@ -6,7 +6,9 @@ namespace WarOfRightsWeb.Data
 {
     public class Weapon
     {
+        [Key]
         public int ID { get; set; }
+
 
         [Required]
         [MaxLength(256)]
@@ -19,7 +21,8 @@ namespace WarOfRightsWeb.Data
         public string Description { get; set; }
 
         [MaxLength(512)]
-        public string Parameters { get; set; }
+        public string ParametersDescription { get; set; }
+
 
         public ICollection<MapRegimentWeapon> MapRegimentWeapons { get; set; }
     }
