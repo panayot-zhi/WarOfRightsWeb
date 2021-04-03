@@ -5,8 +5,10 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Globalization;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using WarOfRightsWeb.Common;
+using WarOfRightsWeb.Data;
 
 namespace WarOfRightsWeb
 {
@@ -36,6 +38,13 @@ namespace WarOfRightsWeb
             {
                 services.AddControllersWithViews();
             }
+
+            services.AddDbContext<WarOfRightsDbContext>(
+                contextLifetime: ServiceLifetime.Transient, optionsAction: options =>
+                {
+                    options.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
+                }
+            );
 
             Console.WriteLine("<<<< SERVICES CONFIGURED");
         }
