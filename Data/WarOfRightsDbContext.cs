@@ -30,20 +30,17 @@ namespace WarOfRightsWeb.Data
 
         private static void SetUpRegimentTable(EntityTypeBuilder<Regiment> tableBuilder)
         {
-            tableBuilder
-                .HasIndex(x => x.Name).IsUnique();
+
         }
 
         private static void SetUpWeaponTable(EntityTypeBuilder<Weapon> tableBuilder)
         {
-            tableBuilder
-                .HasIndex(x => x.Name).IsUnique();
+
         }
 
         private static void SetUpMapTable(EntityTypeBuilder<Map> tableBuilder)
         {
-            tableBuilder
-                .HasIndex(x => x.Name).IsUnique();
+
         }
 
         private static void SetUpMapRegimentTable(EntityTypeBuilder<MapRegiment> tableBuilder)

@@ -7,15 +7,14 @@ namespace WarOfRightsWeb.Data
     public class Weapon
     {
         [Key]
-        public int ID { get; set; }
+        [Required]
+        [MaxLength(255)]
+        public string ID { get; set; }
 
 
         [Required]
-        [MaxLength(256)]
+        [MaxLength(255)]
         public string Name { get; set; }
-
-        [MaxLength(256)]
-        public string DisplayName { get; set; }
 
         [Column(TypeName = "TEXT")]
         public string Description { get; set; }

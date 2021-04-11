@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WarOfRightsWeb.Data.Migrations
 {
@@ -11,24 +10,22 @@ namespace WarOfRightsWeb.Data.Migrations
                 name: "Maps",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(maxLength: 256, nullable: false),
-                    DisplayName = table.Column<string>(maxLength: 256, nullable: true),
+                    ID = table.Column<string>(maxLength: 255, nullable: false),
+                    Name = table.Column<string>(maxLength: 255, nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: true),
-                    DateTimeDescription = table.Column<string>(maxLength: 256, nullable: true),
+                    DateTimeDescription = table.Column<string>(maxLength: 255, nullable: true),
                     DefendingTeam = table.Column<string>(maxLength: 128, nullable: true),
-                    TransferOnDeath = table.Column<decimal>(nullable: true),
+                    TransferOnDeath = table.Column<decimal>(type: "DECIMAL(6,4)", nullable: true),
                     RoundTime = table.Column<int>(nullable: true),
                     WaveTime = table.Column<int>(nullable: true),
-                    CaptureSpeed = table.Column<decimal>(nullable: true),
-                    NeutralizeSpeed = table.Column<decimal>(nullable: true),
+                    CaptureSpeed = table.Column<decimal>(type: "DECIMAL(6,4)", nullable: true),
+                    NeutralizeSpeed = table.Column<decimal>(type: "DECIMAL(6,4)", nullable: true),
                     TicketsUSA = table.Column<int>(nullable: true),
                     TicketsCSA = table.Column<int>(nullable: true),
                     FinalPushTime = table.Column<int>(nullable: true),
-                    SkirmishImagePath = table.Column<string>(maxLength: 256, nullable: true),
-                    SpawnImagePath = table.Column<string>(maxLength: 256, nullable: true),
-                    LoadingImagePath = table.Column<string>(maxLength: 256, nullable: true)
+                    SkirmishImagePath = table.Column<string>(maxLength: 255, nullable: true),
+                    SpawnImagePath = table.Column<string>(maxLength: 255, nullable: true),
+                    LoadingImagePath = table.Column<string>(maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -39,10 +36,8 @@ namespace WarOfRightsWeb.Data.Migrations
                 name: "Regiments",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(maxLength: 256, nullable: false),
-                    DisplayName = table.Column<string>(maxLength: 256, nullable: true),
+                    ID = table.Column<string>(maxLength: 255, nullable: false),
+                    Name = table.Column<string>(maxLength: 255, nullable: true),
                     Faction = table.Column<string>(maxLength: 128, nullable: true),
                     State = table.Column<string>(maxLength: 128, nullable: true),
                     Number = table.Column<string>(nullable: true),
@@ -57,10 +52,8 @@ namespace WarOfRightsWeb.Data.Migrations
                 name: "Weapons",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(maxLength: 256, nullable: false),
-                    DisplayName = table.Column<string>(maxLength: 256, nullable: true),
+                    ID = table.Column<string>(maxLength: 255, nullable: false),
+                    Name = table.Column<string>(maxLength: 255, nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: true),
                     ParametersDescription = table.Column<string>(maxLength: 512, nullable: true)
                 },
@@ -73,10 +66,9 @@ namespace WarOfRightsWeb.Data.Migrations
                 name: "MapRegiment",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    MapID = table.Column<int>(nullable: false),
-                    RegimentID = table.Column<int>(nullable: false)
+                    ID = table.Column<string>(nullable: false),
+                    MapID = table.Column<string>(nullable: true),
+                    RegimentID = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -86,23 +78,22 @@ namespace WarOfRightsWeb.Data.Migrations
                         column: x => x.MapID,
                         principalTable: "Maps",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_MapRegiment_Regiments_RegimentID",
                         column: x => x.RegimentID,
                         principalTable: "Regiments",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "MapRegimentWeapon",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    MapRegimentID = table.Column<int>(nullable: false),
-                    WeaponID = table.Column<int>(nullable: false),
+                    ID = table.Column<string>(nullable: false),
+                    MapRegimentID = table.Column<string>(nullable: true),
+                    WeaponID = table.Column<string>(nullable: true),
                     Count = table.Column<int>(nullable: true),
                     Percent = table.Column<int>(nullable: true)
                 },
@@ -114,13 +105,13 @@ namespace WarOfRightsWeb.Data.Migrations
                         column: x => x.MapRegimentID,
                         principalTable: "MapRegiment",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_MapRegimentWeapon_Weapons_WeaponID",
                         column: x => x.WeaponID,
                         principalTable: "Weapons",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -143,24 +134,6 @@ namespace WarOfRightsWeb.Data.Migrations
                 name: "IX_MapRegimentWeapon_MapRegimentID_WeaponID",
                 table: "MapRegimentWeapon",
                 columns: new[] { "MapRegimentID", "WeaponID" },
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Maps_Name",
-                table: "Maps",
-                column: "Name",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Regiments_Name",
-                table: "Regiments",
-                column: "Name",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Weapons_Name",
-                table: "Weapons",
-                column: "Name",
                 unique: true);
         }
 

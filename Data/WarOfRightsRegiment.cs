@@ -7,15 +7,13 @@ namespace WarOfRightsWeb.Data
     public class Regiment
     {
         [Key]
-        public int ID { get; set; }
-
-
         [Required]
-        [MaxLength(256)]
-        public string Name { get; set; }
+        [MaxLength(255)]
+        public string ID { get; set; }
 
-        [MaxLength(256)]
-        public string DisplayName { get; set; }
+
+        [MaxLength(255)]
+        public string Name { get; set; }
 
         [MaxLength(128)]
         public string Faction { get; set; }

@@ -9,7 +9,7 @@ using WarOfRightsWeb.Data;
 namespace WarOfRightsWeb.Data.Migrations
 {
     [DbContext(typeof(WarOfRightsDbContext))]
-    [Migration("20210403121258_Initial")]
+    [Migration("20210411092648_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,16 +21,16 @@ namespace WarOfRightsWeb.Data.Migrations
 
             modelBuilder.Entity("WarOfRightsWeb.Data.Map", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("ID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<decimal?>("CaptureSpeed")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("DECIMAL(6,4)");
 
                     b.Property<string>("DateTimeDescription")
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<string>("DefendingTeam")
                         .HasColumnType("varchar(128) CHARACTER SET utf8mb4")
@@ -39,35 +39,31 @@ namespace WarOfRightsWeb.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("DisplayName")
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
-
                     b.Property<int?>("FinalPushTime")
                         .HasColumnType("int");
 
                     b.Property<string>("LoadingImagePath")
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<decimal?>("NeutralizeSpeed")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("DECIMAL(6,4)");
 
                     b.Property<int?>("RoundTime")
                         .HasColumnType("int");
 
                     b.Property<string>("SkirmishImagePath")
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<string>("SpawnImagePath")
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<int?>("TicketsCSA")
                         .HasColumnType("int");
@@ -76,30 +72,26 @@ namespace WarOfRightsWeb.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal?>("TransferOnDeath")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("DECIMAL(6,4)");
 
                     b.Property<int?>("WaveTime")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("Name")
-                        .IsUnique();
-
                     b.ToTable("Maps");
                 });
 
             modelBuilder.Entity("WarOfRightsWeb.Data.MapRegiment", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("ID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
-                    b.Property<int>("MapID")
-                        .HasColumnType("int");
+                    b.Property<string>("MapID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
-                    b.Property<int>("RegimentID")
-                        .HasColumnType("int");
+                    b.Property<string>("RegimentID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.HasKey("ID");
 
@@ -113,21 +105,20 @@ namespace WarOfRightsWeb.Data.Migrations
 
             modelBuilder.Entity("WarOfRightsWeb.Data.MapRegimentWeapon", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("ID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<int?>("Count")
                         .HasColumnType("int");
 
-                    b.Property<int>("MapRegimentID")
-                        .HasColumnType("int");
+                    b.Property<string>("MapRegimentID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<int?>("Percent")
                         .HasColumnType("int");
 
-                    b.Property<int>("WeaponID")
-                        .HasColumnType("int");
+                    b.Property<string>("WeaponID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.HasKey("ID");
 
@@ -141,25 +132,20 @@ namespace WarOfRightsWeb.Data.Migrations
 
             modelBuilder.Entity("WarOfRightsWeb.Data.Regiment", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("ID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
-
-                    b.Property<string>("DisplayName")
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
 
                     b.Property<string>("Faction")
                         .HasColumnType("varchar(128) CHARACTER SET utf8mb4")
                         .HasMaxLength(128);
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<string>("Number")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -170,38 +156,28 @@ namespace WarOfRightsWeb.Data.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("Name")
-                        .IsUnique();
-
                     b.ToTable("Regiments");
                 });
 
             modelBuilder.Entity("WarOfRightsWeb.Data.Weapon", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("ID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("DisplayName")
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
-
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
-                        .HasMaxLength(256);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
 
                     b.Property<string>("ParametersDescription")
                         .HasColumnType("varchar(512) CHARACTER SET utf8mb4")
                         .HasMaxLength(512);
 
                     b.HasKey("ID");
-
-                    b.HasIndex("Name")
-                        .IsUnique();
 
                     b.ToTable("Weapons");
                 });
@@ -210,30 +186,22 @@ namespace WarOfRightsWeb.Data.Migrations
                 {
                     b.HasOne("WarOfRightsWeb.Data.Map", "Map")
                         .WithMany("MapRegiments")
-                        .HasForeignKey("MapID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MapID");
 
                     b.HasOne("WarOfRightsWeb.Data.Regiment", "Regiment")
                         .WithMany("MapRegiments")
-                        .HasForeignKey("RegimentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RegimentID");
                 });
 
             modelBuilder.Entity("WarOfRightsWeb.Data.MapRegimentWeapon", b =>
                 {
                     b.HasOne("WarOfRightsWeb.Data.MapRegiment", "MapRegiment")
                         .WithMany("MapRegimentWeapons")
-                        .HasForeignKey("MapRegimentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MapRegimentID");
 
                     b.HasOne("WarOfRightsWeb.Data.Weapon", "Weapon")
                         .WithMany("MapRegimentWeapons")
-                        .HasForeignKey("WeaponID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("WeaponID");
                 });
 #pragma warning restore 612, 618
         }

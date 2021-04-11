@@ -7,15 +7,15 @@ namespace WarOfRightsWeb.Data
     public class MapRegimentWeapon
     {
         [Key]
-        public int ID { get; set; }
+        public string ID { get; set; }
 
 
-        public int MapRegimentID { get; set; }
+        public string MapRegimentID { get; set; }
 
         public MapRegiment MapRegiment { get; set; }
 
 
-        public int WeaponID { get; set; }
+        public string WeaponID { get; set; }
 
         public Weapon Weapon { get; set; }
 
