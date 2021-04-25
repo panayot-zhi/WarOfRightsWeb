@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<WarOfRightsWeb.Data.Map>
+
+@{
     ViewBag.Title = "South Mountain Maps";
 }
 
@@ -8,18 +10,16 @@
 
 <div id="briefMapsContainer">
 
-    @await Html.PartialAsync("_MapBrief", Maps.GarlandsStand)
-    @await Html.PartialAsync("_MapBrief", Maps.CoxsPush)
-    @await Html.PartialAsync("_MapBrief", Maps.HatchsAttack)
-    @await Html.PartialAsync("_MapBrief", Maps.AndersonsCounterattack)
-    @await Html.PartialAsync("_MapBrief", Maps.RenosFall)
-    @await Html.PartialAsync("_MapBrief", Maps.ColquittsDefence)
+    @foreach (var map in Model)
+    {
+        @await Html.PartialAsync("_MapBrief", map)
+    }
 
 </div>
 
 @section scripts {
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("#navMaps").addClass('active');
             $("#navMapSouthMountain").addClass('active');
         })

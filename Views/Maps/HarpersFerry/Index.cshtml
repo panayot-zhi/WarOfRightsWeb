@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<WarOfRightsWeb.Data.Map>
+
+@{
     ViewBag.Title = "Harpers Ferry Maps";
 }
 
@@ -8,22 +10,16 @@
 
 <div id="briefMapsContainer">
 
-    @await Html.PartialAsync("_MapBrief", Maps.MarylandHeights)
-    @await Html.PartialAsync("_MapBrief", Maps.RiverCrossing)
-    @await Html.PartialAsync("_MapBrief", Maps.Downtown)
-    @await Html.PartialAsync("_MapBrief", Maps.SchoolHouseRidge)
-    @await Html.PartialAsync("_MapBrief", Maps.HighStreet)
-    @await Html.PartialAsync("_MapBrief", Maps.BolivarHeightsCamp)
-    @await Html.PartialAsync("_MapBrief", Maps.ShenandoahStreet)
-    @await Html.PartialAsync("_MapBrief", Maps.HarpersGraveyard)
-    @await Html.PartialAsync("_MapBrief", Maps.BolivarHeightsRedoubt)
-    @await Html.PartialAsync("_MapBrief", Maps.WashingtonStreet)
+    @foreach (var map in Model)
+    {
+        @await Html.PartialAsync("_MapBrief", map)
+    }
 
 </div>
 
 @section scripts {
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("#navMaps").addClass('active');
             $("#navMapHarpersFerry").addClass('active');
         })
