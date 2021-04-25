@@ -1,34 +1,35 @@
-﻿@model string
+﻿@model WarOfRightsWeb.Data.MapRegiment
 
 @{
-    var regiment = Model;
-    var displayName = Regiments.DisplayNames[regiment];
-    var weaponPool = RegimentsInfo.WeaponsPool[regiment];
-    var faction = Extensions.RegimentFaction(regiment).ToLowerInvariant();
-    var type = Extensions.RegimentType(regiment).ToLowerInvariant();
-    var isArtillery = type == Labels.Artillery.ToLowerInvariant();
-    var imageName = $"{faction}_{type}_{regiment}_" + (isArtillery ? 
+    var regiment = Model.Regiment;
+    var regimentID = regiment.ID;
+    var displayName = regiment.Name; //Regiments.DisplayNames[regiment];
+    var weaponPool = Model.MapRegimentWeapons; //RegimentsInfo.WeaponsPool[regiment];
+    var faction = regiment.Faction; //Extensions.RegimentFaction(regiment).ToLowerInvariant();
+    var type = regiment.Type; //Extensions.RegimentType(regiment).ToLowerInvariant();
+    var isArtillery = type == RegimentType.Artillery;
+    var imageName = $"{faction}_{type}_{regimentID}_" + (isArtillery ?
         Labels.NCO : Labels.FlagBearer);
-    var image = Url.RegimentImageIfExists(imageName);
-    if (image == null)
+    var regimentImage = Url.RegimentImageIfExists(imageName);
+    if (regimentImage == null)
     {
-        imageName = $"{faction}_{type}_default_" + (isArtillery ? 
+        imageName = $"{faction}_{type}_default_" + (isArtillery ?
             Labels.NCO : Labels.FlagBearer);
-        image = Url.RegimentImageIfExists(imageName);
+        regimentImage = Url.RegimentImageIfExists(imageName);
     }
 }
 
 <div class="latestNewsItem">
-    @if (image != null)
+    @if (regimentImage != null)
     {
-        <a href="@image" target="_blank" class="imageContainer">
-            <div style="background: url('@image'); background-size: contain; background-position-y: -2px; width: 150px; height: 150px" class="worTightBorder"></div>
+        <a href="@regimentImage" target="_blank" class="imageContainer">
+            <div style="background: url('@regimentImage'); background-size: contain; background-position-y: -2px; width: 150px; height: 150px" class="worTightBorder"></div>
         </a>
     }
 
     <div class="newsTextCenterDiv">
                 
-        <a href="@Url.Action("Index", "Regiments", new {id = regiment})">
+        <a href="@Url.Action("Index", "Regiments", new { id = regimentID })">
             <h3>
                 @displayName
             </h3>
@@ -37,19 +38,19 @@
         <ul>
             @for (int i = 0; i < weaponPool.Count; i++)
             {
-                var weapon = weaponPool.ElementAt(i);
+                var element = weaponPool.ElementAt(i);
 
                 <li>
                     <p>
                         @if (isArtillery)
                         {
-                            @($"{weapon.Value}x")
+                            @($"{element.Count}x")
                         }
                         else
                         {
-                            @(weapon.Value == 100 ? "" : $"{weapon.Value}%")
+                            @(element.Percent == 100 ? "" : $"{element.Percent}%")
                         }
-                        @Weapons.DisplayNames[weapon.Key]
+                        @element.Weapon.Name
                     </p>
                 </li>
             }

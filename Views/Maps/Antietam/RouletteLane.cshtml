@@ -1,14 +1,16 @@
-﻿@{
-    ViewBag.Title = Maps.RouletteLane;
+﻿@model WarOfRightsWeb.Data.Map
 
-    var map = Maps.RouletteLane;
-    var dateTime = Maps.DateTimes[map];
-    var image = Url.Content($"~/img/maps/{map}_spawn.png");
-    var imageLoading = Url.Content($"~/img/maps/{map}_loading.png");
+@{
+    var mapID = Model.ID;
+    var mapName = Model.Name;
+    var dateTime = Model.DateTimeDescription;
 
-    var mapInfo = MapsInfo.Parameters[map];
+    var spawnImage = Url.Content($"~/img/{Model.SpawnImagePath}");
+    var imageSkirmish = Url.Content($"~/img/{Model.SkirmishImagePath}");
+    var loadingImage = Url.Content($"~/img/{Model.LoadingImagePath}");
+
+    ViewBag.Title = mapName;
 }
-
 @section navigation {
     @await Html.PartialAsync("_MapsNav")
 }
@@ -22,18 +24,18 @@
 </div>
 
 <h2 class="text-right">@dateTime</h2>
-<a href="@image" target="_blank">
-    <img src="@image" class="imageMaxWidth">
+<a href="@spawnImage" target="_blank">
+    <img src="@spawnImage" class="imageMaxWidth">
 </a>
 
 <p></p>
 
-<a href="@imageLoading" target="_blank">
-    <img src="@imageLoading" class="imageMaxWidth">
+<a href="@loadingImage" target="_blank">
+    <img src="@loadingImage" class="imageMaxWidth">
 </a>
 
 
-@await Html.PartialAsync("_MapTeams", mapInfo)
+@await Html.PartialAsync("_MapTeams", Model)
 
 @section scripts {
     <script>
