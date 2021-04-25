@@ -49,7 +49,7 @@ namespace WarOfRightsWeb.Data
 
         public int? FinalPushTime { get; set; }
 
-        
+
         [MaxLength(255)]
         public string SkirmishImagePath { get; set; }
 
@@ -59,7 +59,8 @@ namespace WarOfRightsWeb.Data
         [MaxLength(255)]
         public string LoadingImagePath { get; set; }
 
-        
+        public int Order { get; set; }
+
         public ICollection<MapRegiment> MapRegiments { get; set; }
 
         [NotMapped]

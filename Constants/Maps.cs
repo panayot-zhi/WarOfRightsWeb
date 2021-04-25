@@ -4,6 +4,8 @@ namespace WarOfRightsWeb.Constants
 {
     public static class Maps
     {
+        public static string[] DrillCampMaps = { Maps.DrillCampCSA, Maps.DrillCampUSA, HarpersFerryUSA };
+
         public const string HookersPush = "HookersPush";
         public const string HagerstownTurnpike = "HagerstownTurnpike";
         public const string MillersCornfield = "MillersCornfield";
@@ -42,5 +44,13 @@ namespace WarOfRightsWeb.Constants
         public const string HarpersFerryUSA = "HarpersFerryUSA";
         public const string DrillCampUSA = "DrillCampUSA";
         public const string DrillCampCSA = "DrillCampCSA";
+
+        public static class Areas
+        {
+            public const string Antietam = "Antietam";
+            public const string HarpersFerry = "HarpersFerry";
+            public const string SouthMountain = "SouthMountain";
+            public const string DrillCamps = "DrillCamps";
+        }
     }
 }
