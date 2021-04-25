@@ -41,17 +41,19 @@
                 var element = weaponPool.ElementAt(i);
 
                 <li>
-                    <p>
-                        @if (isArtillery)
-                        {
-                            @($"{element.Count}x")
-                        }
-                        else
-                        {
-                            @(element.Percent == 100 ? "" : $"{element.Percent}%")
-                        }
-                        @element.Weapon.Name
-                    </p>
+                    <a href="@Url.Action("Index", "Help")#@element.Weapon.ID" target="_blank">
+
+                        <h3>
+                            @if (isArtillery)
+                            {
+                                @($"{element.Count}x")
+                            }
+                            else
+                            {
+                                @($"{element.Percent}%")
+                            }
+                            @element.Weapon.Name</h3>
+                    </a>
                 </li>
             }
         </ul>

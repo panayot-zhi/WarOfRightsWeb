@@ -287,6 +287,13 @@ namespace WarOfRightsWeb.Common
             return seconds;
         }
 
+        public static string RegimentImageOrDefault(this IUrlHelper urlHelper, string faction, RegimentType type,
+            string regiment, string character)
+        {
+            return urlHelper.RegimentImageIfExists($"{faction}_{type}_{regiment}_{character}") ??
+                   urlHelper.RegimentImageIfExists($"{faction}_{type}_default_{character}");
+        }
+
         public static string RegimentImageOrDefault(this IUrlHelper urlHelper, string faction, string type, string regiment, string character)
         {
             return urlHelper.RegimentImageIfExists($"{faction}_{type}_{regiment}_{character}") ??
@@ -321,5 +328,10 @@ namespace WarOfRightsWeb.Common
 
             return null;
         }
+
+        public static string PathToUrl(string path)
+        {
+            return path.Replace('\\', '/');
+        } 
     }
 }

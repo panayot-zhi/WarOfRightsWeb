@@ -1,17 +1,14 @@
-﻿@model string
+﻿@model WarOfRightsWeb.Data.Map
 
 @{
     var map = Model;
-    var mapName = Maps.DisplayNames[map];
-    var mapArea = Extensions.AreaFromMap(map);
-    var mapImage = Url.Content($"~/img/maps/{map}_skirmish.png");
-    var mapLink = Url.Action(mapArea, "Maps", new { id = map });
-    var mapDescription = Maps.Descriptions[map];
-    var defenders = string.Empty;
-    if (MapsInfo.Parameters.ContainsKey(map))
-    {
-        defenders = MapsInfo.Parameters[map].DefendingTeam;
-    }
+    var mapID = map.ID;
+    var mapName = map.Name; //Maps.DisplayNames[mapID];
+    var mapArea = map.AreaName; //Extensions.AreaFromMap(mapID);
+    var mapImage = Url.Content($"~/img/{Extensions.PathToUrl(map.SkirmishImagePath)}");
+    var mapLink = Url.Action(mapArea, "Maps", new { id = mapID });
+    var mapDescription = map.Description; // Maps.Descriptions[mapID];
+    var defenders = map.DefendingTeam;
 }
 
 <div class="briefFieldReportContainer">

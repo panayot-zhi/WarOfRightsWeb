@@ -1,16 +1,17 @@
-﻿@model string
+﻿@model WarOfRightsWeb.Data.Regiment
 
 @{
     var regiment = Model;
-    var regimentName = Regiments.DisplayNames[regiment];    
-    var regimentImage = Url.Content($"~/img/regiments/usa_infantry_{regiment}_FlagBearer.png");
-    var regimentDescription = Regiments.Descriptions[regiment];
+    var regimentID = regiment.ID;
+    var regimentName = regiment.Name; //Regiments.DisplayNames[regiment];    
+    var regimentFlag = Url.Content($"~/img/regiments/usa_infantry_{regimentID}_FlagBearer.png");
+    var regimentDescription = regiment.Description; //Regiments.Descriptions[regiment];
 
 }
 
 <div class="briefFieldReportContainer">
-    <a href="@regimentImage" target="_blank" class="imageContainer">
-        <div style="background: url('@regimentImage'); background-size: contain; background-position-y: -2px" class="worTightBorder"></div>
+    <a href="@regimentFlag" target="_blank" class="imageContainer">
+        <div style="background: url('@regimentFlag'); background-size: contain; background-position-y: -2px" class="worTightBorder"></div>
     </a>
     <div class="briefDescription">
         <a href="@Url.Action("Index", "Regiments", new { id = Model })">

@@ -4,10 +4,10 @@
     var mapID = Model.ID;
     var mapName = Model.Name;
     var dateTime = Model.DateTimeDescription;
-
-    var spawnImage = Url.Content($"~/img/{Model.SpawnImagePath}");
-    var imageSkirmish = Url.Content($"~/img/{Model.SkirmishImagePath}");
-    var loadingImage = Url.Content($"~/img/{Model.LoadingImagePath}");
+    
+    var spawnImage = Url.Content($"~/img/{Extensions.PathToUrl(Model.SpawnImagePath)}");
+    var imageSkirmish = Url.Content($"~/img/{Extensions.PathToUrl(Model.SkirmishImagePath)}");
+    var loadingImage = Url.Content($"~/img/{Extensions.PathToUrl(Model.LoadingImagePath)}");
 
     ViewBag.Title = mapName;
 }

@@ -39,7 +39,7 @@ namespace WarOfRightsWeb.Constants
         public const string FootArtillerySwordCS = "FootArtillerySwordCS";
         public const string ArtilleryToolSpongeRammer = "ArtilleryToolSpongeRammer";
 
-        // Artillery
+        // Missing weapons ...
         public const string Artillery10PdrParrott = "Artillery10PdrParrott";
         public const string Artillery12PdrNapoleon = "Artillery12PdrNapoleon";
         public const string Artillery3InchOrdnance = "Artillery3InchOrdnance";

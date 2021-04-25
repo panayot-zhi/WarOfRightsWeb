@@ -18,7 +18,22 @@ namespace WarOfRightsWeb.Controllers
 
         public IActionResult Index(string id)
         {
-            return View();
+            // We do not need all the properties of
+            // the map here, select only those needed
+            var maps = context.Maps
+                .Select(x => new Map()
+                {
+                    ID = x.ID,
+                    Name = x.Name,
+                    AreaName = x.AreaName,
+                    DateTimeDescription = x.DateTimeDescription,
+                    DefendingTeam = x.DefendingTeam,
+                    Description = x.Description,
+                    SkirmishImagePath = x.SkirmishImagePath,
+
+                }).OrderBy(x => x.Name).AsNoTracking();
+
+            return View(model: maps);
         }
 
         public IActionResult Antietam(string id)

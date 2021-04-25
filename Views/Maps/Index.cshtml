@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<WarOfRightsWeb.Data.Map>
+@{
     ViewBag.Title = "Maps";
 }
 
@@ -7,46 +8,10 @@
 }
 
 <div id="briefMapsContainer">
-    @await Html.PartialAsync("_MapBrief", Maps.AndersonsCounterattack)
-    @await Html.PartialAsync("_MapBrief", Maps.BloodyLane)
-    @await Html.PartialAsync("_MapBrief", Maps.BolivarHeightsCamp)
-    @await Html.PartialAsync("_MapBrief", Maps.BolivarHeightsRedoubt)
-    @await Html.PartialAsync("_MapBrief", Maps.BurnsideBridge)
-    @await Html.PartialAsync("_MapBrief", Maps.ColquittsDefence)
-    @await Html.PartialAsync("_MapBrief", Maps.CookesCountercharge)
-    @await Html.PartialAsync("_MapBrief", Maps.CoxsPush)
-    @await Html.PartialAsync("_MapBrief", Maps.Downtown)
-    @await Html.PartialAsync("_MapBrief", Maps.DrillCampCSA)
-    @await Html.PartialAsync("_MapBrief", Maps.DrillCampUSA)
-    @await Html.PartialAsync("_MapBrief", Maps.DunkerChurch)
-    @await Html.PartialAsync("_MapBrief", Maps.EastWoods)
-    @await Html.PartialAsync("_MapBrief", Maps.EastWoodsSkirmish)
-    @await Html.PartialAsync("_MapBrief", Maps.GarlandsStand)
-    @await Html.PartialAsync("_MapBrief", Maps.HagerstownTurnpike)
-
-    @*@await Html.PartialAsync("_MapBrief", Maps.HarpersFerryBolivarHeightsCampUSA)*@
-
-    @await Html.PartialAsync("_MapBrief", Maps.HarpersGraveyard)
-    @await Html.PartialAsync("_MapBrief", Maps.HatchsAttack)
-    @await Html.PartialAsync("_MapBrief", Maps.HighStreet)
-    @await Html.PartialAsync("_MapBrief", Maps.HillsCounterattack)
-    @await Html.PartialAsync("_MapBrief", Maps.HookersPush)
-    @await Html.PartialAsync("_MapBrief", Maps.MarylandHeights)
-    @await Html.PartialAsync("_MapBrief", Maps.MillersCornfield)
-    @await Html.PartialAsync("_MapBrief", Maps.NicodemusHill)
-    @await Html.PartialAsync("_MapBrief", Maps.OttoSherrickFarm)
-    @await Html.PartialAsync("_MapBrief", Maps.PicketPatrol)
-    @await Html.PartialAsync("_MapBrief", Maps.PiperFarm)
-    @await Html.PartialAsync("_MapBrief", Maps.PryFord)
-    @await Html.PartialAsync("_MapBrief", Maps.PryGristMill)
-    @await Html.PartialAsync("_MapBrief", Maps.PryHouse)
-    @await Html.PartialAsync("_MapBrief", Maps.RenosFall)
-    @await Html.PartialAsync("_MapBrief", Maps.RiverCrossing)
-    @await Html.PartialAsync("_MapBrief", Maps.RouletteLane)
-    @await Html.PartialAsync("_MapBrief", Maps.SchoolHouseRidge)
-    @await Html.PartialAsync("_MapBrief", Maps.ShenandoahStreet)
-    @await Html.PartialAsync("_MapBrief", Maps.WashingtonStreet)
-    @await Html.PartialAsync("_MapBrief", Maps.WestWoods)
+    @foreach (var map in Model)
+    {
+        @await Html.PartialAsync("_MapBrief", map)
+    }
 </div>
 
 @section scripts {
