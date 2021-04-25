@@ -267,8 +267,18 @@ namespace WarOfRightsWeb.Common
             throw new ArgumentException($"Unknown regiment '{regiment}'");
         }
 
+        public static string SecondsToMinutes(int? seconds)
+        {
+            return SecondsToMinutes(seconds.ToString());
+        }
+
         public static string SecondsToMinutes(string seconds)
         {
+            if (string.IsNullOrEmpty(seconds))
+            {
+                return seconds;
+            }
+
             if (int.TryParse(seconds, out var result))
             {
                 return $"{Math.Floor(result / 60d)}:{result % 60}";
