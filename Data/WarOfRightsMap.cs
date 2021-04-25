@@ -16,13 +16,16 @@ namespace WarOfRightsWeb.Data
         [MaxLength(255)]
         public string Name { get; set; }
 
+        [MaxLength(255)]
+        public string AreaName { get; set; }
+
         [Column(TypeName = "TEXT")]
         public string Description { get; set; }
 
         [MaxLength(255)]
         public string DateTimeDescription { get; set; }
 
-        [MaxLength(128)]
+        [MaxLength(127)]
         public string DefendingTeam { get; set; }
 
         [Column(TypeName = "DECIMAL(6,4)")]

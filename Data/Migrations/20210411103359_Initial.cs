@@ -12,6 +12,7 @@ namespace WarOfRightsWeb.Data.Migrations
                 {
                     ID = table.Column<string>(maxLength: 255, nullable: false),
                     Name = table.Column<string>(maxLength: 255, nullable: false),
+                    AreaName = table.Column<string>(maxLength: 255, nullable: true),
                     Description = table.Column<string>(type: "TEXT", nullable: true),
                     DateTimeDescription = table.Column<string>(maxLength: 255, nullable: true),
                     DefendingTeam = table.Column<string>(maxLength: 128, nullable: true),

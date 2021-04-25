@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using WarOfRightsWeb.Common;
 
 namespace WarOfRightsWeb.Data
 {
@@ -30,7 +32,8 @@ namespace WarOfRightsWeb.Data
 
         private static void SetUpRegimentTable(EntityTypeBuilder<Regiment> tableBuilder)
         {
-
+            tableBuilder.Property(x => x.Type)
+                .HasConversion(new EnumToStringConverter<RegimentType>());
         }
 
         private static void SetUpWeaponTable(EntityTypeBuilder<Weapon> tableBuilder)

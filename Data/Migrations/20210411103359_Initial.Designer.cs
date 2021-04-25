@@ -9,7 +9,7 @@ using WarOfRightsWeb.Data;
 namespace WarOfRightsWeb.Data.Migrations
 {
     [DbContext(typeof(WarOfRightsDbContext))]
-    [Migration("20210411092648_Initial")]
+    [Migration("20210411103359_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,6 +22,10 @@ namespace WarOfRightsWeb.Data.Migrations
             modelBuilder.Entity("WarOfRightsWeb.Data.Map", b =>
                 {
                     b.Property<string>("ID")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("AreaName")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
                         .HasMaxLength(255);
 
