@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,72 +10,65 @@ namespace WarOfRightsWeb.Controllers
 {
     public class MapsController : Controller
     {
-        private WarOfRightsDbContext context;
+        private readonly WarOfRightsDbContext _db;
 
-        public MapsController(WarOfRightsDbContext context)
+        public MapsController(WarOfRightsDbContext db)
         {
-            this.context = context;
+            this._db = db;
         }
 
-        public IActionResult Index(string id)
+        public IActionResult Index()
         {
-            // We do not need all the properties of
-            // the map here, select only those needed
-            var maps = context.Maps
-                .Select(x => new Map()
-                {
-                    ID = x.ID,
-                    Name = x.Name,
-                    AreaName = x.AreaName,
-                    DateTimeDescription = x.DateTimeDescription,
-                    DefendingTeam = x.DefendingTeam,
-                    Description = x.Description,
-                    SkirmishImagePath = x.SkirmishImagePath,
-
-                }).OrderBy(x => x.Name).AsNoTracking();
-
-            return View(model: maps);
+            return View(model: GetMaps());
         }
 
         public IActionResult Antietam(string id)
         {
+            var area = Maps.Areas.Antietam;
+
             if (!string.IsNullOrEmpty(id))
             {
-                return View($"Antietam/{id}", model: GetMap(id));
+                return View($"{area}/{id}", model: GetMap(id));
             }
 
-            return View("Antietam/Index");
+            return View($"{area}/Index", GetMaps(area));
 
         }
 
         public IActionResult HarpersFerry(string id)
         {
+            var area = Maps.Areas.HarpersFerry;
+
             if (!string.IsNullOrEmpty(id))
             {
-                return View($"HarpersFerry/{id}", model: GetMap(id));
+                return View($"{area}/{id}", model: GetMap(id));
             }
 
-            return View("HarpersFerry/Index");
+            return View($"{area}/Index", GetMaps(area));
         }
 
         public IActionResult SouthMountain(string id)
         {
+            var area = Maps.Areas.SouthMountain;
+
             if (!string.IsNullOrEmpty(id))
             {
-                return View($"SouthMountain/{id}", model: GetMap(id));
+                return View($"{area}/{id}", model: GetMap(id));
             }
 
-            return View("SouthMountain/Index");
+            return View($"{area}/Index", GetMaps(area));
         }
 
         public IActionResult DrillCamps(string id)
         {
+            var area = Maps.Areas.DrillCamps;
+
             if (!string.IsNullOrEmpty(id))
             {
-                return View($"DrillCamps/{id}", model: GetMap(id));
+                return View($"{area}/{id}", model: GetMap(id));
             }
 
-            return View("DrillCamps/Index");
+            return View($"{area}/Index", GetMaps(area));
         }
 
         public IActionResult PicketPatrol()
@@ -84,7 +78,7 @@ namespace WarOfRightsWeb.Controllers
 
         private Map GetMap(string id)
         {
-            var map = context.Maps
+            var map = _db.Maps
                 .Include(x => x.MapRegiments)
                     .ThenInclude(x => x.Regiment)
                 .Include(x => x.MapRegiments)
@@ -103,7 +97,64 @@ namespace WarOfRightsWeb.Controllers
             }*/
 
             return map;
-        } 
+        }
+
+        private IEnumerable<Map> GetMaps(string area = null)
+        {
+            if (Maps.Areas.DrillCamps.Equals(area))
+            {
+                return _db.Maps
+                    .AsNoTracking()
+                    .Where(x => Maps.DrillCampMaps.Contains(x.ID))
+                    .OrderBy(x => x.Order)
+                    .Select(x => new Map()
+                    {
+                        ID = x.ID,
+                        Name = x.Name,
+                        AreaName = x.AreaName,
+                        DateTimeDescription = x.DateTimeDescription,
+                        DefendingTeam = x.DefendingTeam,
+                        Description = x.Description,
+                        SkirmishImagePath = x.SkirmishImagePath,
+                    });
+            }
+
+            if (Maps.Areas.Antietam.Equals(area) ||
+                Maps.Areas.SouthMountain.Equals(area) ||
+                Maps.Areas.HarpersFerry.Equals(area))
+            {
+                return _db.Maps
+                    .AsNoTracking()
+                    .Where(x => x.AreaName == area)
+                    .OrderBy(x => x.Order)
+                    .Select(x => new Map()
+                    {
+                        ID = x.ID,
+                        Name = x.Name,
+                        AreaName = x.AreaName,
+                        DateTimeDescription = x.DateTimeDescription,
+                        DefendingTeam = x.DefendingTeam,
+                        Description = x.Description,
+                        SkirmishImagePath = x.SkirmishImagePath,
+                    });
+            }
+
+            // else return all 
+            // maps ordered by name
+            return _db.Maps
+                .AsNoTracking()
+                .OrderBy(x => x.Name)
+                .Select(x => new Map()
+                {
+                    ID = x.ID,
+                    Name = x.Name,
+                    AreaName = x.AreaName,
+                    DateTimeDescription = x.DateTimeDescription,
+                    DefendingTeam = x.DefendingTeam,
+                    Description = x.Description,
+                    SkirmishImagePath = x.SkirmishImagePath
+                });
+        }
 
     }
 }
