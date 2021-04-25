@@ -137,6 +137,10 @@ li h2 a {
     height: 200px;
 }
 
+.latestNewsItem:hover h3 {
+    text-decoration: none;
+}
+
 #mapBelligerentsUSA .latestNewsItem:hover {
     cursor: auto;
 }
@@ -144,6 +148,11 @@ li h2 a {
 #mapBelligerentsUSA .latestNewsItem a,
 #mapBelligerentsCSA .latestNewsItem a {
     text-decoration: none;
+}
+
+#mapBelligerentsUSA .latestNewsItem a:hover,
+#mapBelligerentsCSA .latestNewsItem a:hover {
+    text-decoration: underline;
 }
 
 #mapBelligerentsCSA .latestNewsItem,
