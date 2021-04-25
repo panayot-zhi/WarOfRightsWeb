@@ -1,0 +1,20 @@
+[
+  {
+    "ID": "Artillery10PdrParrott",
+    "Name": "10lbs Parrott",
+    "Description": "Robert Parrott of New Hampshire, who graduated third of his class with honors from the US Military Academy in 1824, was the inventor of the famous line of Parrott guns in 1860. The 10-lb Parrott Rifle was one of the most common rifled guns to be found on both sides, but was often shunned by artillerymen as being a gun prone to bursting. However, perhaps due to a low production cost compared to other guns, it could be found in many sizes, the largest being the 300-lb Parrott Siege Rifle used against Confederate held Fort Sumter in August of 1863. Parrotts continued to be used in coastal defense roles until phased out in 1900 with the Endicott Fort Reforms.",
+    "ParametersDescription": ""
+  },
+  {
+    "ID": "Artillery12PdrNapoleon",
+    "Name": "12lbs Napoleon",
+    "Description": "The 10-pounder Parrott rifle, Model 1861 was a cast iron muzzle-loading rifled cannon that was adopted by the United States Army in 1861 and often used in field artillery units during the American Civil War. Like other Parrott rifles, the gun breech was reinforced by a distinctive wrought iron reinforcing band. The gun fired a 9.5 lb (4.3 kg) projectile to a distance of 1,850 yd (1,692 m) at an elevation of 5°. The 10-pounder Parrott rifle was capable of firing shell, shrapnel shell (case shot), canister shot, or solid shot. Midway through the war, the Federal government discontinued the 2.9 in (74 mm) version in favor of a 3.0 in (76 mm) version. Despite the reinforcing band, the guns occasionally burst without warning, inflicting injury on the gun crews. The Confederate States of America manufactured a number of successful copies of the gun.",
+    "ParametersDescription": ""
+  },
+  {
+    "ID": "Artillery3InchOrdnance",
+    "Name": "3-inch Ordnance",
+    "Description": "The 3-inch ordnance rifle, model 1861 was a wrought iron muzzle-loading rifled cannon that was adopted by the United States Army in 1861 and widely used in field artillery units during the American Civil War. It fired a 9.5 lb (4.3 kg) projectile to a distance of 1,830 yd (1,670 m) at an elevation of 5°. The 3-inch rifle was not as effective in firing canister shot as the heavier 12-pounder Napoleon, but it proved to be highly accurate at longer ranges when firing shell or shrapnel. There was only one reported case of a 3-inch ordnance rifle bursting in action. This was in stark contrast to the similarly-sized cast iron 10-pounder Parrott rifles which occasionally burst without warning, inflicting injury on the gun crews. The Confederate States of America lacked the technology to manufacture successful copies of the 3-inch ordnance rifle. However, the Confederate States Army respected the weapons and employed those captured from Federal forces.",
+    "ParametersDescription": ""
+  }  
+]

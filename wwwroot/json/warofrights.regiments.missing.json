@@ -1,0 +1,11 @@
+[
+  {
+    "ID": "Alabama3rd",
+    "Name": "3rd Alabama",
+    "Faction": "CSA",
+    "State": "Alabama",
+    "Number": "3rd",
+    "Description": "The 3rd Alabama Infantry Regiment was mustered in at Montgomery, Alabama in April 1861. And fought in some of The Civil War's most bloody battles, including Seven Pines, Fredericksburg, Chancellorsville, Antietam, Gettysburg and The Wilderness. By war's end the regiment would surrender at Appomattox Court House.",
+    "Type": "Infantry"
+  }
+]
