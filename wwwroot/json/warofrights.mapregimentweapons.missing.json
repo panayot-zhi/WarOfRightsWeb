@@ -1,846 +1,846 @@
 [
   {
-    "ID": "",
+    "ID": "AndersonsCounterattackBatteryClarkArtillery12PdrNapoleon",
     "MapRegimentID": "AndersonsCounterattackBatteryClark",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "AndersonsCounterattackBatteryClarkArtillery3InchOrdnance",
     "MapRegimentID": "AndersonsCounterattackBatteryClark",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "BloodyLaneBatteryMillerArtillery12PdrNapoleon",
     "MapRegimentID": "BloodyLaneBatteryMiller",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "BloodyLaneBatteryMillerArtillery3InchOrdnance",
     "MapRegimentID": "BloodyLaneBatteryMiller",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsCampBatteryVonSehlenArtillery3InchOrdnance",
     "MapRegimentID": "BolivarHeightsCampBatteryVonSehlen",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsCampBatteryVonSehlenArtillery12PdrNapoleon",
     "MapRegimentID": "BolivarHeightsCampBatteryVonSehlen",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsCampBatteryGrahamArtillery12PdrNapoleon",
     "MapRegimentID": "BolivarHeightsCampBatteryGraham",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsCampBatteryGrahamArtillery3InchOrdnance",
     "MapRegimentID": "BolivarHeightsCampBatteryGraham",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsCampBatteryPhillipsArtillery10PdrParrott",
     "MapRegimentID": "BolivarHeightsCampBatteryPhillips",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsCampBatteryPhillipsArtillery12PdrNapoleon",
     "MapRegimentID": "BolivarHeightsCampBatteryPhillips",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsCampBatteryBrockenbroughArtillery3InchOrdnance",
     "MapRegimentID": "BolivarHeightsCampBatteryBrockenbrough",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsCampBatteryBrockenbroughArtillery12PdrNapoleon",
     "MapRegimentID": "BolivarHeightsCampBatteryBrockenbrough",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsRedoubtBatteryRigbyArtillery12PdrNapoleon",
     "MapRegimentID": "BolivarHeightsRedoubtBatteryRigby",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 4
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsRedoubtBatteryRigbyArtillery3InchOrdnance",
     "MapRegimentID": "BolivarHeightsRedoubtBatteryRigby",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 4
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsRedoubtBatteryPottsArtillery12PdrNapoleon",
     "MapRegimentID": "BolivarHeightsRedoubtBatteryPotts",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsRedoubtBatteryPottsArtillery10PdrParrott",
     "MapRegimentID": "BolivarHeightsRedoubtBatteryPotts",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsRedoubtBatteryBraxtonArtillery12PdrNapoleon",
     "MapRegimentID": "BolivarHeightsRedoubtBatteryBraxton",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BolivarHeightsRedoubtBatteryBraxtonArtillery3InchOrdnance",
     "MapRegimentID": "BolivarHeightsRedoubtBatteryBraxton",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "BurnsideBridgeBatteryClarkArtillery3InchOrdnance",
     "MapRegimentID": "BurnsideBridgeBatteryClark",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "BurnsideBridgeBatteryClarkArtillery12PdrNapoleon",
     "MapRegimentID": "BurnsideBridgeBatteryClark",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "BurnsideBridgeBatteryRichardsonArtillery3InchOrdnance",
     "MapRegimentID": "BurnsideBridgeBatteryRichardson",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "BurnsideBridgeBatteryRichardsonArtillery12PdrNapoleon",
     "MapRegimentID": "BurnsideBridgeBatteryRichardson",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "BurnsideBridgeBatteryBrownArtillery10PdrParrott",
     "MapRegimentID": "BurnsideBridgeBatteryBrown",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "BurnsideBridgeBatteryBrownArtillery12PdrNapoleon",
     "MapRegimentID": "BurnsideBridgeBatteryBrown",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "ColquittsDefenceBatteryStewartArtillery3InchOrdnance",
     "MapRegimentID": "ColquittsDefenceBatteryStewart",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "ColquittsDefenceBatteryLaneArtillery12PdrNapoleon",
     "MapRegimentID": "ColquittsDefenceBatteryLane",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "ColquittsDefenceBatteryLaneArtillery10PdrParrott",
     "MapRegimentID": "ColquittsDefenceBatteryLane",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "CookesCounterchargeBatteryOwenArtillery3InchOrdnance",
     "MapRegimentID": "CookesCounterchargeBatteryOwen",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "CookesCounterchargeBatteryOwenArtillery12PdrNapoleon",
     "MapRegimentID": "CookesCounterchargeBatteryOwen",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "CoxsPushBatteryPelhamArtillery12PdrNapoleon",
     "MapRegimentID": "CoxsPushBatteryPelham",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "CoxsPushBatteryPelhamArtillery3InchOrdnance",
     "MapRegimentID": "CoxsPushBatteryPelham",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "DowntownBatteryManlyArtillery12PdrNapoleon",
     "MapRegimentID": "DowntownBatteryManly",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "DowntownBatteryManlyArtillery10PdrParrott",
     "MapRegimentID": "DowntownBatteryManly",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "DowntownBatteryFrenchArtillery12PdrNapoleon",
     "MapRegimentID": "DowntownBatteryFrench",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "DowntownBatteryFrenchArtillery3InchOrdnance",
     "MapRegimentID": "DowntownBatteryFrench",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "DunkerChurchBatteryEdgellArtillery10PdrParrott",
     "MapRegimentID": "DunkerChurchBatteryEdgell",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "DunkerChurchBatteryEdgellArtillery12PdrNapoleon",
     "MapRegimentID": "DunkerChurchBatteryEdgell",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "DunkerChurchBatteryTompkinsArtillery12PdrNapoleon",
     "MapRegimentID": "DunkerChurchBatteryTompkins",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "DunkerChurchBatteryTompkinsArtillery3InchOrdnance",
     "MapRegimentID": "DunkerChurchBatteryTompkins",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "DunkerChurchBatteryCarltonArtillery3InchOrdnance",
     "MapRegimentID": "DunkerChurchBatteryCarlton",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "DunkerChurchBatteryCarltonArtillery12PdrNapoleon",
     "MapRegimentID": "DunkerChurchBatteryCarlton",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "EastWoodsSkirmishBatteryCooperArtillery12PdrNapoleon",
     "MapRegimentID": "EastWoodsSkirmishBatteryCooper",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "EastWoodsSkirmishBatteryCooperArtillery3InchOrdnance",
     "MapRegimentID": "EastWoodsSkirmishBatteryCooper",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "GarlandsStandBatteryCromeArtillery10PdrParrott",
     "MapRegimentID": "GarlandsStandBatteryCrome",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "GarlandsStandBatteryBondurantArtillery3InchOrdnance",
     "MapRegimentID": "GarlandsStandBatteryBondurant",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "GarlandsStandBatteryBondurantArtillery12PdrNapoleon",
     "MapRegimentID": "GarlandsStandBatteryBondurant",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "HagerstownTurnpikeBatteryCampbellArtillery12PdrNapoleon",
     "MapRegimentID": "HagerstownTurnpikeBatteryCampbell",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HagerstownTurnpikeBatteryCampbellArtillery3InchOrdnance",
     "MapRegimentID": "HagerstownTurnpikeBatteryCampbell",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HagerstownTurnpikeBatteryBrockenbroughArtillery12PdrNapoleon",
     "MapRegimentID": "HagerstownTurnpikeBatteryBrockenbrough",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HagerstownTurnpikeBatteryBrockenbroughArtillery10PdrParrott",
     "MapRegimentID": "HagerstownTurnpikeBatteryBrockenbrough",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HagerstownTurnpikeBatteryPoagueArtillery3InchOrdnance",
     "MapRegimentID": "HagerstownTurnpikeBatteryPoague",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "HagerstownTurnpikeBatteryPoagueArtillery12PdrNapoleon",
     "MapRegimentID": "HagerstownTurnpikeBatteryPoague",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "HarpersGraveyardBatteryGrahamArtillery12PdrNapoleon",
     "MapRegimentID": "HarpersGraveyardBatteryGraham",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "HarpersGraveyardBatteryGrahamArtillery3InchOrdnance",
     "MapRegimentID": "HarpersGraveyardBatteryGraham",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "HarpersGraveyardBatteryManlyArtillery12PdrNapoleon",
     "MapRegimentID": "HarpersGraveyardBatteryManly",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HarpersGraveyardBatteryManlyArtillery10PdrParrott",
     "MapRegimentID": "HarpersGraveyardBatteryManly",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HarpersGraveyardBatteryFrenchArtillery12PdrNapoleon",
     "MapRegimentID": "HarpersGraveyardBatteryFrench",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HarpersGraveyardBatteryFrenchArtillery3InchOrdnance",
     "MapRegimentID": "HarpersGraveyardBatteryFrench",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "HighStreetBatteryManlyArtillery12PdrNapoleon",
     "MapRegimentID": "HighStreetBatteryManly",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HighStreetBatteryManlyArtillery10PdrParrott",
     "MapRegimentID": "HighStreetBatteryManly",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HighStreetBatteryFrenchArtillery12PdrNapoleon",
     "MapRegimentID": "HighStreetBatteryFrench",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HighStreetBatteryFrenchArtillery3InchOrdnance",
     "MapRegimentID": "HighStreetBatteryFrench",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "HillsCounterattackBatteryBrownArtillery10PdrParrott",
     "MapRegimentID": "HillsCounterattackBatteryBrown",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "HillsCounterattackBatteryBrownArtillery12PdrNapoleon",
     "MapRegimentID": "HillsCounterattackBatteryBrown",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "HillsCounterattackBatteryReilyArtillery12PdrNapoleon",
     "MapRegimentID": "HillsCounterattackBatteryReily",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "HillsCounterattackBatteryReilyArtillery3InchOrdnance",
     "MapRegimentID": "HillsCounterattackBatteryReily",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryMatthewsArtillery10PdrParrott",
     "MapRegimentID": "HookersPushBatteryMatthews",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryMatthewsArtillery12PdrNapoleon",
     "MapRegimentID": "HookersPushBatteryMatthews",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryThompsonArtillery3InchOrdnance",
     "MapRegimentID": "HookersPushBatteryThompson",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryThompsonArtillery12PdrNapoleon",
     "MapRegimentID": "HookersPushBatteryThompson",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryBrockenbroughArtillery12PdrNapoleon",
     "MapRegimentID": "HookersPushBatteryBrockenbrough",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryBrockenbroughArtillery10PdrParrott",
     "MapRegimentID": "HookersPushBatteryBrockenbrough",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryJordanArtillery12PdrNapoleon",
     "MapRegimentID": "HookersPushBatteryJordan",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryJordanArtillery3InchOrdnance",
     "MapRegimentID": "HookersPushBatteryJordan",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryPoagueArtillery3InchOrdnance",
     "MapRegimentID": "HookersPushBatteryPoague",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "HookersPushBatteryPoagueArtillery12PdrNapoleon",
     "MapRegimentID": "HookersPushBatteryPoague",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "MillersCornfieldBatteryMatthewsArtillery10PdrParrott",
     "MapRegimentID": "MillersCornfieldBatteryMatthews",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "MillersCornfieldBatteryMatthewsArtillery12PdrNapoleon",
     "MapRegimentID": "MillersCornfieldBatteryMatthews",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "MillersCornfieldBatteryRansomArtillery12PdrNapoleon",
     "MapRegimentID": "MillersCornfieldBatteryRansom",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "MillersCornfieldBatteryRansomArtillery3InchOrdnance",
     "MapRegimentID": "MillersCornfieldBatteryRansom",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "MillersCornfieldBatteryBlackshearArtillery3InchOrdnance",
     "MapRegimentID": "MillersCornfieldBatteryBlackshear",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "MillersCornfieldBatteryBlackshearArtillery12PdrNapoleon",
     "MapRegimentID": "MillersCornfieldBatteryBlackshear",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryCampbellArtillery3InchOrdnance",
     "MapRegimentID": "NicodemusHillBatteryCampbell",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryCampbellArtillery12PdrNapoleon",
     "MapRegimentID": "NicodemusHillBatteryCampbell",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryReynoldsArtillery12PdrNapoleon",
     "MapRegimentID": "NicodemusHillBatteryReynolds",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryReynoldsArtillery10PdrParrott",
     "MapRegimentID": "NicodemusHillBatteryReynolds",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryWoodingArtillery10PdrParrott",
     "MapRegimentID": "NicodemusHillBatteryWooding",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryWoodingArtillery12PdrNapoleon",
     "MapRegimentID": "NicodemusHillBatteryWooding",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryBalthisArtillery10PdrParrott",
     "MapRegimentID": "NicodemusHillBatteryBalthis",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryBalthisArtillery12PdrNapoleon",
     "MapRegimentID": "NicodemusHillBatteryBalthis",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryPelhamArtillery12PdrNapoleon",
     "MapRegimentID": "NicodemusHillBatteryPelham",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryPelhamArtillery3InchOrdnance",
     "MapRegimentID": "NicodemusHillBatteryPelham",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryCarpenterArtillery12PdrNapoleon",
     "MapRegimentID": "NicodemusHillBatteryCarpenter",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "NicodemusHillBatteryCarpenterArtillery3InchOrdnance",
     "MapRegimentID": "NicodemusHillBatteryCarpenter",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "OttoSherrickFarmBatteryCookArtillery3InchOrdnance",
     "MapRegimentID": "OttoSherrickFarmBatteryCook",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "OttoSherrickFarmBatteryCookArtillery12PdrNapoleon",
     "MapRegimentID": "OttoSherrickFarmBatteryCook",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "OttoSherrickFarmBatteryMaurinArtillery10PdrParrott",
     "MapRegimentID": "OttoSherrickFarmBatteryMaurin",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "PiperFarmBatteryOwenArtillery12PdrNapoleon",
     "MapRegimentID": "PiperFarmBatteryOwen",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PiperFarmBatteryOwenArtillery10PdrParrott",
     "MapRegimentID": "PiperFarmBatteryOwen",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PiperFarmBatteryHexamerArtillery3InchOrdnance",
     "MapRegimentID": "PiperFarmBatteryHexamer",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PiperFarmBatteryHexamerArtillery12PdrNapoleon",
     "MapRegimentID": "PiperFarmBatteryHexamer",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PiperFarmBatteryBrooksArtillery10PdrParrott",
     "MapRegimentID": "PiperFarmBatteryBrooks",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "PiperFarmBatteryBrooksArtillery12PdrNapoleon",
     "MapRegimentID": "PiperFarmBatteryBrooks",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "PiperFarmBatteryBoyceArtillery12PdrNapoleon",
     "MapRegimentID": "PiperFarmBatteryBoyce",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PiperFarmBatteryBoyceArtillery3InchOrdnance",
     "MapRegimentID": "PiperFarmBatteryBoyce",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PryFordBatteryMcGilveryArtillery3InchOrdnance",
     "MapRegimentID": "PryFordBatteryMcGilvery",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PryFordBatteryMcGilveryArtillery12PdrNapoleon",
     "MapRegimentID": "PryFordBatteryMcGilvery",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PryFordBatteryDAquinArtillery10PdrParrott",
     "MapRegimentID": "PryFordBatteryDAquin",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PryFordBatteryDAquinArtillery12PdrNapoleon",
     "MapRegimentID": "PryFordBatteryDAquin",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "PryHouseBatteryWeaverArtillery12PdrNapoleon",
     "MapRegimentID": "PryHouseBatteryWeaver",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "PryHouseBatteryWeaverArtillery10PdrParrott",
     "MapRegimentID": "PryHouseBatteryWeaver",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "PryHouseBatterySquiresArtillery3InchOrdnance",
     "MapRegimentID": "PryHouseBatterySquires",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "PryHouseBatterySquiresArtillery12PdrNapoleon",
     "MapRegimentID": "PryHouseBatterySquires",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "RenosFallBatteryGlassieArtillery12PdrNapoleon",
     "MapRegimentID": "RenosFallBatteryGlassie",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "RiverCrossingBatteryPottsArtillery3InchOrdnance",
     "MapRegimentID": "RiverCrossingBatteryPotts",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "RiverCrossingBatteryReadArtillery12PdrNapoleon",
     "MapRegimentID": "RiverCrossingBatteryRead",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "RiverCrossingBatteryManlyArtillery12PdrNapoleon",
     "MapRegimentID": "RiverCrossingBatteryManly",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "RiverCrossingBatteryManlyArtillery10PdrParrott",
     "MapRegimentID": "RiverCrossingBatteryManly",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "RiverCrossingBatteryFrenchArtillery12PdrNapoleon",
     "MapRegimentID": "RiverCrossingBatteryFrench",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "RiverCrossingBatteryFrenchArtillery3InchOrdnance",
     "MapRegimentID": "RiverCrossingBatteryFrench",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "RiverCrossingBatteryCarltonArtillery3InchOrdnance",
     "MapRegimentID": "RiverCrossingBatteryCarlton",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "RouletteLaneBatteryGrahamArtillery3InchOrdnance",
     "MapRegimentID": "RouletteLaneBatteryGraham",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "RouletteLaneBatteryGrahamArtillery12PdrNapoleon",
     "MapRegimentID": "RouletteLaneBatteryGraham",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryVonSehlenArtillery12PdrNapoleon",
     "MapRegimentID": "SchoolHouseRidgeBatteryVonSehlen",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryVonSehlenArtillery3InchOrdnance",
     "MapRegimentID": "SchoolHouseRidgeBatteryVonSehlen",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryPhillipsArtillery12PdrNapoleon",
     "MapRegimentID": "SchoolHouseRidgeBatteryPhillips",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryPhillipsArtillery10PdrParrott",
     "MapRegimentID": "SchoolHouseRidgeBatteryPhillips",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryGrahamArtillery12PdrNapoleon",
     "MapRegimentID": "SchoolHouseRidgeBatteryGraham",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 1
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryGrahamArtillery3InchOrdnance",
     "MapRegimentID": "SchoolHouseRidgeBatteryGraham",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryCourtneyArtillery10PdrParrott",
     "MapRegimentID": "SchoolHouseRidgeBatteryCourtney",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryCourtneyArtillery12PdrNapoleon",
     "MapRegimentID": "SchoolHouseRidgeBatteryCourtney",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryBrockenbroughArtillery12PdrNapoleon",
     "MapRegimentID": "SchoolHouseRidgeBatteryBrockenbrough",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "SchoolHouseRidgeBatteryBrockenbroughArtillery3InchOrdnance",
     "MapRegimentID": "SchoolHouseRidgeBatteryBrockenbrough",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "ShenandoahStreetBatteryManlyArtillery12PdrNapoleon",
     "MapRegimentID": "ShenandoahStreetBatteryManly",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "ShenandoahStreetBatteryManlyArtillery10PdrParrott",
     "MapRegimentID": "ShenandoahStreetBatteryManly",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "ShenandoahStreetBatteryFrenchArtillery12PdrNapoleon",
     "MapRegimentID": "ShenandoahStreetBatteryFrench",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "ShenandoahStreetBatteryFrenchArtillery3InchOrdnance",
     "MapRegimentID": "ShenandoahStreetBatteryFrench",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
   },
   {
-    "ID": "",
+    "ID": "WashingtonStreetBatteryManlyArtillery12PdrNapoleon",
     "MapRegimentID": "WashingtonStreetBatteryManly",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "WashingtonStreetBatteryManlyArtillery10PdrParrott",
     "MapRegimentID": "WashingtonStreetBatteryManly",
     "WeaponID": "Artillery10PdrParrott",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "WashingtonStreetBatteryFrenchArtillery12PdrNapoleon",
     "MapRegimentID": "WashingtonStreetBatteryFrench",
     "WeaponID": "Artillery12PdrNapoleon",
     "Count": 3
   },
   {
-    "ID": "",
+    "ID": "WashingtonStreetBatteryFrenchArtillery3InchOrdnance",
     "MapRegimentID": "WashingtonStreetBatteryFrench",
     "WeaponID": "Artillery3InchOrdnance",
     "Count": 2
