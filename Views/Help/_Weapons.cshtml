@@ -9,9 +9,14 @@
 
     <ul>
 
-        @await Html.PartialAsync("_Weapon", Weapons.USFtOfficerSword1850)
-        @await Html.PartialAsync("_Weapon", Weapons.USLightCavalrySaber1860)
-        @await Html.PartialAsync("_Weapon", Weapons.USNCOSword1840)
+        @foreach (Weapon sword in ViewBag.Swords)
+        {
+            @await Html.PartialAsync("_Weapon", sword)
+        }
+
+        @* @await Html.PartialAsync("_Weapon", Weapons.USFtOfficerSword1850) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.USLightCavalrySaber1860) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.USNCOSword1840) *@
     </ul>
 
     <h2>
@@ -19,12 +24,18 @@
     </h2>
 
     <ul>
-        @await Html.PartialAsync("_Weapon", Weapons.RemingtonM1858)
-        @await Html.PartialAsync("_Weapon", Weapons.LeMat)
-        @await Html.PartialAsync("_Weapon", Weapons.ColtWalkerM1847)
-        @await Html.PartialAsync("_Weapon", Weapons.ColtPocketM1849)
-        @await Html.PartialAsync("_Weapon", Weapons.ColtNavyM1851)
-        @await Html.PartialAsync("_Weapon", Weapons.ColtArmyM1860)
+        
+        @foreach (Weapon revolver in ViewBag.Revolvers)
+        {
+            @await Html.PartialAsync("_Weapon", revolver)
+        }
+
+        @* @await Html.PartialAsync("_Weapon", Weapons.RemingtonM1858) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.LeMat) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.ColtWalkerM1847) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.ColtPocketM1849) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.ColtNavyM1851) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.ColtArmyM1860) *@
     </ul>
 
     <h2>
@@ -32,15 +43,21 @@
     </h2>
 
     <ul>
-        @await Html.PartialAsync("_Weapon", Weapons.LorenzM1854)
-        @await Html.PartialAsync("_Weapon", Weapons.Mississippi1841)
-        @await Html.PartialAsync("_Weapon", Weapons.PatternEnfield1853)
-        @await Html.PartialAsync("_Weapon", Weapons.SharpsCarbine)
-        @await Html.PartialAsync("_Weapon", Weapons.SharpsRifle)
-        @await Html.PartialAsync("_Weapon", Weapons.SpringfieldM1861)
-        @await Html.PartialAsync("_Weapon", Weapons.SpringfieldM1842)
-        @await Html.PartialAsync("_Weapon", Weapons.SpringfieldM1855)
-        @await Html.PartialAsync("_Weapon", Weapons.Whitworth)
+        
+        @foreach (Weapon rifle in ViewBag.Rifles)
+        {
+            @await Html.PartialAsync("_Weapon", rifle)
+        }
+
+        @* @await Html.PartialAsync("_Weapon", Weapons.LorenzM1854) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.Mississippi1841) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.PatternEnfield1853) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.SharpsCarbine) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.SharpsRifle) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.SpringfieldM1861) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.SpringfieldM1842) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.SpringfieldM1855) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.Whitworth) *@
     </ul>
     
     <h2>
@@ -48,9 +65,15 @@
     </h2>
 
     <ul>
-        @await Html.PartialAsync("_Weapon", Weapons.Artillery3InchOrdnance)
-        @await Html.PartialAsync("_Weapon", Weapons.Artillery12PdrNapoleon)
-        @await Html.PartialAsync("_Weapon", Weapons.Artillery10PdrParrott)
+        
+        @foreach (Weapon artillery in ViewBag.Artillery)
+        {
+            @await Html.PartialAsync("_Weapon", artillery)
+        }
+
+        @* @await Html.PartialAsync("_Weapon", Weapons.Artillery3InchOrdnance) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.Artillery12PdrNapoleon) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.Artillery10PdrParrott) *@
     </ul>
 
     <h2>
@@ -58,9 +81,15 @@
     </h2>
 
     <ul>
-        @await Html.PartialAsync("_Weapon", Weapons.Bayonet)
-        @await Html.PartialAsync("_Weapon", Weapons.SwordBayonet)
-        @await Html.PartialAsync("_Weapon", Weapons.ArtilleryToolSpongeRammer)
+        
+        @foreach (Weapon misc in ViewBag.Misc)
+        {
+            @await Html.PartialAsync("_Weapon", misc)
+        }
+
+        @* @await Html.PartialAsync("_Weapon", Weapons.Bayonet) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.SwordBayonet) *@
+        @* @await Html.PartialAsync("_Weapon", Weapons.ArtilleryToolSpongeRammer) *@
     </ul>
 </div>
 

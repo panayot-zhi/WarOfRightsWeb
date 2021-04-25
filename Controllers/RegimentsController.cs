@@ -1,28 +1,30 @@
-﻿using System.Dynamic;
-using System.IO;
-using Microsoft.AspNetCore.Hosting;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using WarOfRightsWeb.Constants;
+using Microsoft.EntityFrameworkCore;
+using WarOfRightsWeb.Data;
 
 namespace WarOfRightsWeb.Controllers
 {
     public class RegimentsController : Controller
     {
-        private readonly IConfiguration _configuration;
-        private readonly IWebHostEnvironment _webHostEnv;
+        private readonly WarOfRightsDbContext _db;
 
-        public RegimentsController(IConfiguration configuration, IWebHostEnvironment webHostEnv)
+        public RegimentsController(WarOfRightsDbContext db)
         {
-            this._configuration = configuration;
-            this._webHostEnv = webHostEnv;
+            _db = db;
         }
 
-        public IActionResult Index(string id)
+        public async Task<IActionResult> Index(string id)
         {
-            if (!string.IsNullOrEmpty(id) && Regiments.DisplayNames.ContainsKey(id))
+            if (!string.IsNullOrEmpty(id))
             {
-                return View("Regiment", model: id);
+                var model = await GetRegimentAsync(id);
+                if (model == null)
+                {
+                    return NotFound();
+                }
+
+                return View("Regiment", model);
             }
 
             return View();
@@ -36,6 +38,11 @@ namespace WarOfRightsWeb.Controllers
         public IActionResult CSA()
         {
             return View();
+        }
+
+        private async Task<Regiment> GetRegimentAsync(string id)
+        {
+            return await _db.Regiments.SingleOrDefaultAsync(x => x.ID == id);
         }
     }
 }

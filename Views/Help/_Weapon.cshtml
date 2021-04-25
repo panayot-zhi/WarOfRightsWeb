@@ -1,15 +1,16 @@
-﻿@model string
+﻿@model WarOfRightsWeb.Data.Weapon
 
 @{
-    var id = Model;
-    var name = Weapons.DisplayNames[id];
-    var parameters = Weapons.Parameters[id];
-    var description = Weapons.Descriptions[id];
-    var image = Url.WeaponImageIfExists(id);
+    var weapon = Model;
+    var weaponID = weapon.ID;
+    var name = weapon.Name; //Weapons.DisplayNames[weaponID];
+    var parameters = weapon.ParametersDescription; //Weapons.Parameters[weaponID];
+    var description = weapon.Description; //Weapons.Descriptions[weaponID];
+    var image = Url.WeaponImageIfExists(weaponID);
 }
 
 <li>
-    <h3 id="@id">
+    <h3 id="@weaponID">
         @name
     </h3>
     <p>

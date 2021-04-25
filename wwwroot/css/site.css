@@ -168,3 +168,7 @@ li h2 a {
 #briefMapsContainer .briefDescription a > h2 {
     margin-top: 10px;
 }
+
+#credit {
+    font-family: 'worHandwritten';
+}

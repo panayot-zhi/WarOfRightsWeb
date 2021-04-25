@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WarOfRightsWeb.Constants;
@@ -14,87 +14,108 @@ namespace WarOfRightsWeb.Controllers
 
         public MapsController(WarOfRightsDbContext db)
         {
-            this._db = db;
+            _db = db;
         }
 
         public IActionResult Index()
         {
-            return View(model: GetMaps());
+            return View(GetMaps());
         }
 
-        public IActionResult Antietam(string id)
+        public async Task<IActionResult> Antietam(string id)
         {
             var area = Maps.Areas.Antietam;
 
             if (!string.IsNullOrEmpty(id))
             {
-                return View($"{area}/{id}", model: GetMap(id));
+                var model = await GetMapAsync(id);
+                if (model == null)
+                {
+                    return NotFound();
+                }
+
+                return View($"{area}/{id}", model);
             }
 
             return View($"{area}/Index", GetMaps(area));
 
         }
 
-        public IActionResult HarpersFerry(string id)
+        public async Task<IActionResult> HarpersFerry(string id)
         {
             var area = Maps.Areas.HarpersFerry;
 
             if (!string.IsNullOrEmpty(id))
             {
-                return View($"{area}/{id}", model: GetMap(id));
+                var model = await GetMapAsync(id);
+                if (model == null)
+                {
+                    return NotFound();
+                }
+
+                return View($"{area}/{id}", model);
             }
 
             return View($"{area}/Index", GetMaps(area));
         }
 
-        public IActionResult SouthMountain(string id)
+        public async Task<IActionResult> SouthMountain(string id)
         {
             var area = Maps.Areas.SouthMountain;
 
             if (!string.IsNullOrEmpty(id))
             {
-                return View($"{area}/{id}", model: GetMap(id));
+                var model = await GetMapAsync(id);
+                if (model == null)
+                {
+                    return NotFound();
+                }
+
+                return View($"{area}/{id}", model);
             }
 
             return View($"{area}/Index", GetMaps(area));
         }
 
-        public IActionResult DrillCamps(string id)
+        public async Task<IActionResult> DrillCamps(string id)
         {
             var area = Maps.Areas.DrillCamps;
 
             if (!string.IsNullOrEmpty(id))
             {
-                return View($"{area}/{id}", model: GetMap(id));
+                var model = await GetMapAsync(id);
+                if (model == null)
+                {
+                    return NotFound();
+                }
+
+                return View($"{area}/{id}", model);
             }
 
             return View($"{area}/Index", GetMaps(area));
         }
 
-        public IActionResult PicketPatrol()
+        public async Task<IActionResult> PicketPatrol()
         {
-            return View(model: GetMap(Maps.PicketPatrol));
+            var model = await GetMapAsync(Maps.PicketPatrol);
+            if (model == null)
+            {
+                return NotFound();
+            }
+
+            return View(model);
         }
 
-        private Map GetMap(string id)
+        private async Task<Map> GetMapAsync(string id)
         {
-            var map = _db.Maps
+            var map = await _db.Maps
+                .AsNoTracking()
                 .Include(x => x.MapRegiments)
                     .ThenInclude(x => x.Regiment)
                 .Include(x => x.MapRegiments)
                     .ThenInclude(x => x.MapRegimentWeapons)
                         .ThenInclude(x => x.Weapon)
-                .Single(x => x.ID == id);
-
-            /*Console.WriteLine($"Map: {map.Name}");
-            foreach (var mapRegiment in map.MapRegiments)
-            {
-                Console.WriteLine($"MapRegiment: {mapRegiment.Regiment.Name}");
-                foreach (var mapRegimentWeapon in mapRegiment.MapRegimentWeapons)
-                {
-                    Console.WriteLine($"\tWeapon: {mapRegimentWeapon.Weapon.Name}");
-                }
-            }*/
+                .SingleOrDefaultAsync(x => x.ID == id);
 
             return map;
         }
