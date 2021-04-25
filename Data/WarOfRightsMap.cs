@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using WarOfRightsWeb.Constants;
 
 namespace WarOfRightsWeb.Data
 {
@@ -59,6 +61,14 @@ namespace WarOfRightsWeb.Data
 
         
         public ICollection<MapRegiment> MapRegiments { get; set; }
+
+        [NotMapped]
+        public IList<MapRegiment> MapCSARegiments =>
+            MapRegiments.Where(x => x.Regiment.Faction.Equals(Labels.CSA)).ToList();
+
+        [NotMapped]
+        public IList<MapRegiment> MapUSARegiments =>
+            MapRegiments.Where(x => x.Regiment.Faction.Equals(Labels.USA)).ToList();
 
     }
 }
