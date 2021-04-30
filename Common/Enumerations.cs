@@ -14,8 +14,8 @@ namespace WarOfRightsWeb.Common
     public enum EventOccurrence
     {
         Weekly,
-        FirstWeekOfTheMonth,
-        Yearly,
-        Once
+        WeekDayMonthly,
+        ExactDayYearly,
+        OnlyOnce
     }
 }

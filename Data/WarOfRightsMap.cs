@@ -65,11 +65,11 @@ namespace WarOfRightsWeb.Data
 
         [NotMapped]
         public IList<MapRegiment> MapCSARegiments =>
-            MapRegiments.Where(x => x.Regiment.Faction.Equals(Labels.CSA)).ToList();
+            MapRegiments?.Where(x => x.Regiment.Faction.Equals(Labels.CSA)).ToList();
 
         [NotMapped]
         public IList<MapRegiment> MapUSARegiments =>
-            MapRegiments.Where(x => x.Regiment.Faction.Equals(Labels.USA)).ToList();
+            MapRegiments?.Where(x => x.Regiment.Faction.Equals(Labels.USA)).ToList();
 
     }
 }

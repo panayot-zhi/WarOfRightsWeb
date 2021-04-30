@@ -3,43 +3,50 @@
     {
       "Name": "Company Drill",
       "Description": "Perfect your shooting skills and raise battle awareness. All company members are required to attend at least one drill per month.",
-      "Starting": "2021-02-08T19:00:00+0000",
+      "At": "Monday",
       "Occurring": "Weekly",
       "Duration": "01:00"
     },
     {
       "Name": "Picket Patrol",
       "Description": "Defeat the enemy team in this 5 round journey where you have only one life per round. A laid back experience for veteran players.",
-      "Starting": "2021-02-03T20:00:00+0000",
+      "At": "Wednesday",
       "Occurring": "Weekly",
       "Duration": "01:30"
     },
     {
       "Name": "Friday Event",
       "Description": "To arms! Complete the week with an organized event with other friendly regiments in a deadly skirmish. Coordination begins typically 1h before the event starts. Muster up 15min before the event scheduled time.",
-      "Starting": "2021-02-05T20:00:00+0000",
+      "At": "Friday",
       "Occurring": "Weekly",
       "Duration": "01:30"
     },
     {
       "Name": "Sunday Event",
       "Description": "Battle time! Join your comrades in an organized event with various other groups within warofrights. Coordination begins typically 1h before the event starts. Muster up 15min before the event scheduled time.",
-      "Starting": "2021-02-07T20:00:00+0000",
+      "At": "Sunday",
       "Occurring": "Weekly",
       "Duration": "01:30"
     },
     {
       "Name": "Shooting Competition",
       "Description": "Every first drill of the month we test our skills amongst each other in a shooting competition with various disciplines.",
-      "Starting": "2021-02-01T19:00:00+0000",
-      "Occurring": "Monthly",
+      "At": "Monday",
+      "Occurring": "WeekDayMonthly",
+      "Duration": "01:00"
+    },
+    {
+      "Name": "Company anniversary",
+      "Description": "At this day the 1st United States Sharpshooters celebrates an anniversary from the day of its creation 2019-07-18.",
+      "At": "2020-07-18T19:00:00+0000",
+      "Occurring": "ExactDayYearly",
       "Duration": "01:00"
     },
     {
       "Name": "One Time Test Event",
-      "Description": "This is a test event, it should appear if it is in the range of 2 months according to the current date, please delete manually afterwards, so it won't clog the list of event templates.",
-      "Starting": "2021-02-24T20:00:00+0000",
-      "Occurring": "Once",
+      "Description": "This is a test event, it should appear if it is in the range of 1 month before or after the current date, please delete manually afterwards, so it won't clog the list of event templates (TODO this auto).",
+      "At": "2021-02-24T20:00:00+0000",
+      "Occurring": "OnlyOnce",
       "Duration": "01:30"
     }
   ]
