@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
 
 namespace WarOfRightsWeb.Controllers
@@ -22,11 +24,27 @@ namespace WarOfRightsWeb.Controllers
 
             _configuration.GetSection("Events").Bind(eventTemplates);
 
-            var scheduledEvents = CalculateEventDates(eventTemplates, out var nextEventInLine);
-            
+            var dateNow = DateTimeOffset.Now.Date;
+            var firstDayOfTheMonth = new DateTime(dateNow.Year, dateNow.Month, 1);
+
+            var startDate = firstDayOfTheMonth.AddMonths(-1);
+            var endDate = firstDayOfTheMonth.AddMonths(2).AddDays(-1);
+
+            var scheduledEvents = new List<Event>();
+
+            foreach (var currentDate in Extensions.EachDay(startDate, endDate))
+            {
+                scheduledEvents.AddRange(Extensions.GetEventsByDate(eventTemplates, currentDate));
+            }
+
+            scheduledEvents = scheduledEvents.OrderByDescending(x => x.Starting)
+                .ThenBy(x => x.Occurring).ToList();
+
+            // TODO: resolve next event
+
             var vModel = new EventsViewModel()
             {
-                Current = nextEventInLine,
+                Current = scheduledEvents.First(),
                 EventTemplates = eventTemplates,
                 ScheduledEvents = scheduledEvents
             };
@@ -34,98 +52,19 @@ namespace WarOfRightsWeb.Controllers
             return View(vModel);
         }
 
-        private static IList<Event> CalculateEventDates(IReadOnlyCollection<Event> eventTemplates, out Event next)
+        public IActionResult Event(DateTimeOffset currentDate)
         {
-            // TODO: Abstract that away
-            var now = DateTime.Now.Date;
-            // var now = new DateTime(2021, 1, 7).Date;
-            var start = now.AddDays(-7);
-            var end = now.AddDays(7);
-            next = null;
-            var day = 0;
-            var result = new List<Event>();
-            while (day < (end - start).TotalDays)
-            {
-                var current = start.AddDays(day++);
+            var eventTemplates = new List<Event>();
 
-                var eventTemplate = ResolveEventTemplate(eventTemplates, current);
-                if (eventTemplate == null)
-                {
-                    continue;
-                }
+            _configuration.GetSection("Events").Bind(eventTemplates);
 
-                var scheduledEvent = new Event()
-                {
-                    Name = eventTemplate.Name,
-                    Description = eventTemplate.Description,
-                    Starting = eventTemplate.Starting,
-                    Occurring = eventTemplate.Occurring,
-                    Duration = eventTemplate.Duration,
-
-                    ExactDate = current.Add(eventTemplate.Time)
-                };
-
-                if (next == null && scheduledEvent.ExactDate >= now)
-                {
-                    next = scheduledEvent;
-                }
-
-                result.Add(scheduledEvent);
-            }
-
-            // Add one time events within the range of one month back and one month in the future
-            result.AddRange(eventTemplates.Where(x => x.Occurring == EventOccurrence.Once &&
-                x.Starting.Date >= now.AddMonths(-1) && x.Starting.Date <= now.AddMonths(1))
-                .Select(x => new Event()
-                {
-                    Name = x.Name,
-                    Description = x.Description,
-                    Starting = x.Starting,
-                    Occurring = x.Occurring,
-                    Duration = x.Duration,
-
-                    ExactDate = x.Starting
-                }));
-
-            return result;
-
-        }
-
-        private static Event ResolveEventTemplate(IEnumerable<Event> eventTemplates, DateTime current)
-        {
-            var candidates = eventTemplates.Where(x => x.WeekDay == current.DayOfWeek)
+            var eventsOnThisDate = Extensions.GetEventsByDate(eventTemplates, currentDate.Date)
                 .OrderByDescending(x => x.Occurring).ToList();
 
-            if (!candidates.Any())
+            return Json(eventsOnThisDate, new JsonSerializerOptions()
             {
-                return null;
-            }
-
-            foreach (var eventTemplate in candidates)
-            {
-                if (eventTemplate.Occurring == EventOccurrence.Once)
-                {
-                    continue;
-                }
-
-                if (eventTemplate.Occurring == EventOccurrence.Monthly)
-                {
-                    var difference = current.Month - eventTemplate.Starting.Month;
-                    if (current.AddMonths(-difference) == eventTemplate.Starting.Date)
-                    {
-                        return eventTemplate;
-                    }
-
-                    continue;
-                }
-
-                if (eventTemplate.Occurring == EventOccurrence.Weekly)
-                {
-                    return eventTemplate;
-                }
-            }
-
-            return null;
+                WriteIndented = true
+            });
         }
     }
 }

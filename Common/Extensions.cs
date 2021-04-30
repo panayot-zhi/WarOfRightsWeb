@@ -204,6 +204,13 @@ namespace WarOfRightsWeb.Common
             }
         }
 
+        public static Event GetNextEvent(this IEnumerable<Event> scheduledEvents)
+        {
+            return scheduledEvents.OrderBy(x => x.Starting)
+                .ThenByDescending(x => x.Occurring)
+                .FirstOrDefault(x => x.Starting > DateTimeOffset.Now);
+        }
+
         public static string PathToUrl(string path)
         {
             return path.Replace('\\', '/');
