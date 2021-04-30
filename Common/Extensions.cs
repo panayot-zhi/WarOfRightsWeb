@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using WarOfRightsWeb.Constants;
 
 namespace WarOfRightsWeb.Common
@@ -148,6 +149,14 @@ namespace WarOfRightsWeb.Common
             }
 
             return null;
+        }
+
+        public static IEnumerable<DateTime> EachDay(DateTime from, DateTime thru)
+        {
+            for (var day = from.Date; day.Date <= thru.Date; day = day.AddDays(1))
+            {
+                yield return day;
+            }
         }
 
         public static string PathToUrl(string path)
