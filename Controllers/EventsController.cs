@@ -37,14 +37,12 @@ namespace WarOfRightsWeb.Controllers
                 scheduledEvents.AddRange(Extensions.GetEventsByDate(eventTemplates, currentDate));
             }
 
-            scheduledEvents = scheduledEvents.OrderByDescending(x => x.Starting)
-                .ThenBy(x => x.Occurring).ToList();
-
-            // TODO: resolve next event
+            scheduledEvents = scheduledEvents.OrderBy(x => x.Starting)
+                .ThenByDescending(x => x.Occurring).ToList();
 
             var vModel = new EventsViewModel()
             {
-                Current = scheduledEvents.First(),
+                Current = scheduledEvents.GetNextEvent(),
                 EventTemplates = eventTemplates,
                 ScheduledEvents = scheduledEvents
             };
