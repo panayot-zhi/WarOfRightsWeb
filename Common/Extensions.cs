@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using WarOfRightsWeb.Constants;
+using WarOfRightsWeb.Models;
 
 namespace WarOfRightsWeb.Common
 {
@@ -24,63 +27,6 @@ namespace WarOfRightsWeb.Common
 
                 _hostingEnvironment = hostEnvironment;
                 _initialized = true;
-            }
-        }
-
-        public static string AreaFromMap(string mapId)
-        {
-            switch (mapId)
-            {
-                case Maps.EastWoodsSkirmish:
-                case Maps.HookersPush:
-                case Maps.HagerstownTurnpike:
-                case Maps.MillersCornfield:
-                case Maps.EastWoods:
-                case Maps.NicodemusHill:
-                case Maps.BloodyLane:
-                case Maps.PryFord:
-                case Maps.PryGristMill:
-                case Maps.PryHouse:
-                case Maps.WestWoods:
-                case Maps.DunkerChurch:
-                case Maps.BurnsideBridge:
-                case Maps.CookesCountercharge:
-                case Maps.OttoSherrickFarm:
-                case Maps.RouletteLane:
-                case Maps.PiperFarm:
-                case Maps.HillsCounterattack:
-                    return "Antietam";
-
-                case Maps.MarylandHeights:
-                case Maps.RiverCrossing:
-                case Maps.Downtown:
-                case Maps.SchoolHouseRidge:
-                case Maps.HighStreet:
-                case Maps.BolivarHeightsCamp:
-                case Maps.ShenandoahStreet:
-                case Maps.HarpersGraveyard:
-                case Maps.BolivarHeightsRedoubt:
-                case Maps.WashingtonStreet:
-                    return "HarpersFerry";
-
-                case Maps.GarlandsStand:
-                case Maps.CoxsPush:
-                case Maps.HatchsAttack:
-                case Maps.AndersonsCounterattack:
-                case Maps.RenosFall:
-                case Maps.ColquittsDefence:
-                    return "SouthMountain";
-
-                case Maps.DrillCampCSA:
-                case Maps.DrillCampUSA:
-                case Maps.HarpersFerryUSA:
-                    return "DrillCamps";
-
-                case Maps.PicketPatrol:
-                    return "PicketPatrol";
-
-                default:
-                    return mapId;
             }
         }
 
@@ -134,15 +80,15 @@ namespace WarOfRightsWeb.Common
 
         public static string ImageIfExists(this IUrlHelper urlHelper, string name, string type)
         {
-            var imagePath = System.IO.Path.Combine(_hostingEnvironment.WebRootPath, "img", type, $"{name}.jpg");
-            var imageExists = System.IO.File.Exists(imagePath);
+            var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "img", type, $"{name}.jpg");
+            var imageExists = File.Exists(imagePath);
             if (imageExists)
             {
                 return urlHelper.Content($"~/img/{type}/{name}.jpg");
             }
 
-            imagePath = System.IO.Path.Combine(_hostingEnvironment.WebRootPath, "img", type, $"{name}.png");
-            imageExists = System.IO.File.Exists(imagePath);
+            imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "img", type, $"{name}.png");
+            imageExists = File.Exists(imagePath);
             if (imageExists)
             {
                 return urlHelper.Content($"~/img/{type}/{name}.png");
@@ -156,6 +102,105 @@ namespace WarOfRightsWeb.Common
             for (var day = from.Date; day.Date <= thru.Date; day = day.AddDays(1))
             {
                 yield return day;
+            }
+        }
+
+        public static DateTime GetFirstDayOfTheMonth(int year, int month, DayOfWeek day)
+        {
+            var result = new DateTime(year, month, 1);
+            while (result.DayOfWeek != day)
+            {
+                result = result.AddDays(1);
+            }
+
+            return result;
+        }
+
+        public static IEnumerable<Event> GetEventsByDate(IReadOnlyCollection<Event> eventTemplates, DateTime currentDate)
+        {
+            var result = new List<Event>();
+            var oneTimeEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.OnlyOnce, currentDate).ToList();
+            if (oneTimeEvents.Any())
+            {
+                result.AddRange(oneTimeEvents);
+            }
+
+            var yearlyEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.ExactDayYearly, currentDate).ToList();
+            if (yearlyEvents.Any())
+            {
+                result.AddRange(yearlyEvents);
+            }
+
+            var weekDayMonthlyEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.FirstWeekDayMonthly, currentDate).ToList();
+            if (weekDayMonthlyEvents.Any())
+            {
+                result.AddRange(weekDayMonthlyEvents);
+            }
+
+            var weeklyEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.Weekly, currentDate).ToList();
+            if (weeklyEvents.Any())
+            {
+                result.AddRange(weeklyEvents);
+            }
+
+            return result;
+        }
+
+        public static IEnumerable<Event> GetOccurringEventTemplates(this IEnumerable<Event> eventTemplates,
+            EventOccurrence occurrence, DateTime day)
+        {
+            Event ConstructEvent(Event eventTemplate) =>
+                new()
+                {
+                    Name = eventTemplate.Name,
+                    Description = eventTemplate.Description,
+                    Starting = day.Add(eventTemplate.Time),
+                    Occurring = eventTemplate.Occurring,
+                    Duration = eventTemplate.Duration
+                };
+
+            switch (occurrence)
+            {
+                case EventOccurrence.Weekly:
+
+                    // With weekly events we just compare the week date of the event template
+
+                    return eventTemplates
+                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.Weekly &&
+                                                eventTemplate.WeekDay == day.DayOfWeek)
+                        .Select(ConstructEvent);
+
+                case EventOccurrence.FirstWeekDayMonthly:
+
+                    // With events that occur on a first week day of the month we have to resolve the day first and then compare
+
+                    return eventTemplates
+                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.FirstWeekDayMonthly &&
+                                                GetFirstDayOfTheMonth(day.Year, day.Month, eventTemplate.WeekDay) == day)
+                        .Select(ConstructEvent);
+
+                case EventOccurrence.ExactDayYearly:
+
+                    // With exact yearly events only the month and the day should match
+
+                    return eventTemplates
+                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.ExactDayYearly &&
+                                         eventTemplate.Starting.Date.Day == day.Day &&
+                                         eventTemplate.Starting.Date.Month == day.Month)
+                        .Select(ConstructEvent);
+
+                case EventOccurrence.OnlyOnce:
+
+                    // With one time event types we just check the start date
+
+                    return eventTemplates
+                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.OnlyOnce &&
+                                         eventTemplate.Starting.Date == day)
+                        .Select(ConstructEvent);
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(occurrence), occurrence, 
+                        $"This event occurrence type ('{occurrence}') is not supported.");
             }
         }
 
