@@ -10,4 +10,12 @@ namespace WarOfRightsWeb.Common
         Infantry,
         Artillery
     }
+
+    public enum EventOccurrence
+    {
+        Weekly,
+        FirstWeekOfTheMonth,
+        Yearly,
+        Once
+    }
 }

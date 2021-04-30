@@ -6,7 +6,7 @@ namespace WarOfRightsWeb.Constants
 
     public static class Maps
     {
-        // NOTE: Generated item identifiers 
+        // NOTE: Database map identifiers
         public const string HookersPush = "HookersPush";
         public const string HagerstownTurnpike = "HagerstownTurnpike";
         public const string MillersCornfield = "MillersCornfield";
@@ -46,7 +46,58 @@ namespace WarOfRightsWeb.Constants
         public const string DrillCampUSA = "DrillCampUSA";
         public const string DrillCampCSA = "DrillCampCSA";
 
-        public static string[] DrillCampMaps = { DrillCampCSA, DrillCampUSA, HarpersFerryUSA };
+        public static string[] AntietamMaps =
+        {
+            EastWoodsSkirmish,
+            HookersPush,
+            HagerstownTurnpike,
+            MillersCornfield,
+            EastWoods,
+            NicodemusHill,
+            BloodyLane,
+            PryFord,
+            PryGristMill,
+            PryHouse,
+            WestWoods,
+            DunkerChurch,
+            BurnsideBridge,
+            CookesCountercharge,
+            OttoSherrickFarm,
+            RouletteLane,
+            PiperFarm,
+            HillsCounterattack,
+        };
+
+        public static string[] HarpersFerryMaps =
+        {
+            MarylandHeights,
+            RiverCrossing,
+            Downtown,
+            SchoolHouseRidge,
+            HighStreet,
+            BolivarHeightsCamp,
+            ShenandoahStreet,
+            HarpersGraveyard,
+            BolivarHeightsRedoubt,
+            WashingtonStreet,
+        };
+
+        public static string[] SouthMountainMaps =
+        {
+            GarlandsStand,
+            CoxsPush,
+            HatchsAttack,
+            AndersonsCounterattack,
+            RenosFall,
+            ColquittsDefence,
+        };
+
+        public static string[] DrillCampMaps =
+        {
+            DrillCampCSA, 
+            DrillCampUSA, 
+            HarpersFerryUSA
+        };
 
         public static class Areas
         {

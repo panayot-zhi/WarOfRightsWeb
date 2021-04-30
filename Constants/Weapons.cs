@@ -6,7 +6,7 @@ namespace WarOfRightsWeb.Constants
 
     public static class Weapons
     {
-        // NOTE: Generated item identifiers 
+        // NOTE: Database weapon identifiers
         public const string BuckAndBall = "BuckAndBall";
         public const string BuckShot = "BuckShot";
         public const string CompressionBall = "CompressionBall";

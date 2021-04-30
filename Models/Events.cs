@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using WarOfRightsWeb.Common;
 
 namespace WarOfRightsWeb.Models
 {
@@ -32,10 +32,5 @@ namespace WarOfRightsWeb.Models
         public DateTimeOffset ExactDate { get; set; }
     }
 
-    public enum EventOccurrence
-    {
-        Weekly,
-        Monthly,
-        Once
-    }
+
 }
