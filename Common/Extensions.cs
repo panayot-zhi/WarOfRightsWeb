@@ -154,9 +154,19 @@ namespace WarOfRightsWeb.Common
                 {
                     Name = eventTemplate.Name,
                     Description = eventTemplate.Description,
-                    Starting = day.Add(eventTemplate.Time),
                     Occurring = eventTemplate.Occurring,
-                    Duration = eventTemplate.Duration
+                    Duration = eventTemplate.Duration,
+
+                    // construct a GMT date
+                    Starting = new DateTimeOffset(
+                        day.Year, 
+                        day.Month, 
+                        day.Day, 
+                        eventTemplate.Starting.Hour,
+                        eventTemplate.Starting.Minute,
+                        eventTemplate.Starting.Second,
+                        TimeSpan.Zero
+                    )
                 };
 
             switch (occurrence)
