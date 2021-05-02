@@ -87,6 +87,12 @@
 
                     <div class="worBorder">
                         @RenderBody()
+                        
+                        <div id="pageLoadingContainer" style="display: none;">
+                            <img id="pageLoadingImageIcon" src="@Url.Content("~/img/Loading_Icon.png")">
+                            <img id="pageLoadingImageSoldiers" src="@Url.Content("~/img/Loading_Soldiers.png")">
+                        </div>
+
                     </div>
 
                     <footer class="worBorder" id="footer">
