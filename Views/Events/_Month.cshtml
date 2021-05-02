@@ -2,7 +2,7 @@
 
 @{
     var now = DateTime.Now.Date;
-    var current = Model.Current.ExactDate;
+    var current = Model.Current.Starting;
     var firstDateOfTheMonth = new DateTime(current.Year, current.Month, 1);
     //subtract 1, because we normal people start week from Monday
     var dayOfTheWeekNumber = (int) firstDateOfTheMonth.DayOfWeek - 1;
@@ -40,7 +40,7 @@
             }
 
             var cssClass = "calendar-current-month-day";
-            var eventThisDay = Model.EventTemplates.SingleOrDefault(x => x.ExactDate.Date == day)?.ExactDate;
+            var eventThisDay = Model.EventTemplates.FirstOrDefault(x => x.Starting.Date == day)?.Starting;
 
             if (day < firstDateOfTheMonth)
             {
@@ -55,7 +55,7 @@
                 cssClass = "calendar-today";
             }
 
-            if (eventThisDay != null)
+            if (eventThisDay.HasValue)
             {
                 if (eventThisDay < now)
                 {
@@ -71,7 +71,7 @@
 
                 @if (eventThisDay != null)
                 {
-                    <a href="#">@day.Day</a>
+                    <a target="_blank" class="displayCurrentEvents" href="@Url.Action("EventsAt", "Events", new { utcDate = eventThisDay.Value.ToUnixTimeSeconds() })">@day.Day</a>
                 }
                 else
                 {
@@ -79,8 +79,6 @@
                 }
 
             </td>
-
-
         }
     </tr>
     </tbody>

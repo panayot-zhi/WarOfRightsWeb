@@ -1,0 +1,45 @@
+﻿@model Event
+
+@{
+    var date = Model.Starting.Date;
+}
+
+<div class="optionsContainer optionsContainerVeryLarge text-center">
+    <div class="optionsContainerDarkening"></div>
+    <div class="optionsContainerTop"></div>
+    <div class="optionsContainerMiddle">
+        <input type="image" class="optionsExit" src="@Url.Content("~/img/OptionsExit.png")">
+        <h1 class="text-center">
+            Events on @date.ToString("D")
+        </h1>
+
+        <div class="fancyClearBoth">
+            <img src="@Url.Content("~/img/WoR_Logo.png")" class="fancyCenter">
+        </div>
+        
+        <h2>@Model.Name</h2>
+
+        <h3>
+            @if (Model.Occurring == EventOccurrence.OnlyOnce)
+            {
+                @Model.Starting @:GMT
+            }
+            else
+            {
+                @:@Model.WeekDay, @Model.Time GMT - @Model.Occurring.ToString()
+            }
+        </h3>
+
+        <p class="text-center">@Model.Description</p>
+
+        <div class="text-center">
+            <br>
+            <a class="LinkButtonH1" href="#">Done</a>
+        </div>
+
+        <br>
+
+    </div>
+
+    <div class="optionsContainerBottom"></div>
+</div>

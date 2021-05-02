@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Serilog;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
 
@@ -50,19 +52,27 @@ namespace WarOfRightsWeb.Controllers
             return View(vModel);
         }
 
-        public IActionResult Event(DateTimeOffset currentDate)
+        public IActionResult EventsAt(long utcDate)
         {
             var eventTemplates = new List<Event>();
 
             _configuration.GetSection("Events").Bind(eventTemplates);
 
+            var currentDate = DateTimeOffset.FromUnixTimeSeconds(utcDate);
             var eventsOnThisDate = Extensions.GetEventsByDate(eventTemplates, currentDate.Date)
                 .OrderByDescending(x => x.Occurring).ToList();
 
-            return Json(eventsOnThisDate, new JsonSerializerOptions()
+            if (eventsOnThisDate.Count == 0)
             {
-                WriteIndented = true
-            });
+                return NoContent();
+            }
+
+            if (eventsOnThisDate.Count > 1)
+            {
+                Log.Warning("More than one event found at this date which is not supported for preview!");
+            }
+
+            return PartialView("_Event", eventsOnThisDate.FirstOrDefault());
         }
     }
 }

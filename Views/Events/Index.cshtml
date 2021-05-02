@@ -5,9 +5,11 @@
 }
 
 <div class="fancyLeft text-left">
-    
+
     @{
         var now = DateTimeOffset.Now;
+        var prev = now.AddMonths(-1);
+        var next = now.AddMonths(1);
         var initialCountDown = Model.Current.Starting - new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second, TimeSpan.FromHours(2));
     }
 
@@ -20,24 +22,25 @@
     <h2>@Model.Current.WeekDay, @Model.Current.Time GMT</h2>
 </div>
 
-<img alt="War of Rights Event Schedule" src="@Url.Content("~/img/during-the-american-civil-war.jpg")" class="imageMaxWidth">
+<img id="eventsHeaderImage" alt="War of Rights Event Schedule" src="@Url.Content("~/img/during-the-american-civil-war.jpg")" class="imageMaxWidth">
 
-<p></p>
+<div id="currentsEventOptions" style="display: none;"></div>
 
 <div id="calendar">
     <div id="monthsDisplay" class="fancyLeft">
+        
         @await Html.PartialAsync("_Month", model: new EventsViewModel()
         {
-            EventTemplates = Model.ScheduledEvents,
+            EventTemplates = Model.ScheduledEvents.Where(x => x.Starting.Month == prev.Month).ToList(),
             Current = new Event()
             {
-                Starting = now.AddMonths(-1)
+                Starting = prev
             }
         })
 
         @await Html.PartialAsync("_Month", model: new EventsViewModel()
         {
-            EventTemplates = Model.ScheduledEvents,
+            EventTemplates = Model.ScheduledEvents.Where(x => x.Starting.Month == now.Month).ToList(),
             Current = new Event()
             {
                 Starting = now
@@ -46,47 +49,84 @@
 
         @await Html.PartialAsync("_Month", model: new EventsViewModel()
         {
-            EventTemplates = Model.ScheduledEvents,
+            EventTemplates = Model.ScheduledEvents.Where(x => x.Starting.Month == next.Month).ToList(),
             Current = new Event()
             {
-                Starting = now.AddMonths(1)
+                Starting = next
             }
         })
-
     </div>
-    
-
 
     <div id="eventTemplates" class="fancyRight">
-        @foreach(var e in Model.EventTemplates)
+        @foreach (var e in Model.EventTemplates)
         {
             <h2>@e.Name</h2>
             <h3>
 
                 @if (e.Occurring == EventOccurrence.OnlyOnce)
                 {
-                    @e.Starting
+                    @e.Starting @:GMT
                 }
                 else
                 {
-                    @:@e.WeekDay, @e.Time - @e.Occurring.ToString()
+                    @:@e.WeekDay, @e.Time GMT - @e.Occurring.ToString()
                 }
             </h3>
-            
+
             <p class="text-center">@e.Description</p>
         }
     </div>
 </div>
 
+
+
+
 @section scripts {
     <script src="lib/moment.js/moment-with-locales.min.js"></script>
 
     <script>
+        $(document).ready(function () {
+
+            var eventsHeaderImage = $("#eventsHeaderImage");
+            var currentEventOptionsContainer = $("#currentsEventOptions");
+            function focusCurrentEventOptionsContainer(e) {
+                console.log('focus dam it');
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: eventsHeaderImage.offset().top
+                }, 500);
+
+            }
+
+            currentEventOptionsContainer.on('click',
+                ".LinkButtonH1, .optionsExit, .optionsContainerDarkening",
+                function (e) {
+                    e.preventDefault();
+                    currentEventOptionsContainer.hide();
+                });
+
+            $("#monthsDisplay .displayCurrentEvents").on('click',
+                function(e) {
+                    e.preventDefault();
+
+                    var me = $(this);
+                    var url = me.attr('href');
+
+                    $.get(url, function (r) {
+
+                        if (!r) {
+                            // no-content
+                            return;
+                        }
+
+                        currentEventOptionsContainer.html(r);
+                        currentEventOptionsContainer.show();
+                        focusCurrentEventOptionsContainer();
+                    });
 
 
-        /*$(document).ready(function () {
+                });
 
-            var track = 0;
+            /*var track = 0;
             function timeNow() {
 
                 var now = new Date,
@@ -109,9 +149,8 @@
 
             window.TimeTick = setInterval(function () {
                 timeNow();
-            }, 1000);
+            }, 1000);*/
 
-
-        });*/
+        });
     </script>
 }
