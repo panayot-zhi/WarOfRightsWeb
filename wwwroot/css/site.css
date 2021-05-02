@@ -172,3 +172,8 @@ li h2 a {
 #credit {
     font-family: 'worHandwritten';
 }
+
+.optionsExit {
+    margin-top: -10px;
+    margin-left: -50px;
+}
