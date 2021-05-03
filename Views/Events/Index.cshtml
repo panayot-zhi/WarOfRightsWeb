@@ -12,12 +12,22 @@
         var next = now.AddMonths(1);
         var currentStarting = Model.Current.Starting - DateTimeOffset.UtcNow;
         var totalSecondsLeft = Math.Floor(currentStarting.TotalSeconds);
+        
+        string initialCountDown;
+        if (totalSecondsLeft <= 0)
+        {
+            initialCountDown = $"Event in progress ({Model.Current.Duration.Hours}:{Model.Current.Duration.Minutes})";
+        }
+        else
+        {
+            initialCountDown = Math.Floor(currentStarting.TotalHours).ToString("0#") + ":" +
+                               currentStarting.Minutes.ToString("0#") + ":" +
+                               currentStarting.Seconds.ToString("0#");
+        }
     }
 
     <h1 id="tabTitle">Next Event In:</h1>
-    <h2 style="margin-top: 10px; display: none;" id="next-event-countdown">@totalSecondsLeft</h2>
-    @*<h2 style="margin-top: 10px" id="next-event-countdown1">@initialCountDown.TotalSeconds</h2>*@
-    @*<h2 style="margin-top: 10px" id="next-event-countdown2">@initialCountDown.ToString("g")</h2>*@
+    <h2 style="margin-top: 10px;" id="next-event-countdown">@initialCountDown</h2>
 
 </div>
 
@@ -93,7 +103,7 @@
                 $item.text(localDate);
             });
 
-            $(".local-date-tz").each(function (index, item) {
+            $(".local-date-tz").each(function(index, item) {
                 var $item = $(item);
 
                 var dateAsISO8601 = $item.text();
@@ -116,7 +126,8 @@
             function focusCurrentEventOptionsContainer(e) {
                 $([document.documentElement, document.body]).animate({
                         scrollTop: eventsHeaderImage.offset().top
-                    }, 500);
+                    },
+                    500);
             }
 
             currentEventOptionsContainer.on('click',
@@ -150,10 +161,11 @@
                 });
 
             var eventCountDownTimer;
+
             function startEventCountDownTimer(totalSeconds, display) {
 
                 if (totalSeconds < 0) {
-                    display.text("EVENT IN PROGRESS");
+                    display.text("Event in progress");
                     eventCountDownTimer = clearTimeout(eventCountDownTimer);
                     return;
                 }
@@ -162,26 +174,25 @@
                 var minutes = Math.floor((totalSeconds % 3600) / 60);
                 var seconds = Math.floor(totalSeconds % 60);
 
-                eventCountDownTimer = setTimeout(function () {
+                eventCountDownTimer = setTimeout(function() {
 
-                    hours = hours < 10 ? "0" + hours : hours;
-                    minutes = minutes < 10 ? "0" + minutes : minutes;
-                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                        hours = hours < 10 ? "0" + hours : hours;
+                        minutes = minutes < 10 ? "0" + minutes : minutes;
+                        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-                    display.text(hours + ":" + minutes + ":" + seconds);
+                        display.text(hours + ":" + minutes + ":" + seconds);
 
-                    if (display.is(":hidden")) {
-                        display.show();
-                    }
+                        startEventCountDownTimer(--totalSeconds, display);
 
-                    startEventCountDownTimer(--totalSeconds, display);
-
-                }, 1000);
+                    },
+                    1000);
             }
 
             var totalSeconds = @totalSecondsLeft;
-            var container = $("#next-event-countdown");
-            startEventCountDownTimer(totalSeconds, container);
+            if (totalSeconds > 0) {
+                var container = $("#next-event-countdown");
+                startEventCountDownTimer(totalSeconds, container);
+            }
 
         });
     </script>

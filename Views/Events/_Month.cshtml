@@ -1,7 +1,7 @@
 ﻿@model EventsViewModel
 
 @{
-    var now = DateTime.Now.Date;
+    var now = DateTimeOffset.Now;
     var current = Model.Current.Starting;
     var firstDateOfTheMonth = new DateTime(current.Year, current.Month, 1);
     //subtract 1, because we normal people start week from Monday
