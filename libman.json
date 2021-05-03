@@ -14,9 +14,17 @@
       "library": "moment.js@2.29.1",
       "destination": "wwwroot/lib/moment.js/",
       "files": [
-        "moment-with-locales.js",
-        "moment-with-locales.min.js"
+        "moment.js",
+        "moment.min.js"
       ]
-    }
-  ]
+    },
+    {
+    "library": "moment-timezone@0.5.33",
+    "destination": "wwwroot/lib/moment-timezone/",
+    "files": [
+      "moment-timezone-with-data.js",
+      "moment-timezone-with-data.min.js"
+    ]
+  }
+]
 }

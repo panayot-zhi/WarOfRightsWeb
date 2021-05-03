@@ -18,18 +18,7 @@
         </div>
         
         <h2>@Model.Name</h2>
-
-        <h3>
-            @if (Model.Occurring == EventOccurrence.Once)
-            {
-                @Model.Starting @:GMT
-            }
-            else
-            {
-                @:@Model.WeekDay, @Model.Time GMT - @Model.Occurring.ToString()
-            }
-        </h3>
-
+        <h3 class="local-date-tz">@Model.Starting.ToString("O")</h3>
         <p class="text-center">@Model.Description</p>
 
         <div class="text-center">
@@ -43,3 +32,9 @@
 
     <div class="optionsContainerBottom"></div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        window.displayLocalDates();
+    });
+</script>

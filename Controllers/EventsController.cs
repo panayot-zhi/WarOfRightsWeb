@@ -42,6 +42,11 @@ namespace WarOfRightsWeb.Controllers
             scheduledEvents = scheduledEvents.OrderBy(x => x.Starting)
                 .ThenByDescending(x => x.Occurring).ToList();
 
+            // Filter weekly events within the range of 2 weeks from the current moment
+            scheduledEvents.RemoveAll(x => x.Occurring == EventOccurrence.Weekly &&
+                                           (x.Starting < DateTimeOffset.Now.AddDays(-7) ||
+                                           x.Starting > DateTimeOffset.Now.AddDays(7)));
+
             var vModel = new EventsViewModel()
             {
                 Current = scheduledEvents.GetNextEvent(),
