@@ -20,6 +20,9 @@ namespace WarOfRightsWeb.Data
         public Regiment Regiment { get; set; }
 
 
+        public int Order { get; set; }
+
+
         public ICollection<MapRegimentWeapon> MapRegimentWeapons { get; set; }
 
     }
