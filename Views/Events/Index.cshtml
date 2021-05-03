@@ -75,11 +75,18 @@
         {
             <h2>@e.Name</h2>
             <h3>
-                @e.Starting.ToString("dddd, HH:mm:ss") GMT
-                @if (e.Occurring != EventOccurrence.Once)
+                @if (e.Occurring == EventOccurrence.Weekly ||
+                    e.Occurring == EventOccurrence.Monthly)
                 {
-                    @:- @e.Occurring.ToString()
+                    @e.Starting.ToString("dddd, HH:mm:ss") @:GMT
+
                 }
+                else if (e.Occurring == EventOccurrence.Yearly ||
+                         e.Occurring == EventOccurrence.Once)
+                {
+                    @e.Starting.ToString("dd MMMM, HH:mm:ss") @:GMT
+                }
+                - @e.Occurring.ToString()
             </h3>
             <p class="text-center">@e.Description</p>
         }
@@ -101,6 +108,7 @@
                 var localDate = moment(dateAsISO8601).format("dddd, HH:mm:ss");
 
                 $item.text(localDate);
+                $item.removeClass("local-date");
             });
 
             $(".local-date-tz").each(function(index, item) {
@@ -113,6 +121,7 @@
                 localDate += " " + moment.tz(timezone).format("z");
 
                 $item.text(localDate);
+                $item.removeClass("local-date-tz");
             });
         }
 
