@@ -10,16 +10,20 @@
         var now = DateTimeOffset.Now;
         var prev = now.AddMonths(-1);
         var next = now.AddMonths(1);
-        var initialCountDown = Model.Current.Starting - new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second, TimeSpan.FromHours(2));
+        var currentStarting = Model.Current.Starting - DateTimeOffset.UtcNow;
+        var totalSecondsLeft = Math.Floor(currentStarting.TotalSeconds);
     }
 
     <h1 id="tabTitle">Next Event In:</h1>
-    <h2 style="margin-top: 10px" id="next-event-countdown">@( $"{initialCountDown:c}" ) </h2>
+    <h2 style="margin-top: 10px" id="next-event-countdown">@totalSecondsLeft</h2>
+    @*<h2 style="margin-top: 10px" id="next-event-countdown1">@initialCountDown.TotalSeconds</h2>*@
+    @*<h2 style="margin-top: 10px" id="next-event-countdown2">@initialCountDown.ToString("g")</h2>*@
+
 </div>
 
 <div class="fancyRight text-right">
     <h1>@Model.Current.Name</h1>
-    <h2>@Model.Current.WeekDay, @Model.Current.Time GMT</h2>
+    <h2 class="local-date">@Model.Current.Starting.ToString("O")</h2>
 </div>
 
 <img id="eventsHeaderImage" alt="War of Rights Event Schedule" src="@Url.Content("~/img/during-the-american-civil-war.jpg")" class="imageMaxWidth">
@@ -62,7 +66,7 @@
             <h2>@e.Name</h2>
             <h3>
 
-                @if (e.Occurring == EventOccurrence.OnlyOnce)
+                @if (e.Occurring == EventOccurrence.Once)
                 {
                     @e.Starting @:GMT
                 }
@@ -81,21 +85,54 @@
     <script src="lib/moment.js/moment-with-locales.min.js"></script>
 
     <script>
-        $(document).ready(function () {
+
+        function displayLocalDates() {
+
+            $(".local-date").each(function(index, item) {
+                var $item = $(item);
+
+                var dateAsISO8601 = $item.text();
+                var localDate = moment(dateAsISO8601).format("dddd, HH:mm:ss");
+                $item.text(localDate);
+            });
+
+        /*var dateFields = $(".local-date").text();
+
+        for (var dateField in dateFields) {
+
+            if (!Object.prototype.hasOwnProperty.call(dateFields, dateField)) {
+                continue;
+            }
+
+            var date = new Date(dateField);
+            if (!isValidDate(date)) {
+                continue;
+            }
+
+            var localDate = moment(dateField).format("dddd, HH:mm:ss");
+            $(".local-date").text(localDate);
+        }*/
+        }
+
+        $(document).ready(function() {
+
+            displayLocalDates();
 
             var eventsHeaderImage = $("#eventsHeaderImage");
             var currentEventOptionsContainer = $("#currentsEventOptions");
+
             function focusCurrentEventOptionsContainer(e) {
                 console.log('focus dam it');
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: eventsHeaderImage.offset().top
-                }, 500);
+                        scrollTop: eventsHeaderImage.offset().top
+                    },
+                    500);
 
             }
 
             currentEventOptionsContainer.on('click',
                 ".LinkButtonH1, .optionsExit, .optionsContainerDarkening",
-                function (e) {
+                function(e) {
                     e.preventDefault();
                     currentEventOptionsContainer.hide();
                 });
@@ -107,20 +144,51 @@
                     var me = $(this);
                     var url = me.attr('href');
 
-                    $.get(url, function (r) {
+                    $.get(url,
+                        function(r) {
 
-                        if (!r) {
-                            // no-content
-                            return;
-                        }
+                            if (!r) {
+                                // no-content
+                                return;
+                            }
 
-                        currentEventOptionsContainer.html(r);
-                        currentEventOptionsContainer.show();
-                        focusCurrentEventOptionsContainer();
-                    });
+                            currentEventOptionsContainer.html(r);
+                            currentEventOptionsContainer.show();
+                            focusCurrentEventOptionsContainer();
+                        });
 
 
                 });
+
+            var eventCountDownTimer;
+            function startEventCountDownTimer(totalSeconds, display) {
+
+                if (totalSeconds < 0) {
+                    display.text("EVENT IN PROGRESS");
+                    eventCountDownTimer = clearTimeout(eventCountDownTimer);
+                    return;
+                }
+
+                var hours = Math.floor(totalSeconds / 3600);
+                var minutes = Math.floor((totalSeconds % 3600) / 60);
+                var seconds = Math.floor(totalSeconds % 60);
+
+                eventCountDownTimer = setTimeout(function () {
+
+                    hours = hours < 10 ? "0" + hours : hours;
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    display.text(hours + ":" + minutes + ":" + seconds);
+
+                    startEventCountDownTimer(--totalSeconds, display);
+
+                }, 1000);
+            }
+
+            var totalSeconds = @totalSecondsLeft;
+            var container = $("#next-event-countdown");
+            startEventCountDownTimer(totalSeconds, container);
 
             /*var track = 0;
             function timeNow() {
