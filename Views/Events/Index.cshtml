@@ -28,7 +28,6 @@
 
 <div id="calendar">
     <div id="monthsDisplay" class="fancyLeft">
-        
         @await Html.PartialAsync("_Month", model: new EventsViewModel()
         {
             EventTemplates = Model.ScheduledEvents.Where(x => x.Starting.Month == prev.Month).ToList(),
@@ -77,9 +76,6 @@
         }
     </div>
 </div>
-
-
-
 
 @section scripts {
     <script src="lib/moment.js/moment-with-locales.min.js"></script>

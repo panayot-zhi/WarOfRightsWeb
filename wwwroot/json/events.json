@@ -32,21 +32,21 @@
       "Name": "Shooting Competition",
       "Description": "Every first drill of the month we test our skills amongst each other in a shooting competition with various disciplines.",
       "Starting": "2021-02-01T18:00:00+0000",
-      "Occurring": "FirstWeekDayMonthly",
+      "Occurring": "Monthly",
       "Duration": "01:00"
     },
     {
       "Name": "Company Anniversary",
       "Description": "Every first drill of the month we test our skills amongst each other in a shooting competition with various disciplines.",
       "Starting": "2020-09-20T18:00:00+0000",
-      "Occurring": "ExactDayYearly",
+      "Occurring": "Yearly",
       "Duration": "01:00"
     },
     {
       "Name": "One Time Test Event",
       "Description": "This is a test event, it should appear if it is in the range of 2 months according to the current date, please delete manually afterwards, so it won't clog the list of event templates.",
       "Starting": "2021-05-01T19:00:00+0000",
-      "Occurring": "OnlyOnce",
+      "Occurring": "Once",
       "Duration": "01:30"
     }
   ]

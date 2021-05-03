@@ -119,19 +119,19 @@ namespace WarOfRightsWeb.Common
         public static IEnumerable<Event> GetEventsByDate(IReadOnlyCollection<Event> eventTemplates, DateTime currentDate)
         {
             var result = new List<Event>();
-            var oneTimeEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.OnlyOnce, currentDate).ToList();
+            var oneTimeEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.Once, currentDate).ToList();
             if (oneTimeEvents.Any())
             {
                 result.AddRange(oneTimeEvents);
             }
 
-            var yearlyEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.ExactDayYearly, currentDate).ToList();
+            var yearlyEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.Yearly, currentDate).ToList();
             if (yearlyEvents.Any())
             {
                 result.AddRange(yearlyEvents);
             }
 
-            var weekDayMonthlyEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.FirstWeekDayMonthly, currentDate).ToList();
+            var weekDayMonthlyEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.Monthly, currentDate).ToList();
             if (weekDayMonthlyEvents.Any())
             {
                 result.AddRange(weekDayMonthlyEvents);
@@ -180,31 +180,31 @@ namespace WarOfRightsWeb.Common
                                                 eventTemplate.WeekDay == day.DayOfWeek)
                         .Select(ConstructEvent);
 
-                case EventOccurrence.FirstWeekDayMonthly:
+                case EventOccurrence.Monthly:
 
                     // With events that occur on a first week day of the month we have to resolve the day first and then compare
 
                     return eventTemplates
-                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.FirstWeekDayMonthly &&
+                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.Monthly &&
                                                 GetFirstDayOfTheMonth(day.Year, day.Month, eventTemplate.WeekDay) == day)
                         .Select(ConstructEvent);
 
-                case EventOccurrence.ExactDayYearly:
+                case EventOccurrence.Yearly:
 
                     // With exact yearly events only the month and the day should match
 
                     return eventTemplates
-                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.ExactDayYearly &&
+                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.Yearly &&
                                          eventTemplate.Starting.Date.Day == day.Day &&
                                          eventTemplate.Starting.Date.Month == day.Month)
                         .Select(ConstructEvent);
 
-                case EventOccurrence.OnlyOnce:
+                case EventOccurrence.Once:
 
                     // With one time event types we just check the start date
 
                     return eventTemplates
-                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.OnlyOnce &&
+                        .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.Once &&
                                          eventTemplate.Starting.Date == day)
                         .Select(ConstructEvent);
 
