@@ -6,7 +6,7 @@
     
     <h1 class="text-center">@Labels.USA @(Model.DefendingTeam == Labels.USA ? "(Defending)" : "(Attacking)")</h1>
     
-    @foreach (var regiment in Model.MapUSARegiments.OrderBy(x => x.Regiment.Name))
+    @foreach (var regiment in Model.MapUSARegiments.OrderBy(x => x.Regiment.Type).ThenBy(x => x.Order))
     {
         @await Html.PartialAsync("_RegimentBrief", regiment)
     }
@@ -17,7 +17,7 @@
 
     <h1 class="text-center">@Labels.CSA @(Model.DefendingTeam == Labels.CSA ? "(Defending)" : "(Attacking)")</h1>
     
-    @foreach (var regiment in Model.MapCSARegiments.OrderBy(x => x.Regiment.Name))
+    @foreach (var regiment in Model.MapCSARegiments.OrderBy(x => x.Regiment.Type).ThenBy(x => x.Order))
     {
         @await Html.PartialAsync("_RegimentBrief", regiment)
     }
