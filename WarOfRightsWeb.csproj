@@ -28,8 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Data\Migrations\20210906090745_SnakeCaseNaming.cs" />
-    <Compile Remove="Data\Migrations\20210906090745_SnakeCaseNaming.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,9 +62,6 @@
   <ItemGroup>
     <Content Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="bundleconfig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
