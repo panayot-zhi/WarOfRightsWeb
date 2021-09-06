@@ -3,12 +3,17 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>73d43068-f21b-4f5a-84a8-5fc3efae0dde</UserSecretsId>
+	<ResolveStaticWebAssetsInputsDependsOn>RemoveIdentityAssets</ResolveStaticWebAssetsInputsDependsOn>
 	<RuntimeIdentifiers>linux-x64;ubuntu.18.04-x64</RuntimeIdentifiers>
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+	<Company>1st United States Sharpshooters Company F</Company>
+	<Authors>Panayot Ivanov</Authors>
+	<Version>1.0</Version>    
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
+    <Folder Include="Utility\python\" />
     <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\html\" />
