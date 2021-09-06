@@ -343,3 +343,4 @@ healthchecksdb
 appsettings.Production.json
 appsettings.Development.json
 *.7z
+*.my.cnf
