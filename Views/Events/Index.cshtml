@@ -99,9 +99,38 @@
 
     <script>
 
+        var eventCountDownTimer = null;
+        var totalSeconds = @totalSecondsLeft;
+        var eventCountDownContainer = document.getElementById("next-event-countdown");
+
+        function updateEventCountDownTimer(totalSeconds) {
+
+            if (totalSeconds < 0) {
+                eventCountDownContainer.text("Event in progress");
+                eventCountDownTimer = clearTimeout(eventCountDownTimer);
+                return;
+            }
+
+            var hours = Math.floor(totalSeconds / 3600);
+            var minutes = Math.floor((totalSeconds % 3600) / 60);
+            var seconds = Math.floor(totalSeconds % 60);
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            eventCountDownContainer.innerText = hours + ":" + minutes + ":" + seconds;
+        }
+
+        if (totalSeconds > 0) {
+            eventCountDownTimer = setInterval(function() {
+                updateEventCountDownTimer(--totalSeconds);
+            }, 1E3);
+        }
+
         function displayLocalDates() {
 
-            $(".local-date").each(function(index, item) {
+            $(".local-date").each(function (index, item) {
                 var $item = $(item);
 
                 var dateAsISO8601 = $item.text();
@@ -111,7 +140,7 @@
                 $item.removeClass("local-date");
             });
 
-            $(".local-date-tz").each(function(index, item) {
+            $(".local-date-tz").each(function (index, item) {
                 var $item = $(item);
 
                 var dateAsISO8601 = $item.text();
@@ -125,7 +154,7 @@
             });
         }
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             displayLocalDates();
 
@@ -134,27 +163,27 @@
 
             function focusCurrentEventOptionsContainer(e) {
                 $([document.documentElement, document.body]).animate({
-                        scrollTop: eventsHeaderImage.offset().top
-                    },
+                    scrollTop: eventsHeaderImage.offset().top
+                },
                     500);
             }
 
             currentEventOptionsContainer.on('click',
                 ".LinkButtonH1, .optionsExit, .optionsContainerDarkening",
-                function(e) {
+                function (e) {
                     e.preventDefault();
                     currentEventOptionsContainer.hide();
                 });
 
             $("#monthsDisplay .displayCurrentEvents").on('click',
-                function(e) {
+                function (e) {
                     e.preventDefault();
 
                     var me = $(this);
                     var url = me.attr('href');
 
                     $.get(url,
-                        function(r) {
+                        function (r) {
 
                             if (!r) {
                                 // no-content
@@ -168,40 +197,6 @@
 
 
                 });
-
-            var eventCountDownTimer;
-
-            function startEventCountDownTimer(totalSeconds, display) {
-
-                if (totalSeconds < 0) {
-                    display.text("Event in progress");
-                    eventCountDownTimer = clearTimeout(eventCountDownTimer);
-                    return;
-                }
-
-                var hours = Math.floor(totalSeconds / 3600);
-                var minutes = Math.floor((totalSeconds % 3600) / 60);
-                var seconds = Math.floor(totalSeconds % 60);
-
-                eventCountDownTimer = setTimeout(function() {
-
-                        hours = hours < 10 ? "0" + hours : hours;
-                        minutes = minutes < 10 ? "0" + minutes : minutes;
-                        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                        display.text(hours + ":" + minutes + ":" + seconds);
-
-                        startEventCountDownTimer(--totalSeconds, display);
-
-                    },
-                    1000);
-            }
-
-            var totalSeconds = @totalSecondsLeft;
-            if (totalSeconds > 0) {
-                var container = $("#next-event-countdown");
-                startEventCountDownTimer(totalSeconds, container);
-            }
 
         });
     </script>
