@@ -21,9 +21,13 @@
   </ItemGroup>
 
   <ItemGroup>    
+    <None Remove="backup\**" />    
     <None Remove="publish\**" />    
-    <Compile Remove="publish\**" />        
+    <Compile Remove="backup\**" />    
+    <Compile Remove="publish\**" />    
+    <Content Remove="backup\**" />        
     <Content Remove="publish\**" />        
+    <EmbeddedResource Remove="backup\**" />        
     <EmbeddedResource Remove="publish\**" />               
   </ItemGroup>
 
