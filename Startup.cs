@@ -59,6 +59,13 @@ namespace WarOfRightsWeb
 
             Extensions.Initialize(env);
 
+            // apply any pending migrations to the database if necessary
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<WarOfRightsDbContext>();
+                context.Database.Migrate();
+            }
+
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
