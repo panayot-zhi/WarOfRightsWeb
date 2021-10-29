@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Reflection
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -100,7 +102,8 @@
                     </footer>
                     
                     <div id="credit" class="fancyClearBoth text-right">
-                        <small>this site was assembled by John Brown</small>&nbsp;
+                        @{ var ver = Assembly.GetEntryAssembly()?.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion; }
+                        <small>this site was assembled by John Brown, @(ver != null ? $"version {ver}" : string.Empty)</small>&nbsp;
                     </div>
                 </div>
             </div>
