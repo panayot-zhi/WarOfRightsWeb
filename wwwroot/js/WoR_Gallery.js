@@ -112,8 +112,8 @@ function nextImage() {
         currentImage = currentImage + 1;
     }
 
-    updateImageContainerArray();
     fitImageToScreen();
+    updateImageContainerArray();
 }
 
 function previousImage() {
@@ -126,8 +126,8 @@ function previousImage() {
         currentImage = currentImage - 1;
     }
 
-    updateImageContainerArray();
     fitImageToScreen();
+    updateImageContainerArray();
 }
 
 function fitImageToScreen() {
