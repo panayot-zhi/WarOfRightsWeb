@@ -14,6 +14,7 @@
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
     <Folder Include="Utility\python\" />
+    <Folder Include="wwwroot\img\maps\pp\" />
     <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\html\" />
