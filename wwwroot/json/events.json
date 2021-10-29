@@ -37,7 +37,7 @@
     },
     {
       "Name": "Company Anniversary",
-      "Description": "Every first drill of the month we test our skills amongst each other in a shooting competition with various disciplines.",
+      "Description": "At this day our company celebrates it's forming, celebrations are in order! Contact company command for details.",
       "Starting": "2020-09-20T18:00:00+0000",
       "Occurring": "Yearly",
       "Duration": "01:00"
@@ -45,7 +45,7 @@
     {
       "Name": "One Time Test Event",
       "Description": "This is a test event, it should appear if it is in the range of 2 months according to the current date, please delete manually afterwards, so it won't clog the list of event templates.",
-      "Starting": "2021-05-01T19:00:00+0000",
+      "Starting": "2021-12-01T19:00:00+0000",
       "Occurring": "Once",
       "Duration": "01:30"
     }
