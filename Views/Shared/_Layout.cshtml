@@ -1,4 +1,5 @@
 ﻿@using System.Reflection
+@using System.IO
 
 <!DOCTYPE html>
 <html lang="en">
@@ -98,12 +99,29 @@
                     </div>
 
                     <footer class="worBorder" id="footer">
-                        TODO
+                        <img src="@Url.Content("~/img/1ussscof_baner.png")" alt="1st US Sharpshooters Co.F Regimental Banner" class="imageMaxWidth" />
                     </footer>
                     
-                    <div id="credit" class="fancyClearBoth text-right">
+                    <div id="credit" class="fancyClearBoth text-center">
+                        @{
+                            var buildInfo = string.Empty;
+
+                            var assembly = Assembly.GetEntryAssembly();
+                            if (assembly is not null)
+                            {
+                                var version = assembly?.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
+                                if (version is not null)
+                                {
+                                    var displayVersion = version?.InformationalVersion;
+                                    var buildDate = File.GetLastWriteTime(assembly.Location);
+
+                                    buildInfo = $"version {displayVersion}, built {buildDate:ddd, MMMM dd, yyyy} at {buildDate:HH:mm}";
+                                }
+                            }
+                        }
+
                         @{ var ver = Assembly.GetEntryAssembly()?.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion; }
-                        <small>this site was assembled by John Brown, @(ver != null ? $"version {ver}" : string.Empty)</small>&nbsp;
+                        <small class="text-right">assembled by Sgt. John Brown, @buildInfo</small>&nbsp;
                     </div>
                 </div>
             </div>
