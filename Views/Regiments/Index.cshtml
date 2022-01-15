@@ -1,7 +1,8 @@
-﻿@{
+﻿@model IEnumerable<Regiment>
+
+@{
     ViewBag.Title = "Regiments";
 }
-
 
 @section navigation {
     <nav id="companyToolHeaderContainer" class="worBorder" style="padding: 0px;">
@@ -13,7 +14,7 @@
                     <ul class="companyToolNavUl" style="width: 30%;">
                         <li>
                             <h1 class="text-center">
-                                <a id="navUSARegiments" href="@Url.Action(Labels.USA, "Regiments")">USA</a>
+                                <a id="navUSARegiments" href="@Url.Action(Labels.USA, "Regiments")">@Labels.USA</a>
                             </h1>
                         </li>
                     </ul>
@@ -29,7 +30,7 @@
                     <ul class="companyToolNavUl" style="width: 30%;">
                         <li>
                             <h1 class="text-center">
-                                <a id="navCSARegiments" href="@Url.Action(Labels.CSA, "Regiments")">CSA</a>
+                                <a id="navCSARegiments" href="@Url.Action(Labels.CSA, "Regiments")">@Labels.CSA</a>
                             </h1>
                         </li>
                     </ul>
@@ -39,9 +40,13 @@
         </ul>
 
         <div class="fancyClearBoth">
+
         </div>
 
     </nav>
 }
 
-TODO
+@foreach (var regiment in Model)
+{
+    @await Html.PartialAsync("_RegimentBrief", regiment)
+}

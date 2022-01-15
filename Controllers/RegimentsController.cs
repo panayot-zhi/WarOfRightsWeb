@@ -1,6 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WarOfRightsWeb.Constants;
 using WarOfRightsWeb.Data;
 
 namespace WarOfRightsWeb.Controllers
@@ -14,35 +16,45 @@ namespace WarOfRightsWeb.Controllers
             _db = db;
         }
 
-        public async Task<IActionResult> Index(string id)
+        public IActionResult Index()
         {
-            if (!string.IsNullOrEmpty(id))
-            {
-                var model = await GetRegimentAsync(id);
-                if (model == null)
-                {
-                    return NotFound();
-                }
-
-                return View("Regiment", model);
-            }
-
-            return View();
+            var allRegiments = _db.Regiments.AsEnumerable();
+            return View(allRegiments);
         }
 
         public IActionResult USA()
         {
-            return View();
+            var allUSARegiments = _db.Regiments
+                .Where(x => x.Faction.Equals(Labels.USA))
+                .AsEnumerable();
+
+            return View("Index", allUSARegiments);
         }
 
         public IActionResult CSA()
         {
-            return View();
+            var allCSARegiments = _db.Regiments
+                .Where(x => x.Faction.Equals(Labels.CSA))
+                .AsEnumerable();
+
+            return View("Index", allCSARegiments);
         }
 
-        private async Task<Regiment> GetRegimentAsync(string id)
+        public IActionResult Get(string id)
         {
-            return await _db.Regiments.SingleOrDefaultAsync(x => x.ID == id);
+            if (string.IsNullOrEmpty(id))
+            {
+                return NotFound();
+            }
+
+            var model = _db.Regiments.SingleOrDefault(x => x.ID == id);
+            if (model == null)
+            {
+                return NotFound();
+            }
+
+            return View("Regiment", model);
+
         }
     }
 }
