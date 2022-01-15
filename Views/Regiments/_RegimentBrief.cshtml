@@ -8,14 +8,8 @@
     var faction = regiment.Faction; //Extensions.RegimentFaction(regiment).ToLowerInvariant();
     var type = regiment.Type; //Extensions.RegimentType(regiment).ToLowerInvariant();
     var isArtillery = type == RegimentType.Artillery;
-    var imageName = $"{faction}_{type}_{regimentID}_" + (isArtillery ? Labels.NCO : Labels.FlagBearer);
-    var regimentImage = Url.RegimentImageIfExists(imageName);
-    if (regimentImage == null)
-    {
-        imageName = $"{faction}_{type}_default_" + (isArtillery ?
-            Labels.NCO : Labels.FlagBearer);
-        regimentImage = Url.RegimentImageIfExists(imageName);
-    }
+    var regimentImage = Url.RegimentImageOrDefault(faction, type, regimentID, 
+        isArtillery ? Labels.NCO : Labels.FlagBearer);
 
 }
 

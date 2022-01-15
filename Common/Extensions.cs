@@ -58,17 +58,17 @@ namespace WarOfRightsWeb.Common
         public static string RegimentImageOrDefault(this IUrlHelper urlHelper, string faction, RegimentType type,
             string regiment, string character)
         {
-            return urlHelper.RegimentImageIfExists($"{faction}_{type}_{regiment}_{character}") ??
-                   urlHelper.RegimentImageIfExists($"{faction}_{type}_default_{character}");
+            return RegimentImageOrDefault(urlHelper, faction, type.ToString(), regiment, character);
         }
 
-        public static string RegimentImageOrDefault(this IUrlHelper urlHelper, string faction, string type, string regiment, string character)
+        public static string RegimentImageOrDefault(this IUrlHelper urlHelper, string faction, string type, 
+            string regiment, string character)
         {
-            return urlHelper.RegimentImageIfExists($"{faction}_{type}_{regiment}_{character}") ??
-                   urlHelper.RegimentImageIfExists($"{faction}_{type}_default_{character}");
+            return urlHelper.RegimentImageIfExists($"{faction.ToLowerInvariant()}_{type.ToLowerInvariant()}_{regiment}_{character}") ??
+                   urlHelper.RegimentImageIfExists($"{faction.ToLowerInvariant()}_{type.ToLowerInvariant()}_default_{character}");
         }
 
-        public static string RegimentImageIfExists(this IUrlHelper urlHelper, string name)
+        private static string RegimentImageIfExists(this IUrlHelper urlHelper, string name)
         {
             return ImageIfExists(urlHelper, name, "regiments");
         }
