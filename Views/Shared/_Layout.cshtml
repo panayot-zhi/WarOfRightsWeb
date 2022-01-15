@@ -107,15 +107,17 @@
                             var buildInfo = string.Empty;
 
                             var assembly = Assembly.GetEntryAssembly();
-                            if (assembly is not null)
+                            var version = assembly?.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
+                            if (version != null)
                             {
-                                var version = assembly?.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
-                                if (version is not null)
-                                {
-                                    var displayVersion = version?.InformationalVersion;
-                                    var buildDate = File.GetLastWriteTime(assembly.Location);
+                                var displayVersion = version.InformationalVersion;
+                                buildInfo = $"version {displayVersion}";
 
-                                    buildInfo = $"version {displayVersion}, built {buildDate:ddd, MMMM dd, yyyy} at {buildDate:HH:mm}";
+                                var assemblyFileName = Environment.GetCommandLineArgs().FirstOrDefault();
+                                if (!string.IsNullOrEmpty(assemblyFileName))
+                                {
+                                    var buildDate = File.GetLastWriteTime(assemblyFileName);
+                                    buildInfo += $", built {buildDate:ddd, MMMM dd, yyyy} at {buildDate:HH:mm}";
                                 }
                             }
                         }
