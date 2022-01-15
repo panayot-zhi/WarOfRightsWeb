@@ -3,18 +3,28 @@
 @{
     var regiment = Model;
     var regimentID = regiment.ID;
-    var regimentName = regiment.Name; //Regiments.DisplayNames[regiment];    
-    var regimentFlag = Url.Content($"~/img/regiments/usa_infantry_{regimentID}_FlagBearer.png");
+    var regimentName = regiment.Name; //Regiments.DisplayNames[regiment];        
     var regimentDescription = regiment.Description; //Regiments.Descriptions[regiment];
+    var faction = regiment.Faction; //Extensions.RegimentFaction(regiment).ToLowerInvariant();
+    var type = regiment.Type; //Extensions.RegimentType(regiment).ToLowerInvariant();
+    var isArtillery = type == RegimentType.Artillery;
+    var imageName = $"{faction}_{type}_{regimentID}_" + (isArtillery ? Labels.NCO : Labels.FlagBearer);
+    var regimentImage = Url.RegimentImageIfExists(imageName);
+    if (regimentImage == null)
+    {
+        imageName = $"{faction}_{type}_default_" + (isArtillery ?
+            Labels.NCO : Labels.FlagBearer);
+        regimentImage = Url.RegimentImageIfExists(imageName);
+    }
 
 }
 
 <div class="briefFieldReportContainer">
-    <a href="@regimentFlag" target="_blank" class="imageContainer">
-        <div style="background: url('@regimentFlag'); background-size: contain; background-position-y: -2px" class="worTightBorder"></div>
+    <a href="@regimentImage" target="_blank" class="imageContainer">
+        <div style="background: url('@regimentImage'); background-size: contain; background-position-y: -2px" class="worTightBorder"></div>
     </a>
     <div class="briefDescription">
-        <a href="@Url.Action("Index", "Regiments", new { id = Model })">
+        <a href="@Url.Action("Get", "Regiments", new { id = Model.ID })">
             <h2 class="briefFieldReportName">@regimentName</h2>
         </a>
         <p class="fancyClearBoth">@Html.Raw(regimentDescription)</p>
