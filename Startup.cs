@@ -1,9 +1,10 @@
+using System;
+using System.Globalization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Globalization;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +29,11 @@ namespace WarOfRightsWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IConfiguration>(Configuration);
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                    .AddCookie(cookieOptions => {
+                        cookieOptions.LoginPath = "/";
+                    });
 
             if (WebHostEnvironment.IsDevelopment())
             {
@@ -73,6 +79,7 @@ namespace WarOfRightsWeb
             });
 
             app.UseDeveloperExceptionPage();
+            app.UseAuthentication();
             app.UseStaticFiles();
             app.UseRouting();
 
