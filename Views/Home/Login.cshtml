@@ -1,0 +1,93 @@
+﻿@using WarOfRightsWeb.Controllers
+@model Login
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+@section navigation {
+    <nav id="companyToolHeaderContainer" class="worBorder" style="padding: 0px;">
+
+        <div style="margin: 0px; padding: 0px;">
+            <ul style="margin: 0px; padding: 0px; height: 56px;">
+                <li style="margin: 0px;">
+                    <div id="companyToolHeaderTextContainer">
+
+                        <ul class="companyToolNavUl" style="width: 100%;">
+                            <li>
+                                <h1 class="text-center">
+                                    <a href="#">Karlsen' Sharps</a>
+                                </h1>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+            </ul>
+            <div class="fancyClearBoth">
+            </div>
+        </div>
+    </nav>
+}
+
+<div id="loginContentWrapper">
+
+    <div>
+
+        <h1 class="text-center">Administrator Login</h1>
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+        {
+
+            <table class="tableCenter">
+
+
+                <tbody>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        @Html.EditorFor(x => x.UserName, new { htmlAttributes = new { @class = "worInputField loginTextbox" } })
+                        @Html.ValidationMessageFor(x => x.UserName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "worInputField loginTextbox" } })
+                        @Html.ValidationMessageFor(x => x.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(x => x.Cookies)
+                    </td>
+                    <td>
+                        @Html.EditorFor(x => x.Cookies)
+                        @Html.ValidationMessageFor(x => x.Cookies)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(x => x.RememberMe)
+                    </td>
+                    <td>
+                        @Html.EditorFor(x => x.RememberMe)
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+
+            <div class="text-center">
+                <input class="LinkButtonH1" value="Login" type="submit">
+            </div>
+        }
+
+        <p class="text-center errorTextColor">
+
+        </p>
+    </div>
+</div>

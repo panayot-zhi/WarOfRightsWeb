@@ -1,10 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using System.Dynamic;
 using System.IO;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using WarOfRightsWeb.Common;
+using WarOfRightsWeb.Models;
 
 namespace WarOfRightsWeb.Controllers
 {
@@ -37,6 +44,49 @@ namespace WarOfRightsWeb.Controllers
             vModel.Rooster = roosterFile;
 
             return View(vModel);
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View(new Login());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(Login loginInfo)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(loginInfo);
+            }
+
+            var admin = _configuration.GetSection("SiteUser").Get<Login>();
+
+            if (!admin.UserName.Equals(loginInfo.UserName) || !admin.Password.Equals(loginInfo.Password))
+            {
+                return View(loginInfo);
+            }
+
+            var claims = new List<Claim>
+            {
+                new(ClaimTypes.Name, "Administrator")
+            };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Logout()
+        {
+            if (User.IsLoggedIn())
+            {
+                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }
