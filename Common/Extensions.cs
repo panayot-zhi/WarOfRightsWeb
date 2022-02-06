@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using WarOfRightsWeb.Constants;
@@ -224,6 +225,21 @@ namespace WarOfRightsWeb.Common
         public static string PathToUrl(string path)
         {
             return path.Replace('\\', '/');
-        } 
+        }
+
+        public static bool IsLoggedIn(this ClaimsPrincipal user)
+        {
+            if (user == null)
+            {
+                return false;
+            }
+
+            if (user.Identity == null)
+            {
+                return false;
+            }
+
+            return user.Identity.IsAuthenticated;
+        }
     }
 }
