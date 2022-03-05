@@ -1,0 +1,53 @@
+﻿@model WarOfRightsWeb.Data.Map
+
+<h2 class="text-right">Belligerents</h2>
+
+<div id="mapBelligerentsUSA" class="fancyLeft">
+    
+    <h1 class="text-center">@Labels.USA @(Model.DefendingTeam == Labels.USA ? "(Defending)" : "(Attacking)")</h1>
+    
+    @foreach (var regiment in Model.MapUSARegiments.OrderBy(x => x.Regiment.Type).ThenBy(x => x.Order))
+    {
+        @await Html.PartialAsync("_RegimentBrief", regiment)
+    }
+
+</div>
+
+<div id="mapBelligerentsCSA" class="fancyRight">
+
+    <h1 class="text-center">@Labels.CSA @(Model.DefendingTeam == Labels.CSA ? "(Defending)" : "(Attacking)")</h1>
+    
+    @foreach (var regiment in Model.MapCSARegiments.OrderBy(x => x.Regiment.Type).ThenBy(x => x.Order))
+    {
+        @await Html.PartialAsync("_RegimentBrief", regiment)
+    }
+
+</div>
+
+@if (User.IsLoggedIn())
+{
+    <div id="mapParameters" class="fancyClearBoth">
+
+        <h2 class="text-right">Map Parameters</h2>
+
+        <p class="text-right">- Round Time: @(Extensions.SecondsToMinutes(Model.RoundTime)) min</p>
+        <p class="text-right">- Wave Time: @Model.WaveTime s</p>
+        <p class="text-right">- Capture Speed: @Model.CaptureSpeed</p>
+        <p class="text-right">- Neutralize Speed: @Model.NeutralizeSpeed</p>
+        <p class="text-right">- Tickets USA: @Model.TicketsUSA</p>
+        <p class="text-right">- Tickets CSA: @Model.TicketsCSA</p>
+        <p class="text-right">- Final Push Time: @(Extensions.SecondsToMinutes(Model.FinalPushTime)) min</p>
+
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(Model.NarratorInfo))
+{
+    <div id="narratorInfo" class="fancyClearBoth">
+
+        <h2>End Map Information</h2>
+
+        <p>@Model.NarratorInfo.Replace("<br>", " ")</p>
+
+    </div>
+}
