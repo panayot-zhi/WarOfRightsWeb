@@ -22,7 +22,5 @@ namespace WarOfRightsWeb.Data
 
         public int? Count { get; set; }
 
-        public int? Percent { get; set; }
-
     }
 }
