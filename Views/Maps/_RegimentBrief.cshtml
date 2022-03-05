@@ -32,11 +32,15 @@
             @for (int i = 0; i < weaponPool.Count; i++)
             {
                 var element = weaponPool.ElementAt(i);
-                var distribution = isArtillery ? $"{element.Count}<small>x</small> " : $"{element.Percent}<small>%</small> ";
+                var weaponElementHtmlString = element.Weapon.Name;
+                if (element.Count.HasValue)
+                {
+                    weaponElementHtmlString = $"{element.Count} <small>x</small> " + weaponElementHtmlString;
+                }
 
                 <li>
                     <a href="@Url.Action("Index", "Help")#@element.Weapon.ID" target="_blank">
-                        <h3>@Html.Raw(distribution)@element.Weapon.Name</h3>
+                        <h3>@Html.Raw(weaponElementHtmlString)</h3>
                     </a>
                 </li>
             }
