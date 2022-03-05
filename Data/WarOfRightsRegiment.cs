@@ -29,6 +29,9 @@ namespace WarOfRightsWeb.Data
         public string Description { get; set; }
 
         [MaxLength(127)]
+        public string[] Companies { get; set; }
+
+        [MaxLength(127)]
         public RegimentType Type { get; set; }
 
 
