@@ -24,6 +24,9 @@ namespace WarOfRightsWeb.Data
         [Column(TypeName = "TEXT")]
         public string Description { get; set; }
 
+        [Column(TypeName = "TEXT")]
+        public string NarratorInfo { get; set; }
+
         [MaxLength(255)]
         public string DateTimeDescription { get; set; }
 
