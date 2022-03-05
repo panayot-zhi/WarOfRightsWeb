@@ -12,7 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Migrations\" />
     <Folder Include="Utility\python\" />
     <Folder Include="wwwroot\img\maps\pp\" />
     <Folder Include="wwwroot\lib\" />
@@ -33,6 +32,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Migrations\20220209193909_Companies.cs" />
+    <Compile Remove="Data\Migrations\20220209193909_Companies.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220302192901_RemoveWeaponsPercentAndCount.cs" />
+    <Compile Remove="Data\Migrations\20220302192901_RemoveWeaponsPercentAndCount.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220304193812_RemoveWeaponPercent.cs" />
+    <Compile Remove="Data\Migrations\20220304193812_RemoveWeaponPercent.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
