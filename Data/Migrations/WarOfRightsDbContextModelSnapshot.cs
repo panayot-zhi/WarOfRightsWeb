@@ -62,6 +62,10 @@ namespace WarOfRightsWeb.Migrations
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
                         .HasMaxLength(255);
 
+                    b.Property<string>("NarratorInfo")
+                        .HasColumnName("narrator_info")
+                        .HasColumnType("TEXT");
+
                     b.Property<decimal?>("NeutralizeSpeed")
                         .HasColumnName("neutralize_speed")
                         .HasColumnType("DECIMAL(6,4)");
@@ -151,10 +155,6 @@ namespace WarOfRightsWeb.Migrations
                         .HasColumnName("map_regiment_id")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
-                    b.Property<int?>("Percent")
-                        .HasColumnName("percent")
-                        .HasColumnType("int");
-
                     b.Property<string>("WeaponID")
                         .HasColumnName("weapon_id")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
@@ -178,6 +178,11 @@ namespace WarOfRightsWeb.Migrations
                         .HasColumnName("id")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
                         .HasMaxLength(255);
+
+                    b.Property<string>("Companies")
+                        .HasColumnName("companies")
+                        .HasColumnType("varchar(127) CHARACTER SET utf8mb4")
+                        .HasMaxLength(127);
 
                     b.Property<string>("Description")
                         .HasColumnName("description")
