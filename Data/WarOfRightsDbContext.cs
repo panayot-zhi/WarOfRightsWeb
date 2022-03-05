@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarOfRightsWeb.Common;
@@ -34,6 +37,16 @@ namespace WarOfRightsWeb.Data
         {
             tableBuilder.Property(x => x.Type)
                 .HasConversion(new EnumToStringConverter<RegimentType>());
+
+            var valueComparer = new ValueComparer<string[]>(
+                (source, target) => source.SequenceEqual(target),
+                x => x.Aggregate(0, (aggregate, value) => HashCode.Combine(aggregate, value.GetHashCode())),
+                x => x.ToArray());
+
+            tableBuilder.Property(x => x.Companies)
+                .HasConversion(x => string.Join(',', x),
+                    x => x.Split(',', StringSplitOptions.RemoveEmptyEntries))
+                .Metadata.SetValueComparer(valueComparer);
         }
 
         private static void SetUpWeaponTable(EntityTypeBuilder<Weapon> tableBuilder)
