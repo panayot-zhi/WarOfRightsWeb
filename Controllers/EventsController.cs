@@ -22,10 +22,6 @@ namespace WarOfRightsWeb.Controllers
 
         public IActionResult Index()
         {
-            var eventTemplates = new List<Event>();
-
-            _configuration.GetSection("Events").Bind(eventTemplates);
-
             var dateNow = DateTime.Now.Date;
             var firstDayOfTheMonth = new DateTime(dateNow.Year, dateNow.Month, 1);
 
@@ -34,6 +30,8 @@ namespace WarOfRightsWeb.Controllers
 
             var scheduledEvents = new List<Event>();
 
+            var eventTemplates = _configuration.GetEventTemplates();
+            
             foreach (var currentDate in Extensions.EachDay(startDate, endDate))
             {
                 scheduledEvents.AddRange(Extensions.GetEventsByDate(eventTemplates, currentDate));
@@ -59,12 +57,9 @@ namespace WarOfRightsWeb.Controllers
 
         public IActionResult EventsAt(long utcDate)
         {
-            var eventTemplates = new List<Event>();
-
-            _configuration.GetSection("Events").Bind(eventTemplates);
-
-            var currentDate = DateTimeOffset.FromUnixTimeSeconds(utcDate);
-            var eventsOnThisDate = Extensions.GetEventsByDate(eventTemplates, currentDate.Date)
+            var eventTemplates = _configuration.GetEventTemplates();
+            var currentDate = DateTimeOffset.FromUnixTimeSeconds(utcDate).ToLocalTime();
+            var eventsOnThisDate = Extensions.GetEventsByDate(eventTemplates, currentDate.DateTime)
                 .OrderByDescending(x => x.Occurring).ToList();
 
             if (eventsOnThisDate.Count == 0)
