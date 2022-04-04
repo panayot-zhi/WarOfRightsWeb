@@ -158,15 +158,15 @@ namespace WarOfRightsWeb.Common
                     Occurring = eventTemplate.Occurring,
                     Duration = eventTemplate.Duration,
 
-                    // construct a GMT date
-                    Starting = new DateTimeOffset(
+                    // construct a local date
+                    Starting = new DateTime(
                         day.Year, 
                         day.Month, 
                         day.Day, 
                         eventTemplate.Starting.Hour,
                         eventTemplate.Starting.Minute,
                         eventTemplate.Starting.Second,
-                        eventTemplate.Starting.Offset
+                        DateTimeKind.Local
                     )
                 };
 
