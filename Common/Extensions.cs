@@ -219,7 +219,7 @@ namespace WarOfRightsWeb.Common
         {
             return scheduledEvents.OrderBy(x => x.Starting)
                 .ThenByDescending(x => x.Occurring)
-                .FirstOrDefault(x => x.Starting.Add(x.Duration) > DateTimeOffset.Now);
+                .FirstOrDefault(x => x.Starting.Add(x.Duration) > DateTime.Now);
         }
 
         public static string PathToUrl(string path)
