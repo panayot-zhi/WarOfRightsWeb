@@ -26,7 +26,7 @@ namespace WarOfRightsWeb.Controllers
 
             _configuration.GetSection("Events").Bind(eventTemplates);
 
-            var dateNow = DateTimeOffset.Now.Date;
+            var dateNow = DateTime.Now.Date;
             var firstDayOfTheMonth = new DateTime(dateNow.Year, dateNow.Month, 1);
 
             var startDate = firstDayOfTheMonth.AddMonths(-1);
@@ -44,8 +44,8 @@ namespace WarOfRightsWeb.Controllers
 
             // Filter weekly events within the range of 2 weeks from the current moment
             scheduledEvents.RemoveAll(x => x.Occurring == EventOccurrence.Weekly &&
-                                           (x.Starting < DateTimeOffset.Now.AddDays(-7) ||
-                                           x.Starting > DateTimeOffset.Now.AddDays(7)));
+                                           (x.Starting < DateTime.Now.AddDays(-7) ||
+                                           x.Starting > DateTime.Now.AddDays(7)));
 
             var vModel = new EventsViewModel()
             {

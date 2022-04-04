@@ -19,7 +19,7 @@ namespace WarOfRightsWeb.Models
 
         public string Description { get; set; }
 
-        public DateTimeOffset Starting { get; set; }
+        public DateTime Starting { get; set; }
 
         public DayOfWeek WeekDay => this.Starting.DayOfWeek;
 
