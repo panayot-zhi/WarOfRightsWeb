@@ -80,12 +80,11 @@
             <h3>
                 @if (e.Occurring is EventOccurrence.Weekly or EventOccurrence.Monthly)
                 {
-                    @e.Starting.ToString("dddd, HH:mm:ss") @:GMT
-
+                    @TimeZoneInfo.ConvertTime(e.Starting, europeStandardTime).ToString("dddd, h:mm tt") @:CET
                 }
                 else if (e.Occurring is EventOccurrence.Yearly or EventOccurrence.Once)
                 {
-                    @e.Starting.ToString("dd MMMM, HH:mm:ss") @:GMT
+                    @TimeZoneInfo.ConvertTime(e.Starting, europeStandardTime).ToString("dd MMMM, h:mm tt") @:CET
                 }
                 - @e.Occurring.ToString()
             </h3>

@@ -3,49 +3,49 @@
     {
       "Name": "Company Drill",
       "Description": "Perfect your shooting skills and raise battle awareness. All company members are required to attend at least one drill per month.",
-      "Starting": "2021-02-08T19:00:00+0000",
+      "Starting": "2021-02-08T21:00:00",
       "Occurring": "Weekly",
       "Duration": "01:00"
     },
     {
       "Name": "Picket Patrol",
       "Description": "Defeat the enemy team in this 5 round journey where you have only one life per round. A laid back experience for veteran players.",
-      "Starting": "2021-02-03T20:00:00+0000",
+      "Starting": "2021-02-03T22:00:00",
       "Occurring": "Weekly",
       "Duration": "01:30"
     },
     {
       "Name": "Friday Event",
       "Description": "To arms! Complete the week with an organized event with other friendly regiments in a deadly skirmish. Coordination begins typically 1h before the event starts. Muster up 15min before the event scheduled time.",
-      "Starting": "2021-02-05T20:00:00+0000",
+      "Starting": "2021-02-05T22:00:00",
       "Occurring": "Weekly",
       "Duration": "01:30"
     },
     {
       "Name": "Sunday Event",
       "Description": "Battle time! Join your comrades in an organized event with various other groups within warofrights. Coordination begins typically 1h before the event starts. Muster up 15min before the event scheduled time.",
-      "Starting": "2021-02-07T20:00:00+0000",
+      "Starting": "2021-02-07T22:00:00",
       "Occurring": "Weekly",
       "Duration": "01:30"
     },
     {
       "Name": "Shooting Competition",
       "Description": "Every first drill of the month we test our skills amongst each other in a shooting competition with various disciplines.",
-      "Starting": "2021-02-01T19:00:00+0000",
+      "Starting": "2021-02-01T21:00:00",
       "Occurring": "Monthly",
       "Duration": "01:00"
     },
     {
       "Name": "Company Anniversary",
       "Description": "At this day our company celebrates it's forming, celebrations are in order! Contact company command for details.",
-      "Starting": "2020-09-20T19:00:00+0000",
+      "Starting": "2020-09-20T21:00:00",
       "Occurring": "Yearly",
       "Duration": "01:00"
     },
     {
       "Name": "One Time Test Event",
       "Description": "This is a test event, it should appear if it is in the range of 2 months according to the current date, please delete manually afterwards, so it won't clog the list of event templates.",
-      "Starting": "2021-12-01T20:00:00+0000",
+      "Starting": "2022-04-05T16:30:00",
       "Occurring": "Once",
       "Duration": "01:30"
     }

@@ -71,7 +71,7 @@
 
                 @if (eventThisDay != null)
                 {
-                    <a target="_blank" class="displayCurrentEvents" href="@Url.Action("EventsAt", "Events", new { utcDate = eventThisDay.Value.ToUnixTimeSeconds() })">@day.Day</a>
+                    <a target="_blank" class="displayCurrentEvents" href="@Url.Action("EventsAt", "Events", new { utcDate = new DateTimeOffset(eventThisDay.Value).ToUnixTimeSeconds() })">@day.Day</a>
                 }
                 else
                 {
