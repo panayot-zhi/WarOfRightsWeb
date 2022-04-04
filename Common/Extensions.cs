@@ -203,11 +203,11 @@ namespace WarOfRightsWeb.Common
 
                 case EventOccurrence.Once:
 
-                    // With one time event types we just check the start date
+                    // With one time event types we just check if it is on this day or hour
 
                     return eventTemplates
                         .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.Once &&
-                                         eventTemplate.Starting.Date == day)
+                                         (eventTemplate.Starting.Date == day || eventTemplate.Starting == day))
                         .Select(ConstructEvent);
 
                 default:
