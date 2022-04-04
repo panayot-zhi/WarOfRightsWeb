@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using WarOfRightsWeb.Constants;
 using WarOfRightsWeb.Models;
 
@@ -240,6 +241,17 @@ namespace WarOfRightsWeb.Common
             }
 
             return user.Identity.IsAuthenticated;
+        }
+
+        public static List<Event> GetEventTemplates(this IConfiguration configuration)
+        {
+            var eventTemplates = new List<Event>();
+
+            configuration.GetSection("Events").Bind(eventTemplates);
+
+            eventTemplates.ForEach(x => x.Starting = DateTime.SpecifyKind(x.Starting, DateTimeKind.Local));
+
+            return eventTemplates;
         }
     }
 }
