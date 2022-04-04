@@ -75,14 +75,12 @@
         {
             <h2>@e.Name</h2>
             <h3>
-                @if (e.Occurring == EventOccurrence.Weekly ||
-                    e.Occurring == EventOccurrence.Monthly)
+                @if (e.Occurring is EventOccurrence.Weekly or EventOccurrence.Monthly)
                 {
                     @e.Starting.ToString("dddd, HH:mm:ss") @:GMT
 
                 }
-                else if (e.Occurring == EventOccurrence.Yearly ||
-                         e.Occurring == EventOccurrence.Once)
+                else if (e.Occurring is EventOccurrence.Yearly or EventOccurrence.Once)
                 {
                     @e.Starting.ToString("dd MMMM, HH:mm:ss") @:GMT
                 }
