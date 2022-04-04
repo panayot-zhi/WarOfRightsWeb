@@ -7,11 +7,14 @@
 <div class="fancyLeft text-left">
 
     @{
-        var now = DateTimeOffset.Now;
+        var now = DateTime.Now;
         var prev = now.AddMonths(-1);
         var next = now.AddMonths(1);
-        var currentStarting = Model.Current.Starting - DateTimeOffset.UtcNow;
+
+        var currentStarting = Model.Current.Starting - DateTime.UtcNow;
         var totalSecondsLeft = Math.Floor(currentStarting.TotalSeconds);
+
+        var europeStandardTime = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
         
         string initialCountDown;
         if (totalSecondsLeft <= 0)
