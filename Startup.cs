@@ -64,6 +64,8 @@ namespace WarOfRightsWeb
             CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
             CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
+            Console.WriteLine($"Thread culture information has been set to en-US; TimeZone: {TimeZoneInfo.Local}");
+
             Extensions.Initialize(env);
 
             // apply any pending migrations to the database if necessary
