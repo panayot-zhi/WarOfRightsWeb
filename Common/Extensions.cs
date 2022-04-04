@@ -166,7 +166,7 @@ namespace WarOfRightsWeb.Common
                         eventTemplate.Starting.Hour,
                         eventTemplate.Starting.Minute,
                         eventTemplate.Starting.Second,
-                        TimeSpan.Zero
+                        eventTemplate.Starting.Offset
                     )
                 };
 
