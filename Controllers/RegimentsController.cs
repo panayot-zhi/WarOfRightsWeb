@@ -18,7 +18,11 @@ namespace WarOfRightsWeb.Controllers
 
         public IActionResult Index()
         {
-            var allRegiments = _db.Regiments.AsEnumerable();
+            var allRegiments = _db.Regiments
+                .OrderByDescending(x => x.Type)
+                .ThenBy(x => x.ID)
+                .AsEnumerable();
+
             return View(allRegiments);
         }
 
