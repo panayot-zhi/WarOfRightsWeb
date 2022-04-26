@@ -16,7 +16,7 @@
             <img src="@mapImage" class="worTightBorder">
         </a>*@
     
-    <a href="@mapImage" target="_blank" class="imageContainer">
+    <a href="@mapImage" target="_blank" class="imageContainer" aria-label="@mapName">
         <div class="worTightBorder " style="background: url('@mapImage'); background-repeat: no-repeat; background-size: 250px; background-position-x: -4px; background-position-y: -4px;"></div>
     </a>
 
@@ -24,7 +24,6 @@
 
         <a href="@mapLink">
             <h2 class="briefFieldReportName">@mapName</h2>
-
         </a>
 
         @if (!string.IsNullOrEmpty(defenders))
