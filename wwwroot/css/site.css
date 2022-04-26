@@ -169,6 +169,10 @@ li h2 a {
     margin-top: 10px;
 }
 
+#briefMapsContainer .briefFieldReportContainer .imageContainer {
+    padding-top: 5px;
+}
+
 #credit {
     font-family: 'worHandwritten';
 }
@@ -185,4 +189,8 @@ li h2 a {
 a.displayCurrentEvents {
     font-family: inherit;
     font-size: inherit;
+}
+
+#regimentsContainer .briefFieldReportContainer .imageContainer {
+    padding-top: 20px;
 }

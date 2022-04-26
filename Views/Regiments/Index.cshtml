@@ -46,7 +46,10 @@
     </nav>
 }
 
-@foreach (var regiment in Model)
-{
-    @await Html.PartialAsync("_RegimentBrief", regiment)
-}
+
+<div id="regimentsContainer">
+    @foreach (var regiment in Model)
+    {
+        @await Html.PartialAsync("_RegimentBrief", regiment)
+    }
+</div>
