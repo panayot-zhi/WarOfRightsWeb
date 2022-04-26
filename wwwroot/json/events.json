@@ -1,6 +1,13 @@
 ﻿{
   "Events": [
     {
+      "Name": "One Time Test Event",
+      "Description": "This is a test event, it should appear if it is in the range of 2 months according to the current date, please delete manually afterwards, so it won't clog the list of event templates.",
+      "Starting": "2022-04-05T16:30:00",
+      "Occurring": "Once",
+      "Duration": "01:30"
+    },
+    {
       "Name": "Company Drill",
       "Description": "Perfect your shooting skills and raise battle awareness. All company members are required to attend at least one drill per month.",
       "Starting": "2021-02-08T21:00:00",
@@ -41,13 +48,6 @@
       "Starting": "2020-09-20T21:00:00",
       "Occurring": "Yearly",
       "Duration": "01:00"
-    },
-    {
-      "Name": "One Time Test Event",
-      "Description": "This is a test event, it should appear if it is in the range of 2 months according to the current date, please delete manually afterwards, so it won't clog the list of event templates.",
-      "Starting": "2022-04-05T16:30:00",
-      "Occurring": "Once",
-      "Duration": "01:30"
     }
   ]
 }

@@ -181,3 +181,8 @@ li h2 a {
 #narratorInfo {
     padding: 20px 0;
 }
+
+a.displayCurrentEvents {
+    font-family: inherit;
+    font-size: inherit;
+}
