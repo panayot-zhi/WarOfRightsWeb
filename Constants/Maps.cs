@@ -6,6 +6,8 @@ namespace WarOfRightsWeb.Constants
 
     public static class Maps
     {
+        public const string EmptySkirmishMapImagePath = "maps\\Empty_skirmish.png";
+
         // NOTE: Database map identifiers
         public const string HookersPush = "HookersPush";
         public const string HagerstownTurnpike = "HagerstownTurnpike";
