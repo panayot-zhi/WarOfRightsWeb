@@ -5,7 +5,8 @@
     var mapID = map.ID;
     var mapName = map.Name; //Maps.DisplayNames[mapID];
     var mapArea = map.AreaName; //Extensions.AreaFromMap(mapID);
-    var mapImage = Url.Content($"~/img/{Extensions.PathToUrl(map.SkirmishImagePath)}");
+    var skirmishImagePath = map.SkirmishImagePath ?? Maps.EmptySkirmishMapImagePath;
+    var mapImage = Url.Content($"~/img/{Extensions.PathToUrl(skirmishImagePath)}");
     var mapLink = Url.Action(mapArea, "Maps", new { id = mapID });
     var mapDescription = map.Description; // Maps.Descriptions[mapID];
     var defenders = map.DefendingTeam;

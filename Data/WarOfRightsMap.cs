@@ -33,18 +33,18 @@ namespace WarOfRightsWeb.Data
         [MaxLength(127)]
         public string DefendingTeam { get; set; }
 
-        [Column(TypeName = "DECIMAL(6,4)")]
-        public decimal? TransferOnDeath { get; set; }
+        // [Column(TypeName = "DECIMAL(6,4)")]
+        // public decimal? TransferOnDeath { get; set; }
 
-        public int? RoundTime { get; set; }
+        // public int? RoundTime { get; set; }
 
-        public int? WaveTime { get; set; }
+        // public int? WaveTime { get; set; }
 
-        [Column(TypeName = "DECIMAL(6,4)")]
-        public decimal? CaptureSpeed { get; set; }
+        // [Column(TypeName = "DECIMAL(6,4)")]
+        // public decimal? CaptureSpeed { get; set; }
 
-        [Column(TypeName = "DECIMAL(6,4)")]
-        public decimal? NeutralizeSpeed { get; set; }
+        // [Column(TypeName = "DECIMAL(6,4)")]
+        // public decimal? NeutralizeSpeed { get; set; }
 
         public int? TicketsUSA { get; set; }
 
@@ -63,6 +63,9 @@ namespace WarOfRightsWeb.Data
         public string LoadingImagePath { get; set; }
 
         public int Order { get; set; }
+
+        [MaxLength(127)]
+        public string MapType { get; set; }
 
         public ICollection<MapRegiment> MapRegiments { get; set; }
 

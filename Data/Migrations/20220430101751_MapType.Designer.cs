@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarOfRightsWeb.Data;
 
 namespace WarOfRightsWeb.Migrations
 {
     [DbContext(typeof(WarOfRightsDbContext))]
-    partial class WarOfRightsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220430101751_MapType")]
+    partial class MapType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,6 +30,10 @@ namespace WarOfRightsWeb.Migrations
                         .HasColumnName("area_name")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
                         .HasMaxLength(255);
+
+                    b.Property<decimal?>("CaptureSpeed")
+                        .HasColumnName("capture_speed")
+                        .HasColumnType("DECIMAL(6,4)");
 
                     b.Property<string>("DateTimeDescription")
                         .HasColumnName("date_time_description")
@@ -67,8 +73,16 @@ namespace WarOfRightsWeb.Migrations
                         .HasColumnName("narrator_info")
                         .HasColumnType("TEXT");
 
+                    b.Property<decimal?>("NeutralizeSpeed")
+                        .HasColumnName("neutralize_speed")
+                        .HasColumnType("DECIMAL(6,4)");
+
                     b.Property<int>("Order")
                         .HasColumnName("order")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("RoundTime")
+                        .HasColumnName("round_time")
                         .HasColumnType("int");
 
                     b.Property<string>("SkirmishImagePath")
@@ -87,6 +101,14 @@ namespace WarOfRightsWeb.Migrations
 
                     b.Property<int?>("TicketsUSA")
                         .HasColumnName("tickets_usa")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("TransferOnDeath")
+                        .HasColumnName("transfer_on_death")
+                        .HasColumnType("DECIMAL(6,4)");
+
+                    b.Property<int?>("WaveTime")
+                        .HasColumnName("wave_time")
                         .HasColumnType("int");
 
                     b.HasKey("ID")
