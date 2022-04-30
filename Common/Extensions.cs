@@ -99,6 +99,18 @@ namespace WarOfRightsWeb.Common
             return null;
         }
 
+        public static string AudioIfExists(this IUrlHelper urlHelper, string name)
+        {
+            var audioPath = Path.Combine(_hostingEnvironment.WebRootPath, "audio", $"{name}.ogg");
+            var audioExists = File.Exists(audioPath);
+            if (audioExists)
+            {
+                return urlHelper.Content($"~/audio/{name}.ogg");
+            }
+
+            return null;
+        }
+
         public static IEnumerable<DateTime> EachDay(DateTime from, DateTime thru)
         {
             for (var day = from.Date; day.Date <= thru.Date; day = day.AddDays(1))
