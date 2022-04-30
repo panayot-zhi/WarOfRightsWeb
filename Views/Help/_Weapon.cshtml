@@ -20,9 +20,13 @@
                 <img src="@image" alt="@name" class="imageRightAlign" />
             </a>
         }
+        
+        @if (!string.IsNullOrEmpty(parameters))
+        {
+            @Html.Raw(parameters)
+            <br />
+        }
 
-        @Html.Raw(parameters)
-        <br />
         @Html.Raw(description)
 
     </p>
