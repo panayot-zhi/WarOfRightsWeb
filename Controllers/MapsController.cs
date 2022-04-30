@@ -131,22 +131,46 @@ namespace WarOfRightsWeb.Controllers
                 {
                     return maps.Where(x => Maps.DrillCampMaps.Contains(x.ID))
                         .OrderBy(x => x.Order)
-                        .Select(x => SelectMap(x));
+                        .AsEnumerable()
+                        .Select(x =>
+                        {
+                            // NOTE: This is needed, because the actual
+                            // area name of the drill camps is HarperFerry
+                            x.AreaName = Labels.DrillCamps;
+                            return SelectMap(x);
+
+                        });
                 }
 
                 if (mode == Labels.Conquest)
                 {
                     return maps.Where(x => x.MapType == Labels.Conquest 
-                            && x.AreaName == Labels.DrillCamps)
+                            && x.AreaName == Labels.DrillCamp)
                         .OrderBy(x => x.Order)
-                        .Select(x => SelectMap(x));
+                        .AsEnumerable()
+                        .Select(x =>
+                        {
+                            // NOTE: This is needed, because the actual
+                            // area name of these maps is DrillCamp (not plural)
+                            x.AreaName = Labels.DrillCamps;
+                            return SelectMap(x);
+
+                        });
                 }
 
                 // else --> return all drill camp maps
                 return maps.Where(x => Maps.DrillCampMaps.Contains(x.ID) || 
-                            x.MapType == Labels.Conquest && x.AreaName == Labels.DrillCamps)
+                            x.MapType == Labels.Conquest && x.AreaName == Labels.DrillCamp)
                     .OrderBy(x => x.Name)
-                    .Select(x => SelectMap(x));
+                    .AsEnumerable()
+                    .Select(x =>
+                    {
+                        // NOTE: This is needed, because the actual
+                        // area name of the drill camps is HarperFerry
+                        x.AreaName = Labels.DrillCamps;
+                        return SelectMap(x);
+
+                    });
             }
 
             if (!string.IsNullOrEmpty(mode))
