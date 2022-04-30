@@ -108,5 +108,11 @@ namespace WarOfRightsWeb.Constants
             public const string SouthMountain = "SouthMountain";
             public const string DrillCamps = "DrillCamps";
         }
+
+        public static class MapType
+        {
+            public const string Skirmish = "Skirmish";
+            public const string Conquest = "Conquest";
+        }
     }
 }
