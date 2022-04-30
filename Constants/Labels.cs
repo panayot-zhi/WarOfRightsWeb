@@ -21,5 +21,13 @@ namespace WarOfRightsWeb.Constants
         public const string Private = "Private";
         public const string ArtilleryPrivate1 = "ArtilleryPrivate1";
         public const string ArtilleryPrivate2 = "ArtilleryPrivate2";
+
+        public const string Antietam = "Antietam";
+        public const string HarpersFerry = "HarpersFerry";
+        public const string SouthMountain = "SouthMountain";
+        public const string DrillCamps = "DrillCamps";
+        public const string DrillCamp = "DrillCamp";
+        public const string Skirmish = "Skirmish";
+        public const string Conquest = "Conquest";
     }
 }

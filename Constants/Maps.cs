@@ -100,19 +100,5 @@ namespace WarOfRightsWeb.Constants
             DrillCampUSA, 
             HarpersFerryUSA
         };
-
-        public static class Areas
-        {
-            public const string Antietam = "Antietam";
-            public const string HarpersFerry = "HarpersFerry";
-            public const string SouthMountain = "SouthMountain";
-            public const string DrillCamps = "DrillCamps";
-        }
-
-        public static class MapType
-        {
-            public const string Skirmish = "Skirmish";
-            public const string Conquest = "Conquest";
-        }
     }
 }
