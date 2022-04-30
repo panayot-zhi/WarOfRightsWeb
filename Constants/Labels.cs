@@ -29,5 +29,7 @@ namespace WarOfRightsWeb.Constants
         public const string DrillCamp = "DrillCamp";
         public const string Skirmish = "Skirmish";
         public const string Conquest = "Conquest";
+
+        public const string GenericMapViewName = "Generic";
     }
 }
