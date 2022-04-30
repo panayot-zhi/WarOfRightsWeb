@@ -7,7 +7,7 @@
                 <ul class="companyToolNavUl" style="width: 33%;">
                     <li>
                         <h1 class="text-center">
-                            <a id="navMapAntietam" href="@Url.Action("Antietam", "Maps", new { id = string.Empty })">Antietam</a>
+                            <a id="navMapAntietam" href="@Url.Action("Antietam", "Maps", new { id = string.Empty, mode = Maps.MapType.Skirmish })">Antietam</a>
                         </h1>
                     </li>
                 </ul>
@@ -15,7 +15,7 @@
                 <ul class="companyToolNavUl" style="width: 33%;">
                     <li>
                         <h1 class="text-center">
-                            <a id="navMapHarpersFerry" href="@Url.Action("HarpersFerry", "Maps", new { id = string.Empty })">Harpers Ferry</a>
+                            <a id="navMapHarpersFerry" href="@Url.Action("HarpersFerry", "Maps", new { id = string.Empty, mode = Maps.MapType.Skirmish })">Harpers Ferry</a>
                         </h1>
                     </li>
                 </ul>
@@ -23,7 +23,7 @@
                 <ul class="companyToolNavUl" style="width: 33%;">
                     <li>
                         <h1 class="text-center">
-                            <a id="navMapSouthMountain" href="@Url.Action("SouthMountain", "Maps", new { id = string.Empty })">South Mountain</a>
+                            <a id="navMapSouthMountain" href="@Url.Action("SouthMountain", "Maps", new { id = string.Empty, mode = Maps.MapType.Skirmish })">South Mountain</a>
                         </h1>
                     </li>
                 </ul>
@@ -39,7 +39,7 @@
                 <ul class="companyToolNavUl" style="width: 50%;">
                     <li>
                         <h1 class="text-center">
-                            <a id="navMapDrillCamps" href="@Url.Action("DrillCamps", "Maps", new { id = string.Empty })">Drill Camps</a>
+                            <a id="navMapDrillCamps" href="@Url.Action("DrillCamps", "Maps", new { id = string.Empty, mode = Maps.MapType.Skirmish })">Drill Camps</a>
                         </h1>
                     </li>
                 </ul>
@@ -56,6 +56,6 @@
         </li>
     </ul>
 
-    <div class="fancyClearBoth">
-    </div>
+    <div class="fancyClearBoth"></div>
+
 </nav>

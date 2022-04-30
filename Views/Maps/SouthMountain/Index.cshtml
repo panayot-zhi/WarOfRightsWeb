@@ -8,7 +8,36 @@
     @await Html.PartialAsync("_MapsNav")
 }
 
+<div id="mapTypeHeaderTextContainer">
+
+    <ul class="companyToolNavUl" style="width: 33%;">
+        <li>
+            <h1 class="text-center">
+                <a id="navMapTypeSkirmish" href="@Url.Action("SouthMountain", "Maps", new { id = string.Empty, mode = Maps.MapType.Skirmish })">Skirmish</a>
+            </h1>
+        </li>
+    </ul>
+    
+    <ul class="companyToolNavUl" style="width: 33%;">
+        <li>
+            <h1 class="text-center">
+                <a id="navMapTypeundefined" href="@Url.Action("SouthMountain", "Maps", new { id = string.Empty, mode = string.Empty })">All</a>
+            </h1>
+        </li>
+    </ul>
+
+    <ul class="companyToolNavUl" style="width: 33%;">
+        <li>
+            <h1 class="text-center">
+                <a id="navMapTypeConquest" href="@Url.Action("SouthMountain", "Maps", new { id = string.Empty, mode = Maps.MapType.Conquest })">Conquest</a>
+            </h1>
+        </li>
+    </ul>
+
+</div>
+
 <div id="briefMapsContainer">
+    
 
     @foreach (var map in Model)
     {
@@ -22,6 +51,10 @@
         $(document).ready(function () {
             $("#navMaps").addClass('active');
             $("#navMapSouthMountain").addClass('active');
+
+            const urlSearchParams = new URLSearchParams(location.search);
+            const urlParams = Object.fromEntries(urlSearchParams);
+            $("#navMapType" + urlParams["mode"]).addClass('active');
         })
     </script>
 }
