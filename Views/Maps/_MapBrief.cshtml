@@ -8,8 +8,12 @@
     var skirmishImagePath = map.SkirmishImagePath ?? Maps.EmptySkirmishMapImagePath;
     var mapImage = Url.Content($"~/img/{Extensions.PathToUrl(skirmishImagePath)}");
     var mapLink = Url.Action(mapArea, "Maps", new { id = mapID });
-    var mapDescription = map.Description; // Maps.Descriptions[mapID];
     var defenders = map.DefendingTeam;
+    var mapDescription = map.Description; // Maps.Descriptions[mapID];
+    if (string.IsNullOrWhiteSpace(mapDescription))
+    {
+        mapDescription = "<p class=\"text-right\">No description for this map is available yet.</p>";
+    }
 }
 
 <div class="briefFieldReportContainer">
