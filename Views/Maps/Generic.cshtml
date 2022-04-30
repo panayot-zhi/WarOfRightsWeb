@@ -1,0 +1,59 @@
+﻿@model WarOfRightsWeb.Data.Map
+
+@{
+    var mapID = Model.ID;
+    var mapName = Model.Name;
+
+    string spawnImage = null, /*imageSkirmish,*/ loadingImage = null;
+    if (Extensions.PathToUrl(Model.SpawnImagePath) != null)
+    {
+        spawnImage = Url.Content($"~/img/{Extensions.PathToUrl(Model.SpawnImagePath)}");
+    }
+
+    // if (Extensions.PathToUrl(Model.SkirmishImagePath) != null)
+    // {
+    //     imageSkirmish = Url.Content($"~/img/{Extensions.PathToUrl(Model.SkirmishImagePath)}");
+    // }
+
+    if (Extensions.PathToUrl(Model.LoadingImagePath) != null)
+    {
+        loadingImage = Url.Content($"~/img/{Extensions.PathToUrl(Model.LoadingImagePath)}");
+    }
+
+    ViewBag.Title = mapName;
+}
+
+@section navigation {
+    @await Html.PartialAsync("_MapsNav")
+}
+
+<h2 class="contentTitle" id="tabTitle">@ViewBag.Title</h2>
+
+@if (spawnImage != null)
+{
+    <a href="@spawnImage" target="_blank">
+        <img src="@spawnImage" class="imageMaxWidth">
+    </a>
+}
+
+<p></p>
+
+@if (loadingImage != null)
+{
+    <a href="@loadingImage" target="_blank">
+        <img src="@loadingImage" class="imageMaxWidth">
+    </a>
+}
+
+@await Html.PartialAsync("_MapDetails", Model)
+
+<div class="fancyClearBoth"></div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#navMaps").addClass('active');
+            $("#navMapHarpersFerry").addClass('active');
+        })
+    </script>
+}
