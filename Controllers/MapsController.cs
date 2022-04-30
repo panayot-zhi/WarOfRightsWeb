@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.EntityFrameworkCore;
 using WarOfRightsWeb.Constants;
 using WarOfRightsWeb.Data;
@@ -11,10 +13,12 @@ namespace WarOfRightsWeb.Controllers
     public class MapsController : Controller
     {
         private readonly WarOfRightsDbContext _db;
+        private readonly ICompositeViewEngine _viewEngine;
 
-        public MapsController(WarOfRightsDbContext db)
+        public MapsController(WarOfRightsDbContext db, ICompositeViewEngine viewEngine)
         {
             _db = db;
+            _viewEngine = viewEngine;
         }
 
         public IActionResult Index(string mode)
@@ -33,8 +37,8 @@ namespace WarOfRightsWeb.Controllers
                 {
                     return NotFound();
                 }
-
-                return View($"{area}/{id}", model);
+                
+                return View(GetMapView(model, area), model);
             }
 
             return View($"{area}/Index", GetMaps(area, mode));
@@ -53,7 +57,7 @@ namespace WarOfRightsWeb.Controllers
                     return NotFound();
                 }
 
-                return View($"{area}/{id}", model);
+                return View(GetMapView(model, area), model);
             }
 
             return View($"{area}/Index", GetMaps(area, mode));
@@ -71,7 +75,7 @@ namespace WarOfRightsWeb.Controllers
                     return NotFound();
                 }
 
-                return View($"{area}/{id}", model);
+                return View(GetMapView(model, area), model);
             }
 
             return View($"{area}/Index", GetMaps(area, mode));
@@ -89,7 +93,7 @@ namespace WarOfRightsWeb.Controllers
                     return NotFound();
                 }
 
-                return View($"{area}/{id}", model);
+                return View(GetMapView(model, area), model);
             }
 
             return View($"{area}/Index", GetMaps(area, mode));
@@ -191,7 +195,31 @@ namespace WarOfRightsWeb.Controllers
             // maps ordered by name
             return maps
                 .OrderBy(x => x.Name)
-                .Select(x => SelectMap(x));
+                .AsEnumerable()
+                .Select(x =>
+                {
+                    if (x.AreaName == Labels.DrillCamp)
+                    {
+                        // NOTE: This is needed, because the actual
+                        // area name of these maps is DrillCamp (not plural)
+                        x.AreaName = Labels.DrillCamps;
+                    }
+
+                    return SelectMap(x);
+                });
+        }
+
+        private string GetMapView(Map map, string area)
+        {
+            var viewName = $"{area}/{map.ID}";
+            var result = _viewEngine.FindView(ControllerContext, viewName, false);
+
+            if (!result.Success)
+            {
+                return Labels.GenericMapViewName;
+            }
+
+            return viewName;
         }
 
         private static Map SelectMap(Map x)
