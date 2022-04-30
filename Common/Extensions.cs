@@ -237,6 +237,11 @@ namespace WarOfRightsWeb.Common
 
         public static string PathToUrl(string path)
         {
+            if (path == null)
+            {
+                return null;
+            }
+
             return path.Replace('\\', '/');
         }
 
