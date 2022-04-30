@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>{{SiteURL}}/</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Help</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Home/About</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/SouthMountain</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/DrillCamps</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/PicketPatrol</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/SouthMountain/AndersonsCounterattack</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/BloodyLane</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/BolivarHeightsCamp</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/BolivarHeightsRedoubt</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/BurnsideBridge</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/SouthMountain/ColquittsDefence</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/CookesCountercharge</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/SouthMountain/CoxsPush</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/Downtown</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Index/DrillCampCSA</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Index/DrillCampUSA</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/DunkerChurch</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/EastWoods</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/EastWoodsSkirmish</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/SouthMountain/GarlandsStand</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/HagerstownTurnpike</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Index/HarpersFerryUSA</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/HarpersGraveyard</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/SouthMountain/HatchsAttack</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/HighStreet</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/HillsCounterattack</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/HookersPush</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/MarylandHeights</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/MillersCornfield</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/NicodemusHill</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/OttoSherrickFarm</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Index/PicketPatrol</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/PiperFarm</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/PryFord</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/PryGristMill</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/PryHouse</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/SouthMountain/RenosFall</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/RiverCrossing</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/RouletteLane</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/SchoolHouseRidge</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/ShenandoahStreet</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/HarpersFerry/WashingtonStreet</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/Antietam/WestWoods</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events/EventsAt?utcDate=1646679600</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events/EventsAt?utcDate=1649098800</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events/EventsAt?utcDate=1650484800</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events/EventsAt?utcDate=1650657600</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events/EventsAt?utcDate=1650830400</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events/EventsAt?utcDate=1650913200</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events/EventsAt?utcDate=1651089600</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events/EventsAt?utcDate=1651262400</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Events/EventsAt?utcDate=1651518000</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/DrillCamps/DrillCampCSA</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/DrillCamps/DrillCampUSA</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Maps/DrillCamps/HarpersFerryUSA</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork9th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork89th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryClark</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NorthCarolina2nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NorthCarolina4th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Ohio8th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork69th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Alabama6th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NorthCarolina14th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryMiller</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork39th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Illinois65th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryVonSehlen</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryGraham</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryPhillips</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/LouisianaZouaves1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Louisiana9th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryBrockenbrough</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryRigby</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryPotts</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryBraxton</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork51st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Maryland2nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Georgia2nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Georgia20th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryRichardson</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryBrown</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Wisconsin2nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Indiana19th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryStewart</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Alabama13th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Georgia6th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryLane</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Pennsylvania28th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork52nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryOwen</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Arkansas3rd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NorthCarolina27th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Ohio23rd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Ohio36th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NorthCarolina5th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NorthCarolina23rd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryPelham</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYorkMilitia12th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/SouthCarolina2nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Mississippi18th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryManly</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryFrench</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Pennsylvania72nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryEdgell</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryTompkins</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Virginia30th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryCarlton</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Pennsylvania114th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Pennsylvania42nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Texas5th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Alabama4th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Pennsylvania32nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryCooper</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Georgia18th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/HamptonLegion</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Ohio30th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Ohio12th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryCrome</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NorthCarolina13th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NorthCarolina20th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryBondurant</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Brooklyn14th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Wisconsin6th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryCampbell</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryPoague</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/MarylandPHB3rd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Vermont9th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/AlabamaBtl5th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NorthCarolina18th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/USSharpshooters2nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork23rd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Virginia18th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Virginia56th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Tennessee14th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/RhodeIsland4th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/SouthCarolina12th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/PalmettoSharpshooters</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryReily</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/USSharpshooters1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryMatthews</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryThompson</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Georgia13th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Louisiana6th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryJordan</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Ohio32nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork126th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/SouthCarolina3rd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryRansom</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Texas1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryBlackshear</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Minnesota1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Massachusetts15th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryReynolds</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Virginia13th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/VirginiaCavalry1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryWooding</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryBalthis</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryCarpenter</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Massachusetts28th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Michigan17th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryCook</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Georgia1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryMaurin</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Maine7th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork20th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryHexamer</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Alabama8th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Florida8th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryBrooks</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryBoyce</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Pennsylvania4th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/UnitedStates2nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryMcGilvery</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/HolcombeLegion</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/SouthCarolina17th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryDAquin</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Pennsylvania6th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/UnitedStates10th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NewYork5th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Maine20th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryWeaver</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatterySquires</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Pennsylvania51st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryGlassie</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Mississippi2nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/MarylandPHB1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryRead</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Delaware1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Indiana14th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/BatteryCourtney</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Ohio87th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/VirginiaBtl22nd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Michigan7th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/NCSharpshooters1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/USA</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/CSA</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Alabama3rd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/HeavyArtilleryGraham</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Texas4th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Virginia33rd</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/Virginia5th</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>{{SiteURL}}/Regiments/Get/VirginiaBtl1st</loc>
+  <lastmod>2022-04-26T21:15:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

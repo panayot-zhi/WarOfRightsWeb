@@ -1,15 +1,17 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Diagnostics;
+﻿using System.IO;
+using System.Linq;
+using System.Text;
 using System.Dynamic;
-using System.IO;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
 
@@ -87,6 +89,30 @@ namespace WarOfRightsWeb.Controllers
             }
 
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        [Route("/sitemap.xml")]
+        public async Task SitemapXML()
+        {
+            var host = Request.Host;
+            var headers = Request.Headers;
+            if (headers.TryGetValue("X-Forwarded-For", out var forwardedForHeaders))
+            {
+                var forwardedFor = forwardedForHeaders.SingleOrDefault();
+                if (forwardedFor is not null)
+                {
+                    host = new HostString(forwardedFor);
+                }
+            }
+
+            var sitemapPath = Path.Combine(_webHostEnv.WebRootPath, "xml", "sitemap.xml");
+            var sitemap = await System.IO.File.ReadAllTextAsync(sitemapPath);
+            sitemap = sitemap.Replace("{{SiteURL}}", Request.Scheme + "://" + host);
+
+            Response.ContentType = "application/xml";
+
+            await Response.WriteAsync(sitemap, Encoding.UTF8);
         }
     }
 }

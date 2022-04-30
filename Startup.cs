@@ -90,6 +90,12 @@ namespace WarOfRightsWeb
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "sitemapxml",
+                    pattern: "/sitemap.xml",
+                    defaults: new { controller = "Home", action = "SitemapXML" }
+                );
             });
 
             Console.WriteLine("<<<< APPLICATION STARTED");
