@@ -1,8 +1,13 @@
 ﻿/* mine */
 
-nav ul li a.active {
+nav ul li a.active,
+.companyToolNavUl li a.active {
     text-decoration: underline;
     text-decoration-color: grey;
+}
+
+.companyToolNavUl {
+    list-style-type: none
 }
 
 #briefMapsContainer .briefFieldReportContainer img {
@@ -162,7 +167,7 @@ li h2 a {
 }
 
 #briefMapsContainer {
-    padding-top: 60px;
+    padding-top: 100px;
 }
 
 #briefMapsContainer .briefDescription a > h2 {
