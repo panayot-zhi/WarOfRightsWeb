@@ -17,12 +17,12 @@ namespace WarOfRightsWeb.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string mode)
         {
-            return View(GetMaps());
+            return View(GetMaps(area: null, mode: mode));
         }
 
-        public async Task<IActionResult> Antietam(string id)
+        public async Task<IActionResult> Antietam(string id, string mode)
         {
             var area = Maps.Areas.Antietam;
 
@@ -37,11 +37,11 @@ namespace WarOfRightsWeb.Controllers
                 return View($"{area}/{id}", model);
             }
 
-            return View($"{area}/Index", GetMaps(area));
+            return View($"{area}/Index", GetMaps(area, mode));
 
         }
 
-        public async Task<IActionResult> HarpersFerry(string id)
+        public async Task<IActionResult> HarpersFerry(string id, string mode)
         {
             var area = Maps.Areas.HarpersFerry;
 
@@ -56,10 +56,10 @@ namespace WarOfRightsWeb.Controllers
                 return View($"{area}/{id}", model);
             }
 
-            return View($"{area}/Index", GetMaps(area));
+            return View($"{area}/Index", GetMaps(area, mode));
         }
 
-        public async Task<IActionResult> SouthMountain(string id)
+        public async Task<IActionResult> SouthMountain(string id, string mode)
         {
             var area = Maps.Areas.SouthMountain;
 
@@ -74,10 +74,10 @@ namespace WarOfRightsWeb.Controllers
                 return View($"{area}/{id}", model);
             }
 
-            return View($"{area}/Index", GetMaps(area));
+            return View($"{area}/Index", GetMaps(area, mode));
         }
 
-        public async Task<IActionResult> DrillCamps(string id)
+        public async Task<IActionResult> DrillCamps(string id, string mode)
         {
             var area = Maps.Areas.DrillCamps;
 
@@ -92,7 +92,7 @@ namespace WarOfRightsWeb.Controllers
                 return View($"{area}/{id}", model);
             }
 
-            return View($"{area}/Index", GetMaps(area));
+            return View($"{area}/Index", GetMaps(area, mode));
         }
 
         public async Task<IActionResult> PicketPatrol()
@@ -120,13 +120,19 @@ namespace WarOfRightsWeb.Controllers
             return map;
         }
 
-        private IEnumerable<Map> GetMaps(string area = null)
+        private IEnumerable<Map> GetMaps(string area, string mode)
         {
+            var maps = _db.Maps
+                .AsNoTracking();
+
+            if (!string.IsNullOrEmpty(mode))
+            {
+                maps = maps.Where(x => x.MapType == mode);
+            }
+            
             if (Maps.Areas.DrillCamps.Equals(area))
             {
-                return _db.Maps
-                    .AsNoTracking()
-                    .Where(x => Maps.DrillCampMaps.Contains(x.ID))
+                return maps.Where(x => Maps.DrillCampMaps.Contains(x.ID))
                     .OrderBy(x => x.Order)
                     .Select(x => new Map()
                     {
@@ -144,9 +150,7 @@ namespace WarOfRightsWeb.Controllers
                 Maps.Areas.SouthMountain.Equals(area) ||
                 Maps.Areas.HarpersFerry.Equals(area))
             {
-                return _db.Maps
-                    .AsNoTracking()
-                    .Where(x => x.AreaName == area)
+                return maps.Where(x => x.AreaName == area)
                     .OrderBy(x => x.Order)
                     .Select(x => new Map()
                     {
@@ -162,8 +166,7 @@ namespace WarOfRightsWeb.Controllers
 
             // else return all 
             // maps ordered by name
-            return _db.Maps
-                .AsNoTracking()
+            return maps
                 .OrderBy(x => x.Name)
                 .Select(x => new Map()
                 {
