@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿
+// ReSharper disable InconsistentNaming
 
 namespace WarOfRightsWeb.Constants
 {
@@ -43,7 +44,8 @@ namespace WarOfRightsWeb.Constants
         public const string Artillery12PdrNapoleon = "Artillery12PdrNapoleon";
         public const string Artillery3InchOrdnance = "Artillery3InchOrdnance";
 
-        public static string[] Swords = {USFtOfficerSword1850, USLightCavalrySaber1860, USNCOSword1840};
+        // These collections describe weapons that will be shown in the help page by ID
+        public static string[] Swords = { USFtOfficerSword1850, USLightCavalrySaber1860, USNCOSword1840, /*FootArtillerySwordCS, FootArtillerySwordUS*/ };
         public static string[] Revolvers = { RemingtonM1858, LeMat, ColtWalkerM1847, ColtPocketM1849, ColtNavyM1851, ColtArmyM1860 };
         public static string[] Rifles = { LorenzM1854, Mississippi1841, PatternEnfield1853, SharpsCarbine, SharpsRifle, SpringfieldM1861, SpringfieldM1842, SpringfieldM1855, Whitworth };
         public static string[] Artillery = { Artillery3InchOrdnance, Artillery12PdrNapoleon, Artillery10PdrParrott };
