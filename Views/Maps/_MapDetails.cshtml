@@ -46,7 +46,7 @@
 
         <h2>Historical Narration</h2>
 
-        <p>@Html.Raw(@Model.NarratorInfo.Replace("<br>", " "))</p>
+        <p>@Html.Raw(Model.NarratorInfo.Replace("<br>", " "))</p>
 
         <div id="narratorAudio" class="text-center">
             @if (audioPartOne != null)
