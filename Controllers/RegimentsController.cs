@@ -51,7 +51,14 @@ namespace WarOfRightsWeb.Controllers
                 return NotFound();
             }
 
-            var model = _db.Regiments.SingleOrDefault(x => x.ID == id);
+            var model = _db.Regiments
+                .Include(x => x.MapRegiments)
+                    .ThenInclude(x => x.Map)
+                .Include(x => x.MapRegiments)
+                    .ThenInclude(x => x.MapRegimentWeapons)
+                        .ThenInclude(x => x.Weapon)
+                .SingleOrDefault(x => x.ID == id);
+
             if (model == null)
             {
                 return NotFound();
