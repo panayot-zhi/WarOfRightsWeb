@@ -290,5 +290,11 @@ namespace WarOfRightsWeb.Common
 
             return easternStandardTime;
         }
+
+        public static int GetDayOfTheWeekNumber(this DateTime dateTime)
+        {
+            return dateTime.DayOfWeek == DayOfWeek.Sunday
+                ? 7 : (int) dateTime.DayOfWeek;
+        }
     }
 }

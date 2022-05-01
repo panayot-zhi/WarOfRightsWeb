@@ -3,14 +3,16 @@
 @{
     var now = DateTime.Now.Date;
     var current = Model.Current.Starting;
-    var firstDateOfTheMonth = new DateTime(current.Year, current.Month, 1);
-    //subtract 1, because we normal people start week from Monday
-    var dayOfTheWeekNumber = (int) firstDateOfTheMonth.DayOfWeek - 1;
-    var startDate = firstDateOfTheMonth.AddDays(-dayOfTheWeekNumber);
     var totalDaysInCurrentMonth = DateTime.DaysInMonth(current.Year, current.Month);
-    // this is a double, not a day :D
-    var numberOfWeeks = Math.Ceiling(totalDaysInCurrentMonth / 7d);
+    var firstDateOfTheMonth = new DateTime(current.Year, current.Month, 1);
+    var firstDayOfTheWeekNumber = firstDateOfTheMonth.GetDayOfTheWeekNumber();
     var lastDateOfTheMonth = new DateTime(current.Year, current.Month, totalDaysInCurrentMonth);
+    var lastDayOfTheWeekNumber = lastDateOfTheMonth.GetDayOfTheWeekNumber();
+    var startDate = firstDateOfTheMonth.AddDays(1 - firstDayOfTheWeekNumber);
+    var endDate = lastDateOfTheMonth.AddDays(7 - lastDayOfTheWeekNumber);
+    // because the dates are inclusive as a period we add a day here
+    var totalDaysInCurrentDisplayMonth = (endDate - startDate).TotalDays + 1;
+    var numberOfWeeks = Math.Ceiling(totalDaysInCurrentDisplayMonth / 7d);
 }
 
 <h2>@current.ToString("MMMM")</h2>
