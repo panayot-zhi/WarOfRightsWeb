@@ -238,3 +238,11 @@ a.displayCurrentEvents {
 .regimentEncountersContainer .newsTextCenterDiv {
     float: none;
 }
+
+#helpContentWrapper ul {
+    color: #191919;
+    font-family: 'Roboto Slab',serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}

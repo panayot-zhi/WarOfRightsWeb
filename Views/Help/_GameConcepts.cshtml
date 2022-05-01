@@ -9,7 +9,9 @@
         Game Modes
     </h2>
     <p>
-        As of yet War of Rights offers three game modes: Skirmish, Picket Patrol and Drill Camp. These can be seen in-game in the server browser in the mode column for the server.
+        As of yet War of Rights offers four game modes: Skirmish, Conquest, Picket Patrol and Drill Camp.
+        These can be seen in-game in the server browser in the mode column for the server.
+        A server can support up to 300 players, depending on the server slots size.
         Each mode has their own rules and peculiarities, this section tells you what's special about each of these modes.
     </p>
 
@@ -17,11 +19,53 @@
         Skirmish
     </h3>
     <p>
-        The Skirmish game mode you'll encounter most often. It allows up to 150 players, depending on the server slots size. Games last 45 minutes OR until one team losses morale.
-        Most of the matches are with auto-balanced teams (somewhere around 75 vs 75 players), although this feature can be temporarily disabled on privately owned servers,
-        but not on official ones (e.g. on WAR OF RIGHTS OFFICIAL X - Europe). Currently there are <a href="@Url.Action("Index", "Maps")">34 maps</a> for skirmish across
-        Harpers Ferry, Antietam, and South Mountain, almost all of which have artillery on either one or both sides.
+        The Skirmish game mode you'll encounter most often. Games last 45 minutes OR until one team losses all of their morale.
+        Most of the matches are with auto-balanced teams (somewhere around 150 vs 150 players), although this feature can be temporarily disabled on privately owned servers,
+        but not on official ones (e.g. on WAR OF RIGHTS OFFICIAL X - Europe). Currently there are
+        <a href="@Url.Action("Index", "Maps", new { id = string.Empty, mode = Labels.Skirmish })">34 maps</a> with skirmish areas across
+        Harpers Ferry, Antietam, and South Mountain, and <a href="@Url.Action("Index", "Maps", new { id = string.Empty, mode = Labels.Conquest })">18 conquest maps</a>,
+        not bound by any historical context, almost all of which have artillery on either one or both sides.
     </p>
+
+    <h3>
+        Conquest
+    </h3>
+
+    <p>
+        <img src="@Url.Content("img/CaptureTheFlag.gif")" alt="Capture the Flag" class="imageRightAlign" style="width: 400px;" />
+        The mode essentially revolves around two teams fighting for the control of multiple capture points. Each point captured results in a slow ticket (morale) drain of the enemy team.
+        The first team to run out of tickets/morale caused by taking casualties and the drain due to enemy controlled capture points, will lose the round.
+    </p>
+    <ul>
+        <li>Formation state buffs are identical to the ones found in the Skirmishes game mode, i.e. suppression resistances and stamina recovery - or a lack thereof should you be out of line.</li>
+        <li>The morale cost of dying is also still tied to the formation state of the players and the overall team morale levels (Battle Ready, Engaged, Taking Losses and Breaking) are still valid.</li>
+        <li>Artillery batteries are also featured in each Conquest area.</li>
+        <li>Flag bearer spawning works in an identical way to Skirmishes.</li>
+    </ul>
+    <p>Features unique to this mode:</p>
+    <ul>
+        <li>There are 3 capture points per Conquest area, marked by flagpoles as well as User Interface icons (which you can view by pressing the 'T' key).</li>
+        <li>The flag bearer will have to approach the flagpole and attempt to raise their flag to the top of the pole, if they successfully raise it to the top the point will be captured.</li>
+        <li>The captured point then becomes a staging area, where soldiers can spawn on.</li>
+        <li>Enemy controlled capture points can be neutralized by approaching the flagpole and lowering the enemy flag.</li>
+    </ul>
+    <p>The winning/losing conditions for Conquest are as following:</p>
+    <ul>
+        <li>
+            If a team reaches 0 morale before the round timer runs out, either via the enemy team controlling more capture points than them or killing their players, the team enters Last Stand (i.e. no additional respawns).
+            Once close to all of the players in Last Stand have been killed the team will lose the round.
+        </li>
+        <li>
+            A team can also force the enemy team into a Counter-Attack. This happens when one team controls all 3 capture points.
+            When Counter-Attack is triggered, the team with no points in their control will have a few minutes to retake a point.
+            If this is not done in time, the team will lose the round. A Counter-Attack can be triggered while in Last Stand.
+        </li>
+        <li>
+            Should the round timer reach 0 before any team has depleted all of its morale, the winner of the round will be
+            based on the overall morale level: A “Engaged” team versus a “Taking Losses” one will for example win.
+            Should both teams be at an identical morale level (say “Breaking” versus “Breaking”) the round will end as a draw.
+        </li>
+    </ul>
 
     <h3>
         Picket Patrol
@@ -30,18 +74,22 @@
     <p>
         The main objective of Picket Patrol is simply to kill the enemy force you encounter. The round ends when all enemies are killed or the timer runs out.
         Whoever has the most kills when the timer ends, wins. The teams kill count is hidden until the end of the round where a winner is declared. @* TODO: Revisit this *@
-        <u>Players only have 1 life per round</u>. Formation requirements are stricter than in the Skirmishes game mode: players should stick in groups of at least 3
-        and cannot be “out of line” for more than 30 seconds. Formation restrictions are automatically disabled when less than 12 players are present on the server.
-        Each patrol area has roughly 7 team spawn points placed in various positions in the area. Team spawn points are selected at random at the beginning og the round.
+        <u>Players only have 1 life per round</u>. Formation requirements <i>were</i> stricter than in the Skirmishes game mode: players were required to stick in groups of at least 3
+        and cannot be “out of line” for more than 30 seconds. As of the time of writing these requirements are not enforced anymore. So that means your whole team can go full Rambo on the enemy.
+        <a href="@Url.Action("PicketPatrol", "Maps")">Each patrol area</a> has roughly 7 team spawn points placed in various positions in the area. Team spawn points are selected at random at the beginning of the round.
     </p>
 
     <h3>
         Drill Camp
+        <img src="@Url.Content("img/DrillCampRegiments.png")" alt="Capture the Flag" class="imageRightAlign" />
     </h3>
     <p>
+
         The training ground of the army, here only one side is present and you can choose from all the regiments on your side (CSA or USA) with the help of the pages in the spawn screen.
-        The timer displays the current time of day. You cannot die in Drill Camp, although you can be hurt and all the bad implications that follow from being shot or stabbed do still occur.
+        The timer displays the current time of day. You can choose not to die in Drill Camp, although you can be hurt and all the bad implications that follow from being shot or stabbed do still occur.
+        As an administrator you can disable friendly fire, which would make the players mortal in the server again.
         At the marksman range you can get instant feedback on where your shot hit the target.
+        You can do the same for artillery at the artillery marksman camp.
     </p>
 
 
@@ -245,6 +293,18 @@
         <li>
             <p>
                 up to 150 players: x0.75
+            </p>
+        </li>
+
+        <li>
+            <p>
+                up to 200 players: x0.5
+            </p>
+        </li>
+        
+        <li>
+            <p>
+                up to 300 players: x0.25
             </p>
         </li>
 
