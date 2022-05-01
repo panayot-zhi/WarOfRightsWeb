@@ -199,3 +199,9 @@ a.displayCurrentEvents {
 #regimentsContainer .briefFieldReportContainer .imageContainer {
     padding-top: 20px;
 }
+
+.companyToolRosterContainer {
+    background-image: url('../img/CompanyTool_Background.png');
+    -ms-background-repeat: no-repeat;
+    background-repeat: no-repeat;
+}

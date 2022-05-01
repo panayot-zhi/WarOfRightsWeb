@@ -14,9 +14,11 @@
 
                         <ul class="companyToolNavUl" style="width: 100%;">
                             <li>
-                                <h2 class="handWritten" >
-                                    1st US Sharpshooters Company F
-                                </h2>
+                                <a href="https://warofrights.com/CT_ViewCompany?companyID=@Model.CompanyID" target="_blank">
+                                    <h2 class="handWritten">
+                                        1st US Sharpshooters Company F
+                                    </h2>
+                                </a>
                             </li>
                         </ul>
 
@@ -33,4 +35,18 @@
 
 <hr>
 
-<h2 class="text-center">Retrieved: @Model.Retrieved</h2>
+<img src="@Url.Content("~/img/FieldReport22_2.jpg")" class="imageMaxWidth">
+
+<a href="https://warofrights.com/CT_ViewCompany?companyID=@Model.CompanyID" target="_blank">
+    <h2 class="text-center">
+        Volunteer
+    </h2>
+</a>
+
+<h3 class="text-center">Retrieved: @Model.Retrieved</h3>
+
+<script>
+    $(document).ready(function () {
+        $("#wrapper div.worBorder").addClass('companyToolRosterContainer');
+    })
+</script>
