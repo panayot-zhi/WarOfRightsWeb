@@ -6,7 +6,6 @@
     var dateTime = Model.DateTimeDescription;
 
     var spawnImage = Url.Content($"~/img/{Extensions.PathToUrl(Model.SpawnImagePath)}");
-    var imageSkirmish = Url.Content($"~/img/{Extensions.PathToUrl(Model.SkirmishImagePath)}");
     var loadingImage = Url.Content($"~/img/{Extensions.PathToUrl(Model.LoadingImagePath)}");
 
     ViewBag.Title = mapName;
@@ -19,80 +18,81 @@
 <h2 class="contentTitle" id="tabTitle">Picket Patrol</h2>
 
 <h2 class="text-right">@dateTime</h2>
-<a href="@spawnImage" target="_blank">
+<a href="@spawnImage">
     <img src="@spawnImage" class="imageMaxWidth">
 </a>
 
-<p></p>
+<div class="fancyClearBoth"><p></p></div>
 
-<a href="@loadingImage" target="_blank">
+<a href="@Url.Content("~/img/maps/DrillCampCSA_skirmish.png")">
+    <div class="picketPatrolCamp imageHalfWidth" style="background-image: url('@Url.Content("~/img/maps/DrillCampCSA_skirmish.png")')" ></div>
+</a>
+<a href="@Url.Content("~/img/maps/DrillCampUSA_skirmish.png")">
+    <div class="picketPatrolCamp imageHalfWidth" style="background-image: url('@Url.Content("~/img/maps/DrillCampUSA_skirmish.png")')"></div>
+</a>
+
+<div class="fancyClearBoth"><p></p></div>
+
+<a href="@loadingImage">
     <img src="@loadingImage" class="imageMaxWidth">
 </a>
 
 <div id="galleryImagesContainer">
     <h1 class="text-center">
-        In-game images
+        Picket Patrol Areas
     </h1>
     <div id="galleryImages">
-        <a href="#" class="active" data-src="https://warofrights.com/Content/Images/Gallery/wor_1.jpg">
-            <img class="galleryImageContainer worTightBorder" src="https://warofrights.com/Content/Images/Gallery/wor_1_min.jpg">
-        </a>
-        <a href="#" data-src="https://warofrights.com/Content/Images/Gallery/wor_2.jpg">
-            <img class="galleryImageContainer worTightBorder" src="https://warofrights.com/Content/Images/Gallery/wor_2_min.jpg">
-        </a>
-        <a href="#" data-src="https://warofrights.com/Content/Images/Gallery/wor_3.jpg">
-            <img class="galleryImageContainer worTightBorder" src="https://warofrights.com/Content/Images/Gallery/wor_3_min.jpg">
-        </a>
         
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol1_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol1_skirmish.jpg")">
-        </a>
-        
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol2_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol2_skirmish.jpg")">
-        </a>
-        
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol3_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol3_skirmish.jpg")">
-        </a>
-        
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol4_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol4_skirmish.jpg")">
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol1_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol1_skirmish.png")');"></div>
         </a>
 
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol5_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol5_skirmish.jpg")">
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol2_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol2_skirmish.png")');"></div>
         </a>
-        
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol6_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol6_skirmish.jpg")">
+
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol3_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol3_skirmish.png")');"></div>
         </a>
-        
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol7_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol7_skirmish.jpg")">
+
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol4_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol4_skirmish.png")');"></div>
         </a>
-        
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol8_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol8_skirmish.jpg")">
+
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol5_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol5_skirmish.png")');"></div>
         </a>
-        
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol9_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol9_skirmish.jpg")">
+
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol6_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol6_skirmish.png")');"></div>
         </a>
-        
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol10_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol10_skirmish.jpg")">
+
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol7_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol7_skirmish.png")');"></div>
         </a>
-        
-        <a href="#" data-src="@Url.Content("~/img/maps/pp/PicketPatrol11_skirmish.jpg")" style="display: none">
-            <img class="galleryImageContainer worTightBorder" src="@Url.Content("~/img/maps/pp/PicketPatrol11_skirmish.jpg")">
+
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol8_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol8_skirmish.png")');"></div>
+        </a>
+
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol9_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol9_skirmish.png")');"></div>
+        </a>
+
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol10_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol10_skirmish.png")');"></div>
+        </a>
+
+        <a href="@Url.Content("~/img/maps/pp/PicketPatrol11_skirmish.png")">
+            <div class="galleryImageContainer worTightBorder picketPatrolArea" style="background-image: url('@Url.Content("~/img/maps/pp/PicketPatrol11_skirmish.png")');"></div>
         </a>
     </div>
-    <div class="fancyClearBoth">
-    </div>
+
 </div>
 
-@await Html.PartialAsync("_Gallery")
+<div class="fancyClearBoth"></div>
+
+@*@await Html.PartialAsync("_Gallery")*@
 
 @section scripts {
     <script>

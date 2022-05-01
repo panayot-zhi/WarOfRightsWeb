@@ -202,6 +202,23 @@ a.displayCurrentEvents {
 
 .companyToolRosterContainer {
     background-image: url('../img/CompanyTool_Background.png');
-    -ms-background-repeat: no-repeat;
     background-repeat: no-repeat;
+}
+
+#galleryImages .picketPatrolArea {
+    background-position-x: -4px;
+    background-position-y: -4px;
+    background-repeat: no-repeat;
+    background-size: 388px;
+    height: 309px;
+}
+
+.picketPatrolCamp {
+    width: 49.75%;
+    height: 492px;
+    display: inline-block;
+    background-position-x: -4px;
+    background-position-y: -4px;
+    background-repeat: no-repeat;
+    background-size: 615px;
 }
