@@ -19,8 +19,8 @@ namespace WarOfRightsWeb.Controllers
         public IActionResult Index()
         {
             var allRegiments = _db.Regiments
-                .OrderByDescending(x => x.Type)
-                .ThenBy(x => x.ID)
+                //.OrderByDescending(x => x.Type)
+                .OrderBy(x => x.ID)
                 .AsEnumerable();
 
             return View(allRegiments);
@@ -28,8 +28,11 @@ namespace WarOfRightsWeb.Controllers
 
         public IActionResult USA()
         {
+            ViewBag.Faction = Labels.USA;
             var allUSARegiments = _db.Regiments
                 .Where(x => x.Faction.Equals(Labels.USA))
+                .OrderByDescending(x => x.Type)
+                    .ThenBy(x => x.ID)
                 .AsEnumerable();
 
             return View("Index", allUSARegiments);
@@ -37,8 +40,11 @@ namespace WarOfRightsWeb.Controllers
 
         public IActionResult CSA()
         {
+            ViewBag.Faction = Labels.CSA;
             var allCSARegiments = _db.Regiments
                 .Where(x => x.Faction.Equals(Labels.CSA))
+                .OrderByDescending(x => x.Type)
+                    .ThenBy(x => x.ID)
                 .AsEnumerable();
 
             return View("Index", allCSARegiments);

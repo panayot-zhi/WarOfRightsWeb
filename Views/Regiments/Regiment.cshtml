@@ -61,21 +61,19 @@
 <div id="regimentRankImages" class="fancyCenter text-center">
 
     @{
-        string artilleryPrivate = null, infantryPrivate = null, flagBearer = null,
-            bugler = null, drummer = null, fifer = null;
         var nco = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.NCO);
         var officer = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.Officer);
 
-        var defaultCss = "background-size: 250px 250px; background-position-y: -60px; background-position-x: -30px;";
-        var flagCss = "background-size: contain; background-position-y: -2px;";
+        const string defaultCss = "background-size: 250px 250px; background-position-y: -60px; background-position-x: -30px;";
+        const string flagCss = "background-size: contain; background-position-y: -2px;";
 
-        bugler = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.Bugler);
-        drummer = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.Drummer);
-        fifer = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.Fifer);
+        var bugler = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.Bugler);
+        var drummer = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.Drummer);
+        var fifer = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.Fifer);
 
-        artilleryPrivate = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.ArtilleryPrivate);
-        infantryPrivate = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.Private);
-        flagBearer = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.FlagBearer);
+        var artilleryPrivate = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.ArtilleryPrivate);
+        var infantryPrivate = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.Private);
+        var flagBearer = Url.RegimentImageOrDefault(faction, type, regimentID, Labels.FlagBearer);
     }
 
     @if (type == RegimentType.Artillery)
@@ -102,6 +100,7 @@
             <div style="background: url('@infantryPrivate'); @defaultCss" class="worTightBorder"></div>
             <span>Private</span>
         </a>
+
 
         <a href="@bugler" target="_blank" class="imageContainer" style="float: none;">
             <div style="background: url('@bugler'); @defaultCss" class="worTightBorder"></div>
@@ -152,7 +151,6 @@
     {
         <p>This regiment does not represent in any map in the game yet!</p>
     }
-
 
 </div>
 

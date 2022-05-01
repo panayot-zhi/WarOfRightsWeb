@@ -18,11 +18,11 @@
                             </h1>
                         </li>
                     </ul>
-                    
+
                     <ul class="companyToolNavUl" style="width: 40%;">
                         <li>
                             <h1 class="text-center">
-                                <a id="navAllRegiments" class="active" href="@Url.Action("Index", "Regiments")">All</a>
+                                <a id="navAllRegiments" href="@Url.Action("Index", "Regiments")">All</a>
                             </h1>
                         </li>
                     </ul>
@@ -53,3 +53,11 @@
 
     <div class="fancyClearBoth"></div>
 </div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#nav" + "@(ViewBag.Faction ?? "All")"  + "Regiments").addClass('active');
+        })
+    </script>
+}
