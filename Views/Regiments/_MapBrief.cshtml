@@ -1,0 +1,43 @@
+﻿@model WarOfRightsWeb.Data.MapRegiment
+
+@{
+    var map = Model.Map;
+    var mapID = map.ID;
+    var mapName = map.Name; //Maps.DisplayNames[mapID];
+    var mapArea = map.AreaName; //Extensions.AreaFromMap(mapID);
+    var skirmishImagePath = map.SkirmishImagePath ?? Maps.EmptySkirmishMapImagePath;
+    var mapImage = Url.Content($"~/img/{Extensions.PathToUrl(skirmishImagePath)}");
+    var mapLink = Url.Action(mapArea, "Maps", new { id = mapID });
+    var defenders = map.DefendingTeam;
+    var mapDescription = map.Description; // Maps.Descriptions[mapID];
+    if (string.IsNullOrWhiteSpace(mapDescription))
+    {
+        mapDescription = "<p class=\"text-right\">No description for this map is available yet.</p>";
+    }
+}
+
+<div class="briefFieldReportContainer">
+    @*<a href="@mapImage" target="_blank">
+            <img src="@mapImage" class="worTightBorder">
+        </a>*@
+    
+    <a href="@mapImage" target="_blank" class="imageContainer" aria-label="@mapName">
+        <div class="worTightBorder " style="background: url('@mapImage'); background-repeat: no-repeat; background-size: 250px; background-position-x: -4px; background-position-y: -4px;"></div>
+    </a>
+
+    <div class="briefDescription">
+
+        <a href="@mapLink">
+            <h2 class="briefFieldReportName">@mapName</h2>
+        </a>
+
+        @if (!string.IsNullOrEmpty(defenders))
+        {
+            <h2 class="text-right">Defenders: @defenders</h2>
+        }
+
+        <p class="fancyClearBoth">@Html.Raw(mapDescription)</p>
+
+        @await Html.PartialAsync("_MapRegimentBrief", Model)
+    </div>
+</div>

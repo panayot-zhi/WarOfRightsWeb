@@ -1,0 +1,49 @@
+﻿@model WarOfRightsWeb.Data.MapRegiment
+
+@{
+    var regiment = Model.Regiment;
+    var regimentID = regiment.ID;
+    var displayName = regiment.Name; //Regiments.DisplayNames[regiment];
+    var weaponPool = Model.MapRegimentWeapons; //RegimentsInfo.WeaponsPool[regiment];
+    var faction = regiment.Faction; //Extensions.RegimentFaction(regiment).ToLowerInvariant();
+    var type = regiment.Type; //Extensions.RegimentType(regiment).ToLowerInvariant();
+    var isArtillery = type == RegimentType.Artillery;
+    var regimentImage = Url.RegimentImageOrDefault(faction, type, regimentID, 
+        isArtillery ? Labels.NCO : Labels.FlagBearer);
+}
+
+<div class="latestNewsItem">
+    @if (regimentImage != null)
+    {
+        <a href="@regimentImage" target="_blank" class="imageContainer" aria-label="@displayName">
+            <div style="background: url('@regimentImage'); background-size: contain; background-position-y: -2px; width: 150px; height: 150px" class="worTightBorder"></div>
+        </a>
+    }
+
+    <div class="newsTextCenterDiv">
+                
+        <a href="@Url.Action("Get", "Regiments", new { id = regimentID })">
+            <h3>
+                @displayName
+            </h3>
+        </a>
+
+        <ul>
+            @for (int i = 0; i < weaponPool.Count; i++)
+            {
+                var element = weaponPool.ElementAt(i);
+                var weaponElementHtmlString = element.Weapon.Name;
+                if (element.Count.HasValue)
+                {
+                    weaponElementHtmlString = $"{element.Count} <small>x</small> " + weaponElementHtmlString;
+                }
+
+                <li>
+                    <a href="@Url.Action("Index", "Help")#@element.Weapon.ID" target="_blank">
+                        <h3>@Html.Raw(weaponElementHtmlString)</h3>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

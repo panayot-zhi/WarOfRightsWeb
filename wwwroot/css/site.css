@@ -137,6 +137,10 @@ li h2 a {
     padding-right: 20px;
 }
 
+#regimentRankImages .imageContainer {
+    padding-top: 10px;
+}
+
 .imageContainer .worTightBorder {
     width: 200px;
     height: 200px;
@@ -221,4 +225,16 @@ a.displayCurrentEvents {
     background-position-y: -4px;
     background-repeat: no-repeat;
     background-size: 615px;
+}
+
+.regimentEncountersContainer .briefDescription {
+    padding-bottom: 100px;
+}
+
+.regimentEncountersContainer .newsTextCenterDiv ul {
+    padding-inline-start: 195px;
+}
+
+.regimentEncountersContainer .newsTextCenterDiv {
+    float: none;
 }
