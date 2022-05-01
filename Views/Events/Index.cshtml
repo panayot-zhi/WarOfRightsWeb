@@ -14,7 +14,7 @@
         var currentStarting = Model.Current.Starting - DateTime.UtcNow;
         var totalSecondsLeft = Math.Floor(currentStarting.TotalSeconds);
 
-        var europeStandardTime = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
+        var europeStandardTime = Extensions.GetCentralEuropeanTimeZoneInfo();
         
         string initialCountDown;
         if (totalSecondsLeft <= 0)

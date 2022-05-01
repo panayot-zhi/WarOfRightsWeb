@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Claims;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using WarOfRightsWeb.Constants;
 using WarOfRightsWeb.Models;
 
@@ -269,6 +270,25 @@ namespace WarOfRightsWeb.Common
             eventTemplates.ForEach(x => x.Starting = DateTime.SpecifyKind(x.Starting, DateTimeKind.Local));
 
             return eventTemplates;
+        }
+
+        public static TimeZoneInfo GetCentralEuropeanTimeZoneInfo()
+        {
+            TimeZoneInfo easternStandardTime = null;
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                easternStandardTime = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
+            }
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                easternStandardTime = TimeZoneInfo.FindSystemTimeZoneById("Europe/Berlin");
+            }
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
+                easternStandardTime = TimeZoneInfo.FindSystemTimeZoneById("Europe/Berlin");
+            }
+
+            return easternStandardTime;
         }
     }
 }
