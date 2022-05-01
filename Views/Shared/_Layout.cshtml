@@ -117,7 +117,7 @@
                                 if (!string.IsNullOrEmpty(assemblyFileName))
                                 {
                                     var buildDate = File.GetLastWriteTime(assemblyFileName);
-                                    buildInfo += $", built {buildDate:ddd, MMMM dd, yyyy} at {buildDate:HH:mm}";
+                                    buildInfo += $", built {buildDate:ddd, MMMM dd, yyyy} at {buildDate:HH:00}";
                                 }
                             }
                         }
