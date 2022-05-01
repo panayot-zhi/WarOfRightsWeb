@@ -19,8 +19,10 @@ namespace WarOfRightsWeb.Constants
         public const string NCO = "NCO";
         public const string Officer = "Officer";    
         public const string Private = "Private";
-        public const string ArtilleryPrivate1 = "ArtilleryPrivate1";
-        public const string ArtilleryPrivate2 = "ArtilleryPrivate2";
+        public const string Bugler = "Bugler";
+        public const string Drummer = "Drummer";
+        public const string Fifer = "Fifer";
+        public const string ArtilleryPrivate = "Private";
 
         public const string Antietam = "Antietam";
         public const string HarpersFerry = "HarpersFerry";
