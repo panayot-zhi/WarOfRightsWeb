@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `__efmigrationshistory`
+-- Table structure for table `__EFMigrationsHistory`
 --
 
-DROP TABLE IF EXISTS `__efmigrationshistory`;
+DROP TABLE IF EXISTS `__EFMigrationsHistory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `__efmigrationshistory` (
+CREATE TABLE `__EFMigrationsHistory` (
   `migration_id` varchar(95) NOT NULL,
   `product_version` varchar(32) NOT NULL,
   PRIMARY KEY (`migration_id`)
@@ -30,13 +30,13 @@ CREATE TABLE `__efmigrationshistory` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `__efmigrationshistory`
+-- Dumping data for table `__EFMigrationsHistory`
 --
 
-LOCK TABLES `__efmigrationshistory` WRITE;
-/*!40000 ALTER TABLE `__efmigrationshistory` DISABLE KEYS */;
-INSERT INTO `__efmigrationshistory` VALUES ('20210906091238_Initial','3.1.13'),('20220209194530_CompaniesAndMapNarrator','3.1.13'),('20220304193926_RemoveWeaponPercent','3.1.13'),('20220430101751_MapType','3.1.13'),('20220430105157_RemoveMapObsoleteProperties','3.1.13');
-/*!40000 ALTER TABLE `__efmigrationshistory` ENABLE KEYS */;
+LOCK TABLES `__EFMigrationsHistory` WRITE;
+/*!40000 ALTER TABLE `__EFMigrationsHistory` DISABLE KEYS */;
+INSERT INTO `__EFMigrationsHistory` VALUES ('20210906091238_Initial','3.1.13'),('20220209194530_CompaniesAndMapNarrator','3.1.13'),('20220304193926_RemoveWeaponPercent','3.1.13'),('20220430101751_MapType','3.1.13'),('20220430105157_RemoveMapObsoleteProperties','3.1.13');
+/*!40000 ALTER TABLE `__EFMigrationsHistory` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
