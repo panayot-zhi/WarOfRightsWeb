@@ -48,7 +48,8 @@ namespace WarOfRightsWeb
             services.AddDbContext<WarOfRightsDbContext>(
                 contextLifetime: ServiceLifetime.Transient, optionsAction: options =>
                 {
-                    options.UseMySql(Configuration.GetConnectionString("DefaultConnection"))
+                    var connectionString = Configuration.GetConnectionString("DefaultConnection");
+                    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
                         .UseSnakeCaseNamingConvention();
                 }
             );
