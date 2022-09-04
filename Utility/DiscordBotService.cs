@@ -11,6 +11,10 @@ using Discord.Interactions;
 using Discord.WebSocket;
 using Discord.Commands;
 using Discord;
+using WarOfRightsWeb.Common;
+using WarOfRightsWeb.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace WarOfRightsWeb.Utility
 {
@@ -24,20 +28,23 @@ namespace WarOfRightsWeb.Utility
         private static readonly object Initializator = new();
         private static bool _initialized;
 
+        private readonly IConfiguration _configuration;
+        private readonly IServiceProvider _serviceProvider;
+        private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly ILogger<DiscordBotService> _logger;
 
         public DiscordBotService(ILogger<DiscordBotService> logger,
             IServiceProvider serviceProvider,
-            IConfiguration configuration)
+            IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
         {
             _logger = logger;
+            _configuration = configuration;
             _serviceProvider = serviceProvider;
+            _hostingEnvironment = hostingEnvironment;
             _discordConfig = configuration
                 .GetSection("DiscordConfig")
                 .Get<Models.DiscordConfig>();
         }
-
-        private readonly IServiceProvider _serviceProvider;
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
@@ -51,7 +58,7 @@ namespace WarOfRightsWeb.Utility
 
                 var config = new DiscordSocketConfig()
                 {
-                    GatewayIntents = GatewayIntents.All
+
                 };
 
                 _client = new DiscordSocketClient(config);
@@ -99,12 +106,35 @@ namespace WarOfRightsWeb.Utility
             return Task.CompletedTask;
         }
 
-        public async Task AnnounceEvent()
+        public async Task CheckForEventToday()
+        {
+            var eventTemplates = _configuration.GetEventTemplates();
+            var events = Extensions.GetEventsByDate(eventTemplates, DateTime.Now.Date);
+            if (events.Any())
+            {
+                var evt = events.First();
+                await AnnounceEvent(evt);
+            }
+        }
+
+        public async Task AnnounceEvent(Event evt)
         {
             var id = _discordConfig.AnnouncementChannelId;
             if (_client.GetChannel(id) is IMessageChannel channel)
             {
-                await channel.SendMessageAsync("Event!");
+                var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "img", "north_and_south_fighting.png");
+                var eventTime = TimeZoneInfo.ConvertTime(evt.Starting, Extensions.GetCentralEuropeanTimeZoneInfo());
+                var eventHour = eventTime.ToString("h tt");
+
+                var yes = new Emoji("✅");
+                var unsure = new Emoji("☑️");
+                var no = new Emoji("❌");
+
+                var message = await channel.SendFileAsync(imagePath, text: $"@everyone Come join the {evt.Name}. We start at **{eventHour} CET**.");
+
+                await message.AddReactionAsync(yes);
+                await message.AddReactionAsync(unsure);
+                await message.AddReactionAsync(no);
             }
         }
 
