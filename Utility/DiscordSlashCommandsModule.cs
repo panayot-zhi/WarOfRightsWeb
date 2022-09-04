@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Discord.Interactions;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using WarOfRightsWeb.Common;
+using WarOfRightsWeb.Models;
 
 namespace WarOfRightsWeb.Utility
 {
@@ -20,14 +22,27 @@ namespace WarOfRightsWeb.Utility
         public async Task NextEvent()
         {
             var eventTemplates = _configuration.GetEventTemplates();
-            var events = Extensions.GetEventsByDate(eventTemplates, DateTime.Now.Date);
-            if (!events.Any())
+
+            var startDate = DateTime.Now.Date;
+            var endDate = startDate.AddMonths(1);
+
+            var scheduledEvents = new List<Event>();
+
+            foreach (var currentDate in Extensions.EachDay(startDate, endDate))
             {
-                await RespondAsync("No events have been found. :(");
+                scheduledEvents.AddRange(Extensions.GetEventsByDate(eventTemplates, currentDate));
+            }
+
+            // Return information only about scheduled future events
+            scheduledEvents = scheduledEvents.Where(x => x.Starting > DateTime.Now).ToList();
+
+            if (!scheduledEvents.Any())
+            {
+                await RespondAsync("No events have been found for the next month.");
             }
             else
             {
-                var nextEvent = events.First();
+                var nextEvent = scheduledEvents.First();
                 var eventTime = TimeZoneInfo.ConvertTime(nextEvent.Starting, 
                     Extensions.GetCentralEuropeanTimeZoneInfo());
 
