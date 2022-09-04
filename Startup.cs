@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +13,7 @@ using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Data;
 using WarOfRightsWeb.Utility;
 using Hangfire.MemoryStorage;
+using Hangfire.Dashboard;
 using Hangfire;
 
 namespace WarOfRightsWeb
@@ -40,6 +42,8 @@ namespace WarOfRightsWeb
                 .UseSimpleAssemblyNameTypeSerializer()
                 .UseRecommendedSerializerSettings()
                 .UseMemoryStorage());
+
+            services.AddHangfireServer();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                     .AddCookie(cookieOptions => {
@@ -108,6 +112,19 @@ namespace WarOfRightsWeb
                     pattern: "/sitemap.xml",
                     defaults: new { controller = "Home", action = "SitemapXML" }
                 );
+            });
+
+            RecurringJob.AddOrUpdate<DiscordBotService>(
+                "CheckForEventToday",
+                (bot) => bot.CheckForEventToday(),
+                Cron.Daily(9), Extensions.GetCentralEuropeanTimeZoneInfo());
+
+            app.UseHangfireDashboard("/hangfire" ,options: new DashboardOptions()
+            {
+                Authorization = new List<IDashboardAuthorizationFilter>()
+                {
+                    new BasicAuthenticationFilter()
+                }
             });
 
             Console.WriteLine("<<<< APPLICATION STARTED");
