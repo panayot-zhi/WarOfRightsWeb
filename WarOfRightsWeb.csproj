@@ -8,7 +8,7 @@
 		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 		<Company>1st United States Sharpshooters Company F</Company>
 		<Authors>Panayot Ivanov</Authors>
-		<Version>2.0.20-c0ffc5a</Version>
+		<Version>2.0.21-159d05e</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
