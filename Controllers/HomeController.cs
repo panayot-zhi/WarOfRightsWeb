@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Dynamic;
@@ -14,6 +15,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
+using WarOfRightsWeb.Utility;
+using Discord;
 
 namespace WarOfRightsWeb.Controllers
 {
@@ -22,12 +25,17 @@ namespace WarOfRightsWeb.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IWebHostEnvironment _webHostEnv;
         private readonly IConfiguration _configuration;
+        private readonly DiscordBotService _botService;
 
-        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment webHostEnv, IConfiguration configuration)
+        public HomeController(ILogger<HomeController> logger, 
+            IWebHostEnvironment webHostEnv, 
+            IConfiguration configuration, 
+            DiscordBotService botService)
         {
             _logger = logger;
             _webHostEnv = webHostEnv;
             _configuration = configuration;
+            _botService = botService;
         }
 
         public IActionResult Index()
@@ -52,18 +60,18 @@ namespace WarOfRightsWeb.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            return View(new Login());
+            return View(new LoginModel());
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(Login loginInfo)
+        public async Task<IActionResult> Login(LoginModel loginInfo)
         {
             if (!ModelState.IsValid)
             {
                 return View(loginInfo);
             }
 
-            var admin = _configuration.GetSection("SiteUser").Get<Login>();
+            var admin = _configuration.GetSection("SiteUser").Get<LoginModel>();
 
             if (!admin.UserName.Equals(loginInfo.UserName) || !admin.Password.Equals(loginInfo.Password))
             {

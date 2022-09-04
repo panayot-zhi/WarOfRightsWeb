@@ -28,5 +28,7 @@ namespace WarOfRightsWeb.Models
         public EventOccurrence Occurring { get; set; }
 
         public TimeSpan Duration { get; set; }
+
+        public bool Enabled { get; set; }
     }
 }
