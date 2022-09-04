@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System.Text;
 using System.Dynamic;
@@ -13,10 +12,9 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using WarOfRightsWeb.Utility;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
-using WarOfRightsWeb.Utility;
-using Discord;
 
 namespace WarOfRightsWeb.Controllers
 {

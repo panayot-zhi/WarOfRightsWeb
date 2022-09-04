@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
-using Serilog;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
+using Serilog;
 
 namespace WarOfRightsWeb.Controllers
 {

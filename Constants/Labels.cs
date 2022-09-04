@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace WarOfRightsWeb.Constants
+﻿namespace WarOfRightsWeb.Constants
 {
     public static class Labels
     {
