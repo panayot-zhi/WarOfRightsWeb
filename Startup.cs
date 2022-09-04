@@ -11,6 +11,8 @@ using Microsoft.Extensions.Hosting;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Data;
 using WarOfRightsWeb.Utility;
+using Hangfire.MemoryStorage;
+using Hangfire;
 
 namespace WarOfRightsWeb
 {
@@ -32,6 +34,12 @@ namespace WarOfRightsWeb
             services.AddSingleton(Configuration);
             services.AddTransient<DiscordSlashCommandsModule>();
             services.AddWrappedHostedService<DiscordBotService>();
+
+            services.AddHangfire(configuration => configuration
+                .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+                .UseSimpleAssemblyNameTypeSerializer()
+                .UseRecommendedSerializerSettings()
+                .UseMemoryStorage());
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                     .AddCookie(cookieOptions => {
