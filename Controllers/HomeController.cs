@@ -101,6 +101,25 @@ namespace WarOfRightsWeb.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> Test()
+        {
+            if (!User.IsLoggedIn())
+            {
+                return RedirectToAction(nameof(Login));
+            }
+
+            await _botService.AnnounceEvent();
+
+            return View("Index");
+        }
+
+        private Task Log(LogMessage msg)
+        {
+            Console.WriteLine(msg.ToString());
+            return Task.CompletedTask;
+        }
+
+        [HttpGet]
         [Route("/sitemap.xml")]
         public async Task SitemapXML()
         {
