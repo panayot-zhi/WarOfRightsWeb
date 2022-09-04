@@ -136,7 +136,7 @@ namespace WarOfRightsWeb.Common
             return result;
         }
 
-        public static IEnumerable<Event> GetEventsByDate(IReadOnlyCollection<Event> eventTemplates, DateTime currentDate)
+        public static List<Event> GetEventsByDate(IReadOnlyCollection<Event> eventTemplates, DateTime currentDate)
         {
             var result = new List<Event>();
             var oneTimeEvents = eventTemplates.GetOccurringEventTemplates(EventOccurrence.Once, currentDate).ToList();
@@ -196,6 +196,7 @@ namespace WarOfRightsWeb.Common
                     // With weekly events we just compare the week date of the event template
 
                     return eventTemplates
+                        .Where(x => x.Enabled)
                         .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.Weekly &&
                                                 eventTemplate.WeekDay == day.DayOfWeek)
                         .Select(ConstructEvent);
@@ -205,6 +206,7 @@ namespace WarOfRightsWeb.Common
                     // With events that occur on a first week day of the month we have to resolve the day first and then compare
 
                     return eventTemplates
+                        .Where(x => x.Enabled)
                         .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.Monthly &&
                                                 GetFirstDayOfTheMonth(day.Year, day.Month, eventTemplate.WeekDay) == day)
                         .Select(ConstructEvent);
@@ -214,6 +216,7 @@ namespace WarOfRightsWeb.Common
                     // With exact yearly events only the month and the day should match
 
                     return eventTemplates
+                        .Where(x => x.Enabled)
                         .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.Yearly &&
                                          eventTemplate.Starting.Date.Day == day.Day &&
                                          eventTemplate.Starting.Date.Month == day.Month)
@@ -224,6 +227,7 @@ namespace WarOfRightsWeb.Common
                     // With one time event types we just check if it is on this day or hour
 
                     return eventTemplates
+                        .Where(x => x.Enabled)
                         .Where(eventTemplate => eventTemplate.Occurring == EventOccurrence.Once &&
                                          (eventTemplate.Starting.Date == day || eventTemplate.Starting == day))
                         .Select(ConstructEvent);
