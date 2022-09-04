@@ -4,14 +4,16 @@ using System.Linq;
 using System.Security.Claims;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using WarOfRightsWeb.Constants;
-using WarOfRightsWeb.Models;
 using WarOfRightsWeb.Utility;
+using WarOfRightsWeb.Models;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json;
 
 namespace WarOfRightsWeb.Common
 {
@@ -273,6 +275,25 @@ namespace WarOfRightsWeb.Common
             eventTemplates.ForEach(x => x.Starting = DateTime.SpecifyKind(x.Starting, DateTimeKind.Local));
 
             return eventTemplates;
+        }
+
+        public static void UpdateEventTemplates(List<Event> eventTemplates)
+        {
+            var eventsConfigPath = Path.Combine(_hostingEnvironment.WebRootPath, "json", "events.json");
+            var jsonSettings = new JsonSerializerSettings()
+            {
+                DateFormatString = "yyyy-MM-ddTHH:mm:ss",
+                Converters = new List<JsonConverter>()
+                {
+                    new ExpandoObjectConverter(),
+                    new StringEnumConverter()
+                }
+            };
+
+            dynamic eventsConfig = new { Events = eventTemplates };
+            var newJsonConfig = JsonConvert.SerializeObject(eventsConfig, Formatting.Indented, jsonSettings);
+
+            File.WriteAllText(eventsConfigPath, newJsonConfig);
         }
 
         public static TimeZoneInfo GetCentralEuropeanTimeZoneInfo()
