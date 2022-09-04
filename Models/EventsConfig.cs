@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using WarOfRightsWeb.Common;
 
 namespace WarOfRightsWeb.Models
@@ -21,8 +22,10 @@ namespace WarOfRightsWeb.Models
 
         public DateTime Starting { get; set; }
 
+        [JsonIgnore]
         public DayOfWeek WeekDay => this.Starting.DayOfWeek;
 
+        [JsonIgnore]
         public TimeSpan Time => this.Starting.TimeOfDay;
 
         public EventOccurrence Occurring { get; set; }
