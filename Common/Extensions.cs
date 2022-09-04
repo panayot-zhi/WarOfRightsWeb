@@ -7,8 +7,11 @@ using System.Runtime.InteropServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using WarOfRightsWeb.Constants;
 using WarOfRightsWeb.Models;
+using WarOfRightsWeb.Utility;
 
 namespace WarOfRightsWeb.Common
 {
@@ -295,6 +298,13 @@ namespace WarOfRightsWeb.Common
         {
             return dateTime.DayOfWeek == DayOfWeek.Sunday
                 ? 7 : (int) dateTime.DayOfWeek;
+        }
+
+        public static void AddWrappedHostedService<TService>(this IServiceCollection services)
+            where TService : class, IHostedService
+        {
+            services.AddSingleton<TService>();
+            services.AddHostedService<HostedServiceWrapper<TService>>();
         }
     }
 }
