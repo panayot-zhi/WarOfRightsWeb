@@ -19,6 +19,7 @@ using Serilog;
 using Serilog.Core;
 using WarOfRightsWeb.Models;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using DiscordConfig = Discord.DiscordConfig;
 
 namespace WarOfRightsWeb.Utility
 {
@@ -28,28 +29,22 @@ namespace WarOfRightsWeb.Utility
     {
         private DiscordSocketClient _client;
         private InteractionService _interactionService;
-        private readonly Models.DiscordConfig _discordConfigOptions;
+        private readonly Models.DiscordConfig _discordConfig;
 
-        private readonly IConfiguration _configuration;
         private readonly ILogger<DiscordBotService> _logger;
-        private readonly IServiceProvider _serviceProvider;
 
         public DiscordBotService(ILogger<DiscordBotService> logger,
-            IConfiguration configuration,
             IServiceProvider serviceProvider,
-            IOptionsMonitor<Models.DiscordConfig> discordOptions)
+            IConfiguration configuration)
         {
             _logger = logger;
-            _configuration = configuration;
             _serviceProvider = serviceProvider;
-            _discordConfigOptions = discordOptions.CurrentValue;
-            discordOptions.OnChange(Listener);
+            _discordConfig = configuration
+                .GetSection("DiscordConfig")
+                .Get<Models.DiscordConfig>();
         }
 
-        private void Listener(Models.DiscordConfig discordConfigOptions)
-        {
-            
-        }
+        private readonly IServiceProvider _serviceProvider;
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
@@ -62,9 +57,8 @@ namespace WarOfRightsWeb.Utility
 
             _client.Log += LogAsync;
             _client.Ready += ClientOnReady;
-            // _command.Log += LogAsync;
 
-            var token = _configuration.GetValue<string>("DiscordBotToken");
+            var token = _discordConfig.BotToken;
 
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
@@ -74,7 +68,7 @@ namespace WarOfRightsWeb.Utility
         {
             _interactionService = new InteractionService(_client);
             await _interactionService.AddModulesAsync(Assembly.GetEntryAssembly(), _serviceProvider);
-            await _interactionService.RegisterCommandsToGuildAsync(_discordConfigOptions.GuildId);
+            await _interactionService.RegisterCommandsToGuildAsync(_discordConfig.GuildId);
 
             _client.InteractionCreated += ClientOnInteraction;
         }
@@ -103,11 +97,23 @@ namespace WarOfRightsWeb.Utility
 
         public async Task AnnounceEvent()
         {
-            var id = _discordConfigOptions.AnnouncementChannelId;
+            var id = _discordConfig.AnnouncementChannelId;
             if (_client.GetChannel(id) is IMessageChannel channel)
             {
                 await channel.SendMessageAsync("Event!");
             }
+        }
+
+        public async Task CreateDiscordEvent()
+        {
+            var guild = _client.GetGuild(_discordConfig.GuildId);
+
+            var guildEvent = await guild.CreateEventAsync(
+                name: "Event!",
+                type: GuildScheduledEventType.Voice,
+                startTime: DateTimeOffset.UtcNow.AddMinutes(1),
+                endTime: DateTimeOffset.UtcNow.AddMinutes(6), 
+                channelId: _discordConfig.MusterVoiceChannelId);
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
