@@ -1,91 +1,91 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <UserSecretsId>73d43068-f21b-4f5a-84a8-5fc3efae0dde</UserSecretsId>
-	<ResolveStaticWebAssetsInputsDependsOn>RemoveIdentityAssets</ResolveStaticWebAssetsInputsDependsOn>
-	<RuntimeIdentifiers>linux-x64;ubuntu.18.04-x64</RuntimeIdentifiers>
-    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
-	<Company>1st United States Sharpshooters Company F</Company>
-	<Authors>Panayot Ivanov</Authors>
-	<Version>2.0.20-c0ffc5a</Version>    
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<UserSecretsId>73d43068-f21b-4f5a-84a8-5fc3efae0dde</UserSecretsId>
+		<ResolveStaticWebAssetsInputsDependsOn>RemoveIdentityAssets</ResolveStaticWebAssetsInputsDependsOn>
+		<RuntimeIdentifiers>linux-x64;ubuntu.18.04-x64</RuntimeIdentifiers>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+		<Company>1st United States Sharpshooters Company F</Company>
+		<Authors>Panayot Ivanov</Authors>
+		<Version>2.0.20-c0ffc5a</Version>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Utility\python\" />
-    <Folder Include="wwwroot\img\maps\pp\" />
-    <Folder Include="wwwroot\lib\" />
-    <Folder Include="wwwroot\fonts\" />
-    <Folder Include="wwwroot\html\" />
-    <Folder Include="wwwroot\xml\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Utility\python\" />
+		<Folder Include="wwwroot\img\maps\pp\" />
+		<Folder Include="wwwroot\lib\" />
+		<Folder Include="wwwroot\fonts\" />
+		<Folder Include="wwwroot\html\" />
+		<Folder Include="wwwroot\xml\" />
+	</ItemGroup>
 
-  <ItemGroup>    
-    <None Remove="backup\**" />    
-    <None Remove="publish\**" />    
-    <Compile Remove="backup\**" />    
-    <Compile Remove="publish\**" />    
-    <Content Remove="backup\**" />        
-    <Content Remove="publish\**" />        
-    <EmbeddedResource Remove="backup\**" />        
-    <EmbeddedResource Remove="publish\**" />               
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="backup\**" />
+		<None Remove="publish\**" />
+		<Compile Remove="backup\**" />
+		<Compile Remove="publish\**" />
+		<Content Remove="backup\**" />
+		<Content Remove="publish\**" />
+		<EmbeddedResource Remove="backup\**" />
+		<EmbeddedResource Remove="publish\**" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Data\Migrations\20220209193909_Companies.cs" />
-    <Compile Remove="Data\Migrations\20220209193909_Companies.Designer.cs" />
-    <Compile Remove="Data\Migrations\20220302192901_RemoveWeaponsPercentAndCount.cs" />
-    <Compile Remove="Data\Migrations\20220302192901_RemoveWeaponsPercentAndCount.Designer.cs" />
-    <Compile Remove="Data\Migrations\20220304193812_RemoveWeaponPercent.cs" />
-    <Compile Remove="Data\Migrations\20220304193812_RemoveWeaponPercent.Designer.cs" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Data\Migrations\20220209193909_Companies.cs" />
+		<Compile Remove="Data\Migrations\20220209193909_Companies.Designer.cs" />
+		<Compile Remove="Data\Migrations\20220302192901_RemoveWeaponsPercentAndCount.cs" />
+		<Compile Remove="Data\Migrations\20220302192901_RemoveWeaponsPercentAndCount.Designer.cs" />
+		<Compile Remove="Data\Migrations\20220304193812_RemoveWeaponPercent.cs" />
+		<Compile Remove="Data\Migrations\20220304193812_RemoveWeaponPercent.Designer.cs" />
+	</ItemGroup>
 
-  <ItemGroup>
-	<None Include="wwwroot\img\favicon.ico" />
-    <None Include="wwwroot\json\events.json" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="wwwroot\img\favicon.ico" />
+		<None Include="wwwroot\json\events.json" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Discord.Net" Version="3.8.0" />
-    <PackageReference Include="EFCore.NamingConventions" Version="6.0.0" />
-    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.31" />
-    <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
-    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Discord.Net" Version="3.8.0" />
+		<PackageReference Include="EFCore.NamingConventions" Version="6.0.0" />
+		<PackageReference Include="Hangfire.AspNetCore" Version="1.7.31" />
+		<PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+		<PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Content Remove="wwwroot\json\events.json" />
-    <Content Remove="appsettings.Development.json" />
-    <Content Remove="appsettings.Production.json" />
-    <Content Remove="appsettings.json" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Remove="wwwroot\json\events.json" />
+		<Content Remove="appsettings.Development.json" />
+		<Content Remove="appsettings.Production.json" />
+		<Content Remove="appsettings.json" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="appsettings.Development.json" />
-    <None Include="appsettings.Production.json" />
-	  <None Include="appsettings.json">
-		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-	  </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="appsettings.Development.json" />
+		<None Include="appsettings.Production.json" />
+		<None Include="appsettings.json">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
-  <Target Name="RemoveIdentityAssets">
-    <ItemGroup>
-      <StaticWebAsset Remove="@(StaticWebAsset)" Condition="%(SourceId) == 'Microsoft.AspNetCore.Identity.UI'" />
-    </ItemGroup>
-  </Target>
+	<Target Name="RemoveIdentityAssets">
+		<ItemGroup>
+			<StaticWebAsset Remove="@(StaticWebAsset)" Condition="%(SourceId) == 'Microsoft.AspNetCore.Identity.UI'" />
+		</ItemGroup>
+	</Target>
 
-  <Target AfterTargets="AfterPublish" Name="UpdateVersionPy">
-    <Exec Command="python &quot;$(ProjectDir)Utility\python\version.py&quot; &quot;$(ProjectDir)$(ProjectName).csproj&quot;" />
-  </Target>
-  
+	<Target AfterTargets="AfterPublish" Name="UpdateVersionPy">
+		<Exec Command="python &quot;$(ProjectDir)Utility\python\version.py&quot; &quot;$(ProjectDir)$(ProjectName).csproj&quot;" />
+	</Target>
+
 </Project>
