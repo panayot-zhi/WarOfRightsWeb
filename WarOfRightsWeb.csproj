@@ -8,7 +8,7 @@
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 	<Company>1st United States Sharpshooters Company F</Company>
 	<Authors>Panayot Ivanov</Authors>
-	<Version>2.0.18-020e170</Version>    
+	<Version>2.0.20-c0ffc5a</Version>    
   </PropertyGroup>
 
   <ItemGroup>
@@ -41,13 +41,15 @@
   </ItemGroup>
 
   <ItemGroup>
-
-    <None Include="wwwroot\img\favicon.ico" />
+	<None Include="wwwroot\img\favicon.ico" />
+    <None Include="wwwroot\json\events.json" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Discord.Net" Version="3.8.0" />
     <PackageReference Include="EFCore.NamingConventions" Version="6.0.0" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.31" />
+    <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
       <PrivateAssets>all</PrivateAssets>
@@ -62,9 +64,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="appsettings.Development.json" />    
+    <Content Remove="wwwroot\json\events.json" />
+    <Content Remove="appsettings.Development.json" />
     <Content Remove="appsettings.Production.json" />
-	<Content Remove="appsettings.json" />
+    <Content Remove="appsettings.json" />
   </ItemGroup>
 
   <ItemGroup>
