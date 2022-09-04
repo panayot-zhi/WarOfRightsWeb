@@ -109,6 +109,7 @@ namespace WarOfRightsWeb.Controllers
             }
 
             await _botService.AnnounceEvent();
+            await _botService.CreateDiscordEvent();
 
             return View("Index");
         }
