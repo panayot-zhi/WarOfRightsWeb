@@ -51,7 +51,7 @@ namespace WarOfRightsWeb.Utility
 
                 var config = new DiscordSocketConfig()
                 {
-
+                    GatewayIntents = GatewayIntents.All
                 };
 
                 _client = new DiscordSocketClient(config);
@@ -112,7 +112,7 @@ namespace WarOfRightsWeb.Utility
         {
             var guild = _client.GetGuild(_discordConfig.GuildId);
 
-            var guildEvent = await guild.CreateEventAsync(
+            var _ = await guild.CreateEventAsync(
                 name: "Event!",
                 type: GuildScheduledEventType.Voice,
                 startTime: DateTimeOffset.UtcNow.AddMinutes(1),
