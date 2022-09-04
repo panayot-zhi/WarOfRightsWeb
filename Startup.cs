@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Data;
+using WarOfRightsWeb.Utility;
 
 namespace WarOfRightsWeb
 {
@@ -28,7 +29,9 @@ namespace WarOfRightsWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddSingleton(Configuration);
+            services.AddTransient<DiscordSlashCommandsModule>();
+            services.AddWrappedHostedService<DiscordBotService>();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                     .AddCookie(cookieOptions => {
