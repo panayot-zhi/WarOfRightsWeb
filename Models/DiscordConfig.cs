@@ -7,5 +7,7 @@
         public string BotToken { get; set; }
         
         public ulong AnnouncementChannelId { get; set; }
+
+        public ulong MusterVoiceChannelId { get; set; }
     }
 }
