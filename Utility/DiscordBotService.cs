@@ -3,23 +3,14 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Input;
-using Discord;
-using Discord.Commands;
-using Discord.Interactions;
-using Discord.WebSocket;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Microsoft.VisualBasic;
-using Serilog;
-using Serilog.Core;
-using WarOfRightsWeb.Models;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-using DiscordConfig = Discord.DiscordConfig;
+using Discord.Interactions;
+using Discord.WebSocket;
+using Discord.Commands;
+using Discord;
 
 namespace WarOfRightsWeb.Utility
 {
@@ -30,6 +21,8 @@ namespace WarOfRightsWeb.Utility
         private DiscordSocketClient _client;
         private InteractionService _interactionService;
         private readonly Models.DiscordConfig _discordConfig;
+        private static readonly object Initializator = new();
+        private static bool _initialized;
 
         private readonly ILogger<DiscordBotService> _logger;
 
@@ -48,13 +41,23 @@ namespace WarOfRightsWeb.Utility
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            var config = new DiscordSocketConfig()
+            // no re-init pls
+            lock (Initializator)
             {
-                
-            };
+                if (_initialized)
+                {
+                    return;
+                }
 
-            _client = new DiscordSocketClient(config);
+                var config = new DiscordSocketConfig()
+                {
 
+                };
+
+                _client = new DiscordSocketClient(config);
+                _initialized = true;
+            }
+            
             _client.Log += LogAsync;
             _client.Ready += ClientOnReady;
 
@@ -85,7 +88,8 @@ namespace WarOfRightsWeb.Utility
             if (message.Exception is CommandException cmdException)
             {
                 _logger.LogError(message.Exception, 
-                    $"[Command/{message.Severity}] {cmdException.Command.Aliases.First()} failed to execute in {cmdException.Context.Channel}.");
+                    $"[Command/{message.Severity}] {cmdException.Command.Aliases.First()} " +
+                    $"failed to execute in {cmdException.Context.Channel}.");
             }
             else
             {
