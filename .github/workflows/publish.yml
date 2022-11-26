@@ -31,14 +31,14 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: SFTP Deploy
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+    - name: SFTP Sync
+      uses: swillner/sftp-sync-action@v1.0
       with:
         server: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        local_path: ./publish/*
-        remote_path: /var/www/1usssf.eu
+        user: ${{ secrets.SSH_USER }}
+        user_private_key: "${{ secrets.SSH_PRIVATE_KEY }}"        
+        remote: /var/www/1usssf.eu
+        local: ./publish/
     - name: Start Service
       uses: garygrossgarten/github-action-ssh@release
       with:
