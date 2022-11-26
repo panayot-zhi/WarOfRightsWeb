@@ -1,0 +1,48 @@
+name: Publish .NET Core app via SFTP
+
+on:
+  push:
+    tags:
+      - v.*
+
+jobs:
+  publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore Dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: Publish
+      run: dotnet publish /p:PublishProfile=Properties/PublishProfiles/FolderProfile.pubxml
+    - name: Stop Service
+      uses: garygrossgarten/github-action-ssh@release
+      with:
+        command: sudo systemctl stop 1usssf.service
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: SFTP Deploy
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        server: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        local_path: ./publish/*
+        remote_path: /var/www/1usssf.eu
+    - name: Start Service
+      uses: garygrossgarten/github-action-ssh@release
+      with:
+        command: sudo systemctl start 1usssf.service
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
