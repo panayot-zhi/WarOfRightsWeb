@@ -246,3 +246,13 @@ a.displayCurrentEvents {
     font-size: 18px;
     line-height: 23px;
 }
+
+#previousMap a,
+#nextMap a {
+    text-decoration: none;
+}
+
+#previousMap a:hover,
+#nextMap a:hover {
+    text-decoration: underline;
+}

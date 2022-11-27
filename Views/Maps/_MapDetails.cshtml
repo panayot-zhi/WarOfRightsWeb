@@ -1,6 +1,39 @@
 ﻿@model WarOfRightsWeb.Data.Map
 
-<h2 class="text-right">Belligerents</h2>
+@{
+    var previousMap = Model.PreviousMap;
+    var nextMap = Model.NextMap;
+}
+
+<div class="fancyClearBoth"></div>
+
+@if (previousMap is not null)
+{
+    var previousMapLink = Url.Action(previousMap.AreaName, "Maps", 
+        new { id = previousMap.ID });
+
+    <div id="previousMap" class="fancyLeft">
+        <a href="@previousMapLink">
+            <h2 class="text-left">&lt;&lt;&nbsp;&nbsp;&nbsp;PREVIOUS MAP<br /><small>(@previousMap.Name)</small></h2>
+        </a>
+    </div>
+}
+
+@if (nextMap is not null)
+{
+    var nextMapLink = Url.Action(nextMap.AreaName, "Maps", 
+        new { id = nextMap.ID });
+
+    <div id="nextMap" class="fancyRight text-right">
+        <a href="@nextMapLink">
+            <h2 class="text-right">NEXT MAP&nbsp;&nbsp;&nbsp;&gt;&gt;<br /><small>(@nextMap.Name)</small></h2>
+        </a>
+    </div>
+}
+
+<div class="fancyClearBoth"></div>
+
+<h2 class="text-center">~&nbsp;&nbsp;&nbsp;Belligerents&nbsp;&nbsp;&nbsp;~</h2>
 
 <div id="mapBelligerentsUSA" class="fancyLeft">
 
