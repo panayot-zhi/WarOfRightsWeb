@@ -11,19 +11,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+      with:
+        ref: default
+        # git-restore-mtime-bare uses the ref log to find the correct timestamp
+        # for each file. This requires a full git history. The default value (1)
+        # creates a shallow checkout.
+        fetch-depth: 0
+        
+    # Fix Timestamps
+    - name: Fix Timestamps
+      uses: chetan/git-restore-mtime-action@v1
+      
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
+        
     - name: Restore Dependencies
       run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-    - name: Publish
-      run: dotnet publish /p:PublishProfile=Properties/PublishProfiles/FolderProfile.pubxml
+      
+    - name: Release Build
+      run: dotnet build --no-restore --configuration Release
+      
+    - name: Run Tests
+      run: dotnet test --no-build --configuration Release --verbosity normal
+      
+    - name: Publish Release
+      run: dotnet publish /p:PublishProfile=Properties/PublishProfiles/FolderProfile.pubxml --configuration Release
+      
+    - name: List Result
+      run: cd publish && ls -la
+      
     - name: Stop Service
       uses: garygrossgarten/github-action-ssh@release
       with:
@@ -31,14 +52,17 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+
     - name: SFTP Sync
       uses: swillner/sftp-sync-action@v1.0
       with:
         server: ${{ secrets.SSH_HOST }}
         user: ${{ secrets.SSH_USER }}
-        user_private_key: "${{ secrets.SSH_PRIVATE_KEY }}"        
+        user_private_key: "${{ secrets.SSH_PRIVATE_KEY }}"
         remote: /var/www/1usssf.eu
         local: ./publish/
+        mirror_options: "--only-newer"
+        
     - name: Start Service
       uses: garygrossgarten/github-action-ssh@release
       with:
