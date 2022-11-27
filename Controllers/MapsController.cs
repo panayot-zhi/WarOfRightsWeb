@@ -109,6 +109,46 @@ namespace WarOfRightsWeb.Controllers
             return View(model);
         }
 
+        public void SetAdjacentMaps(Map map)
+        {
+            if (map is null)
+            {
+                return;
+            }
+
+            var mapAreaName = map.AreaName;
+            if (Labels.DrillCamp.Equals(mapAreaName))
+            {
+                mapAreaName = Labels.DrillCamps;
+            }
+
+            var maps = GetMaps(mapAreaName, map.MapType).ToArray();
+
+            if (!maps.Any())
+            {
+                return;
+            }
+
+            var currentMapOrder = map.Order;
+            var previousMapOrder = currentMapOrder - 1;
+            if (previousMapOrder < 0)
+            {
+                // display the last map from selection
+                previousMapOrder = maps.Length - 1;
+            }
+
+            map.PreviousMap = maps.SingleOrDefault(x => x.Order == previousMapOrder);
+
+            var nextMapOrder = currentMapOrder + 1;
+            if (nextMapOrder >= maps.Length)
+            {
+                // display first
+                nextMapOrder = 0;
+            }
+
+            map.NextMap = maps.SingleOrDefault(x => x.Order == nextMapOrder);
+        }
+
         private async Task<Map> GetMapAsync(string id)
         {
             var map = await _db.Maps
@@ -119,6 +159,8 @@ namespace WarOfRightsWeb.Controllers
                     .ThenInclude(x => x.MapRegimentWeapons)
                         .ThenInclude(x => x.Weapon)
                 .SingleOrDefaultAsync(x => x.ID == id);
+
+            SetAdjacentMaps(map);
 
             return map;
         }
