@@ -67,7 +67,9 @@ namespace WarOfRightsWeb.Data
         [MaxLength(127)]
         public string MapType { get; set; }
 
+
         public ICollection<MapRegiment> MapRegiments { get; set; }
+
 
         [NotMapped]
         public IList<MapRegiment> MapCSARegiments =>
@@ -76,6 +78,13 @@ namespace WarOfRightsWeb.Data
         [NotMapped]
         public IList<MapRegiment> MapUSARegiments =>
             MapRegiments?.Where(x => x.Regiment.Faction.Equals(Labels.USA)).ToList();
+
+
+        [NotMapped]
+        public Map PreviousMap { get; set; }
+
+        [NotMapped]
+        public Map NextMap { get; set; }
 
     }
 }
