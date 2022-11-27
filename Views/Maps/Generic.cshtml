@@ -3,6 +3,11 @@
 @{
     var mapID = Model.ID;
     var mapName = Model.Name;
+    var mapAreaName = Model.AreaName;
+    if (Labels.DrillCamp.Equals(mapAreaName))
+    {
+        mapAreaName = Labels.DrillCamps;
+    }
 
     string spawnImage = null, /*imageSkirmish,*/ loadingImage = null;
     if (Extensions.PathToUrl(Model.SpawnImagePath) != null)
@@ -53,9 +58,11 @@
 
 @section scripts {
     <script>
+        let areaName = '@mapAreaName';
         $(document).ready(function () {
             $("#navMaps").addClass('active');
-            $("#navMapHarpersFerry").addClass('active');
+            $("#navMap" + areaName).addClass('active');
         })
+    
     </script>
 }
