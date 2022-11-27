@@ -232,6 +232,8 @@ namespace WarOfRightsWeb.Controllers
                 DefendingTeam = x.DefendingTeam,
                 Description = x.Description,
                 SkirmishImagePath = x.SkirmishImagePath,
+
+                Order = x.Order
             };
         }
     }
