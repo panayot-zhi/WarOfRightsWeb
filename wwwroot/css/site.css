@@ -256,3 +256,7 @@ a.displayCurrentEvents {
 #nextMap a:hover {
     text-decoration: underline;
 }
+
+.alignCenter {
+    text-align: center;
+}

@@ -35,18 +35,36 @@
         </h2>
     </div>
 
-    <div class="fancyLeft">
+    <div class="fancyLeft alignCenter">
         <p >Click on the poster below to join our Discord.</p>
-        <a href="https://discord.gg/veaATew867" target="_blank"><img src="@Url.Content("~/img/recruitment_poster.png")" alt="Sharpshooters Recruitment Poster" /></a>
+        <a href="https://discord.gg/veaATew867" target="_blank">
+            <img src="@Url.Content("~/img/recruitment_poster.png")" alt="Sharpshooters Recruitment Poster"/>
+        </a>
     </div>
     
-    <div class="fancyRight">
+    <div class="fancyRight alignCenter">
         <p >Click on the poster below to go to our Forum page.</p>
-        <a href="https://www.warofrightsforum.com/showthread.php?6279-1st-U-S-Sharpshooters-Co-F-(EU-IL)" target="_blank"><img src="@Url.Content("~/img/bounty_poster_2_recruiters.png")" alt="Sharpshooters Recruitment Poster" /></a>
+        <a href="https://www.warofrightsforum.com/showthread.php?6279-1st-U-S-Sharpshooters-Co-F-(EU-IL)" target="_blank">
+            <img src="@Url.Content("~/img/bounty_poster_2_recruiters.png")" alt="Sharpshooters Recruitment Poster"/>
+        </a>
     </div>
 
     <div class="fancyClearBoth"></div>
     
+    <div class="fancyLeft">
+        <a href="@Url.Content("~/img/1st_United_States_Sharpshooters.png")" target="_blank" style="width: 100%">
+            <img src="@Url.Content("~/img/1st_United_States_Sharpshooters.png")" alt="Sharpshooters Recruitment Poster" style="width: 100%" />
+        </a>
+    </div>
+    
+    <div class="fancyRight">
+        <a href="@Url.Content("~/img/AL_1st_United_States_Sharpshooters.png")" target="_blank">
+            <img src="@Url.Content("~/img/AL_1st_United_States_Sharpshooters.png")" alt="Sharpshooters Recruitment Poster" style="width: 100%" />
+        </a>
+    </div>
+
+    <div class="fancyClearBoth"></div>
+
     @if (User.IsLoggedIn())
     {
         <span>You are a member of the 1. USSS Co. F</span>
