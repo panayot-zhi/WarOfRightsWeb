@@ -116,6 +116,11 @@ namespace WarOfRightsWeb.Controllers
                 return;
             }
 
+            if (Maps.PicketPatrol.Equals(map.ID))
+            {
+                return;
+            }
+
             var mapAreaName = map.AreaName;
             if (Labels.DrillCamp.Equals(mapAreaName))
             {
