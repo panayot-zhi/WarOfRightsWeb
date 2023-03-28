@@ -9,5 +9,7 @@
         public ulong AnnouncementChannelId { get; set; }
 
         public ulong MusterVoiceChannelId { get; set; }
+
+        public bool Enabled { get; set; }
     }
 }

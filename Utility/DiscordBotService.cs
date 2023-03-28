@@ -48,6 +48,12 @@ namespace WarOfRightsWeb.Utility
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
+            if (!_discordConfig.Enabled)
+            {
+                _logger.LogWarning("Discord bot service has been disabled and will not run, Ed Weston is on vacation.");
+                return;
+            }
+
             // no re-init pls
             lock (Initializator)
             {
