@@ -12,10 +12,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Data;
-using WarOfRightsWeb.Utility;
 using Hangfire.MemoryStorage;
 using Hangfire.Dashboard;
 using Hangfire;
+using Serilog;
+using WarOfRightsWeb.Utility.Discord;
+using WarOfRightsWeb.Utility.Hangfire;
 
 namespace WarOfRightsWeb
 {
@@ -34,10 +36,9 @@ namespace WarOfRightsWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddSingleton(Configuration);
             services.AddSingleton<DiscordSocketClient>();
-            services.AddTransient<DiscordSlashCommandsModule>();
+            services.AddTransient<DiscordSlashCommands>();
             services.AddWrappedHostedService<DiscordBotService>();
 
             services.AddHangfire(configuration => configuration
@@ -119,16 +120,13 @@ namespace WarOfRightsWeb
                 );
             });
 
-            RecurringJob.AddOrUpdate<DiscordBotService>(
-                "CheckForEventToday",
-                (bot) => bot.CheckForEventToday(),
-                Cron.Daily(9), Extensions.GetCentralEuropeanTimeZoneInfo());
+            HangfireJobRegistry.Register();
 
-            app.UseHangfireDashboard("/hangfire" ,options: new DashboardOptions()
+            app.UseHangfireDashboard("/hangfire", options: new DashboardOptions()
             {
                 Authorization = new List<IDashboardAuthorizationFilter>()
                 {
-                    new BasicAuthenticationFilter()
+                    new HangfireBasicAuthFilter()
                 }
             });
 

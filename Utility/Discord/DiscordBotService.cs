@@ -16,13 +16,12 @@ using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
-using System.Threading.Channels;
 
 namespace WarOfRightsWeb.Utility.Discord
 {
     // DiscordConfig Gateway Thread
 
-    public class BotService : IHostedService
+    public class DiscordBotService : IHostedService
     {
         private DiscordSocketClient _client;
         private InteractionService _interactionService;
@@ -33,9 +32,9 @@ namespace WarOfRightsWeb.Utility.Discord
         private readonly IConfiguration _configuration;
         private readonly IServiceProvider _serviceProvider;
         private readonly IWebHostEnvironment _hostingEnvironment;
-        private readonly ILogger<BotService> _logger;
+        private readonly ILogger<DiscordBotService> _logger;
 
-        public BotService(ILogger<BotService> logger,
+        public DiscordBotService(ILogger<DiscordBotService> logger,
             IServiceProvider serviceProvider,
             IConfiguration configuration,
             IWebHostEnvironment hostingEnvironment)

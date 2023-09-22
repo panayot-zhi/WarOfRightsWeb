@@ -9,11 +9,11 @@ using WarOfRightsWeb.Models;
 
 namespace WarOfRightsWeb.Utility.Discord
 {
-    public class SlashCommands : InteractionModuleBase<SocketInteractionContext>
+    public class DiscordSlashCommands : InteractionModuleBase<SocketInteractionContext>
     {
         private readonly IConfiguration _configuration;
 
-        public SlashCommands(IConfiguration configuration)
+        public DiscordSlashCommands(IConfiguration configuration)
         {
             _configuration = configuration;
         }

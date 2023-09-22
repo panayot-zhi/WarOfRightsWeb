@@ -12,9 +12,9 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using WarOfRightsWeb.Utility;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
+using WarOfRightsWeb.Utility.Discord;
 
 namespace WarOfRightsWeb.Controllers
 {
@@ -23,17 +23,17 @@ namespace WarOfRightsWeb.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IWebHostEnvironment _webHostEnv;
         private readonly IConfiguration _configuration;
-        private readonly DiscordBotService _botService;
+        private readonly DiscordBotService _discordBotService;
 
         public HomeController(ILogger<HomeController> logger, 
             IWebHostEnvironment webHostEnv, 
             IConfiguration configuration, 
-            DiscordBotService botService)
+            DiscordBotService discordBotService)
         {
             _logger = logger;
             _webHostEnv = webHostEnv;
             _configuration = configuration;
-            _botService = botService;
+            _discordBotService = discordBotService;
         }
 
         public IActionResult Index()

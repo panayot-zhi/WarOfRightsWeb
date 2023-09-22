@@ -9,7 +9,7 @@ using Hangfire.Dashboard;
 
 namespace WarOfRightsWeb.Utility.Hangfire
 {
-    public class BasicAuthenticationFilter : IDashboardAuthorizationFilter
+    public class HangfireBasicAuthFilter : IDashboardAuthorizationFilter
     {
         public const string AuthenticationScheme = "Basic";
 
@@ -21,7 +21,7 @@ namespace WarOfRightsWeb.Utility.Hangfire
         {
             var httpContext = context.GetHttpContext();
             var logger = httpContext.RequestServices
-                .GetRequiredService<ILogger<BasicAuthenticationFilter>>();
+                .GetRequiredService<ILogger<HangfireBasicAuthFilter>>();
             var userConfiguration = GetUserConfig(httpContext);
             var header = httpContext.Request.Headers["Authorization"];
 
