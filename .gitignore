@@ -344,3 +344,4 @@ appsettings.Production.json
 appsettings.Development.json
 backup/versions/*.7z
 backup/versions/*.zip
+wwwroot/json/

@@ -16,6 +16,8 @@ using Hangfire.MemoryStorage;
 using Hangfire.Dashboard;
 using Hangfire;
 using Serilog;
+using WarOfRightsWeb.Utility;
+using WarOfRightsWeb.Utility.Configuration;
 using WarOfRightsWeb.Utility.Discord;
 using WarOfRightsWeb.Utility.Hangfire;
 
@@ -37,9 +39,14 @@ namespace WarOfRightsWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton(Configuration);
+            services.AddTransient<ConfigurationHelper>();
             services.AddSingleton<DiscordSocketClient>();
             services.AddTransient<DiscordSlashCommands>();
+            services.AddTransient<DiscordHelper>();
+
             services.AddWrappedHostedService<DiscordBotService>();
+
+            services.AddAutoMapper(typeof(MappingProfile));
 
             services.AddHangfire(configuration => configuration
                 .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
@@ -54,6 +61,7 @@ namespace WarOfRightsWeb
                         cookieOptions.LoginPath = "/";
                     });
 
+            // Add services for MVC controllers
             if (WebHostEnvironment.IsDevelopment())
             {
                 services.AddControllersWithViews()
@@ -64,6 +72,9 @@ namespace WarOfRightsWeb
                 services.AddControllersWithViews();
             }
 
+            // Add services for API controllers
+            services.AddControllers();
+
             services.AddDbContext<WarOfRightsDbContext>(
                 contextLifetime: ServiceLifetime.Transient, optionsAction: options =>
                 {
@@ -73,7 +84,7 @@ namespace WarOfRightsWeb
                 }
             );
 
-            Console.WriteLine("<<<< SERVICES CONFIGURED");
+            Log.Logger.Information("<<<< SERVICES CONFIGURED");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -84,7 +95,7 @@ namespace WarOfRightsWeb
             CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
             CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
-            Console.WriteLine($"Thread culture information has been set to en-US; TimeZone: {TimeZoneInfo.Local}");
+            Log.Logger.Information($"Thread culture information has been set to en-US; TimeZone: {TimeZoneInfo.Local}");
 
             Extensions.Initialize(env);
 
@@ -101,6 +112,7 @@ namespace WarOfRightsWeb
             });
 
             app.UseDeveloperExceptionPage();
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
 
@@ -109,6 +121,10 @@ namespace WarOfRightsWeb
 
             app.UseEndpoints(endpoints =>
             {
+                // API routes
+                endpoints.MapControllers();
+
+                // MVC routes
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
@@ -130,7 +146,7 @@ namespace WarOfRightsWeb
                 }
             });
 
-            Console.WriteLine("<<<< APPLICATION STARTED");
+            Log.Logger.Information("<<<< APPLICATION STARTED");
         }
     }
 }
