@@ -4,25 +4,23 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using Serilog.Events;
 
 namespace WarOfRightsWeb
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
-                .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-                .Enrich.FromLogContext()
                 .WriteTo.Console()
                 .CreateLogger();
 
             try
             {
                 Log.Information("Application starting web host...");
-                CreateHostBuilder(args).Build().Run();
+                var builder = CreateHostBuilder(args);
+                var host = builder.Build();
+                host.Run();
             }
             catch (Exception ex)
             {
@@ -34,7 +32,7 @@ namespace WarOfRightsWeb
             }
         }
 
-        protected static void ConfigureLogger(WebHostBuilderContext webHostBuilderContext,
+        public static void ConfigureLogger(HostBuilderContext webHostBuilderContext,
             LoggerConfiguration loggerConfiguration)
         {
             // NOTE: Read configuration from appsettings.json
@@ -44,6 +42,7 @@ namespace WarOfRightsWeb
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
             return Host.CreateDefaultBuilder(args)
+                .UseSerilog(ConfigureLogger)
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
                     var contentRootPath = hostingContext.HostingEnvironment.ContentRootPath;
@@ -53,7 +52,10 @@ namespace WarOfRightsWeb
                         false,
                         true);
                 })
-                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
         }
     }
 }
