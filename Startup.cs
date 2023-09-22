@@ -100,9 +100,11 @@ namespace WarOfRightsWeb
             });
 
             app.UseDeveloperExceptionPage();
-            app.UseAuthentication();
             app.UseStaticFiles();
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
