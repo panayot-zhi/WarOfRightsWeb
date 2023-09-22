@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using WarOfRightsWeb.Models;
 using Hangfire.Dashboard;
 
-namespace WarOfRightsWeb.Utility
+namespace WarOfRightsWeb.Utility.Hangfire
 {
     public class BasicAuthenticationFilter : IDashboardAuthorizationFilter
     {

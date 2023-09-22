@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
@@ -15,12 +16,13 @@ using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using System.Threading.Channels;
 
-namespace WarOfRightsWeb.Utility
+namespace WarOfRightsWeb.Utility.Discord
 {
     // DiscordConfig Gateway Thread
 
-    public class DiscordBotService : IHostedService
+    public class BotService : IHostedService
     {
         private DiscordSocketClient _client;
         private InteractionService _interactionService;
@@ -31,11 +33,12 @@ namespace WarOfRightsWeb.Utility
         private readonly IConfiguration _configuration;
         private readonly IServiceProvider _serviceProvider;
         private readonly IWebHostEnvironment _hostingEnvironment;
-        private readonly ILogger<DiscordBotService> _logger;
+        private readonly ILogger<BotService> _logger;
 
-        public DiscordBotService(ILogger<DiscordBotService> logger,
+        public BotService(ILogger<BotService> logger,
             IServiceProvider serviceProvider,
-            IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
+            IConfiguration configuration,
+            IWebHostEnvironment hostingEnvironment)
         {
             _logger = logger;
             _configuration = configuration;
@@ -64,13 +67,13 @@ namespace WarOfRightsWeb.Utility
 
                 var config = new DiscordSocketConfig()
                 {
-
+                    GatewayIntents = GatewayIntents.AllUnprivileged | GatewayIntents.GuildMembers
                 };
 
                 _client = new DiscordSocketClient(config);
                 _initialized = true;
             }
-            
+
             _client.Log += LogAsync;
             _client.Ready += ClientOnReady;
 
@@ -100,7 +103,7 @@ namespace WarOfRightsWeb.Utility
         {
             if (message.Exception is CommandException cmdException)
             {
-                _logger.LogError(message.Exception, 
+                _logger.LogError(message.Exception,
                     $"[Command/{message.Severity}] {cmdException.Command.Aliases.First()} " +
                     $"failed to execute in {cmdException.Context.Channel}.");
             }
@@ -121,6 +124,85 @@ namespace WarOfRightsWeb.Utility
                 var evt = events.First();
                 await AnnounceEvent(evt);
             }
+        }
+
+        public async Task TestMessage()
+        {
+            var members = await GetAllMembers();
+            if (members.Any())
+            {
+                Console.WriteLine($"Found {members.Count} guild members.");
+            }
+
+            var id = _discordConfig.AnnouncementChannelId;
+            if (_client.GetChannel(id) is IMessageChannel channel)
+            {
+                // var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "img", "north_and_south_fighting.png");
+                // var eventTime = TimeZoneInfo.ConvertTime(evt.Starting, Extensions.GetCentralEuropeanTimeZoneInfo());
+                // var eventHour = eventTime.ToString("h tt");
+
+                var embed = new EmbedBuilder()
+                    .WithTitle("My Title")
+                    .WithDescription("This is the description of my message.")
+                    .WithColor(Color.Green)
+                    .AddField("Field 1", "This is the value of field 1.")
+                    .AddField("Field 2", "This is the value of field 2.")
+                    .WithImageUrl("https://1usssf.eu/img/1ussscof_baner.png")
+                    .WithFooter("My footer text")
+                    .WithUrl("https://google.bg")
+                    .Build();
+
+                var builder = new ComponentBuilder()
+                    .WithButton("label", "custom-id");
+
+                _client.ButtonExecuted += MyButtonHandler;
+
+                var result = await channel.SendMessageAsync(text: "TEST, WHERE DOES THIS GO?", embed: embed, components: builder.Build());
+            }
+        }
+
+        public async Task MyButtonHandler(SocketMessageComponent component)
+        {
+            var embed = new EmbedBuilder()
+                .WithTitle("My Title")
+                .WithDescription("This is the description of my message.")
+                .WithColor(Color.Red)
+                .AddField("Field 1", $"This is the value of field {new Random().Next()}.")
+                .AddField("Field 2", "This is the value of field 2.")
+                .WithImageUrl("https://1usssf.eu/img/1ussscof_baner.png")
+                .WithFooter("My footer text")
+                .WithUrl("https://google.bg")
+                .Build();
+
+            // We can now check for our custom id
+            switch (component.Data.CustomId)
+            {
+                // Since we set our buttons custom id as 'custom-id', we can check for it like this:
+                case "custom-id":
+                    // Lets respond by sending a message saying they clicked the button
+                    await component.Channel.ModifyMessageAsync(component.Message.Id, m =>
+                    {
+                        m.Embed = embed;
+                    });
+
+                    await component.RespondAsync();
+                    break;
+            }
+        }
+
+        public async Task<List<SocketGuildUser>> GetAllMembers()
+        {
+            var guild = _client.GetGuild(_discordConfig.GuildId);
+            if (guild == null)
+            {
+                Console.WriteLine($"Could not find guild with ID: {_discordConfig.GuildId}");
+                return new List<SocketGuildUser>();
+            }
+
+            // DownloadUsersAsync makes sure that we have all the member info
+            await guild.DownloadUsersAsync();
+
+            return guild.Users.ToList();
         }
 
         public async Task AnnounceEvent(Event evt)
@@ -152,13 +234,16 @@ namespace WarOfRightsWeb.Utility
                 name: "Event!",
                 type: GuildScheduledEventType.Voice,
                 startTime: DateTimeOffset.UtcNow.AddMinutes(1),
-                endTime: DateTimeOffset.UtcNow.AddMinutes(6), 
+                endTime: DateTimeOffset.UtcNow.AddMinutes(6),
                 channelId: _discordConfig.MusterVoiceChannelId);
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
         {
-            await _client.StopAsync();
+            if (_client is not null)
+            {
+                await _client.StopAsync();
+            }
         }
     }
 }

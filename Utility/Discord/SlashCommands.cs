@@ -7,13 +7,13 @@ using Microsoft.Extensions.Configuration;
 using WarOfRightsWeb.Common;
 using WarOfRightsWeb.Models;
 
-namespace WarOfRightsWeb.Utility
+namespace WarOfRightsWeb.Utility.Discord
 {
-    public class DiscordSlashCommandsModule : InteractionModuleBase<SocketInteractionContext>
+    public class SlashCommands : InteractionModuleBase<SocketInteractionContext>
     {
         private readonly IConfiguration _configuration;
 
-        public DiscordSlashCommandsModule(IConfiguration configuration)
+        public SlashCommands(IConfiguration configuration)
         {
             _configuration = configuration;
         }
@@ -43,7 +43,7 @@ namespace WarOfRightsWeb.Utility
             else
             {
                 var nextEvent = scheduledEvents.First();
-                var eventTime = TimeZoneInfo.ConvertTime(nextEvent.Starting, 
+                var eventTime = TimeZoneInfo.ConvertTime(nextEvent.Starting,
                     Extensions.GetCentralEuropeanTimeZoneInfo());
 
                 await RespondAsync($"Next event will be at {eventTime.ToString("MMMM d, h tt")} CET.");
