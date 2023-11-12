@@ -105,6 +105,7 @@ namespace WarOfRightsWeb.Utility.Discord
             _client.Ready += ClientOnReady;
             _client.UserJoined += UserJoinedAsync;
             _client.MessageReceived += MessageReceivedAsync;
+            _client.ButtonExecuted += InteractionButtonExecuted;
 
             var token = _discordConfig.BotToken;
 
@@ -150,6 +151,37 @@ namespace WarOfRightsWeb.Utility.Discord
             await UpdateCompanyDiscordMembers();
             await user.SendMessageAsync("Welcome to the server! Let us know if you have any questions.");
         }
+
+        public async Task InteractionButtonExecuted(SocketMessageComponent component)
+        {
+            await component.RespondAsync();
+            // var embed = new EmbedBuilder()
+            //     .WithTitle("My Title")
+            //     .WithDescription("This is the description of my message.")
+            //     .WithColor(Color.Red)
+            //     .AddField("Field 1", $"This is the value of field {new Random().Next()}.")
+            //     .AddField("Field 2", "This is the value of field 2.")
+            //     .WithImageUrl("https://1usssf.eu/img/1ussscof_baner.png")
+            //     .WithFooter("My footer text")
+            //     .WithUrl("https://google.bg")
+            //     .Build();
+            //
+            // // We can now check for our custom id
+            // switch (component.Data.CustomId)
+            // {
+            //     // Since we set our buttons custom id as 'custom-id', we can check for it like this:
+            //     case "custom-id":
+            //         // Lets respond by sending a message saying they clicked the button
+            //         await component.Channel.ModifyMessageAsync(component.Message.Id, m =>
+            //         {
+            //             m.Embed = embed;
+            //         });
+            //
+            //         await component.RespondAsync();
+            //         break;
+            // }
+        }
+
 
         private async Task MessageReceivedAsync(SocketMessage message)
         {
@@ -256,8 +288,13 @@ namespace WarOfRightsWeb.Utility.Discord
 
         #endregion
 
-        public async Task TestMessage()
+        public async Task TestAnnounce()
         {
+            var eventTemplates = _configuration.GetEventTemplates();
+            var events = Extensions.GetEventsByDate(eventTemplates, DateTime.Now.Date);
+            var evt = events.First();
+            // await AnnounceEvent(evt);
+
             var id = _discordConfig.AnnouncementChannelId;
             if (_client.GetChannel(id) is IMessageChannel channel)
             {
@@ -265,52 +302,32 @@ namespace WarOfRightsWeb.Utility.Discord
                 // var eventTime = TimeZoneInfo.ConvertTime(evt.Starting, Extensions.GetCentralEuropeanTimeZoneInfo());
                 // var eventHour = eventTime.ToString("h tt");
 
+                // Assuming you have lists for each type of response
+                var acceptedAttendees = new List<string> { "John" };
+                var declinedAttendees = new List<string> { "Mckee" };
+                var tentativeAttendees = new List<string> { "Taff" };
+
                 var embed = new EmbedBuilder()
-                    .WithTitle("My Title")
-                    .WithDescription("This is the description of my message.")
-                    .WithColor(Color.Green)
-                    .AddField("Field 1", "This is the value of field 1.")
-                    .AddField("Field 2", "This is the value of field 2.")
+                    .WithTitle(evt.Name)
+                    .WithDescription(evt.Description)
+                    .WithColor(Color.Orange)
+                    .AddField("Time", $"<t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:F>{Environment.NewLine}🕐 <t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:R>")
+                    // .AddField("🕐", $"<t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:R>")
+                    // Add fields for the attendee lists
+                    .AddField("Accepted (" + acceptedAttendees.Count + ")", string.Join("\n", acceptedAttendees))
+                    .AddField("Declined", string.Join("\n", declinedAttendees))
+                    .AddField("Tentative", string.Join("\n", tentativeAttendees))
                     .WithImageUrl("https://1usssf.eu/img/1ussscof_baner.png")
-                    .WithFooter("My footer text")
-                    .WithUrl("https://google.bg")
+                    .WithFooter($"Created by [1.USSS.F] Cpt. John Brown • Repeats {evt.Occurring}")
+                    .WithUrl("https://1usssf.eu/Events")
                     .Build();
 
                 var builder = new ComponentBuilder()
-                    .WithButton("label", "custom-id");
-
-                _client.ButtonExecuted += MyButtonHandler;
+                    .WithButton("Attend", "attend", style: ButtonStyle.Success)
+                    .WithButton("Maybe", "maybe", style: ButtonStyle.Secondary)
+                    .WithButton("Deny", "deny", style: ButtonStyle.Danger);
 
                 var result = await channel.SendMessageAsync(text: "TEST, WHERE DOES THIS GO?", embed: embed, components: builder.Build());
-            }
-        }
-
-        public async Task MyButtonHandler(SocketMessageComponent component)
-        {
-            var embed = new EmbedBuilder()
-                .WithTitle("My Title")
-                .WithDescription("This is the description of my message.")
-                .WithColor(Color.Red)
-                .AddField("Field 1", $"This is the value of field {new Random().Next()}.")
-                .AddField("Field 2", "This is the value of field 2.")
-                .WithImageUrl("https://1usssf.eu/img/1ussscof_baner.png")
-                .WithFooter("My footer text")
-                .WithUrl("https://google.bg")
-                .Build();
-
-            // We can now check for our custom id
-            switch (component.Data.CustomId)
-            {
-                // Since we set our buttons custom id as 'custom-id', we can check for it like this:
-                case "custom-id":
-                    // Lets respond by sending a message saying they clicked the button
-                    await component.Channel.ModifyMessageAsync(component.Message.Id, m =>
-                    {
-                        m.Embed = embed;
-                    });
-
-                    await component.RespondAsync();
-                    break;
             }
         }
 
