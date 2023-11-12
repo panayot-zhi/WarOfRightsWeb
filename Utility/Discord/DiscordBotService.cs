@@ -151,7 +151,7 @@ namespace WarOfRightsWeb.Utility.Discord
 
         public const string EventIdPrefix = "event_";
         public const string AttendLabel = "Attend";
-        public const string AcceptedLabel = "✅/tAccepted";
+        public const string AcceptedLabel = "✅ Accepted";
         public const string DenyLabel = "Deny";
         public const string DeclinedLabel = "❌ Declined";
         public const string MaybeLabel = "Maybe";
@@ -298,6 +298,11 @@ namespace WarOfRightsWeb.Utility.Discord
         private void UpdateEventEmbedData(EventEmbedData eventEmbedData, SocketMessageComponent component)
         {
             var userIdentifier = component.User.Username;
+            if (component.User is SocketGuildUser socketGuildUser)
+            {
+                userIdentifier = socketGuildUser.Nickname;
+            }
+
             var componentId = component.Data.CustomId;
 
             if (componentId.EndsWith(AttendLabel))
@@ -413,7 +418,7 @@ namespace WarOfRightsWeb.Utility.Discord
                     return "-";
                 }
 
-                return string.Join('\n', attendees.Select(x => "> " + x));
+                return string.Join('\n', attendees.Select(x => $"> {x}"));
             }
 
             var evt = eventEmbedData.EventData;

@@ -3,6 +3,19 @@ using System.Collections.Generic;
 
 namespace WarOfRightsWeb.Models
 {
+    public enum CompanyRank
+    {
+        Reserve,
+        Private,
+        Corporal,
+        Sergeant,
+        FirstSergeant,
+        Lieutenant,
+        FirstLieutenant,
+        Captain
+
+    }
+
     public record CompanyMembers
     {
         public List<CompanyMember> Members { get; set; }
@@ -10,6 +23,8 @@ namespace WarOfRightsWeb.Models
 
     public record CompanyMember
     {
+        // Updated from Discord
+
         public ulong Id { get; init; }
 
         public string DisplayName { get; init; }
@@ -27,5 +42,12 @@ namespace WarOfRightsWeb.Models
         public string Status { get; init; }
 
         public List<CompanyRole> Roles { get; init; }
+
+
+        // Updated automatically
+
+        public DateTimeOffset LastActiveAt { get; init; }
+
+        public CompanyRank Rank { get; init; }
     }
 }
