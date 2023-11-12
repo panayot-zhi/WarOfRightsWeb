@@ -24,8 +24,8 @@ namespace WarOfRightsWeb.Utility.Hangfire
 
             // SEND TEST MESSAGE TO ANNOUNCEMENT CHANNEL
             RecurringJob.AddOrUpdate<DiscordBotService>(
-                nameof(DiscordBotService.TestMessage),
-                (bot) => bot.TestMessage(),
+                nameof(DiscordBotService.TestAnnounce),
+                (bot) => bot.TestAnnounce(),
                 cronExpression: Cron.Never, //Cron.Daily(9), 
                 Extensions.GetCentralEuropeanTimeZoneInfo());
         }
