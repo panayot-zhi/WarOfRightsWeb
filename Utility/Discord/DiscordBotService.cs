@@ -33,7 +33,6 @@ namespace WarOfRightsWeb.Utility.Discord
         private static bool _initialized;
 
         private readonly IMapper _mapper;
-        private readonly IConfiguration _configuration;
         private readonly IServiceProvider _serviceProvider;
         private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly ILogger<DiscordBotService> _logger;
@@ -49,7 +48,6 @@ namespace WarOfRightsWeb.Utility.Discord
             _logger = logger;
             _mapper = mapper;
             _configHelper = configHelper;
-            _configuration = configuration;
             _serviceProvider = serviceProvider;
             _hostingEnvironment = hostingEnvironment;
             _discordConfig = configuration
@@ -151,17 +149,20 @@ namespace WarOfRightsWeb.Utility.Discord
             await user.SendMessageAsync("Welcome to the server! Let us know if you have any questions.");
         }
 
-        public const string EventInteractionIdPrefix = "event_";
-        public const string AttendInteractionIdLabel = "Attend";
-        public const string DenyInteractionIdLabel = "Deny";
-        public const string MaybeInteractionIdLabel = "Maybe";
+        public const string EventIdPrefix = "event_";
+        public const string AttendLabel = "Attend";
+        public const string AcceptedLabel = "✅/tAccepted";
+        public const string DenyLabel = "Deny";
+        public const string DeclinedLabel = "❌ Declined";
+        public const string MaybeLabel = "Maybe";
+        public const string TentativeLabel = "☑️ Tentative";
 
         public async Task InteractionButtonExecuted(SocketMessageComponent component)
         {
             var companyMember = _configHelper.GetCompanyDiscordMember(component.User.Id);
 
-            // if the component id begins with EventInteractionIdPrefix
-            if (component.Data.CustomId.StartsWith(EventInteractionIdPrefix))
+            // if the component id begins with EventIdPrefix
+            if (component.Data.CustomId.StartsWith(EventIdPrefix))
             {
                 await EventInteractionAcknowledge(component);
             }
@@ -201,7 +202,7 @@ namespace WarOfRightsWeb.Utility.Discord
 
         public async Task CheckForEventToday()
         {
-            var eventTemplates = _configuration.GetEventTemplates();
+            var eventTemplates = _configHelper.Configuration.GetEventTemplates();
             var events = Extensions.GetEventsByDate(eventTemplates, DateTime.Now.Date);
             if (events.Any())
             {
@@ -275,9 +276,9 @@ namespace WarOfRightsWeb.Utility.Discord
                 var embed = GenerateEmbed(eventEmbedData);
 
                 var builder = new ComponentBuilder()
-                    .WithButton(AttendInteractionIdLabel, EventInteractionIdPrefix + AttendInteractionIdLabel, style: ButtonStyle.Success)
-                    .WithButton(MaybeInteractionIdLabel, EventInteractionIdPrefix + MaybeInteractionIdLabel, style: ButtonStyle.Secondary)
-                    .WithButton(DenyInteractionIdLabel, EventInteractionIdPrefix + DenyInteractionIdLabel, style: ButtonStyle.Danger);
+                    .WithButton(AttendLabel, EventIdPrefix + AttendLabel, style: ButtonStyle.Success)
+                    .WithButton(MaybeLabel, EventIdPrefix + MaybeLabel, style: ButtonStyle.Secondary)
+                    .WithButton(DenyLabel, EventIdPrefix + DenyLabel, style: ButtonStyle.Danger);
 
                 await channel.SendMessageAsync(text: "@everyone", embed: embed, components: builder.Build());
             }
@@ -299,7 +300,7 @@ namespace WarOfRightsWeb.Utility.Discord
             var userIdentifier = component.User.Username;
             var componentId = component.Data.CustomId;
 
-            if (componentId.EndsWith(AttendInteractionIdLabel))
+            if (componentId.EndsWith(AttendLabel))
             {
                 // remove from current list if present and break execution
                 if (eventEmbedData.AcceptedAttendees.Contains(userIdentifier))
@@ -321,7 +322,7 @@ namespace WarOfRightsWeb.Utility.Discord
                 // add to current list
                 eventEmbedData.AcceptedAttendees.Add(userIdentifier);
             }
-            else if (componentId.EndsWith(DenyInteractionIdLabel))
+            else if (componentId.EndsWith(DenyLabel))
             {
                 // remove from current list if present and break execution
                 if (eventEmbedData.DeclinedAttendees.Contains(userIdentifier))
@@ -343,7 +344,7 @@ namespace WarOfRightsWeb.Utility.Discord
                 // add to current list
                 eventEmbedData.DeclinedAttendees.Add(userIdentifier);
             }
-            else if (componentId.EndsWith(MaybeInteractionIdLabel))
+            else if (componentId.EndsWith(MaybeLabel))
             {
                 // remove from current list if present and break execution
                 if (eventEmbedData.TentativeAttendees.Contains(userIdentifier))
@@ -373,13 +374,35 @@ namespace WarOfRightsWeb.Utility.Discord
 
         private EventEmbedData GetEventEmbedData(Embed message)
         {
-            // can we resolve event by timestamp?
-            return new EventEmbedData()
+            List<string> GetAttendees(string label)
             {
-            };
-        }
+                // remove empty array indicator
+                // trim quote formatting
+                // trim any whitespace
+                return message.Fields
+                    .Single(x => x.Name.StartsWith(label)).Value.Split('\n', StringSplitOptions.RemoveEmptyEntries)
+                    .Where(x => x != "-")
+                    .Select(x => x
+                        .TrimStart('>')
+                        .TrimStart())
+                    .ToList();
+            }
 
-        #endregion HighLevel
+            var eventDate = message.Timestamp;
+            var eventTemplates = _configHelper.Configuration.GetEventTemplates();
+            var events = Extensions.GetEventsByDate(eventTemplates, eventDate.Value.DateTime);
+            var evt = events.First();
+
+            var eventEmbedData = new EventEmbedData
+            {
+                EventData = evt,
+                AcceptedAttendees = GetAttendees(AcceptedLabel),
+                DeclinedAttendees = GetAttendees(DeclinedLabel),
+                TentativeAttendees = GetAttendees(TentativeLabel)
+            };
+
+            return eventEmbedData;
+        }
 
         private static Embed GenerateEmbed(EventEmbedData eventEmbedData)
         {
@@ -390,7 +413,7 @@ namespace WarOfRightsWeb.Utility.Discord
                     return "-";
                 }
 
-                return string.Join("\n> ", attendees);
+                return string.Join('\n', attendees.Select(x => "> " + x));
             }
 
             var evt = eventEmbedData.EventData;
@@ -402,9 +425,9 @@ namespace WarOfRightsWeb.Utility.Discord
                 .WithColor(Color.Orange)
                 .AddField("Time",
                     $"<t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:F>{Environment.NewLine}🕐 <t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:R>")
-                .AddField("Accepted (" + eventEmbedData.AcceptedAttendees.Count + ")", FormatList(eventEmbedData.AcceptedAttendees))
-                .AddField("Declined (" + eventEmbedData.DeclinedAttendees.Count + ")", FormatList(eventEmbedData.DeclinedAttendees))
-                .AddField("Tentative (" + eventEmbedData.TentativeAttendees.Count + ")", FormatList(eventEmbedData.TentativeAttendees))
+                .AddField(AcceptedLabel + " (" + eventEmbedData.AcceptedAttendees.Count + ")", FormatList(eventEmbedData.AcceptedAttendees))
+                .AddField(DeclinedLabel + " (" + eventEmbedData.DeclinedAttendees.Count + ")", FormatList(eventEmbedData.DeclinedAttendees))
+                .AddField(TentativeLabel + " (" + eventEmbedData.TentativeAttendees.Count + ")", FormatList(eventEmbedData.TentativeAttendees))
                 .WithImageUrl("https://1usssf.eu/img/1ussscof_baner.png")
                 .WithFooter($"Created by [1.USSS.F] Cpt. John Brown • Repeats {evt.Occurring}")
                 .Build();
@@ -412,10 +435,12 @@ namespace WarOfRightsWeb.Utility.Discord
             return embed;
         }
 
+        #endregion HighLevel
+
 
         public async Task TestAnnounce()
         {
-            var eventTemplates = _configuration.GetEventTemplates();
+            var eventTemplates = _configHelper.Configuration.GetEventTemplates();
             var events = Extensions.GetEventsByDate(eventTemplates, DateTime.Now.Date);
             var evt = events.First();
             await AnnounceEvent(evt);

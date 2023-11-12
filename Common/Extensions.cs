@@ -172,6 +172,7 @@ namespace WarOfRightsWeb.Common
             Event ConstructEvent(Event eventTemplate) =>
                 new()
                 {
+                    Enabled = true,
                     Name = eventTemplate.Name,
                     Description = eventTemplate.Description,
                     Occurring = eventTemplate.Occurring,

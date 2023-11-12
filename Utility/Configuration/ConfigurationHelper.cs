@@ -4,17 +4,21 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using WarOfRightsWeb.Models;
 
 namespace WarOfRightsWeb.Utility.Configuration
 {
     public class ConfigurationHelper
     {
+        // any options here?
         private readonly IWebHostEnvironment _hostingEnvironment;
+        public readonly IConfiguration Configuration;
 
-        public ConfigurationHelper(IWebHostEnvironment hostingEnvironment)
+        public ConfigurationHelper(IWebHostEnvironment hostingEnvironment, IConfiguration configuration)
         {
             _hostingEnvironment = hostingEnvironment;
+            Configuration = configuration;
         }
 
         public CompanyMembers GetCompanyDiscordMembers()
