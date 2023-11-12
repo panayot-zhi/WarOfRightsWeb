@@ -17,7 +17,6 @@ using WarOfRightsWeb.Models;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using AutoMapper;
-using AutoMapper.Execution;
 using Newtonsoft.Json;
 using WarOfRightsWeb.Utility.Configuration;
 
@@ -152,45 +151,38 @@ namespace WarOfRightsWeb.Utility.Discord
             await user.SendMessageAsync("Welcome to the server! Let us know if you have any questions.");
         }
 
+        public const string EventInteractionIdPrefix = "event_";
+        public const string AttendInteractionIdLabel = "Attend";
+        public const string DenyInteractionIdLabel = "Deny";
+        public const string MaybeInteractionIdLabel = "Maybe";
+
         public async Task InteractionButtonExecuted(SocketMessageComponent component)
         {
-            await component.RespondAsync();
-            // var embed = new EmbedBuilder()
-            //     .WithTitle("My Title")
-            //     .WithDescription("This is the description of my message.")
-            //     .WithColor(Color.Red)
-            //     .AddField("Field 1", $"This is the value of field {new Random().Next()}.")
-            //     .AddField("Field 2", "This is the value of field 2.")
-            //     .WithImageUrl("https://1usssf.eu/img/1ussscof_baner.png")
-            //     .WithFooter("My footer text")
-            //     .WithUrl("https://google.bg")
-            //     .Build();
-            //
-            // // We can now check for our custom id
-            // switch (component.Data.CustomId)
-            // {
-            //     // Since we set our buttons custom id as 'custom-id', we can check for it like this:
-            //     case "custom-id":
-            //         // Lets respond by sending a message saying they clicked the button
-            //         await component.Channel.ModifyMessageAsync(component.Message.Id, m =>
-            //         {
-            //             m.Embed = embed;
-            //         });
-            //
-            //         await component.RespondAsync();
-            //         break;
-            // }
-        }
+            var companyMember = _configHelper.GetCompanyDiscordMember(component.User.Id);
 
+            // if the component id begins with EventInteractionIdPrefix
+            if (component.Data.CustomId.StartsWith(EventInteractionIdPrefix))
+            {
+                await EventInteractionAcknowledge(component);
+            }
+
+            // respond to request for sure
+            if (!component.HasResponded)
+            {
+                await component.DeferAsync(ephemeral: true);
+            }
+        }
 
         private async Task MessageReceivedAsync(SocketMessage message)
         {
-            // Check if the message is from a DM channel and if the author is the user we're interested in
             var companyMember = _configHelper.GetCompanyDiscordMember(message.Author.Id);
-            if (message.Channel is IDMChannel && companyMember is not null)
+            if (message.Channel is IDMChannel && companyMember is not null && !companyMember.IsBot)
             {
-                // Respond to the message
-                await message.Channel.SendMessageAsync("Thanks for reaching out! How can I assist you?");
+                // if the message is from a DM channel
+                // if the author is the user we're interested in
+                // if the user sending the message is not a bot
+                // then respond to a private message
+                await RespondToPrivateMessage(message);
             }
         }
 
@@ -203,7 +195,7 @@ namespace WarOfRightsWeb.Utility.Discord
             _client.InteractionCreated += ClientOnInteraction;
         }
 
-        #endregion
+        #endregion LowLevel
 
         #region HighLevel
 
@@ -252,6 +244,11 @@ namespace WarOfRightsWeb.Utility.Discord
             await File.WriteAllTextAsync(filePath, jsonContent);
         }
 
+        private async Task RespondToPrivateMessage(SocketMessage message)
+        {
+            await message.Channel.SendMessageAsync("Thanks for reaching out! How can I assist you?");
+        }
+
         public async Task ModifyMemberNickname(ulong id, string nickname)
         {
             var users = await GetGuildMembers();
@@ -270,65 +267,158 @@ namespace WarOfRightsWeb.Utility.Discord
             var id = _discordConfig.AnnouncementChannelId;
             if (_client.GetChannel(id) is IMessageChannel channel)
             {
-                var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "img", "north_and_south_fighting.png");
-                var eventTime = TimeZoneInfo.ConvertTime(evt.Starting, Extensions.GetCentralEuropeanTimeZoneInfo());
-                var eventHour = eventTime.ToString("h tt");
+                var eventEmbedData = new EventEmbedData()
+                {
+                    EventData = evt
+                };
 
-                var yes = new Emoji("✅");
-                var unsure = new Emoji("☑️");
-                var no = new Emoji("❌");
+                var embed = GenerateEmbed(eventEmbedData);
 
-                var message = await channel.SendFileAsync(imagePath, text: $"@everyone Come join the {evt.Name}. We start at **{eventHour} CET**.");
+                var builder = new ComponentBuilder()
+                    .WithButton(AttendInteractionIdLabel, EventInteractionIdPrefix + AttendInteractionIdLabel, style: ButtonStyle.Success)
+                    .WithButton(MaybeInteractionIdLabel, EventInteractionIdPrefix + MaybeInteractionIdLabel, style: ButtonStyle.Secondary)
+                    .WithButton(DenyInteractionIdLabel, EventInteractionIdPrefix + DenyInteractionIdLabel, style: ButtonStyle.Danger);
 
-                await message.AddReactionAsync(yes);
-                await message.AddReactionAsync(unsure);
-                await message.AddReactionAsync(no);
+                await channel.SendMessageAsync(text: "@everyone", embed: embed, components: builder.Build());
             }
         }
 
-        #endregion
+        private async Task EventInteractionAcknowledge(SocketMessageComponent component)
+        {
+            var eventEmbedData = GetEventEmbedData(component.Message.Embeds.Single());
+            UpdateEventEmbedData(eventEmbedData, component);
+            var embed = GenerateEmbed(eventEmbedData);
+            await component.Channel.ModifyMessageAsync(component.Message.Id, m =>
+            {
+                m.Embed = embed;
+            });
+        }
+
+        private void UpdateEventEmbedData(EventEmbedData eventEmbedData, SocketMessageComponent component)
+        {
+            var userIdentifier = component.User.Username;
+            var componentId = component.Data.CustomId;
+
+            if (componentId.EndsWith(AttendInteractionIdLabel))
+            {
+                // remove from current list if present and break execution
+                if (eventEmbedData.AcceptedAttendees.Contains(userIdentifier))
+                {
+                    eventEmbedData.AcceptedAttendees.Remove(userIdentifier);
+                    return;
+                }
+
+                // remove from other lists if present
+                if (eventEmbedData.DeclinedAttendees.Contains(userIdentifier))
+                {
+                    eventEmbedData.DeclinedAttendees.Remove(userIdentifier);
+                }
+                else if (eventEmbedData.TentativeAttendees.Contains(userIdentifier))
+                {
+                    eventEmbedData.TentativeAttendees.Remove(userIdentifier);
+                }
+
+                // add to current list
+                eventEmbedData.AcceptedAttendees.Add(userIdentifier);
+            }
+            else if (componentId.EndsWith(DenyInteractionIdLabel))
+            {
+                // remove from current list if present and break execution
+                if (eventEmbedData.DeclinedAttendees.Contains(userIdentifier))
+                {
+                    eventEmbedData.DeclinedAttendees.Remove(userIdentifier);
+                    return;
+                }
+
+                // remove from other lists if present
+                if (eventEmbedData.AcceptedAttendees.Contains(userIdentifier))
+                {
+                    eventEmbedData.AcceptedAttendees.Remove(userIdentifier);
+                }
+                else if (eventEmbedData.TentativeAttendees.Contains(userIdentifier))
+                {
+                    eventEmbedData.TentativeAttendees.Remove(userIdentifier);
+                }
+
+                // add to current list
+                eventEmbedData.DeclinedAttendees.Add(userIdentifier);
+            }
+            else if (componentId.EndsWith(MaybeInteractionIdLabel))
+            {
+                // remove from current list if present and break execution
+                if (eventEmbedData.TentativeAttendees.Contains(userIdentifier))
+                {
+                    eventEmbedData.TentativeAttendees.Remove(userIdentifier);
+                    return;
+                }
+
+                // remove from other lists if present
+                if (eventEmbedData.DeclinedAttendees.Contains(userIdentifier))
+                {
+                    eventEmbedData.DeclinedAttendees.Remove(userIdentifier);
+                }
+                else if (eventEmbedData.AcceptedAttendees.Contains(userIdentifier))
+                {
+                    eventEmbedData.AcceptedAttendees.Remove(userIdentifier);
+                }
+
+                // add to current list
+                eventEmbedData.TentativeAttendees.Add(userIdentifier);
+            }
+            else
+            {
+                throw new ArgumentException($"Cannot recognize interaction from component with id '{componentId}'.");
+            }
+        }
+
+        private EventEmbedData GetEventEmbedData(Embed message)
+        {
+            // can we resolve event by timestamp?
+            return new EventEmbedData()
+            {
+            };
+        }
+
+        #endregion HighLevel
+
+        private static Embed GenerateEmbed(EventEmbedData eventEmbedData)
+        {
+            string FormatList(IReadOnlyCollection<string> attendees)
+            {
+                if (!attendees.Any())
+                {
+                    return "-";
+                }
+
+                return string.Join("\n> ", attendees);
+            }
+
+            var evt = eventEmbedData.EventData;
+            var embed = new EmbedBuilder()
+                .WithTitle(evt.Name)
+                .WithTimestamp(evt.Starting)
+                .WithUrl("https://1usssf.eu/Events")
+                .WithDescription(evt.Description)
+                .WithColor(Color.Orange)
+                .AddField("Time",
+                    $"<t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:F>{Environment.NewLine}🕐 <t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:R>")
+                .AddField("Accepted (" + eventEmbedData.AcceptedAttendees.Count + ")", FormatList(eventEmbedData.AcceptedAttendees))
+                .AddField("Declined (" + eventEmbedData.DeclinedAttendees.Count + ")", FormatList(eventEmbedData.DeclinedAttendees))
+                .AddField("Tentative (" + eventEmbedData.TentativeAttendees.Count + ")", FormatList(eventEmbedData.TentativeAttendees))
+                .WithImageUrl("https://1usssf.eu/img/1ussscof_baner.png")
+                .WithFooter($"Created by [1.USSS.F] Cpt. John Brown • Repeats {evt.Occurring}")
+                .Build();
+
+            return embed;
+        }
+
 
         public async Task TestAnnounce()
         {
             var eventTemplates = _configuration.GetEventTemplates();
             var events = Extensions.GetEventsByDate(eventTemplates, DateTime.Now.Date);
             var evt = events.First();
-            // await AnnounceEvent(evt);
-
-            var id = _discordConfig.AnnouncementChannelId;
-            if (_client.GetChannel(id) is IMessageChannel channel)
-            {
-                // var imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "img", "north_and_south_fighting.png");
-                // var eventTime = TimeZoneInfo.ConvertTime(evt.Starting, Extensions.GetCentralEuropeanTimeZoneInfo());
-                // var eventHour = eventTime.ToString("h tt");
-
-                // Assuming you have lists for each type of response
-                var acceptedAttendees = new List<string> { "John" };
-                var declinedAttendees = new List<string> { "Mckee" };
-                var tentativeAttendees = new List<string> { "Taff" };
-
-                var embed = new EmbedBuilder()
-                    .WithTitle(evt.Name)
-                    .WithDescription(evt.Description)
-                    .WithColor(Color.Orange)
-                    .AddField("Time", $"<t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:F>{Environment.NewLine}🕐 <t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:R>")
-                    // .AddField("🕐", $"<t:{((DateTimeOffset)evt.Starting).ToUnixTimeSeconds()}:R>")
-                    // Add fields for the attendee lists
-                    .AddField("Accepted (" + acceptedAttendees.Count + ")", string.Join("\n", acceptedAttendees))
-                    .AddField("Declined", string.Join("\n", declinedAttendees))
-                    .AddField("Tentative", string.Join("\n", tentativeAttendees))
-                    .WithImageUrl("https://1usssf.eu/img/1ussscof_baner.png")
-                    .WithFooter($"Created by [1.USSS.F] Cpt. John Brown • Repeats {evt.Occurring}")
-                    .WithUrl("https://1usssf.eu/Events")
-                    .Build();
-
-                var builder = new ComponentBuilder()
-                    .WithButton("Attend", "attend", style: ButtonStyle.Success)
-                    .WithButton("Maybe", "maybe", style: ButtonStyle.Secondary)
-                    .WithButton("Deny", "deny", style: ButtonStyle.Danger);
-
-                var result = await channel.SendMessageAsync(text: "TEST, WHERE DOES THIS GO?", embed: embed, components: builder.Build());
-            }
+            await AnnounceEvent(evt);
         }
 
         public async Task CreateDiscordEvent()
