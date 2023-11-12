@@ -14,6 +14,17 @@ namespace WarOfRightsWeb.Models
         public IList<Event> ScheduledEvents { get; set; }
     }
 
+    public class EventEmbedData
+    {
+        public List<string> AcceptedAttendees { get; set; } = new();
+
+        public List<string> DeclinedAttendees { get; set; } = new();
+
+        public List<string> TentativeAttendees { get; set; } = new();
+
+        public Event EventData { get; set; }
+    }
+
     public class Event
     {
         public string Name { get; set; }
